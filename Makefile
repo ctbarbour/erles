@@ -1,27 +1,18 @@
-REBAR=`which rebar || printf ./rebar`
+REBAR=$(shell which rebar3)
 
-all:
-    get-deps compile
-
-get-deps:
-    @$(REBAR) get-deps
-
-proto:
-    get-deps
-    compile
-    escript compile_clientapi_proto.escript
+all: compile
 
 compile:
-    @$(REBAR) compile
+	@$(REBAR) compile
 
 clean:
-    @$(REBAR) clean
+	@$(REBAR) clean
 
 ct:
-    @$(REBAR) skip_deps=true ct
+	@$(REBAR) ct
 
 eunit:
-    @$(REBAR) skip_deps=true eunit
+	@$(REBAR) eunit
 
 test: eunit ct
 

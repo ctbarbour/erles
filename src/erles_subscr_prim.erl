@@ -86,17 +86,17 @@ disconnected(Msg, From, State) ->
 pending({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
     case Cmd of
         subscription_confirmation ->
-            Dto = erles_clientapi_pb:decode_subscriptionconfirmation(Data),
+            Dto = erles_clientapi_pb:decode_msg(Data, 'SubscriptionConfirmation'),
             SubPos = case State#state.sub_kind of
-                all    -> Dto#subscriptionconfirmation.last_commit_position;
-                stream -> Dto#subscriptionconfirmation.last_event_number
+                all    -> Dto#'SubscriptionConfirmation'.last_commit_position;
+                stream -> Dto#'SubscriptionConfirmation'.last_event_number
             end,
             gen_fsm:reply(State#state.reply_pid, {ok, self(), SubPos}),
             NewState = succeed(State),
             {next_state, subscribed, NewState};
         subscription_dropped ->
-            Dto = erles_clientapi_pb:decode_subscriptiondropped(Data),
-            Reason = drop_reason(Dto#subscriptiondropped.reason),
+            Dto = erles_clientapi_pb:decode_msg(Data, 'SubscriptionDropped'),
+            Reason = drop_reason(Dto#'SubscriptionDropped'.reason),
             complete(State, {error, Reason});
         not_handled ->
             not_handled(Data, State);
@@ -162,13 +162,13 @@ retry_pending(Msg, From, State) ->
 subscribed({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
     case Cmd of
         stream_event_appeared ->
-            Dto = erles_clientapi_pb:decode_streameventappeared(Data),
-            {E, P} = erles_utils:resolved_event(State#state.sub_kind, Dto#streameventappeared.event),
+            Dto = erles_clientapi_pb:decode_msg(Data, 'StreamEventAppeared'),
+            {E, P} = erles_utils:resolved_event(State#state.sub_kind, Dto#'StreamEventAppeared'.event),
             notify(State, {subscr_event, self(), E, P}),
             {next_state, subscribed, State};
         subscription_dropped ->
-            Dto = erles_clientapi_pb:decode_subscriptiondropped(Data),
-            Reason = Dto#subscriptiondropped.reason,
+            Dto = erles_clientapi_pb:decode_msg(Data, 'SubscriptionDropped'),
+            Reason = Dto#'SubscriptionDropped'.reason,
             notify(State, {unsubscribed, self(), Reason}),
             complete(State);
         _ ->
@@ -225,19 +225,19 @@ code_change(_OldVsn, StateName, State, _Extra) ->
 
 
 issue_subscribe_request(State=#state{}) ->
-    Dto = #subscribetostream{
+    Dto = #'SubscribeToStream'{
         event_stream_id = State#state.stream_id,
         resolve_link_tos = State#state.resolve_links
     },
-    Bin = erles_clientapi_pb:encode_subscribetostream(Dto),
+    Bin = erles_clientapi_pb:encode_msg(Dto),
     Pkg = erles_pkg:create(subscribe_to_stream, State#state.corr_id, State#state.auth, Bin),
     erles_conn:send(State#state.conn_pid, Pkg),
     TimerRef = erlang:start_timer(State#state.timeout, self(), timeout),
     {next_state, pending, State#state{timer_ref=TimerRef}}.
 
 issue_unsubscribe_request(State) ->
-    Dto = #unsubscribefromstream{},
-    Bin = erles_clientapi_pb:encode_unsubscribefromstream(Dto),
+    Dto = #'UnsubscribeFromStream'{},
+    Bin = erles_clientapi_pb:encode_msg(Dto),
     Pkg = erles_pkg:create(unsubscribe_from_stream, State#state.corr_id, State#state.auth, Bin),
     erles_conn:send(State#state.conn_pid, Pkg).
 
@@ -267,12 +267,12 @@ notify(State, Msg) ->
     State#state.sub_pid ! Msg.
 
 not_handled(Data, State) ->
-    Dto = erles_clientapi_pb:decode_nothandled(Data),
-    case Dto#nothandled.reason of
+    Dto = erles_clientapi_pb:decode_msg(Data, 'NotHandled'),
+    case Dto#'NotHandled'.reason of
         'NotMaster' ->
-            MasterInfo = erles_clientapi_pb:decode_nothandled_masterinfo(Dto#nothandled.additional_info),
-            Ip = erles_utils:parse_ip(MasterInfo#nothandled_masterinfo.external_tcp_address),
-            Port = MasterInfo#nothandled_masterinfo.external_tcp_port,
+            MasterInfo = erles_clientapi_pb:decode_msg(Dto#'NotHandled'.additional_info, 'NotHandled.MasterInfo'),
+            Ip = erles_utils:parse_ip(MasterInfo#'NotHandled.MasterInfo'.external_tcp_address),
+            Port = MasterInfo#'NotHandled.MasterInfo'.external_tcp_port,
             cancel_timer(State#state.timer_ref),
             case erles_conn:reconnect(State#state.conn_pid, Ip, Port) of
                 already_connected ->

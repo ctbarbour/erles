@@ -49,7 +49,7 @@
 
 -spec gen_uuid() -> uuid().
 gen_uuid() ->
-    <<Rand1:48, _:4, Rand2:12, _:2, Rand3:62>> = crypto:rand_bytes(16),
+    <<Rand1:48, _:4, Rand2:12, _:2, Rand3:62>> = crypto:strong_rand_bytes(16),
     <<Rand1:48,
       0:1, 1:1, 0:1, 0:1,  % version 4 bits
       Rand2:12,
@@ -95,43 +95,43 @@ parse_ip(String)                  -> {ok, Addr} = inet:parse_address(String), Ad
 
 -spec shuffle(List :: [T]) -> [T].
 shuffle(L) when is_list(L) ->
-    [X || {_, X} <- lists:sort([{random:uniform(), Y} || Y <- L])].
+    [X || {_, X} <- lists:sort([{rand:uniform(), Y} || Y <- L])].
 
 
--spec resolved_event('all', #resolvedevent{})                              -> all_event_res();
-                    ('stream', #resolvedevent{} | #resolvedindexedevent{}) -> stream_event_res().
+-spec resolved_event('all', #'ResolvedEvent'{})                              -> all_event_res();
+                    ('stream', #'ResolvedEvent'{} | #'ResolvedIndexedEvent'{}) -> stream_event_res().
 
-resolved_event(all, E = #resolvedevent{}) ->
-    ResolvedEvent = event_rec(E#resolvedevent.event),
-    OrigPos = {tfpos, E#resolvedevent.commit_position, E#resolvedevent.prepare_position},
+resolved_event(all, E = #'ResolvedEvent'{}) ->
+    ResolvedEvent = event_rec(E#'ResolvedEvent'.event),
+    OrigPos = {tfpos, E#'ResolvedEvent'.commit_position, E#'ResolvedEvent'.prepare_position},
     {ResolvedEvent, OrigPos};
 
-resolved_event(stream, E = #resolvedevent{}) ->
-    OrigEvent = case E#resolvedevent.link of
-        undefined -> E#resolvedevent.event;
+resolved_event(stream, E = #'ResolvedEvent'{}) ->
+    OrigEvent = case E#'ResolvedEvent'.link of
+        undefined -> E#'ResolvedEvent'.event;
         Link -> Link
     end,
-    ResolvedEvent = event_rec(E#resolvedevent.event),
-    OrigEventNumber = OrigEvent#eventrecord.event_number,
+    ResolvedEvent = event_rec(E#'ResolvedEvent'.event),
+    OrigEventNumber = OrigEvent#'EventRecord'.event_number,
     {ResolvedEvent, OrigEventNumber};
 
-resolved_event(stream, E = #resolvedindexedevent{}) ->
-    OrigEvent = case E#resolvedindexedevent.link of
-        undefined -> E#resolvedindexedevent.event;
+resolved_event(stream, E = #'ResolvedIndexedEvent'{}) ->
+    OrigEvent = case E#'ResolvedIndexedEvent'.link of
+        undefined -> E#'ResolvedIndexedEvent'.event;
         Link -> Link
     end,
-    ResolvedEvent = event_rec(E#resolvedindexedevent.event),
-    OrigEventNumber  = OrigEvent#eventrecord.event_number,
+    ResolvedEvent = event_rec(E#'ResolvedIndexedEvent'.event),
+    OrigEventNumber  = OrigEvent#'EventRecord'.event_number,
     {ResolvedEvent, OrigEventNumber}.
 
--spec event_rec(EventRecord :: #eventrecord{}) -> #event{}.
-event_rec(E = #eventrecord{}) ->
-    #event{stream_id    = list_to_binary(E#eventrecord.event_stream_id),
-           event_number = E#eventrecord.event_number,
-           event_id     = E#eventrecord.event_id,
-           event_type   = list_to_binary(E#eventrecord.event_type),
-           data         = E#eventrecord.data,
-           metadata     = E#eventrecord.metadata}.
+-spec event_rec(EventRecord :: #'EventRecord'{}) -> #event{}.
+event_rec(E = #'EventRecord'{}) ->
+    #event{stream_id    = E#'EventRecord'.event_stream_id,
+           event_number = E#'EventRecord'.event_number,
+           event_id     = E#'EventRecord'.event_id,
+           event_type   = E#'EventRecord'.event_type,
+           data         = E#'EventRecord'.data,
+           metadata     = E#'EventRecord'.metadata}.
 
 -spec meta_to_metajson(stream_meta()) -> jsx:json_term().
 meta_to_metajson(Meta) ->
