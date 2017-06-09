@@ -213,7 +213,8 @@ response_cmd(read_event) ->                  read_event_completed;
 response_cmd(read_stream_events_forward) ->  read_stream_events_forward_completed;
 response_cmd(read_stream_events_backward) -> read_stream_events_backward_completed;
 response_cmd(read_all_events_forward) ->     read_all_events_forward_completed;
-response_cmd(read_all_events_backward) ->    read_all_events_backward_completed.
+response_cmd(read_all_events_backward) ->    read_all_events_backward_completed;
+response_cmd(create_persistent_subscription) -> create_persistent_subscription_completed.
 
 create_package(CorrId, Auth, ping, {}) ->
     erles_pkg:create(ping, CorrId, Auth, <<>>);
@@ -330,7 +331,29 @@ create_package(CorrId, Auth, read_all_events_backward, {{tfpos, CommitPos, Prepa
         require_master = MasterOnly
     },
     Bin = erles_clientapi_pb:encode_msg(Dto),
-    erles_pkg:create(read_all_events_backward, CorrId, Auth, Bin).
+    erles_pkg:create(read_all_events_backward, CorrId, Auth, Bin);
+
+create_package(CorrId, Auth, create_persistent_subscription, {StreamId, GroupName}) ->
+    Dto = #'CreatePersistentSubscription'{
+             subscription_group_name = GroupName,
+             event_stream_id = StreamId,
+             resolve_link_tos = false,
+             start_from = 0,
+             message_timeout_milliseconds = 10000,
+             record_statistics = false,
+             live_buffer_size = 500,
+             read_batch_size = 20,
+             buffer_size = 500,
+             max_retry_count = 10,
+             prefer_round_robin = false,
+             checkpoint_after_time = 1000,
+             checkpoint_max_count = 500,
+             checkpoint_min_count = 10,
+             subscriber_max_count = 10,
+             named_consumer_strategy = <<"RoundRobin">>
+            },
+    Bin = erles_clientapi_pb:encode_msg(Dto),
+    erles_pkg:create(create_persistent_subscription, CorrId, Auth, Bin).
 
 deserialize_result(ping, pong, _Data) ->
     {complete, ok};
@@ -392,7 +415,10 @@ deserialize_result(read_all_events_forward, read_all_events_forward_completed, D
     deserialize_alleventscompleted(Data);
 
 deserialize_result(read_all_events_backward, read_all_events_backward_completed, Data) ->
-    deserialize_alleventscompleted(Data).
+    deserialize_alleventscompleted(Data);
+deserialize_result(create_persistent_subscription, create_persistent_subscription_completed, Data) ->
+    deserialize_create_persistent_subscription_completed(Data).
+
 
 decode_write_failure(OperationResult) ->
     case OperationResult of
@@ -417,6 +443,19 @@ deserialize_streameventscompleted(Data) ->
         'StreamDeleted' -> {complete, {error, stream_deleted}};
         'Error' ->         {complete, {error, Dto#'ReadStreamEventsCompleted'.error}};
         'AccessDenied' ->  {complete, {error, access_denied}}
+    end.
+
+deserialize_create_persistent_subscription_completed(Data) ->
+    Dto = erles_clientapi_pb:decode_msg(Data, 'CreatePersistentSubscriptionCompleted'),
+    case Dto#'CreatePersistentSubscriptionCompleted'.result of
+        'Success' ->
+            {complete, {ok, Dto#'CreatePersistentSubscriptionCompleted'.reason}};
+        'AlreadyExists' ->
+            {complete, {error, already_exists}};
+        'Fail' ->
+            {complete, {error, Dto#'CreatePersistentSubscriptionCompleted'.reason}};
+        'AccessDenied' ->
+            {complete, {error, access_denied}}
     end.
 
 deserialize_alleventscompleted(Data) ->

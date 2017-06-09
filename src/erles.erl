@@ -14,6 +14,7 @@
 -export([subscribe_prim/2, subscribe_prim/3, unsubscribe_prim/1]).
 -export([set_metadata/4, set_metadata/5]).
 -export([get_metadata/2, get_metadata/3, get_metadata/4]).
+-export([create_persistent_subscription/4]).
 
 -include("erles.hrl").
 -include("erles_internal.hrl").
@@ -422,3 +423,7 @@ get_metadata(Pid, StreamId, raw, Options) ->
             {error, Reason}
     end.
 
+create_persistent_subscription(Pid, StreamId, GroupName, Options) ->
+    Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
+    gen_fsm:sync_send_event(Pid, {op, {create_persistent_subscription, temp, Auth},
+                                      {StreamId, GroupName}}, infinity).

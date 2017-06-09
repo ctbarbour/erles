@@ -83,6 +83,9 @@ decode_cmd(16#F2) -> authenticate;
 decode_cmd(16#F3) -> authenticated;
 decode_cmd(16#F4) -> not_authenticated;
 
+decode_cmd(16#C8) -> create_persistent_subscription;
+decode_cmd(16#C9) -> create_persistent_subscription_completed;
+
 decode_cmd(Cmd) when is_integer(Cmd) ->  Cmd.
 
 
@@ -126,5 +129,7 @@ encode_cmd(not_handled) ->                           16#F1;
 encode_cmd(authenticate) ->                          16#F2;
 encode_cmd(authenticated) ->                         16#F3;
 encode_cmd(not_authenticated) ->                     16#F4;
+
+encode_cmd(create_persistent_subscription) ->        16#C8;
 
 encode_cmd(Cmd) when is_integer(Cmd) ->              Cmd.
