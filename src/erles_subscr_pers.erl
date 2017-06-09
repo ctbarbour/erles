@@ -30,6 +30,7 @@
                 timer_ref,
                 group_id,
                 stream_id,
+                sub_id,
                 sub_kind,
                 resolve_links,
                 sub_pid,
@@ -107,7 +108,7 @@ pending({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
             end,
             gen_fsm:reply(State#state.reply_pid, {ok, self(), SubPos}),
             NewState = succeed(State),
-            {next_state, subscribed, NewState};
+            {next_state, subscribed, NewState#state{sub_id = Dto#'PersistentSubscriptionConfirmation'.subscription_id}};
         subscription_dropped ->
             Dto = erles_clientapi_pb:decode_msg(Data, 'SubscriptionDropped'),
             Reason = drop_reason(Dto#'SubscriptionDropped'.reason),
@@ -214,7 +215,7 @@ subscribed(stop, From, State) ->
 
 subscribed({ack_events, EventIds}, _From, State=#state{}) ->
     Dto = #'PersistentSubscriptionAckEvents'{
-        subscription_id = State#state.group_id,
+        subscription_id = State#state.sub_id,
         processed_event_ids = EventIds
     },
     Bin = erles_clientapi_pb:encode_msg(Dto),
