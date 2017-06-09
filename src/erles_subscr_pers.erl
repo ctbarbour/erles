@@ -214,7 +214,7 @@ subscribed(stop, From, State) ->
 
 subscribed({ack_events, EventIds}, _From, State=#state{}) ->
     Dto = #'PersistentSubscriptionAckEvents'{
-        subscription_id = State#state.stream_id,
+        subscription_id = State#state.group_id,
         processed_event_ids = EventIds
     },
     Bin = erles_clientapi_pb:encode_msg(Dto),
