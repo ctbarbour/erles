@@ -2,6 +2,6 @@
     {description, "EventStore client for Erlang."},
     {vsn, "0.0.0"},
     {registered, []},
-    {applications, [kernel, stdlib, crypto, inets, jsx, protobuffs]},
+    {applications, [kernel, stdlib, crypto, inets, jsx]},
     {env, []}
 ]}.
