@@ -449,7 +449,7 @@ deserialize_create_persistent_subscription_completed(Data) ->
     Dto = erles_clientapi_pb:decode_msg(Data, 'CreatePersistentSubscriptionCompleted'),
     case Dto#'CreatePersistentSubscriptionCompleted'.result of
         'Success' ->
-            {complete, {ok, Dto#'CreatePersistentSubscriptionCompleted'.reason}};
+            {complete, ok};
         'AlreadyExists' ->
             {complete, {error, already_exists}};
         'Fail' ->

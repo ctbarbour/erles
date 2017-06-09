@@ -65,7 +65,8 @@ teardown(C) ->
 create_persistent_subscription(C) ->
     Stream = gen_stream_id(),
     Group = <<"group-name">>,
-    ?assertEqual(ok, erles:create_persistent_subscription(C, Stream, Group, [])).
+    Opts = [{auth, {<<"admin">>, <<"changeit">>}}],
+    ?assertEqual(ok, erles:create_persistent_subscription(C, Stream, Group, Opts)).
 
 append_any_works_always(C) ->
     Stream = gen_stream_id(),
