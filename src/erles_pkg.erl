@@ -75,6 +75,18 @@ decode_cmd(16#C2) -> stream_event_appeared;
 decode_cmd(16#C3) -> unsubscribe_from_stream;
 decode_cmd(16#C4) -> subscription_dropped;
 
+decode_cmd(16#C5) -> connect_to_persistent_subscription;
+decode_cmd(16#C6) -> persistent_subscription_confirmation;
+decode_cmd(16#C7) -> persistent_subscription_stream_event_appeared;
+decode_cmd(16#C8) -> create_persistent_subscription;
+decode_cmd(16#C9) -> create_persistent_subscription_completed;
+decode_cmd(16#CA) -> delete_persistent_subscription;
+decode_cmd(16#CB) -> delete_persistent_subscription_completed;
+decode_cmd(16#CC) -> persistent_subscription_ack_events;
+decode_cmd(16#CD) -> persistent_subscription_nak_events;
+decode_cmd(16#CE) -> update_persistent_subscription;
+decode_cmd(16#CF) -> update_persistent_subscription_completed;
+
 decode_cmd(16#D0) -> scavenge_database;
 
 decode_cmd(16#F0) -> bad_request;
@@ -83,8 +95,6 @@ decode_cmd(16#F2) -> authenticate;
 decode_cmd(16#F3) -> authenticated;
 decode_cmd(16#F4) -> not_authenticated;
 
-decode_cmd(16#C8) -> create_persistent_subscription;
-decode_cmd(16#C9) -> create_persistent_subscription_completed;
 
 decode_cmd(Cmd) when is_integer(Cmd) ->  Cmd.
 
@@ -130,6 +140,10 @@ encode_cmd(authenticate) ->                          16#F2;
 encode_cmd(authenticated) ->                         16#F3;
 encode_cmd(not_authenticated) ->                     16#F4;
 
+encode_cmd(connect_to_persistent_subscription) ->    16#C5;
 encode_cmd(create_persistent_subscription) ->        16#C8;
+encode_cmd(delete_persistent_subscription) ->        16#CA;
+encode_cmd(persistent_subscription_ack_events) ->    16#CC;
+encode_cmd(persistent_subscription_nak_events) ->    16#CD;
 
 encode_cmd(Cmd) when is_integer(Cmd) ->              Cmd.

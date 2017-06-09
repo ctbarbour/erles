@@ -15,6 +15,8 @@
 -export([set_metadata/4, set_metadata/5]).
 -export([get_metadata/2, get_metadata/3, get_metadata/4]).
 -export([create_persistent_subscription/4]).
+-export([subscribe_pers/4]).
+-export([ack_events/2]).
 
 -include("erles.hrl").
 -include("erles_internal.hrl").
@@ -423,7 +425,16 @@ get_metadata(Pid, StreamId, raw, Options) ->
             {error, Reason}
     end.
 
-create_persistent_subscription(Pid, StreamId, GroupName, Options) ->
+create_persistent_subscription(Pid, GroupName, StreamId, Options) ->
     Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
     gen_fsm:sync_send_event(Pid, {op, {create_persistent_subscription, temp, Auth},
-                                      {StreamId, GroupName}}, infinity).
+                                      {GroupName, StreamId}}, infinity).
+
+subscribe_pers(Pid, GroupName, StreamId, Options) ->
+    Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
+    SubscriberPid = proplists:get_value(subscriber, Options, ?DEF_SUBSCRIBER),
+    gen_fsm:sync_send_event(Pid, {op, {connect_to_persistent_subscription, perm, Auth},
+                                  {GroupName, StreamId, SubscriberPid}}, infinity).
+
+ack_events(Pid, Events) ->
+    erles_subscr_pers:ack_events(Pid, [ID || #event{event_id = ID} <- Events]).

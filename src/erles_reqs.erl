@@ -333,7 +333,7 @@ create_package(CorrId, Auth, read_all_events_backward, {{tfpos, CommitPos, Prepa
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(read_all_events_backward, CorrId, Auth, Bin);
 
-create_package(CorrId, Auth, create_persistent_subscription, {StreamId, GroupName}) ->
+create_package(CorrId, Auth, create_persistent_subscription, {GroupName, StreamId}) ->
     Dto = #'CreatePersistentSubscription'{
              subscription_group_name = GroupName,
              event_stream_id = StreamId,

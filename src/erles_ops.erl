@@ -26,7 +26,10 @@ start_link(ReqCmd=read_all_events_backward, SysParams, OpParams) ->
 start_link(ReqCmd=subscribe_to_stream, SysParams, OpParams) ->
     gen_fsm:start_link(erles_subscr_prim, {ReqCmd, SysParams, OpParams}, []);
 start_link(ReqCmd=create_persistent_subscription, SysParams, OpParams) ->
-    gen_fsm:start_link(erles_reqs, {ReqCmd, SysParams, OpParams}, []).
+    gen_fsm:start_link(erles_reqs, {ReqCmd, SysParams, OpParams}, []);
+start_link(ReqCmd=connect_to_persistent_subscription, SysParams, OpParams) ->
+    gen_fsm:start_link(erles_subscr_pers, {ReqCmd, SysParams, OpParams}, []).
+
 
 connected(Pid) ->
     gen_fsm:send_event(Pid, connected).
