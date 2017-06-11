@@ -47,7 +47,7 @@ erles_test_() ->
                             fun metadata_struct_set_struct_read_struct/1,
                             fun metadata_struct_set_struct_read_raw/1,
                             fun metadata_struct_set_empty_acl_works/1,
-                            fun create_persistent_subscription/1
+                            fun create_and_delete_persistent_subscription/1
                          ]] ++ [
                             %fun read_all_forward/1,
                             %fun read_all_backward/1
@@ -62,11 +62,13 @@ setup() ->
 teardown(C) ->
     ok = erles:close(C).
 
-create_persistent_subscription(C) ->
+create_and_delete_persistent_subscription(C) ->
     Stream = gen_stream_id(),
     Group = <<"group-name">>,
     Opts = [{auth, {<<"admin">>, <<"changeit">>}}],
-    ?assertEqual(ok, erles:create_persistent_subscription(C, Stream, Group, Opts)).
+    ?assertEqual(ok, erles:create_persistent_subscription(C, Stream, Group, Opts)),
+    ?assertEqual(ok, erles:update_persistent_subscription(C, Stream, Group, Opts)),
+    ?assertEqual(ok, erles:delete_persistent_subscription(C, Stream, Group, Opts)).
 
 append_any_works_always(C) ->
     Stream = gen_stream_id(),

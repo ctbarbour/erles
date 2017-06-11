@@ -36,8 +36,9 @@
                 sub_pid,
                 sub_mon_ref}).
 
-ack_events(Pid, EventIds) ->
-    gen_fsm:sync_send_event(Pid, {ack_events, EventIds}).
+ack_events(Pid, EventIds)
+  when is_list(EventIds) ->
+    gen_fsm:send_event(Pid, {ack_events, EventIds}).
 
 
 stop(Pid) ->
@@ -191,6 +192,16 @@ subscribed({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
             {next_state, pending, State}
     end;
 
+subscribed({ack_events, EventIds}, State=#state{}) ->
+    Dto = #'PersistentSubscriptionAckEvents'{
+        subscription_id = State#state.sub_id,
+        processed_event_ids = EventIds
+    },
+    Bin = erles_clientapi_pb:encode_msg(Dto),
+    Pkg = erles_pkg:create(persistent_subscription_ack_events, State#state.corr_id, State#state.auth, Bin),
+    erles_conn:send(State#state.conn_pid, Pkg),
+    {next_state, subscribed, State};
+
 subscribed(disconnected, State=#state{}) ->
     notify(State, {unsubscribed, self(), connection_dropped}),
     complete(State);
@@ -212,16 +223,6 @@ subscribed(stop, From, State) ->
     notify(State, {unsubscribed, self(), requested_by_client}),
     gen_fsm:reply(From, ok),
     complete(State);
-
-subscribed({ack_events, EventIds}, _From, State=#state{}) ->
-    Dto = #'PersistentSubscriptionAckEvents'{
-        subscription_id = State#state.sub_id,
-        processed_event_ids = EventIds
-    },
-    Bin = erles_clientapi_pb:encode_msg(Dto),
-    Pkg = erles_pkg:create(persistent_subscription_ack_events, State#state.corr_id, State#state.auth, Bin),
-    erles_conn:send(State#state.conn_pid, Pkg),
-    {reply, ok, subscribed, State};
 
 subscribed(Msg, From, State) ->
     io:format("Unexpected SYNC EVENT ~p from ~p, state name ~p, state data ~p~n", [Msg, From, subscribed, State]),

@@ -145,5 +145,6 @@ encode_cmd(create_persistent_subscription) ->        16#C8;
 encode_cmd(delete_persistent_subscription) ->        16#CA;
 encode_cmd(persistent_subscription_ack_events) ->    16#CC;
 encode_cmd(persistent_subscription_nak_events) ->    16#CD;
+encode_cmd(update_persistent_subscription) ->        16#CE;
 
 encode_cmd(Cmd) when is_integer(Cmd) ->              Cmd.

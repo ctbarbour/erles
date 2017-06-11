@@ -15,6 +15,8 @@
 -export([set_metadata/4, set_metadata/5]).
 -export([get_metadata/2, get_metadata/3, get_metadata/4]).
 -export([create_persistent_subscription/4]).
+-export([update_persistent_subscription/4]).
+-export([delete_persistent_subscription/4]).
 -export([subscribe_pers/4]).
 -export([ack_events/2]).
 
@@ -429,6 +431,16 @@ create_persistent_subscription(Pid, GroupName, StreamId, Options) ->
     Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
     gen_fsm:sync_send_event(Pid, {op, {create_persistent_subscription, temp, Auth},
                                       {GroupName, StreamId}}, infinity).
+
+update_persistent_subscription(Pid, GroupName, StreamId, Options) ->
+    Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
+    gen_fsm:sync_send_event(Pid, {op, {update_persistent_subscription, temp, Auth},
+                                  {GroupName, StreamId, Options}}).
+
+delete_persistent_subscription(Pid, GroupName, StreamId, Options) ->
+    Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
+    gen_fsm:sync_send_event(Pid, {op, {delete_persistent_subscription, temp, Auth},
+                                  {GroupName, StreamId}}).
 
 subscribe_pers(Pid, GroupName, StreamId, Options) ->
     Auth = proplists:get_value(auth, Options, ?DEF_AUTH),

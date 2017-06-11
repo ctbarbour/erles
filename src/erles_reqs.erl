@@ -214,7 +214,10 @@ response_cmd(read_stream_events_forward) ->  read_stream_events_forward_complete
 response_cmd(read_stream_events_backward) -> read_stream_events_backward_completed;
 response_cmd(read_all_events_forward) ->     read_all_events_forward_completed;
 response_cmd(read_all_events_backward) ->    read_all_events_backward_completed;
-response_cmd(create_persistent_subscription) -> create_persistent_subscription_completed.
+response_cmd(create_persistent_subscription) -> create_persistent_subscription_completed;
+response_cmd(update_persistent_subscription) -> update_persistent_subscription_completed;
+response_cmd(delete_persistent_subscription) -> delete_persistent_subscription_completed.
+
 
 create_package(CorrId, Auth, ping, {}) ->
     erles_pkg:create(ping, CorrId, Auth, <<>>);
@@ -353,7 +356,38 @@ create_package(CorrId, Auth, create_persistent_subscription, {GroupName, StreamI
              named_consumer_strategy = <<"RoundRobin">>
             },
     Bin = erles_clientapi_pb:encode_msg(Dto),
-    erles_pkg:create(create_persistent_subscription, CorrId, Auth, Bin).
+    erles_pkg:create(create_persistent_subscription, CorrId, Auth, Bin);
+
+create_package(CorrId, Auth, update_persistent_subscription, {GroupName, StreamId, _Options}) ->
+    Dto = #'UpdatePersistentSubscription'{
+             subscription_group_name = GroupName,
+             event_stream_id = StreamId,
+             resolve_link_tos = false,
+             start_from = 0,
+             message_timeout_milliseconds = 10000,
+             record_statistics = false,
+             live_buffer_size = 500,
+             read_batch_size = 20,
+             buffer_size = 500,
+             max_retry_count = 10,
+             prefer_round_robin = false,
+             checkpoint_after_time = 1000,
+             checkpoint_max_count = 500,
+             checkpoint_min_count = 10,
+             subscriber_max_count = 10,
+             named_consumer_strategy = <<"RoundRobin">>
+            },
+    Bin = erles_clientapi_pb:encode_msg(Dto),
+    erles_pkg:create(update_persistent_subscription, CorrId, Auth, Bin);
+
+create_package(CorrId, Auth, delete_persistent_subscription, {GroupName, StreamId}) ->
+    Dto = #'DeletePersistentSubscription'{
+             subscription_group_name = GroupName,
+             event_stream_id = StreamId
+            },
+    Bin = erles_clientapi_pb:encode_msg(Dto),
+    erles_pkg:create(delete_persistent_subscription, CorrId, Auth, Bin).
+
 
 deserialize_result(ping, pong, _Data) ->
     {complete, ok};
@@ -416,8 +450,15 @@ deserialize_result(read_all_events_forward, read_all_events_forward_completed, D
 
 deserialize_result(read_all_events_backward, read_all_events_backward_completed, Data) ->
     deserialize_alleventscompleted(Data);
+
 deserialize_result(create_persistent_subscription, create_persistent_subscription_completed, Data) ->
-    deserialize_create_persistent_subscription_completed(Data).
+    deserialize_create_persistent_subscription_completed(Data);
+
+deserialize_result(update_persistent_subscription, update_persistent_subscription_completed, Data) ->
+    deserialize_update_persistent_subscription_completed(Data);
+
+deserialize_result(delete_persistent_subscription, delete_persistent_subscription_completed, Data) ->
+    deserializer_delete_persistent_subscription_completed(Data).
 
 
 decode_write_failure(OperationResult) ->
@@ -454,6 +495,32 @@ deserialize_create_persistent_subscription_completed(Data) ->
             {complete, {error, already_exists}};
         'Fail' ->
             {complete, {error, Dto#'CreatePersistentSubscriptionCompleted'.reason}};
+        'AccessDenied' ->
+            {complete, {error, access_denied}}
+    end.
+
+deserialize_update_persistent_subscription_completed(Data) ->
+    Dto = erles_clientapi_pb:decode_msg(Data, 'UpdatePersistentSubscriptionCompleted'),
+    case Dto#'UpdatePersistentSubscriptionCompleted'.result of
+        'Success' ->
+            {complete, ok};
+        'DoesNotExist' ->
+            {complete, {error, subscription_does_not_exist}};
+        'Fail' ->
+            {complete, {error, Dto#'UpdatePersistentSubscriptionCompleted'.reason}};
+        'AccessDenied' ->
+            {complete, {error, access_denied}}
+    end.
+
+deserializer_delete_persistent_subscription_completed(Data) ->
+    Dto = erles_clientapi_pb:decode_msg(Data, 'DeletePersistentSubscriptionCompleted'),
+    case Dto#'DeletePersistentSubscriptionCompleted'.result of
+        'Success' ->
+            {complete, ok};
+        'DoesNotExist' ->
+            {complete, ok};
+        'Fail' ->
+            {complete, {error, Dto#'DeletePersistentSubscriptionCompleted'.reason}};
         'AccessDenied' ->
             {complete, {error, access_denied}}
     end.

@@ -27,6 +27,10 @@ start_link(ReqCmd=subscribe_to_stream, SysParams, OpParams) ->
     gen_fsm:start_link(erles_subscr_prim, {ReqCmd, SysParams, OpParams}, []);
 start_link(ReqCmd=create_persistent_subscription, SysParams, OpParams) ->
     gen_fsm:start_link(erles_reqs, {ReqCmd, SysParams, OpParams}, []);
+start_link(ReqCmd=update_persistent_subscription, SysParams, OpParams) ->
+    gen_fsm:start_link(erles_reqs, {ReqCmd, SysParams, OpParams}, []);
+start_link(ReqCmd=delete_persistent_subscription, SysParams, OpParams) ->
+    gen_fsm:start_link(erles_reqs, {ReqCmd, SysParams, OpParams}, []);
 start_link(ReqCmd=connect_to_persistent_subscription, SysParams, OpParams) ->
     gen_fsm:start_link(erles_subscr_pers, {ReqCmd, SysParams, OpParams}, []).
 
