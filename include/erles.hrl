@@ -60,6 +60,12 @@
                             | {read_batch, pos_integer()}.
 -type subscr_prim_option() :: {auth, auth()} | {resolve, boolean()} | {subscriber, boolean()}.
 
+-type nak_action()         :: 'Unknown' |
+                              'Park'    |
+                              'Retry'   |
+                              'Skip'    |
+                              'Stop'.
+
 %% Event data to send for write to Event Store
 -record(event_data,
         {

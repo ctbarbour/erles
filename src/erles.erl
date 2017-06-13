@@ -19,6 +19,7 @@
 -export([delete_persistent_subscription/4]).
 -export([subscribe_pers/4]).
 -export([ack_events/2]).
+-export([nak_events/3]).
 
 -include("erles.hrl").
 -include("erles_internal.hrl").
@@ -228,7 +229,7 @@ read_event(Pid, StreamId, EventNumber, Options) ->
     MasterOnly = proplists:get_value(master_only, Options, ?DEF_MASTER_ONLY),
     read_event(Pid, StreamId, Pos, Auth, ResolveLinks, MasterOnly).
 
--spec read_event(pid(), stream_id(), event_num(), auth(), boolean(), boolean()) ->
+-spec read_event(pid(), stream_id(), event_num() | 'first' | 'last', auth(), boolean(), boolean()) ->
         {'ok', event_res()} | {'error', read_event_error()}.
 read_event(Pid, StreamId, EventNumber, Auth, ResolveLinks, MasterOnly)
         when is_integer(EventNumber), EventNumber >= ?LAST_EVENT_NUM,
@@ -442,11 +443,33 @@ delete_persistent_subscription(Pid, GroupName, StreamId, Options) ->
     gen_fsm:sync_send_event(Pid, {op, {delete_persistent_subscription, temp, Auth},
                                   {GroupName, StreamId}}).
 
+-spec subscribe_pers(Pid, GroupName, StreamId, Options) -> {ok, SubPid, StreamPos} when
+      Pid :: pid(),
+      GroupName :: binary(),
+      StreamId  :: binary(),
+      Options   :: [subscr_option()],
+      SubPid    :: pid(),
+      StreamPos :: stream_pos().
+
 subscribe_pers(Pid, GroupName, StreamId, Options) ->
     Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
     SubscriberPid = proplists:get_value(subscriber, Options, ?DEF_SUBSCRIBER),
     gen_fsm:sync_send_event(Pid, {op, {connect_to_persistent_subscription, perm, Auth},
                                   {GroupName, StreamId, SubscriberPid}}, infinity).
 
-ack_events(Pid, Events) ->
+-spec ack_events(Pid, Events) -> ok when
+      Pid    :: pid(),
+      Events :: [event()].
+
+ack_events(Pid, Events)
+  when is_list(Events) ->
     erles_subscr_pers:ack_events(Pid, [ID || #event{event_id = ID} <- Events]).
+
+-spec nak_events(Pid, Action, Events) -> ok when
+      Pid    :: pid(),
+      Action :: nak_action(),
+      Events :: [event()].
+
+nak_events(Pid, Action, Events)
+  when is_list(Events) ->
+    erles_subscr_pers:nak_events(Pid, Action, [ID || #event{event_id = ID} <- Events]).

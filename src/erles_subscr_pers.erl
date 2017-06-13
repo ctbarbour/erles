@@ -1,6 +1,7 @@
 -module(erles_subscr_pers).
 
 -export([ack_events/2]).
+-export([nak_events/3]).
 -export([stop/1]).
 
 -export([init/1]).
@@ -40,6 +41,9 @@ ack_events(Pid, EventIds)
   when is_list(EventIds) ->
     gen_fsm:send_event(Pid, {ack_events, EventIds}).
 
+nak_events(Pid, Action, EventIds)
+  when is_list(EventIds) ->
+    gen_fsm:send_event(Pid, {nak_events, Action, EventIds}).
 
 stop(Pid) ->
     gen_fsm:sync_send_event(Pid, stop).
@@ -199,6 +203,17 @@ subscribed({ack_events, EventIds}, State=#state{}) ->
     },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     Pkg = erles_pkg:create(persistent_subscription_ack_events, State#state.corr_id, State#state.auth, Bin),
+    erles_conn:send(State#state.conn_pid, Pkg),
+    {next_state, subscribed, State};
+
+subscribed({nak_events, Action, EventIds}, State=#state{}) ->
+    Dto = #'PersistentSubscriptionNakEvents'{
+             subscription_id = State#state.sub_id,
+             processed_event_ids = EventIds,
+             action = Action
+            },
+    Bin = erles_clientapi_pb:encode_msg(Dto),
+    Pkg = erles_pkg:create(persistent_subscription_nak_events, State#state.corr_id, State#state.auth, Bin),
     erles_conn:send(State#state.conn_pid, Pkg),
     {next_state, subscribed, State};
 
