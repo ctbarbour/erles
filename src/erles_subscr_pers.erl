@@ -70,7 +70,7 @@ init({connect_to_persistent_subscription, S=#sys_params{}, {GroupId, StreamId, S
                        all -> all;
                        _   -> stream
                    end,
-                   resolve_links = false,
+                   resolve_links = true,
                    sub_pid = SubPid,
                    sub_mon_ref = MonRef},
     {ok, disconnected, State}.
@@ -269,7 +269,7 @@ issue_subscribe_request(State=#state{}) ->
     Dto = #'ConnectToPersistentSubscription'{
         subscription_id = State#state.group_id,
         event_stream_id = State#state.stream_id,
-        allowed_in_flight_messages = 100
+        allowed_in_flight_messages = 1
     },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     Pkg = erles_pkg:create(connect_to_persistent_subscription, State#state.corr_id, State#state.auth, Bin),
