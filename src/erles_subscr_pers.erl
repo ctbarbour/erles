@@ -184,12 +184,16 @@ subscribed({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
         persistent_subscription_stream_event_appeared ->
             Dto = erles_clientapi_pb:decode_msg(Data, 'PersistentSubscriptionStreamEventAppeared'),
             R = Dto#'PersistentSubscriptionStreamEventAppeared'.event,
+            OrigEvent = case R#'ResolvedIndexedEvent'.link of
+                            undefined -> R#'ResolvedIndexedEvent'.event;
+                            Link -> Link
+                        end,
             E = #resolved_indexed_event{event = erles_utils:event_rec(R#'ResolvedIndexedEvent'.event),
                                         link = case R#'ResolvedIndexedEvent'.link of
                                                    undefined -> undefined;
-                                                   Link -> erles_utils:event_rec(Link)
+                                                   L -> erles_utils:event_rec(L)
                                                end},
-            notify(State, {subscr_event, self(), E}),
+            notify(State, {subscr_event, self(), E, OrigEvent#'EventRecord'.event_number}),
             {next_state, subscribed, State};
         subscription_dropped ->
             Dto = erles_clientapi_pb:decode_msg(Data, 'SubscriptionDropped'),
