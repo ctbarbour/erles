@@ -5,7 +5,6 @@
 -export([shuffle/1]).
 -export([resolved_event/2]).
 -export([meta_to_metajson/1, metajson_to_meta/1]).
--export([event_rec/1]).
 
 -include("erles_clientapi_pb.hrl").
 -include("erles.hrl").
@@ -123,16 +122,18 @@ resolved_event(stream, E = #'ResolvedIndexedEvent'{}) ->
     end,
     ResolvedEvent = event_rec(E#'ResolvedIndexedEvent'.event),
     OrigEventNumber  = OrigEvent#'EventRecord'.event_number,
-    {ResolvedEvent, OrigEventNumber}.
+    {ResolvedEvent#event{event_id = OrigEvent#'EventRecord'.event_id}, OrigEventNumber}.
 
 -spec event_rec(EventRecord :: #'EventRecord'{}) -> #event{}.
 event_rec(E = #'EventRecord'{}) ->
-    #event{stream_id    = E#'EventRecord'.event_stream_id,
-           event_number = E#'EventRecord'.event_number,
-           event_id     = E#'EventRecord'.event_id,
-           event_type   = E#'EventRecord'.event_type,
-           data         = E#'EventRecord'.data,
-           metadata     = E#'EventRecord'.metadata}.
+    #event{
+       stream_id     = E#'EventRecord'.event_stream_id,
+       event_number  = E#'EventRecord'.event_number,
+       event_id      = E#'EventRecord'.event_id,
+       event_type    = E#'EventRecord'.event_type,
+       data          = E#'EventRecord'.data,
+       metadata      = E#'EventRecord'.metadata
+      }.
 
 -spec meta_to_metajson(stream_meta()) -> jsx:json_term().
 meta_to_metajson(Meta) ->

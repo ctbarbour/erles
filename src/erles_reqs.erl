@@ -184,7 +184,7 @@ not_handled(Data, State) ->
     end.
 
 retry(_Reason, State) ->
-    %io:format("Retrying ~p because ~p.~n", [State#state.req_cmd, _Reason]),
+                                                %io:format("Retrying ~p because ~p.~n", [State#state.req_cmd, _Reason]),
     Retries = State#state.retries - 1,
     case Retries >= 0 of
         true ->
@@ -224,115 +224,115 @@ create_package(CorrId, Auth, ping, {}) ->
 
 create_package(CorrId, Auth, write_events, {StreamId, ExpectedVersion, Events, MasterOnly}) ->
     Dto = #'WriteEvents'{
-        event_stream_id = StreamId,
-        expected_version = ExpectedVersion,
-        events = lists:map(fun(X) ->
-            #'NewEvent'{event_id = X#event_data.event_id,
-                      event_type = X#event_data.event_type,
-                      data_content_type = datatype_to_int(X#event_data.data_type),
-                      metadata_content_type = 0,
-                      data = X#event_data.data,
-                      metadata = X#event_data.metadata}
-        end, Events),
-        require_master = MasterOnly
-    },
+             event_stream_id = StreamId,
+             expected_version = ExpectedVersion,
+             events = lists:map(fun(X) ->
+                                        #'NewEvent'{event_id = X#event_data.event_id,
+                                                    event_type = X#event_data.event_type,
+                                                    data_content_type = datatype_to_int(X#event_data.data_type),
+                                                    metadata_content_type = 0,
+                                                    data = X#event_data.data,
+                                                    metadata = X#event_data.metadata}
+                                end, Events),
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(write_events, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, transaction_start, {StreamId, ExpectedVersion, MasterOnly}) ->
     Dto = #'TransactionStart'{
-        event_stream_id = StreamId,
-        expected_version = ExpectedVersion,
-        require_master = MasterOnly
-    },
+             event_stream_id = StreamId,
+             expected_version = ExpectedVersion,
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(transaction_start, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, transaction_write, {TransactionId, Events, MasterOnly}) ->
     Dto = #'TransactionWrite'{
-        transaction_id = TransactionId,
-        events = lists:map(fun(X) ->
-            #'NewEvent'{event_id = X#event_data.event_id,
-                      event_type = X#event_data.event_type,
-                      data_content_type = datatype_to_int(X#event_data.data_type),
-                      metadata_content_type = 0,
-                      data = X#event_data.data,
-                      metadata = X#event_data.metadata}
-        end, Events),
-        require_master = MasterOnly
-    },
+             transaction_id = TransactionId,
+             events = lists:map(fun(X) ->
+                                        #'NewEvent'{event_id = X#event_data.event_id,
+                                                    event_type = X#event_data.event_type,
+                                                    data_content_type = datatype_to_int(X#event_data.data_type),
+                                                    metadata_content_type = 0,
+                                                    data = X#event_data.data,
+                                                    metadata = X#event_data.metadata}
+                                end, Events),
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(transaction_write, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, transaction_commit, {TransactionId, MasterOnly}) ->
     Dto = #'TransactionCommit'{
-        transaction_id = TransactionId,
-        require_master = MasterOnly
-    },
+             transaction_id = TransactionId,
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(transaction_commit, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, delete_stream, {StreamId, ExpectedVersion, DeleteType, MasterOnly}) ->
     Dto = #'DeleteStream'{
-        event_stream_id = StreamId,
-        expected_version = ExpectedVersion,
-        require_master = MasterOnly,
-        hard_delete = DeleteType =:= 'perm'
-    },
+             event_stream_id = StreamId,
+             expected_version = ExpectedVersion,
+             require_master = MasterOnly,
+             hard_delete = DeleteType =:= 'perm'
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(delete_stream, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, read_event, {StreamId, EventNumber, ResolveLinks, MasterOnly}) ->
     Dto = #'ReadEvent'{
-        event_stream_id = StreamId,
-        event_number = EventNumber,
-        resolve_link_tos = ResolveLinks,
-        require_master = MasterOnly
-    },
+             event_stream_id = StreamId,
+             event_number = EventNumber,
+             resolve_link_tos = ResolveLinks,
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(read_event, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, read_stream_events_forward, {StreamId, FromEventNumber, MaxCount, ResolveLinks, MasterOnly}) ->
     Dto = #'ReadStreamEvents'{
-        event_stream_id = StreamId,
-        from_event_number = FromEventNumber,
-        max_count = MaxCount,
-        resolve_link_tos = ResolveLinks,
-        require_master = MasterOnly
-    },
+             event_stream_id = StreamId,
+             from_event_number = FromEventNumber,
+             max_count = MaxCount,
+             resolve_link_tos = ResolveLinks,
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(read_stream_events_forward, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, read_stream_events_backward, {StreamId, FromEventNumber, MaxCount, ResolveLinks, MasterOnly}) ->
     Dto = #'ReadStreamEvents'{
-        event_stream_id = StreamId,
-        from_event_number = FromEventNumber,
-        max_count = MaxCount,
-        resolve_link_tos = ResolveLinks,
-        require_master = MasterOnly
-    },
+             event_stream_id = StreamId,
+             from_event_number = FromEventNumber,
+             max_count = MaxCount,
+             resolve_link_tos = ResolveLinks,
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(read_stream_events_backward, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, read_all_events_forward, {{tfpos, CommitPos, PreparePos}, MaxCount, ResolveLinks, MasterOnly}) ->
     Dto = #'ReadAllEvents'{
-        commit_position = CommitPos,
-        prepare_position = PreparePos,
-        max_count = MaxCount,
-        resolve_link_tos = ResolveLinks,
-        require_master = MasterOnly
-    },
+             commit_position = CommitPos,
+             prepare_position = PreparePos,
+             max_count = MaxCount,
+             resolve_link_tos = ResolveLinks,
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(read_all_events_forward, CorrId, Auth, Bin);
 
 create_package(CorrId, Auth, read_all_events_backward, {{tfpos, CommitPos, PreparePos}, MaxCount, ResolveLinks, MasterOnly}) ->
     Dto = #'ReadAllEvents'{
-        commit_position = CommitPos,
-        prepare_position = PreparePos,
-        max_count = MaxCount,
-        resolve_link_tos = ResolveLinks,
-        require_master = MasterOnly
-    },
+             commit_position = CommitPos,
+             prepare_position = PreparePos,
+             max_count = MaxCount,
+             resolve_link_tos = ResolveLinks,
+             require_master = MasterOnly
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(read_all_events_backward, CorrId, Auth, Bin);
 
@@ -476,10 +476,10 @@ deserialize_streameventscompleted(Data) ->
     Dto = erles_clientapi_pb:decode_msg(Data, 'ReadStreamEventsCompleted'),
     case Dto#'ReadStreamEventsCompleted'.result of
         'Success' ->       {complete, {ok,
-            [erles_utils:resolved_event(stream, E) || E <- Dto#'ReadStreamEventsCompleted'.events],
-            Dto#'ReadStreamEventsCompleted'.next_event_number,
-            Dto#'ReadStreamEventsCompleted'.is_end_of_stream
-        }};
+                                       [erles_utils:resolved_event(stream, E) || E <- Dto#'ReadStreamEventsCompleted'.events],
+                                       Dto#'ReadStreamEventsCompleted'.next_event_number,
+                                       Dto#'ReadStreamEventsCompleted'.is_end_of_stream
+                                      }};
         'NoStream' ->      {complete, {error, no_stream}};
         'StreamDeleted' -> {complete, {error, stream_deleted}};
         'Error' ->         {complete, {error, Dto#'ReadStreamEventsCompleted'.error}};
@@ -529,10 +529,10 @@ deserialize_alleventscompleted(Data) ->
     Dto = erles_clientapi_pb:decode_msg(Data, 'ReadAllEventsCompleted'),
     case Dto#'ReadAllEventsCompleted'.result of
         'Success' ->       {complete, {ok,
-            [erles_utils:resolved_event(all, E) || E <- Dto#'ReadAllEventsCompleted'.events],
-            {tfpos, Dto#'ReadAllEventsCompleted'.next_commit_position, Dto#'ReadAllEventsCompleted'.next_prepare_position},
-            Dto#'ReadAllEventsCompleted'.events =:= []
-        }};
+                                       [erles_utils:resolved_event(all, E) || E <- Dto#'ReadAllEventsCompleted'.events],
+                                       {tfpos, Dto#'ReadAllEventsCompleted'.next_commit_position, Dto#'ReadAllEventsCompleted'.next_prepare_position},
+                                       Dto#'ReadAllEventsCompleted'.events =:= []
+                                      }};
         'Error' ->         {complete, {error, Dto#'ReadAllEventsCompleted'.error}};
         'AccessDenied' ->  {complete, {error, access_denied}}
     end.

@@ -459,24 +459,16 @@ subscribe_pers(Pid, GroupName, StreamId, Options) ->
 
 -spec ack_event(Pid, Event) -> ok when
       Pid   :: pid(),
-      Event :: resolved_indexed_event() | event().
+      Event :: event().
 
-ack_event(Pid, #resolved_indexed_event{link = undefined, event = Event}) ->
-    ack_event(Pid, Event);
-ack_event(Pid, #resolved_indexed_event{link = Event}) ->
-    ack_event(Pid, Event);
 ack_event(Pid, #event{event_id = EventID}) ->
     erles_subscr_pers:ack_events(Pid, [EventID]).
 
 -spec nak_event(Pid, Action, Event) -> ok when
       Pid    :: pid(),
       Action :: nak_action(),
-      Event  :: resolved_indexed_event() | event().
+      Event  :: event().
 
-nak_event(Pid, Action, #resolved_indexed_event{link = undefined, event = Event}) ->
-    nak_event(Pid, Action, Event);
-nak_event(Pid, Action, #resolved_indexed_event{link = Event}) ->
-    nak_event(Pid, Action, Event);
 nak_event(Pid, Action, #event{event_id = EventID}) ->
     erles_subscr_pers:nak_events(Pid, Action, [EventID]).
 

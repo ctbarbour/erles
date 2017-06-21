@@ -63,13 +63,13 @@ init({connect_to_persistent_subscription, S=#sys_params{}, {GroupId, StreamId, S
                    timer_ref = none,
                    group_id = GroupId,
                    stream_id = case StreamId of
-                       all -> <<>>;
-                       _   -> StreamId
-                   end,
+                                   all -> <<>>;
+                                   _   -> StreamId
+                               end,
                    sub_kind = case StreamId of
-                       all -> all;
-                       _   -> stream
-                   end,
+                                  all -> all;
+                                  _   -> stream
+                              end,
                    resolve_links = true,
                    sub_pid = SubPid,
                    sub_mon_ref = MonRef},
@@ -108,9 +108,9 @@ pending({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
         persistent_subscription_confirmation ->
             Dto = erles_clientapi_pb:decode_msg(Data, 'PersistentSubscriptionConfirmation'),
             SubPos = case State#state.sub_kind of
-                all    -> Dto#'PersistentSubscriptionConfirmation'.last_commit_position;
-                stream -> Dto#'PersistentSubscriptionConfirmation'.last_event_number
-            end,
+                         all    -> Dto#'PersistentSubscriptionConfirmation'.last_commit_position;
+                         stream -> Dto#'PersistentSubscriptionConfirmation'.last_event_number
+                     end,
             gen_fsm:reply(State#state.reply_pid, {ok, self(), SubPos}),
             NewState = succeed(State),
             {next_state, subscribed, NewState#state{sub_id = Dto#'PersistentSubscriptionConfirmation'.subscription_id}};
@@ -183,17 +183,10 @@ subscribed({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
     case Cmd of
         persistent_subscription_stream_event_appeared ->
             Dto = erles_clientapi_pb:decode_msg(Data, 'PersistentSubscriptionStreamEventAppeared'),
-            R = Dto#'PersistentSubscriptionStreamEventAppeared'.event,
-            OrigEvent = case R#'ResolvedIndexedEvent'.link of
-                            undefined -> R#'ResolvedIndexedEvent'.event;
-                            Link -> Link
-                        end,
-            E = #resolved_indexed_event{event = erles_utils:event_rec(R#'ResolvedIndexedEvent'.event),
-                                        link = case R#'ResolvedIndexedEvent'.link of
-                                                   undefined -> undefined;
-                                                   L -> erles_utils:event_rec(L)
-                                               end},
-            notify(State, {subscr_event, self(), E, OrigEvent#'EventRecord'.event_number}),
+            {E, P} = erles_utils:resolved_event(
+                       State#state.sub_kind,
+                       Dto#'PersistentSubscriptionStreamEventAppeared'.event),
+            notify(State, {subscr_event, self(), E, P}),
             {next_state, subscribed, State};
         subscription_dropped ->
             Dto = erles_clientapi_pb:decode_msg(Data, 'SubscriptionDropped'),
@@ -207,9 +200,9 @@ subscribed({pkg, Cmd, CorrId, _Auth, Data}, State=#state{corr_id=CorrId}) ->
 
 subscribed({ack_events, EventIds}, State=#state{}) ->
     Dto = #'PersistentSubscriptionAckEvents'{
-        subscription_id = State#state.sub_id,
-        processed_event_ids = EventIds
-    },
+             subscription_id = State#state.sub_id,
+             processed_event_ids = EventIds
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     Pkg = erles_pkg:create(persistent_subscription_ack_events, State#state.corr_id, State#state.auth, Bin),
     erles_conn:send(State#state.conn_pid, Pkg),
@@ -276,10 +269,10 @@ code_change(_OldVsn, StateName, State, _Extra) ->
 
 issue_subscribe_request(State=#state{}) ->
     Dto = #'ConnectToPersistentSubscription'{
-        subscription_id = State#state.group_id,
-        event_stream_id = State#state.stream_id,
-        allowed_in_flight_messages = 1
-    },
+             subscription_id = State#state.group_id,
+             event_stream_id = State#state.stream_id,
+             allowed_in_flight_messages = 1
+            },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     Pkg = erles_pkg:create(connect_to_persistent_subscription, State#state.corr_id, State#state.auth, Bin),
     erles_conn:send(State#state.conn_pid, Pkg),
@@ -336,7 +329,7 @@ not_handled(Data, State) ->
     end.
 
 retry(_Reason, State=#state{retries=Retries}) when Retries > 0 ->
-    %io:format("Retrying subscription because ~p.~n", [_Reason]),
+                                                %io:format("Retrying subscription because ~p.~n", [_Reason]),
     cancel_timer(State#state.timer_ref),
     NewCorrId = erles_utils:gen_uuid(),
     erles_fsm:operation_restarted(State#state.els_pid, State#state.corr_id, NewCorrId),
@@ -344,7 +337,7 @@ retry(_Reason, State=#state{retries=Retries}) when Retries > 0 ->
     {next_state, retry_pending, State#state{corr_id=NewCorrId, retries=Retries-1, timer_ref=TimerRef}};
 
 retry(_Reason, State=#state{retries=Retries}) when Retries =< 0 ->
-    %io:format("Retrying subscription because ~p... Retries limit reached!~n", [_Reason]),
+                                                %io:format("Retrying subscription because ~p... Retries limit reached!~n", [_Reason]),
     complete(State, {error, retry_limit}).
 
 cancel_timer(none)     -> ok;
