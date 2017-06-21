@@ -18,8 +18,8 @@
 -export([update_persistent_subscription/4]).
 -export([delete_persistent_subscription/4]).
 -export([subscribe_pers/4]).
--export([ack_events/2]).
--export([nak_events/3]).
+-export([ack_event/2]).
+-export([nak_event/3]).
 
 -include("erles.hrl").
 -include("erles_internal.hrl").
@@ -457,19 +457,26 @@ subscribe_pers(Pid, GroupName, StreamId, Options) ->
     gen_fsm:sync_send_event(Pid, {op, {connect_to_persistent_subscription, perm, Auth},
                                   {GroupName, StreamId, SubscriberPid}}, infinity).
 
--spec ack_events(Pid, Events) -> ok when
-      Pid    :: pid(),
-      Events :: [event()].
+-spec ack_event(Pid, Event) -> ok when
+      Pid   :: pid(),
+      Event :: resolved_indexed_event() | event().
 
-ack_events(Pid, Events)
-  when is_list(Events) ->
-    erles_subscr_pers:ack_events(Pid, [ID || #event{event_id = ID} <- Events]).
+ack_event(Pid, #resolved_indexed_event{link = undefined, event = Event}) ->
+    ack_event(Pid, Event);
+ack_event(Pid, #resolved_indexed_event{link = Event}) ->
+    ack_event(Pid, Event);
+ack_event(Pid, #event{event_id = EventID}) ->
+    erles_subscr_pers:ack_events(Pid, [EventID]).
 
--spec nak_events(Pid, Action, Events) -> ok when
+-spec nak_event(Pid, Action, Event) -> ok when
       Pid    :: pid(),
       Action :: nak_action(),
-      Events :: [event()].
+      Event  :: resolved_indexed_event() | event().
 
-nak_events(Pid, Action, Events)
-  when is_list(Events) ->
-    erles_subscr_pers:nak_events(Pid, Action, [ID || #event{event_id = ID} <- Events]).
+nak_event(Pid, Action, #resolved_indexed_event{link = undefined, event = Event}) ->
+    nak_event(Pid, Action, Event);
+nak_event(Pid, Action, #resolved_indexed_event{link = Event}) ->
+    nak_event(Pid, Action, Event);
+nak_event(Pid, Action, #event{event_id = EventID}) ->
+    erles_subscr_pers:nak_events(Pid, Action, [EventID]).
+

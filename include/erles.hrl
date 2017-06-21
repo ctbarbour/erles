@@ -87,6 +87,11 @@
             metadata = <<>>   :: binary()
         }).
 
+-record(resolved_indexed_event, {
+          event :: event(),
+          link  :: event()
+         }).
+
 %% Stream ACL structure
 -record(stream_acl,
         {
@@ -110,6 +115,7 @@
 
 -type event_data()       :: #event_data{}.
 -type event()            :: #event{}.
+-type resolved_indexed_event() :: #resolved_indexed_event{}.
 -type stream_acl()       :: #stream_acl{}.
 -type stream_meta()      :: #stream_meta{}.
 -type stream_event_res() :: {'event', event(), event_num()}.

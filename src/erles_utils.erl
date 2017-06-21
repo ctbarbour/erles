@@ -5,6 +5,7 @@
 -export([shuffle/1]).
 -export([resolved_event/2]).
 -export([meta_to_metajson/1, metajson_to_meta/1]).
+-export([event_rec/1]).
 
 -include("erles_clientapi_pb.hrl").
 -include("erles.hrl").
