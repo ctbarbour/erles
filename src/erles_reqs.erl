@@ -336,12 +336,13 @@ create_package(CorrId, Auth, read_all_events_backward, {{tfpos, CommitPos, Prepa
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(read_all_events_backward, CorrId, Auth, Bin);
 
-create_package(CorrId, Auth, create_persistent_subscription, {GroupName, StreamId}) ->
+create_package(CorrId, Auth, create_persistent_subscription, {GroupName, StreamId, Opts}) ->
+    StartFrom = proplists:get_value(start_from, Opts, -1),
     Dto = #'CreatePersistentSubscription'{
              subscription_group_name = GroupName,
              event_stream_id = StreamId,
-             resolve_link_tos = false,
-             start_from = 0,
+             resolve_link_tos = true,
+             start_from = StartFrom,
              message_timeout_milliseconds = 10000,
              record_statistics = false,
              live_buffer_size = 500,
@@ -351,19 +352,19 @@ create_package(CorrId, Auth, create_persistent_subscription, {GroupName, StreamI
              prefer_round_robin = false,
              checkpoint_after_time = 1000,
              checkpoint_max_count = 500,
-             checkpoint_min_count = 10,
-             subscriber_max_count = 10,
-             named_consumer_strategy = <<"RoundRobin">>
+             checkpoint_min_count = 1,
+             subscriber_max_count = 10
             },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(create_persistent_subscription, CorrId, Auth, Bin);
 
-create_package(CorrId, Auth, update_persistent_subscription, {GroupName, StreamId, _Options}) ->
+create_package(CorrId, Auth, update_persistent_subscription, {GroupName, StreamId, Opts}) ->
+    StartFrom = proplists:get_value(start_from, Opts, -1),
     Dto = #'UpdatePersistentSubscription'{
              subscription_group_name = GroupName,
              event_stream_id = StreamId,
-             resolve_link_tos = false,
-             start_from = 0,
+             resolve_link_tos = true,
+             start_from = StartFrom,
              message_timeout_milliseconds = 10000,
              record_statistics = false,
              live_buffer_size = 500,
@@ -373,9 +374,8 @@ create_package(CorrId, Auth, update_persistent_subscription, {GroupName, StreamI
              prefer_round_robin = false,
              checkpoint_after_time = 1000,
              checkpoint_max_count = 500,
-             checkpoint_min_count = 10,
-             subscriber_max_count = 10,
-             named_consumer_strategy = <<"RoundRobin">>
+             checkpoint_min_count = 1,
+             subscriber_max_count = 10
             },
     Bin = erles_clientapi_pb:encode_msg(Dto),
     erles_pkg:create(update_persistent_subscription, CorrId, Auth, Bin);

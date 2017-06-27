@@ -431,7 +431,7 @@ get_metadata(Pid, StreamId, raw, Options) ->
 create_persistent_subscription(Pid, GroupName, StreamId, Options) ->
     Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
     gen_fsm:sync_send_event(Pid, {op, {create_persistent_subscription, temp, Auth},
-                                      {GroupName, StreamId}}, infinity).
+                                      {GroupName, StreamId, Options}}, infinity).
 
 update_persistent_subscription(Pid, GroupName, StreamId, Options) ->
     Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
