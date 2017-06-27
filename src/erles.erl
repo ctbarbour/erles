@@ -462,6 +462,8 @@ subscribe_pers(Pid, GroupName, StreamId, Options) ->
       Event :: event().
 
 ack_event(Pid, #event{event_id = EventID}) ->
+    ack_event(Pid, EventID);
+ack_event(Pid, EventID) when is_binary(EventID) ->
     erles_subscr_pers:ack_events(Pid, [EventID]).
 
 -spec nak_event(Pid, Action, Event) -> ok when
@@ -470,5 +472,7 @@ ack_event(Pid, #event{event_id = EventID}) ->
       Event  :: event().
 
 nak_event(Pid, Action, #event{event_id = EventID}) ->
+    nak_event(Pid, Action, EventID);
+nak_event(Pid, Action, EventID) when is_binary(EventID) ->
     erles_subscr_pers:nak_events(Pid, Action, [EventID]).
 
