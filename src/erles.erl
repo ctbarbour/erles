@@ -91,6 +91,8 @@ append(Pid, StreamId, ExpectedVersion, Events) ->
 append(Pid, StreamId, ExpectedVersion, Events, Options) ->
     ExpVer = case ExpectedVersion of
         any -> ?EXPVER_ANY;
+        stream_exists -> ?EXPVER_EXISTS;
+        no_stream -> ?EXPVER_NOSTREAM;
         _ -> ExpectedVersion
     end,
     Auth = proplists:get_value(auth, Options, ?DEF_AUTH),
@@ -475,4 +477,3 @@ nak_event(Pid, Action, #event{event_id = EventID}) ->
     nak_event(Pid, Action, EventID);
 nak_event(Pid, Action, EventID) when is_binary(EventID) ->
     erles_subscr_pers:nak_events(Pid, Action, [EventID]).
-

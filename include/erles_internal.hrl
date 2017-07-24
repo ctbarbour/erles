@@ -1,5 +1,7 @@
 %% SPECIAL VALUES
 -define(EXPVER_ANY, -2).
+-define(EXPVER_EXISTS, -4).
+-define(EXPVER_NOSTREAM, -1).
 -define(LAST_EVENT_NUM, -1).
 -define(LAST_LOG_POS, -1).
 

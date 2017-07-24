@@ -1,9 +1,14 @@
 -type uuid()               :: <<_:128>>.
 -type stream_id()          :: nonempty_string() | binary().
 -type all_stream_id()      :: 'all' | stream_id().
--type stream_ver()         :: -1 | non_neg_integer().
--type exp_ver_any()        :: 'any' | -2.
--type exp_ver()            :: stream_ver() | exp_ver_any().
+-type stream_ver()         :: non_neg_integer().
+-type exp_ver_exists()     :: 'stream_exists'.
+-type exp_ver_not_exists() :: 'no_stream'.
+-type exp_ver_any()        :: 'any'.
+-type exp_ver()            :: stream_ver()
+                            | exp_ver_any()
+                            | exp_ver_exists()
+                            | exp_ver_not_exists().
 -type trans_id()           :: non_neg_integer().
 
 -type event_num()          :: non_neg_integer().
