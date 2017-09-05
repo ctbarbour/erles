@@ -51,47 +51,47 @@
 -export_type(['OperationResult'/0, 'ReadEventCompleted.ReadEventResult'/0, 'ReadStreamEventsCompleted.ReadStreamResult'/0, 'ReadAllEventsCompleted.ReadAllResult'/0, 'UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'/0, 'CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'/0, 'DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'/0, 'PersistentSubscriptionNakEvents.NakAction'/0, 'SubscriptionDropped.SubscriptionDropReason'/0, 'NotHandled.NotHandledReason'/0, 'ScavengeDatabaseCompleted.ScavengeResult'/0]).
 
 %% message types
--type 'NewEvent'() :: #'NewEvent'{}.
--type 'TransactionWrite'() :: #'TransactionWrite'{}.
--type 'TransactionCommitCompleted'() :: #'TransactionCommitCompleted'{}.
--type 'NotHandled.MasterInfo'() :: #'NotHandled.MasterInfo'{}.
--type 'ScavengeDatabase'() :: #'ScavengeDatabase'{}.
--type 'WriteEventsCompleted'() :: #'WriteEventsCompleted'{}.
--type 'SubscribeToStream'() :: #'SubscribeToStream'{}.
--type 'SubscriptionDropped'() :: #'SubscriptionDropped'{}.
--type 'TransactionWriteCompleted'() :: #'TransactionWriteCompleted'{}.
--type 'TransactionStart'() :: #'TransactionStart'{}.
--type 'CreatePersistentSubscription'() :: #'CreatePersistentSubscription'{}.
--type 'TransactionStartCompleted'() :: #'TransactionStartCompleted'{}.
--type 'EventRecord'() :: #'EventRecord'{}.
--type 'ResolvedEvent'() :: #'ResolvedEvent'{}.
--type 'ReadAllEventsCompleted'() :: #'ReadAllEventsCompleted'{}.
--type 'NotHandled'() :: #'NotHandled'{}.
+-type 'ReadAllEvents'() :: #'ReadAllEvents'{}.
 -type 'SubscriptionConfirmation'() :: #'SubscriptionConfirmation'{}.
--type 'DeleteStreamCompleted'() :: #'DeleteStreamCompleted'{}.
--type 'WriteEvents'() :: #'WriteEvents'{}.
--type 'DeleteStream'() :: #'DeleteStream'{}.
--type 'ScavengeDatabaseCompleted'() :: #'ScavengeDatabaseCompleted'{}.
--type 'UnsubscribeFromStream'() :: #'UnsubscribeFromStream'{}.
--type 'DeletePersistentSubscriptionCompleted'() :: #'DeletePersistentSubscriptionCompleted'{}.
--type 'UpdatePersistentSubscription'() :: #'UpdatePersistentSubscription'{}.
--type 'ResolvedIndexedEvent'() :: #'ResolvedIndexedEvent'{}.
--type 'ReadStreamEventsCompleted'() :: #'ReadStreamEventsCompleted'{}.
+-type 'TransactionWriteCompleted'() :: #'TransactionWriteCompleted'{}.
 -type 'TransactionCommit'() :: #'TransactionCommit'{}.
--type 'CreatePersistentSubscriptionCompleted'() :: #'CreatePersistentSubscriptionCompleted'{}.
--type 'ReadEvent'() :: #'ReadEvent'{}.
--type 'UpdatePersistentSubscriptionCompleted'() :: #'UpdatePersistentSubscriptionCompleted'{}.
+-type 'UpdatePersistentSubscription'() :: #'UpdatePersistentSubscription'{}.
+-type 'EventRecord'() :: #'EventRecord'{}.
+-type 'ResolvedIndexedEvent'() :: #'ResolvedIndexedEvent'{}.
 -type 'PersistentSubscriptionStreamEventAppeared'() :: #'PersistentSubscriptionStreamEventAppeared'{}.
+-type 'ReadEvent'() :: #'ReadEvent'{}.
+-type 'TransactionStartCompleted'() :: #'TransactionStartCompleted'{}.
+-type 'ScavengeDatabaseCompleted'() :: #'ScavengeDatabaseCompleted'{}.
+-type 'WriteEventsCompleted'() :: #'WriteEventsCompleted'{}.
+-type 'DeleteStream'() :: #'DeleteStream'{}.
+-type 'UnsubscribeFromStream'() :: #'UnsubscribeFromStream'{}.
+-type 'NewEvent'() :: #'NewEvent'{}.
+-type 'NotHandled'() :: #'NotHandled'{}.
+-type 'WriteEvents'() :: #'WriteEvents'{}.
+-type 'ScavengeDatabase'() :: #'ScavengeDatabase'{}.
+-type 'ResolvedEvent'() :: #'ResolvedEvent'{}.
+-type 'StreamEventAppeared'() :: #'StreamEventAppeared'{}.
+-type 'ReadStreamEvents'() :: #'ReadStreamEvents'{}.
+-type 'SubscriptionDropped'() :: #'SubscriptionDropped'{}.
+-type 'SubscribeToStream'() :: #'SubscribeToStream'{}.
+-type 'PersistentSubscriptionConfirmation'() :: #'PersistentSubscriptionConfirmation'{}.
+-type 'TransactionStart'() :: #'TransactionStart'{}.
+-type 'CreatePersistentSubscriptionCompleted'() :: #'CreatePersistentSubscriptionCompleted'{}.
+-type 'ReadStreamEventsCompleted'() :: #'ReadStreamEventsCompleted'{}.
+-type 'TransactionCommitCompleted'() :: #'TransactionCommitCompleted'{}.
+-type 'PersistentSubscriptionAckEvents'() :: #'PersistentSubscriptionAckEvents'{}.
+-type 'DeleteStreamCompleted'() :: #'DeleteStreamCompleted'{}.
+-type 'CreatePersistentSubscription'() :: #'CreatePersistentSubscription'{}.
+-type 'DeletePersistentSubscriptionCompleted'() :: #'DeletePersistentSubscriptionCompleted'{}.
 -type 'ReadEventCompleted'() :: #'ReadEventCompleted'{}.
 -type 'DeletePersistentSubscription'() :: #'DeletePersistentSubscription'{}.
--type 'StreamEventAppeared'() :: #'StreamEventAppeared'{}.
+-type 'UpdatePersistentSubscriptionCompleted'() :: #'UpdatePersistentSubscriptionCompleted'{}.
+-type 'NotHandled.MasterInfo'() :: #'NotHandled.MasterInfo'{}.
+-type 'ReadAllEventsCompleted'() :: #'ReadAllEventsCompleted'{}.
 -type 'ConnectToPersistentSubscription'() :: #'ConnectToPersistentSubscription'{}.
+-type 'TransactionWrite'() :: #'TransactionWrite'{}.
 -type 'PersistentSubscriptionNakEvents'() :: #'PersistentSubscriptionNakEvents'{}.
--type 'ReadStreamEvents'() :: #'ReadStreamEvents'{}.
--type 'ReadAllEvents'() :: #'ReadAllEvents'{}.
--type 'PersistentSubscriptionConfirmation'() :: #'PersistentSubscriptionConfirmation'{}.
--type 'PersistentSubscriptionAckEvents'() :: #'PersistentSubscriptionAckEvents'{}.
--export_type(['NewEvent'/0, 'TransactionWrite'/0, 'TransactionCommitCompleted'/0, 'NotHandled.MasterInfo'/0, 'ScavengeDatabase'/0, 'WriteEventsCompleted'/0, 'SubscribeToStream'/0, 'SubscriptionDropped'/0, 'TransactionWriteCompleted'/0, 'TransactionStart'/0, 'CreatePersistentSubscription'/0, 'TransactionStartCompleted'/0, 'EventRecord'/0, 'ResolvedEvent'/0, 'ReadAllEventsCompleted'/0, 'NotHandled'/0, 'SubscriptionConfirmation'/0, 'DeleteStreamCompleted'/0, 'WriteEvents'/0, 'DeleteStream'/0, 'ScavengeDatabaseCompleted'/0, 'UnsubscribeFromStream'/0, 'DeletePersistentSubscriptionCompleted'/0, 'UpdatePersistentSubscription'/0, 'ResolvedIndexedEvent'/0, 'ReadStreamEventsCompleted'/0, 'TransactionCommit'/0, 'CreatePersistentSubscriptionCompleted'/0, 'ReadEvent'/0, 'UpdatePersistentSubscriptionCompleted'/0, 'PersistentSubscriptionStreamEventAppeared'/0, 'ReadEventCompleted'/0, 'DeletePersistentSubscription'/0, 'StreamEventAppeared'/0, 'ConnectToPersistentSubscription'/0, 'PersistentSubscriptionNakEvents'/0, 'ReadStreamEvents'/0, 'ReadAllEvents'/0, 'PersistentSubscriptionConfirmation'/0, 'PersistentSubscriptionAckEvents'/0]).
+-export_type(['ReadAllEvents'/0, 'SubscriptionConfirmation'/0, 'TransactionWriteCompleted'/0, 'TransactionCommit'/0, 'UpdatePersistentSubscription'/0, 'EventRecord'/0, 'ResolvedIndexedEvent'/0, 'PersistentSubscriptionStreamEventAppeared'/0, 'ReadEvent'/0, 'TransactionStartCompleted'/0, 'ScavengeDatabaseCompleted'/0, 'WriteEventsCompleted'/0, 'DeleteStream'/0, 'UnsubscribeFromStream'/0, 'NewEvent'/0, 'NotHandled'/0, 'WriteEvents'/0, 'ScavengeDatabase'/0, 'ResolvedEvent'/0, 'StreamEventAppeared'/0, 'ReadStreamEvents'/0, 'SubscriptionDropped'/0, 'SubscribeToStream'/0, 'PersistentSubscriptionConfirmation'/0, 'TransactionStart'/0, 'CreatePersistentSubscriptionCompleted'/0, 'ReadStreamEventsCompleted'/0, 'TransactionCommitCompleted'/0, 'PersistentSubscriptionAckEvents'/0, 'DeleteStreamCompleted'/0, 'CreatePersistentSubscription'/0, 'DeletePersistentSubscriptionCompleted'/0, 'ReadEventCompleted'/0, 'DeletePersistentSubscription'/0, 'UpdatePersistentSubscriptionCompleted'/0, 'NotHandled.MasterInfo'/0, 'ReadAllEventsCompleted'/0, 'ConnectToPersistentSubscription'/0, 'TransactionWrite'/0, 'PersistentSubscriptionNakEvents'/0]).
 
 
 -spec encode_msg(_) -> binary().
@@ -106,106 +106,107 @@ encode_msg(Msg, Opts) ->
     end,
     TrUserData = proplists:get_value(user_data, Opts),
     case Msg of
-      #'NewEvent'{} -> e_msg_NewEvent(Msg, TrUserData);
-      #'TransactionWrite'{} ->
-	  e_msg_TransactionWrite(Msg, TrUserData);
-      #'TransactionCommitCompleted'{} ->
-	  e_msg_TransactionCommitCompleted(Msg, TrUserData);
-      #'NotHandled.MasterInfo'{} ->
-	  'e_msg_NotHandled.MasterInfo'(Msg, TrUserData);
-      #'ScavengeDatabase'{} ->
-	  e_msg_ScavengeDatabase(Msg, TrUserData);
-      #'WriteEventsCompleted'{} ->
-	  e_msg_WriteEventsCompleted(Msg, TrUserData);
-      #'SubscribeToStream'{} ->
-	  e_msg_SubscribeToStream(Msg, TrUserData);
-      #'SubscriptionDropped'{} ->
-	  e_msg_SubscriptionDropped(Msg, TrUserData);
-      #'TransactionWriteCompleted'{} ->
-	  e_msg_TransactionWriteCompleted(Msg, TrUserData);
-      #'TransactionStart'{} ->
-	  e_msg_TransactionStart(Msg, TrUserData);
-      #'CreatePersistentSubscription'{} ->
-	  e_msg_CreatePersistentSubscription(Msg, TrUserData);
-      #'TransactionStartCompleted'{} ->
-	  e_msg_TransactionStartCompleted(Msg, TrUserData);
-      #'EventRecord'{} -> e_msg_EventRecord(Msg, TrUserData);
-      #'ResolvedEvent'{} ->
-	  e_msg_ResolvedEvent(Msg, TrUserData);
-      #'ReadAllEventsCompleted'{} ->
-	  e_msg_ReadAllEventsCompleted(Msg, TrUserData);
-      #'NotHandled'{} -> e_msg_NotHandled(Msg, TrUserData);
+      #'ReadAllEvents'{} ->
+	  e_msg_ReadAllEvents(Msg, TrUserData);
       #'SubscriptionConfirmation'{} ->
 	  e_msg_SubscriptionConfirmation(Msg, TrUserData);
-      #'DeleteStreamCompleted'{} ->
-	  e_msg_DeleteStreamCompleted(Msg, TrUserData);
-      #'WriteEvents'{} -> e_msg_WriteEvents(Msg, TrUserData);
-      #'DeleteStream'{} ->
-	  e_msg_DeleteStream(Msg, TrUserData);
-      #'ScavengeDatabaseCompleted'{} ->
-	  e_msg_ScavengeDatabaseCompleted(Msg, TrUserData);
-      #'UnsubscribeFromStream'{} ->
-	  e_msg_UnsubscribeFromStream(Msg, TrUserData);
-      #'DeletePersistentSubscriptionCompleted'{} ->
-	  e_msg_DeletePersistentSubscriptionCompleted(Msg,
-						      TrUserData);
-      #'UpdatePersistentSubscription'{} ->
-	  e_msg_UpdatePersistentSubscription(Msg, TrUserData);
-      #'ResolvedIndexedEvent'{} ->
-	  e_msg_ResolvedIndexedEvent(Msg, TrUserData);
-      #'ReadStreamEventsCompleted'{} ->
-	  e_msg_ReadStreamEventsCompleted(Msg, TrUserData);
+      #'TransactionWriteCompleted'{} ->
+	  e_msg_TransactionWriteCompleted(Msg, TrUserData);
       #'TransactionCommit'{} ->
 	  e_msg_TransactionCommit(Msg, TrUserData);
-      #'CreatePersistentSubscriptionCompleted'{} ->
-	  e_msg_CreatePersistentSubscriptionCompleted(Msg,
-						      TrUserData);
-      #'ReadEvent'{} -> e_msg_ReadEvent(Msg, TrUserData);
-      #'UpdatePersistentSubscriptionCompleted'{} ->
-	  e_msg_UpdatePersistentSubscriptionCompleted(Msg,
-						      TrUserData);
+      #'UpdatePersistentSubscription'{} ->
+	  e_msg_UpdatePersistentSubscription(Msg, TrUserData);
+      #'EventRecord'{} -> e_msg_EventRecord(Msg, TrUserData);
+      #'ResolvedIndexedEvent'{} ->
+	  e_msg_ResolvedIndexedEvent(Msg, TrUserData);
       #'PersistentSubscriptionStreamEventAppeared'{} ->
 	  e_msg_PersistentSubscriptionStreamEventAppeared(Msg,
 							  TrUserData);
+      #'ReadEvent'{} -> e_msg_ReadEvent(Msg, TrUserData);
+      #'TransactionStartCompleted'{} ->
+	  e_msg_TransactionStartCompleted(Msg, TrUserData);
+      #'ScavengeDatabaseCompleted'{} ->
+	  e_msg_ScavengeDatabaseCompleted(Msg, TrUserData);
+      #'WriteEventsCompleted'{} ->
+	  e_msg_WriteEventsCompleted(Msg, TrUserData);
+      #'DeleteStream'{} ->
+	  e_msg_DeleteStream(Msg, TrUserData);
+      #'UnsubscribeFromStream'{} ->
+	  e_msg_UnsubscribeFromStream(Msg, TrUserData);
+      #'NewEvent'{} -> e_msg_NewEvent(Msg, TrUserData);
+      #'NotHandled'{} -> e_msg_NotHandled(Msg, TrUserData);
+      #'WriteEvents'{} -> e_msg_WriteEvents(Msg, TrUserData);
+      #'ScavengeDatabase'{} ->
+	  e_msg_ScavengeDatabase(Msg, TrUserData);
+      #'ResolvedEvent'{} ->
+	  e_msg_ResolvedEvent(Msg, TrUserData);
+      #'StreamEventAppeared'{} ->
+	  e_msg_StreamEventAppeared(Msg, TrUserData);
+      #'ReadStreamEvents'{} ->
+	  e_msg_ReadStreamEvents(Msg, TrUserData);
+      #'SubscriptionDropped'{} ->
+	  e_msg_SubscriptionDropped(Msg, TrUserData);
+      #'SubscribeToStream'{} ->
+	  e_msg_SubscribeToStream(Msg, TrUserData);
+      #'PersistentSubscriptionConfirmation'{} ->
+	  e_msg_PersistentSubscriptionConfirmation(Msg,
+						   TrUserData);
+      #'TransactionStart'{} ->
+	  e_msg_TransactionStart(Msg, TrUserData);
+      #'CreatePersistentSubscriptionCompleted'{} ->
+	  e_msg_CreatePersistentSubscriptionCompleted(Msg,
+						      TrUserData);
+      #'ReadStreamEventsCompleted'{} ->
+	  e_msg_ReadStreamEventsCompleted(Msg, TrUserData);
+      #'TransactionCommitCompleted'{} ->
+	  e_msg_TransactionCommitCompleted(Msg, TrUserData);
+      #'PersistentSubscriptionAckEvents'{} ->
+	  e_msg_PersistentSubscriptionAckEvents(Msg, TrUserData);
+      #'DeleteStreamCompleted'{} ->
+	  e_msg_DeleteStreamCompleted(Msg, TrUserData);
+      #'CreatePersistentSubscription'{} ->
+	  e_msg_CreatePersistentSubscription(Msg, TrUserData);
+      #'DeletePersistentSubscriptionCompleted'{} ->
+	  e_msg_DeletePersistentSubscriptionCompleted(Msg,
+						      TrUserData);
       #'ReadEventCompleted'{} ->
 	  e_msg_ReadEventCompleted(Msg, TrUserData);
       #'DeletePersistentSubscription'{} ->
 	  e_msg_DeletePersistentSubscription(Msg, TrUserData);
-      #'StreamEventAppeared'{} ->
-	  e_msg_StreamEventAppeared(Msg, TrUserData);
+      #'UpdatePersistentSubscriptionCompleted'{} ->
+	  e_msg_UpdatePersistentSubscriptionCompleted(Msg,
+						      TrUserData);
+      #'NotHandled.MasterInfo'{} ->
+	  'e_msg_NotHandled.MasterInfo'(Msg, TrUserData);
+      #'ReadAllEventsCompleted'{} ->
+	  e_msg_ReadAllEventsCompleted(Msg, TrUserData);
       #'ConnectToPersistentSubscription'{} ->
 	  e_msg_ConnectToPersistentSubscription(Msg, TrUserData);
+      #'TransactionWrite'{} ->
+	  e_msg_TransactionWrite(Msg, TrUserData);
       #'PersistentSubscriptionNakEvents'{} ->
-	  e_msg_PersistentSubscriptionNakEvents(Msg, TrUserData);
-      #'ReadStreamEvents'{} ->
-	  e_msg_ReadStreamEvents(Msg, TrUserData);
-      #'ReadAllEvents'{} ->
-	  e_msg_ReadAllEvents(Msg, TrUserData);
-      #'PersistentSubscriptionConfirmation'{} ->
-	  e_msg_PersistentSubscriptionConfirmation(Msg,
-						   TrUserData);
-      #'PersistentSubscriptionAckEvents'{} ->
-	  e_msg_PersistentSubscriptionAckEvents(Msg, TrUserData)
+	  e_msg_PersistentSubscriptionNakEvents(Msg, TrUserData)
     end.
 
 
 
-e_msg_NewEvent(Msg, TrUserData) ->
-    e_msg_NewEvent(Msg, <<>>, TrUserData).
+e_msg_ReadAllEvents(Msg, TrUserData) ->
+    e_msg_ReadAllEvents(Msg, <<>>, TrUserData).
 
 
-e_msg_NewEvent(#'NewEvent'{event_id = F1,
-			   event_type = F2, data_content_type = F3,
-			   metadata_content_type = F4, data = F5,
-			   metadata = F6},
-	       Bin, TrUserData) ->
+e_msg_ReadAllEvents(#'ReadAllEvents'{commit_position =
+					 F1,
+				     prepare_position = F2, max_count = F3,
+				     resolve_link_tos = F4,
+				     require_master = F5},
+		    Bin, TrUserData) ->
     B1 = begin
 	   TrF1 = id(F1, TrUserData),
-	   e_type_bytes(TrF1, <<Bin/binary, 10>>)
+	   e_type_int64(TrF1, <<Bin/binary, 8>>)
 	 end,
     B2 = begin
 	   TrF2 = id(F2, TrUserData),
-	   e_type_string(TrF2, <<B1/binary, 18>>)
+	   e_type_int64(TrF2, <<B1/binary, 16>>)
 	 end,
     B3 = begin
 	   TrF3 = id(F3, TrUserData),
@@ -213,224 +214,31 @@ e_msg_NewEvent(#'NewEvent'{event_id = F1,
 	 end,
     B4 = begin
 	   TrF4 = id(F4, TrUserData),
-	   e_type_int32(TrF4, <<B3/binary, 32>>)
+	   e_type_bool(TrF4, <<B3/binary, 32>>)
 	 end,
-    B5 = begin
-	   TrF5 = id(F5, TrUserData),
-	   e_type_bytes(TrF5, <<B4/binary, 42>>)
-	 end,
-    if F6 == undefined -> B5;
-       true ->
-	   begin
-	     TrF6 = id(F6, TrUserData),
-	     e_type_bytes(TrF6, <<B5/binary, 50>>)
-	   end
+    begin
+      TrF5 = id(F5, TrUserData),
+      e_type_bool(TrF5, <<B4/binary, 40>>)
     end.
 
-e_msg_TransactionWrite(Msg, TrUserData) ->
-    e_msg_TransactionWrite(Msg, <<>>, TrUserData).
+e_msg_SubscriptionConfirmation(Msg, TrUserData) ->
+    e_msg_SubscriptionConfirmation(Msg, <<>>, TrUserData).
 
 
-e_msg_TransactionWrite(#'TransactionWrite'{transaction_id
-					       = F1,
-					   events = F2, require_master = F3},
-		       Bin, TrUserData) ->
+e_msg_SubscriptionConfirmation(#'SubscriptionConfirmation'{last_commit_position
+							       = F1,
+							   last_event_number =
+							       F2},
+			       Bin, TrUserData) ->
     B1 = begin
 	   TrF1 = id(F1, TrUserData),
 	   e_type_int64(TrF1, <<Bin/binary, 8>>)
 	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   if TrF2 == [] -> B1;
-	      true ->
-		  e_field_TransactionWrite_events(TrF2, B1, TrUserData)
-	   end
-	 end,
-    begin
-      TrF3 = id(F3, TrUserData),
-      e_type_bool(TrF3, <<B2/binary, 24>>)
-    end.
-
-e_msg_TransactionCommitCompleted(Msg, TrUserData) ->
-    e_msg_TransactionCommitCompleted(Msg, <<>>, TrUserData).
-
-
-e_msg_TransactionCommitCompleted(#'TransactionCommitCompleted'{transaction_id
-								   = F1,
-							       result = F2,
-							       message = F3,
-							       first_event_number
-								   = F4,
-							       last_event_number
-								   = F5,
-							       prepare_position
-								   = F6,
-							       commit_position =
-								   F7},
-				 Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_int64(TrF1, <<Bin/binary, 8>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_enum_OperationResult(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = if F3 == undefined -> B2;
-	    true ->
-		begin
-		  TrF3 = id(F3, TrUserData),
-		  e_type_string(TrF3, <<B2/binary, 26>>)
-		end
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_int32(TrF4, <<B3/binary, 32>>)
-	 end,
-    B5 = begin
-	   TrF5 = id(F5, TrUserData),
-	   e_type_int32(TrF5, <<B4/binary, 40>>)
-	 end,
-    B6 = if F6 == undefined -> B5;
-	    true ->
-		begin
-		  TrF6 = id(F6, TrUserData),
-		  e_type_int64(TrF6, <<B5/binary, 48>>)
-		end
-	 end,
-    if F7 == undefined -> B6;
+    if F2 == undefined -> B1;
        true ->
 	   begin
-	     TrF7 = id(F7, TrUserData),
-	     e_type_int64(TrF7, <<B6/binary, 56>>)
-	   end
-    end.
-
-'e_msg_NotHandled.MasterInfo'(Msg, TrUserData) ->
-    'e_msg_NotHandled.MasterInfo'(Msg, <<>>, TrUserData).
-
-
-'e_msg_NotHandled.MasterInfo'(#'NotHandled.MasterInfo'{external_tcp_address
-							   = F1,
-						       external_tcp_port = F2,
-						       external_http_address =
-							   F3,
-						       external_http_port = F4,
-						       external_secure_tcp_address
-							   = F5,
-						       external_secure_tcp_port
-							   = F6},
-			      Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int32(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_string(TrF3, <<B2/binary, 26>>)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_int32(TrF4, <<B3/binary, 32>>)
-	 end,
-    B5 = if F5 == undefined -> B4;
-	    true ->
-		begin
-		  TrF5 = id(F5, TrUserData),
-		  e_type_string(TrF5, <<B4/binary, 42>>)
-		end
-	 end,
-    if F6 == undefined -> B5;
-       true ->
-	   begin
-	     TrF6 = id(F6, TrUserData),
-	     e_type_int32(TrF6, <<B5/binary, 48>>)
-	   end
-    end.
-
-e_msg_ScavengeDatabase(_Msg, _TrUserData) -> <<>>.
-
-e_msg_WriteEventsCompleted(Msg, TrUserData) ->
-    e_msg_WriteEventsCompleted(Msg, <<>>, TrUserData).
-
-
-e_msg_WriteEventsCompleted(#'WriteEventsCompleted'{result
-						       = F1,
-						   message = F2,
-						   first_event_number = F3,
-						   last_event_number = F4,
-						   prepare_position = F5,
-						   commit_position = F6},
-			   Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_enum_OperationResult(TrF1, <<Bin/binary, 8>>)
-	 end,
-    B2 = if F2 == undefined -> B1;
-	    true ->
-		begin
-		  TrF2 = id(F2, TrUserData),
-		  e_type_string(TrF2, <<B1/binary, 18>>)
-		end
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_int32(TrF3, <<B2/binary, 24>>)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_int32(TrF4, <<B3/binary, 32>>)
-	 end,
-    B5 = if F5 == undefined -> B4;
-	    true ->
-		begin
-		  TrF5 = id(F5, TrUserData),
-		  e_type_int64(TrF5, <<B4/binary, 40>>)
-		end
-	 end,
-    if F6 == undefined -> B5;
-       true ->
-	   begin
-	     TrF6 = id(F6, TrUserData),
-	     e_type_int64(TrF6, <<B5/binary, 48>>)
-	   end
-    end.
-
-e_msg_SubscribeToStream(Msg, TrUserData) ->
-    e_msg_SubscribeToStream(Msg, <<>>, TrUserData).
-
-
-e_msg_SubscribeToStream(#'SubscribeToStream'{event_stream_id
-						 = F1,
-					     resolve_link_tos = F2},
-			Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    begin
-      TrF2 = id(F2, TrUserData),
-      e_type_bool(TrF2, <<B1/binary, 16>>)
-    end.
-
-e_msg_SubscriptionDropped(Msg, TrUserData) ->
-    e_msg_SubscriptionDropped(Msg, <<>>, TrUserData).
-
-
-e_msg_SubscriptionDropped(#'SubscriptionDropped'{reason
-						     = F1},
-			  Bin, TrUserData) ->
-    if F1 == undefined -> Bin;
-       true ->
-	   begin
-	     TrF1 = id(F1, TrUserData),
-	     'e_enum_SubscriptionDropped.SubscriptionDropReason'(TrF1,
-								 <<Bin/binary,
-								   8>>)
+	     TrF2 = id(F2, TrUserData),
+	     e_type_int32(TrF2, <<B1/binary, 16>>)
 	   end
     end.
 
@@ -459,496 +267,21 @@ e_msg_TransactionWriteCompleted(#'TransactionWriteCompleted'{transaction_id
 	   end
     end.
 
-e_msg_TransactionStart(Msg, TrUserData) ->
-    e_msg_TransactionStart(Msg, <<>>, TrUserData).
+e_msg_TransactionCommit(Msg, TrUserData) ->
+    e_msg_TransactionCommit(Msg, <<>>, TrUserData).
 
 
-e_msg_TransactionStart(#'TransactionStart'{event_stream_id
-					       = F1,
-					   expected_version = F2,
-					   require_master = F3},
-		       Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int32(TrF2, <<B1/binary, 16>>)
-	 end,
-    begin
-      TrF3 = id(F3, TrUserData),
-      e_type_bool(TrF3, <<B2/binary, 24>>)
-    end.
-
-e_msg_CreatePersistentSubscription(Msg, TrUserData) ->
-    e_msg_CreatePersistentSubscription(Msg, <<>>,
-				       TrUserData).
-
-
-e_msg_CreatePersistentSubscription(#'CreatePersistentSubscription'{subscription_group_name
-								       = F1,
-								   event_stream_id
-								       = F2,
-								   resolve_link_tos
-								       = F3,
-								   start_from =
-								       F4,
-								   message_timeout_milliseconds
-								       = F5,
-								   record_statistics
-								       = F6,
-								   live_buffer_size
-								       = F7,
-								   read_batch_size
-								       = F8,
-								   buffer_size =
-								       F9,
-								   max_retry_count
-								       = F10,
-								   prefer_round_robin
-								       = F11,
-								   checkpoint_after_time
-								       = F12,
-								   checkpoint_max_count
-								       = F13,
-								   checkpoint_min_count
-								       = F14,
-								   subscriber_max_count
-								       = F15,
-								   named_consumer_strategy
-								       = F16},
-				   Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_string(TrF2, <<B1/binary, 18>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_bool(TrF3, <<B2/binary, 24>>)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_int32(TrF4, <<B3/binary, 32>>)
-	 end,
-    B5 = begin
-	   TrF5 = id(F5, TrUserData),
-	   e_type_int32(TrF5, <<B4/binary, 40>>)
-	 end,
-    B6 = begin
-	   TrF6 = id(F6, TrUserData),
-	   e_type_bool(TrF6, <<B5/binary, 48>>)
-	 end,
-    B7 = begin
-	   TrF7 = id(F7, TrUserData),
-	   e_type_int32(TrF7, <<B6/binary, 56>>)
-	 end,
-    B8 = begin
-	   TrF8 = id(F8, TrUserData),
-	   e_type_int32(TrF8, <<B7/binary, 64>>)
-	 end,
-    B9 = begin
-	   TrF9 = id(F9, TrUserData),
-	   e_type_int32(TrF9, <<B8/binary, 72>>)
-	 end,
-    B10 = begin
-	    TrF10 = id(F10, TrUserData),
-	    e_type_int32(TrF10, <<B9/binary, 80>>)
-	  end,
-    B11 = begin
-	    TrF11 = id(F11, TrUserData),
-	    e_type_bool(TrF11, <<B10/binary, 88>>)
-	  end,
-    B12 = begin
-	    TrF12 = id(F12, TrUserData),
-	    e_type_int32(TrF12, <<B11/binary, 96>>)
-	  end,
-    B13 = begin
-	    TrF13 = id(F13, TrUserData),
-	    e_type_int32(TrF13, <<B12/binary, 104>>)
-	  end,
-    B14 = begin
-	    TrF14 = id(F14, TrUserData),
-	    e_type_int32(TrF14, <<B13/binary, 112>>)
-	  end,
-    B15 = begin
-	    TrF15 = id(F15, TrUserData),
-	    e_type_int32(TrF15, <<B14/binary, 120>>)
-	  end,
-    if F16 == undefined -> B15;
-       true ->
-	   begin
-	     TrF16 = id(F16, TrUserData),
-	     e_type_string(TrF16, <<B15/binary, 130, 1>>)
-	   end
-    end.
-
-e_msg_TransactionStartCompleted(Msg, TrUserData) ->
-    e_msg_TransactionStartCompleted(Msg, <<>>, TrUserData).
-
-
-e_msg_TransactionStartCompleted(#'TransactionStartCompleted'{transaction_id
-								 = F1,
-							     result = F2,
-							     message = F3},
-				Bin, TrUserData) ->
+e_msg_TransactionCommit(#'TransactionCommit'{transaction_id
+						 = F1,
+					     require_master = F2},
+			Bin, TrUserData) ->
     B1 = begin
 	   TrF1 = id(F1, TrUserData),
 	   e_type_int64(TrF1, <<Bin/binary, 8>>)
 	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_enum_OperationResult(TrF2, <<B1/binary, 16>>)
-	 end,
-    if F3 == undefined -> B2;
-       true ->
-	   begin
-	     TrF3 = id(F3, TrUserData),
-	     e_type_string(TrF3, <<B2/binary, 26>>)
-	   end
-    end.
-
-e_msg_EventRecord(Msg, TrUserData) ->
-    e_msg_EventRecord(Msg, <<>>, TrUserData).
-
-
-e_msg_EventRecord(#'EventRecord'{event_stream_id = F1,
-				 event_number = F2, event_id = F3,
-				 event_type = F4, data_content_type = F5,
-				 metadata_content_type = F6, data = F7,
-				 metadata = F8, created = F9,
-				 created_epoch = F10},
-		  Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int32(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_bytes(TrF3, <<B2/binary, 26>>)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_string(TrF4, <<B3/binary, 34>>)
-	 end,
-    B5 = begin
-	   TrF5 = id(F5, TrUserData),
-	   e_type_int32(TrF5, <<B4/binary, 40>>)
-	 end,
-    B6 = begin
-	   TrF6 = id(F6, TrUserData),
-	   e_type_int32(TrF6, <<B5/binary, 48>>)
-	 end,
-    B7 = begin
-	   TrF7 = id(F7, TrUserData),
-	   e_type_bytes(TrF7, <<B6/binary, 58>>)
-	 end,
-    B8 = if F8 == undefined -> B7;
-	    true ->
-		begin
-		  TrF8 = id(F8, TrUserData),
-		  e_type_bytes(TrF8, <<B7/binary, 66>>)
-		end
-	 end,
-    B9 = if F9 == undefined -> B8;
-	    true ->
-		begin
-		  TrF9 = id(F9, TrUserData),
-		  e_type_int64(TrF9, <<B8/binary, 72>>)
-		end
-	 end,
-    if F10 == undefined -> B9;
-       true ->
-	   begin
-	     TrF10 = id(F10, TrUserData),
-	     e_type_int64(TrF10, <<B9/binary, 80>>)
-	   end
-    end.
-
-e_msg_ResolvedEvent(Msg, TrUserData) ->
-    e_msg_ResolvedEvent(Msg, <<>>, TrUserData).
-
-
-e_msg_ResolvedEvent(#'ResolvedEvent'{event = F1,
-				     link = F2, commit_position = F3,
-				     prepare_position = F4},
-		    Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_mfield_ResolvedEvent_event(TrF1, <<Bin/binary, 10>>,
-					TrUserData)
-	 end,
-    B2 = if F2 == undefined -> B1;
-	    true ->
-		begin
-		  TrF2 = id(F2, TrUserData),
-		  e_mfield_ResolvedEvent_link(TrF2, <<B1/binary, 18>>,
-					      TrUserData)
-		end
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_int64(TrF3, <<B2/binary, 24>>)
-	 end,
     begin
-      TrF4 = id(F4, TrUserData),
-      e_type_int64(TrF4, <<B3/binary, 32>>)
-    end.
-
-e_msg_ReadAllEventsCompleted(Msg, TrUserData) ->
-    e_msg_ReadAllEventsCompleted(Msg, <<>>, TrUserData).
-
-
-e_msg_ReadAllEventsCompleted(#'ReadAllEventsCompleted'{commit_position
-							   = F1,
-						       prepare_position = F2,
-						       events = F3,
-						       next_commit_position =
-							   F4,
-						       next_prepare_position =
-							   F5,
-						       result = F6, error = F7},
-			     Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_int64(TrF1, <<Bin/binary, 8>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int64(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   if TrF3 == [] -> B2;
-	      true ->
-		  e_field_ReadAllEventsCompleted_events(TrF3, B2,
-							TrUserData)
-	   end
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_int64(TrF4, <<B3/binary, 32>>)
-	 end,
-    B5 = begin
-	   TrF5 = id(F5, TrUserData),
-	   e_type_int64(TrF5, <<B4/binary, 40>>)
-	 end,
-    B6 = if F6 == undefined -> B5;
-	    true ->
-		begin
-		  TrF6 = id(F6, TrUserData),
-		  'e_enum_ReadAllEventsCompleted.ReadAllResult'(TrF6,
-								<<B5/binary,
-								  48>>)
-		end
-	 end,
-    if F7 == undefined -> B6;
-       true ->
-	   begin
-	     TrF7 = id(F7, TrUserData),
-	     e_type_string(TrF7, <<B6/binary, 58>>)
-	   end
-    end.
-
-e_msg_NotHandled(Msg, TrUserData) ->
-    e_msg_NotHandled(Msg, <<>>, TrUserData).
-
-
-e_msg_NotHandled(#'NotHandled'{reason = F1,
-			       additional_info = F2},
-		 Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   'e_enum_NotHandled.NotHandledReason'(TrF1,
-						<<Bin/binary, 8>>)
-	 end,
-    if F2 == undefined -> B1;
-       true ->
-	   begin
-	     TrF2 = id(F2, TrUserData),
-	     e_type_bytes(TrF2, <<B1/binary, 18>>)
-	   end
-    end.
-
-e_msg_SubscriptionConfirmation(Msg, TrUserData) ->
-    e_msg_SubscriptionConfirmation(Msg, <<>>, TrUserData).
-
-
-e_msg_SubscriptionConfirmation(#'SubscriptionConfirmation'{last_commit_position
-							       = F1,
-							   last_event_number =
-							       F2},
-			       Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_int64(TrF1, <<Bin/binary, 8>>)
-	 end,
-    if F2 == undefined -> B1;
-       true ->
-	   begin
-	     TrF2 = id(F2, TrUserData),
-	     e_type_int32(TrF2, <<B1/binary, 16>>)
-	   end
-    end.
-
-e_msg_DeleteStreamCompleted(Msg, TrUserData) ->
-    e_msg_DeleteStreamCompleted(Msg, <<>>, TrUserData).
-
-
-e_msg_DeleteStreamCompleted(#'DeleteStreamCompleted'{result
-							 = F1,
-						     message = F2,
-						     prepare_position = F3,
-						     commit_position = F4},
-			    Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_enum_OperationResult(TrF1, <<Bin/binary, 8>>)
-	 end,
-    B2 = if F2 == undefined -> B1;
-	    true ->
-		begin
-		  TrF2 = id(F2, TrUserData),
-		  e_type_string(TrF2, <<B1/binary, 18>>)
-		end
-	 end,
-    B3 = if F3 == undefined -> B2;
-	    true ->
-		begin
-		  TrF3 = id(F3, TrUserData),
-		  e_type_int64(TrF3, <<B2/binary, 24>>)
-		end
-	 end,
-    if F4 == undefined -> B3;
-       true ->
-	   begin
-	     TrF4 = id(F4, TrUserData),
-	     e_type_int64(TrF4, <<B3/binary, 32>>)
-	   end
-    end.
-
-e_msg_WriteEvents(Msg, TrUserData) ->
-    e_msg_WriteEvents(Msg, <<>>, TrUserData).
-
-
-e_msg_WriteEvents(#'WriteEvents'{event_stream_id = F1,
-				 expected_version = F2, events = F3,
-				 require_master = F4},
-		  Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int32(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   if TrF3 == [] -> B2;
-	      true -> e_field_WriteEvents_events(TrF3, B2, TrUserData)
-	   end
-	 end,
-    begin
-      TrF4 = id(F4, TrUserData),
-      e_type_bool(TrF4, <<B3/binary, 32>>)
-    end.
-
-e_msg_DeleteStream(Msg, TrUserData) ->
-    e_msg_DeleteStream(Msg, <<>>, TrUserData).
-
-
-e_msg_DeleteStream(#'DeleteStream'{event_stream_id = F1,
-				   expected_version = F2, require_master = F3,
-				   hard_delete = F4},
-		   Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int32(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_bool(TrF3, <<B2/binary, 24>>)
-	 end,
-    if F4 == undefined -> B3;
-       true ->
-	   begin
-	     TrF4 = id(F4, TrUserData),
-	     e_type_bool(TrF4, <<B3/binary, 32>>)
-	   end
-    end.
-
-e_msg_ScavengeDatabaseCompleted(Msg, TrUserData) ->
-    e_msg_ScavengeDatabaseCompleted(Msg, <<>>, TrUserData).
-
-
-e_msg_ScavengeDatabaseCompleted(#'ScavengeDatabaseCompleted'{result
-								 = F1,
-							     error = F2,
-							     total_time_ms = F3,
-							     total_space_saved =
-								 F4},
-				Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   'e_enum_ScavengeDatabaseCompleted.ScavengeResult'(TrF1,
-							     <<Bin/binary, 8>>)
-	 end,
-    B2 = if F2 == undefined -> B1;
-	    true ->
-		begin
-		  TrF2 = id(F2, TrUserData),
-		  e_type_string(TrF2, <<B1/binary, 18>>)
-		end
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_int32(TrF3, <<B2/binary, 24>>)
-	 end,
-    begin
-      TrF4 = id(F4, TrUserData),
-      e_type_int64(TrF4, <<B3/binary, 32>>)
-    end.
-
-e_msg_UnsubscribeFromStream(_Msg, _TrUserData) -> <<>>.
-
-e_msg_DeletePersistentSubscriptionCompleted(Msg,
-					    TrUserData) ->
-    e_msg_DeletePersistentSubscriptionCompleted(Msg, <<>>,
-						TrUserData).
-
-
-e_msg_DeletePersistentSubscriptionCompleted(#'DeletePersistentSubscriptionCompleted'{result
-											 =
-											 F1,
-										     reason
-											 =
-											 F2},
-					    Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   'e_enum_DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'(TrF1,
-											     <<Bin/binary,
-											       8>>)
-	 end,
-    if F2 == undefined -> B1;
-       true ->
-	   begin
-	     TrF2 = id(F2, TrUserData),
-	     e_type_string(TrF2, <<B1/binary, 18>>)
-	   end
+      TrF2 = id(F2, TrUserData),
+      e_type_bool(TrF2, <<B1/binary, 16>>)
     end.
 
 e_msg_UpdatePersistentSubscription(Msg, TrUserData) ->
@@ -1057,6 +390,67 @@ e_msg_UpdatePersistentSubscription(#'UpdatePersistentSubscription'{subscription_
 	   end
     end.
 
+e_msg_EventRecord(Msg, TrUserData) ->
+    e_msg_EventRecord(Msg, <<>>, TrUserData).
+
+
+e_msg_EventRecord(#'EventRecord'{event_stream_id = F1,
+				 event_number = F2, event_id = F3,
+				 event_type = F4, data_content_type = F5,
+				 metadata_content_type = F6, data = F7,
+				 metadata = F8, created = F9,
+				 created_epoch = F10},
+		  Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_bytes(TrF3, <<B2/binary, 26>>)
+	 end,
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_string(TrF4, <<B3/binary, 34>>)
+	 end,
+    B5 = begin
+	   TrF5 = id(F5, TrUserData),
+	   e_type_int32(TrF5, <<B4/binary, 40>>)
+	 end,
+    B6 = begin
+	   TrF6 = id(F6, TrUserData),
+	   e_type_int32(TrF6, <<B5/binary, 48>>)
+	 end,
+    B7 = begin
+	   TrF7 = id(F7, TrUserData),
+	   e_type_bytes(TrF7, <<B6/binary, 58>>)
+	 end,
+    B8 = if F8 == undefined -> B7;
+	    true ->
+		begin
+		  TrF8 = id(F8, TrUserData),
+		  e_type_bytes(TrF8, <<B7/binary, 66>>)
+		end
+	 end,
+    B9 = if F9 == undefined -> B8;
+	    true ->
+		begin
+		  TrF9 = id(F9, TrUserData),
+		  e_type_int64(TrF9, <<B8/binary, 72>>)
+		end
+	 end,
+    if F10 == undefined -> B9;
+       true ->
+	   begin
+	     TrF10 = id(F10, TrUserData),
+	     e_type_int64(TrF10, <<B9/binary, 80>>)
+	   end
+    end.
+
 e_msg_ResolvedIndexedEvent(Msg, TrUserData) ->
     e_msg_ResolvedIndexedEvent(Msg, <<>>, TrUserData).
 
@@ -1076,6 +470,458 @@ e_msg_ResolvedIndexedEvent(#'ResolvedIndexedEvent'{event
 	     TrF2 = id(F2, TrUserData),
 	     e_mfield_ResolvedIndexedEvent_link(TrF2,
 						<<B1/binary, 18>>, TrUserData)
+	   end
+    end.
+
+e_msg_PersistentSubscriptionStreamEventAppeared(Msg,
+						TrUserData) ->
+    e_msg_PersistentSubscriptionStreamEventAppeared(Msg,
+						    <<>>, TrUserData).
+
+
+e_msg_PersistentSubscriptionStreamEventAppeared(#'PersistentSubscriptionStreamEventAppeared'{event
+												 =
+												 F1},
+						Bin, TrUserData) ->
+    begin
+      TrF1 = id(F1, TrUserData),
+      e_mfield_PersistentSubscriptionStreamEventAppeared_event(TrF1,
+							       <<Bin/binary,
+								 10>>,
+							       TrUserData)
+    end.
+
+e_msg_ReadEvent(Msg, TrUserData) ->
+    e_msg_ReadEvent(Msg, <<>>, TrUserData).
+
+
+e_msg_ReadEvent(#'ReadEvent'{event_stream_id = F1,
+			     event_number = F2, resolve_link_tos = F3,
+			     require_master = F4},
+		Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_bool(TrF3, <<B2/binary, 24>>)
+	 end,
+    begin
+      TrF4 = id(F4, TrUserData),
+      e_type_bool(TrF4, <<B3/binary, 32>>)
+    end.
+
+e_msg_TransactionStartCompleted(Msg, TrUserData) ->
+    e_msg_TransactionStartCompleted(Msg, <<>>, TrUserData).
+
+
+e_msg_TransactionStartCompleted(#'TransactionStartCompleted'{transaction_id
+								 = F1,
+							     result = F2,
+							     message = F3},
+				Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_int64(TrF1, <<Bin/binary, 8>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_enum_OperationResult(TrF2, <<B1/binary, 16>>)
+	 end,
+    if F3 == undefined -> B2;
+       true ->
+	   begin
+	     TrF3 = id(F3, TrUserData),
+	     e_type_string(TrF3, <<B2/binary, 26>>)
+	   end
+    end.
+
+e_msg_ScavengeDatabaseCompleted(Msg, TrUserData) ->
+    e_msg_ScavengeDatabaseCompleted(Msg, <<>>, TrUserData).
+
+
+e_msg_ScavengeDatabaseCompleted(#'ScavengeDatabaseCompleted'{result
+								 = F1,
+							     error = F2,
+							     total_time_ms = F3,
+							     total_space_saved =
+								 F4},
+				Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   'e_enum_ScavengeDatabaseCompleted.ScavengeResult'(TrF1,
+							     <<Bin/binary, 8>>)
+	 end,
+    B2 = if F2 == undefined -> B1;
+	    true ->
+		begin
+		  TrF2 = id(F2, TrUserData),
+		  e_type_string(TrF2, <<B1/binary, 18>>)
+		end
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_int32(TrF3, <<B2/binary, 24>>)
+	 end,
+    begin
+      TrF4 = id(F4, TrUserData),
+      e_type_int64(TrF4, <<B3/binary, 32>>)
+    end.
+
+e_msg_WriteEventsCompleted(Msg, TrUserData) ->
+    e_msg_WriteEventsCompleted(Msg, <<>>, TrUserData).
+
+
+e_msg_WriteEventsCompleted(#'WriteEventsCompleted'{result
+						       = F1,
+						   message = F2,
+						   first_event_number = F3,
+						   last_event_number = F4,
+						   prepare_position = F5,
+						   commit_position = F6},
+			   Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_enum_OperationResult(TrF1, <<Bin/binary, 8>>)
+	 end,
+    B2 = if F2 == undefined -> B1;
+	    true ->
+		begin
+		  TrF2 = id(F2, TrUserData),
+		  e_type_string(TrF2, <<B1/binary, 18>>)
+		end
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_int32(TrF3, <<B2/binary, 24>>)
+	 end,
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_int32(TrF4, <<B3/binary, 32>>)
+	 end,
+    B5 = if F5 == undefined -> B4;
+	    true ->
+		begin
+		  TrF5 = id(F5, TrUserData),
+		  e_type_int64(TrF5, <<B4/binary, 40>>)
+		end
+	 end,
+    if F6 == undefined -> B5;
+       true ->
+	   begin
+	     TrF6 = id(F6, TrUserData),
+	     e_type_int64(TrF6, <<B5/binary, 48>>)
+	   end
+    end.
+
+e_msg_DeleteStream(Msg, TrUserData) ->
+    e_msg_DeleteStream(Msg, <<>>, TrUserData).
+
+
+e_msg_DeleteStream(#'DeleteStream'{event_stream_id = F1,
+				   expected_version = F2, require_master = F3,
+				   hard_delete = F4},
+		   Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_bool(TrF3, <<B2/binary, 24>>)
+	 end,
+    if F4 == undefined -> B3;
+       true ->
+	   begin
+	     TrF4 = id(F4, TrUserData),
+	     e_type_bool(TrF4, <<B3/binary, 32>>)
+	   end
+    end.
+
+e_msg_UnsubscribeFromStream(_Msg, _TrUserData) -> <<>>.
+
+e_msg_NewEvent(Msg, TrUserData) ->
+    e_msg_NewEvent(Msg, <<>>, TrUserData).
+
+
+e_msg_NewEvent(#'NewEvent'{event_id = F1,
+			   event_type = F2, data_content_type = F3,
+			   metadata_content_type = F4, data = F5,
+			   metadata = F6},
+	       Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_bytes(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_string(TrF2, <<B1/binary, 18>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_int32(TrF3, <<B2/binary, 24>>)
+	 end,
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_int32(TrF4, <<B3/binary, 32>>)
+	 end,
+    B5 = begin
+	   TrF5 = id(F5, TrUserData),
+	   e_type_bytes(TrF5, <<B4/binary, 42>>)
+	 end,
+    if F6 == undefined -> B5;
+       true ->
+	   begin
+	     TrF6 = id(F6, TrUserData),
+	     e_type_bytes(TrF6, <<B5/binary, 50>>)
+	   end
+    end.
+
+e_msg_NotHandled(Msg, TrUserData) ->
+    e_msg_NotHandled(Msg, <<>>, TrUserData).
+
+
+e_msg_NotHandled(#'NotHandled'{reason = F1,
+			       additional_info = F2},
+		 Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   'e_enum_NotHandled.NotHandledReason'(TrF1,
+						<<Bin/binary, 8>>)
+	 end,
+    if F2 == undefined -> B1;
+       true ->
+	   begin
+	     TrF2 = id(F2, TrUserData),
+	     e_type_bytes(TrF2, <<B1/binary, 18>>)
+	   end
+    end.
+
+e_msg_WriteEvents(Msg, TrUserData) ->
+    e_msg_WriteEvents(Msg, <<>>, TrUserData).
+
+
+e_msg_WriteEvents(#'WriteEvents'{event_stream_id = F1,
+				 expected_version = F2, events = F3,
+				 require_master = F4},
+		  Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   if TrF3 == [] -> B2;
+	      true -> e_field_WriteEvents_events(TrF3, B2, TrUserData)
+	   end
+	 end,
+    begin
+      TrF4 = id(F4, TrUserData),
+      e_type_bool(TrF4, <<B3/binary, 32>>)
+    end.
+
+e_msg_ScavengeDatabase(_Msg, _TrUserData) -> <<>>.
+
+e_msg_ResolvedEvent(Msg, TrUserData) ->
+    e_msg_ResolvedEvent(Msg, <<>>, TrUserData).
+
+
+e_msg_ResolvedEvent(#'ResolvedEvent'{event = F1,
+				     link = F2, commit_position = F3,
+				     prepare_position = F4},
+		    Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_mfield_ResolvedEvent_event(TrF1, <<Bin/binary, 10>>,
+					TrUserData)
+	 end,
+    B2 = if F2 == undefined -> B1;
+	    true ->
+		begin
+		  TrF2 = id(F2, TrUserData),
+		  e_mfield_ResolvedEvent_link(TrF2, <<B1/binary, 18>>,
+					      TrUserData)
+		end
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_int64(TrF3, <<B2/binary, 24>>)
+	 end,
+    begin
+      TrF4 = id(F4, TrUserData),
+      e_type_int64(TrF4, <<B3/binary, 32>>)
+    end.
+
+e_msg_StreamEventAppeared(Msg, TrUserData) ->
+    e_msg_StreamEventAppeared(Msg, <<>>, TrUserData).
+
+
+e_msg_StreamEventAppeared(#'StreamEventAppeared'{event =
+						     F1},
+			  Bin, TrUserData) ->
+    begin
+      TrF1 = id(F1, TrUserData),
+      e_mfield_StreamEventAppeared_event(TrF1,
+					 <<Bin/binary, 10>>, TrUserData)
+    end.
+
+e_msg_ReadStreamEvents(Msg, TrUserData) ->
+    e_msg_ReadStreamEvents(Msg, <<>>, TrUserData).
+
+
+e_msg_ReadStreamEvents(#'ReadStreamEvents'{event_stream_id
+					       = F1,
+					   from_event_number = F2,
+					   max_count = F3,
+					   resolve_link_tos = F4,
+					   require_master = F5},
+		       Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_int32(TrF3, <<B2/binary, 24>>)
+	 end,
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_bool(TrF4, <<B3/binary, 32>>)
+	 end,
+    begin
+      TrF5 = id(F5, TrUserData),
+      e_type_bool(TrF5, <<B4/binary, 40>>)
+    end.
+
+e_msg_SubscriptionDropped(Msg, TrUserData) ->
+    e_msg_SubscriptionDropped(Msg, <<>>, TrUserData).
+
+
+e_msg_SubscriptionDropped(#'SubscriptionDropped'{reason
+						     = F1},
+			  Bin, TrUserData) ->
+    if F1 == undefined -> Bin;
+       true ->
+	   begin
+	     TrF1 = id(F1, TrUserData),
+	     'e_enum_SubscriptionDropped.SubscriptionDropReason'(TrF1,
+								 <<Bin/binary,
+								   8>>)
+	   end
+    end.
+
+e_msg_SubscribeToStream(Msg, TrUserData) ->
+    e_msg_SubscribeToStream(Msg, <<>>, TrUserData).
+
+
+e_msg_SubscribeToStream(#'SubscribeToStream'{event_stream_id
+						 = F1,
+					     resolve_link_tos = F2},
+			Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    begin
+      TrF2 = id(F2, TrUserData),
+      e_type_bool(TrF2, <<B1/binary, 16>>)
+    end.
+
+e_msg_PersistentSubscriptionConfirmation(Msg,
+					 TrUserData) ->
+    e_msg_PersistentSubscriptionConfirmation(Msg, <<>>,
+					     TrUserData).
+
+
+e_msg_PersistentSubscriptionConfirmation(#'PersistentSubscriptionConfirmation'{last_commit_position
+										   =
+										   F1,
+									       subscription_id
+										   =
+										   F2,
+									       last_event_number
+										   =
+										   F3},
+					 Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_int64(TrF1, <<Bin/binary, 8>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_string(TrF2, <<B1/binary, 18>>)
+	 end,
+    if F3 == undefined -> B2;
+       true ->
+	   begin
+	     TrF3 = id(F3, TrUserData),
+	     e_type_int32(TrF3, <<B2/binary, 24>>)
+	   end
+    end.
+
+e_msg_TransactionStart(Msg, TrUserData) ->
+    e_msg_TransactionStart(Msg, <<>>, TrUserData).
+
+
+e_msg_TransactionStart(#'TransactionStart'{event_stream_id
+					       = F1,
+					   expected_version = F2,
+					   require_master = F3},
+		       Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	 end,
+    begin
+      TrF3 = id(F3, TrUserData),
+      e_type_bool(TrF3, <<B2/binary, 24>>)
+    end.
+
+e_msg_CreatePersistentSubscriptionCompleted(Msg,
+					    TrUserData) ->
+    e_msg_CreatePersistentSubscriptionCompleted(Msg, <<>>,
+						TrUserData).
+
+
+e_msg_CreatePersistentSubscriptionCompleted(#'CreatePersistentSubscriptionCompleted'{result
+											 =
+											 F1,
+										     reason
+											 =
+											 F2},
+					    Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   'e_enum_CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'(TrF1,
+											     <<Bin/binary,
+											       8>>)
+	 end,
+    if F2 == undefined -> B1;
+       true ->
+	   begin
+	     TrF2 = id(F2, TrUserData),
+	     e_type_string(TrF2, <<B1/binary, 18>>)
 	   end
     end.
 
@@ -1134,82 +980,237 @@ e_msg_ReadStreamEventsCompleted(#'ReadStreamEventsCompleted'{events
 	   end
     end.
 
-e_msg_TransactionCommit(Msg, TrUserData) ->
-    e_msg_TransactionCommit(Msg, <<>>, TrUserData).
+e_msg_TransactionCommitCompleted(Msg, TrUserData) ->
+    e_msg_TransactionCommitCompleted(Msg, <<>>, TrUserData).
 
 
-e_msg_TransactionCommit(#'TransactionCommit'{transaction_id
-						 = F1,
-					     require_master = F2},
-			Bin, TrUserData) ->
+e_msg_TransactionCommitCompleted(#'TransactionCommitCompleted'{transaction_id
+								   = F1,
+							       result = F2,
+							       message = F3,
+							       first_event_number
+								   = F4,
+							       last_event_number
+								   = F5,
+							       prepare_position
+								   = F6,
+							       commit_position =
+								   F7},
+				 Bin, TrUserData) ->
     B1 = begin
 	   TrF1 = id(F1, TrUserData),
 	   e_type_int64(TrF1, <<Bin/binary, 8>>)
 	 end,
-    begin
-      TrF2 = id(F2, TrUserData),
-      e_type_bool(TrF2, <<B1/binary, 16>>)
-    end.
-
-e_msg_CreatePersistentSubscriptionCompleted(Msg,
-					    TrUserData) ->
-    e_msg_CreatePersistentSubscriptionCompleted(Msg, <<>>,
-						TrUserData).
-
-
-e_msg_CreatePersistentSubscriptionCompleted(#'CreatePersistentSubscriptionCompleted'{result
-											 =
-											 F1,
-										     reason
-											 =
-											 F2},
-					    Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   'e_enum_CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'(TrF1,
-											     <<Bin/binary,
-											       8>>)
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_enum_OperationResult(TrF2, <<B1/binary, 16>>)
 	 end,
-    if F2 == undefined -> B1;
+    B3 = if F3 == undefined -> B2;
+	    true ->
+		begin
+		  TrF3 = id(F3, TrUserData),
+		  e_type_string(TrF3, <<B2/binary, 26>>)
+		end
+	 end,
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_int32(TrF4, <<B3/binary, 32>>)
+	 end,
+    B5 = begin
+	   TrF5 = id(F5, TrUserData),
+	   e_type_int32(TrF5, <<B4/binary, 40>>)
+	 end,
+    B6 = if F6 == undefined -> B5;
+	    true ->
+		begin
+		  TrF6 = id(F6, TrUserData),
+		  e_type_int64(TrF6, <<B5/binary, 48>>)
+		end
+	 end,
+    if F7 == undefined -> B6;
        true ->
 	   begin
-	     TrF2 = id(F2, TrUserData),
-	     e_type_string(TrF2, <<B1/binary, 18>>)
+	     TrF7 = id(F7, TrUserData),
+	     e_type_int64(TrF7, <<B6/binary, 56>>)
 	   end
     end.
 
-e_msg_ReadEvent(Msg, TrUserData) ->
-    e_msg_ReadEvent(Msg, <<>>, TrUserData).
+e_msg_PersistentSubscriptionAckEvents(Msg,
+				      TrUserData) ->
+    e_msg_PersistentSubscriptionAckEvents(Msg, <<>>,
+					  TrUserData).
 
 
-e_msg_ReadEvent(#'ReadEvent'{event_stream_id = F1,
-			     event_number = F2, resolve_link_tos = F3,
-			     require_master = F4},
-		Bin, TrUserData) ->
+e_msg_PersistentSubscriptionAckEvents(#'PersistentSubscriptionAckEvents'{subscription_id
+									     =
+									     F1,
+									 processed_event_ids
+									     =
+									     F2},
+				      Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    begin
+      TrF2 = id(F2, TrUserData),
+      if TrF2 == [] -> B1;
+	 true ->
+	     e_field_PersistentSubscriptionAckEvents_processed_event_ids(TrF2,
+									 B1,
+									 TrUserData)
+      end
+    end.
+
+e_msg_DeleteStreamCompleted(Msg, TrUserData) ->
+    e_msg_DeleteStreamCompleted(Msg, <<>>, TrUserData).
+
+
+e_msg_DeleteStreamCompleted(#'DeleteStreamCompleted'{result
+							 = F1,
+						     message = F2,
+						     prepare_position = F3,
+						     commit_position = F4},
+			    Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_enum_OperationResult(TrF1, <<Bin/binary, 8>>)
+	 end,
+    B2 = if F2 == undefined -> B1;
+	    true ->
+		begin
+		  TrF2 = id(F2, TrUserData),
+		  e_type_string(TrF2, <<B1/binary, 18>>)
+		end
+	 end,
+    B3 = if F3 == undefined -> B2;
+	    true ->
+		begin
+		  TrF3 = id(F3, TrUserData),
+		  e_type_int64(TrF3, <<B2/binary, 24>>)
+		end
+	 end,
+    if F4 == undefined -> B3;
+       true ->
+	   begin
+	     TrF4 = id(F4, TrUserData),
+	     e_type_int64(TrF4, <<B3/binary, 32>>)
+	   end
+    end.
+
+e_msg_CreatePersistentSubscription(Msg, TrUserData) ->
+    e_msg_CreatePersistentSubscription(Msg, <<>>,
+				       TrUserData).
+
+
+e_msg_CreatePersistentSubscription(#'CreatePersistentSubscription'{subscription_group_name
+								       = F1,
+								   event_stream_id
+								       = F2,
+								   resolve_link_tos
+								       = F3,
+								   start_from =
+								       F4,
+								   message_timeout_milliseconds
+								       = F5,
+								   record_statistics
+								       = F6,
+								   live_buffer_size
+								       = F7,
+								   read_batch_size
+								       = F8,
+								   buffer_size =
+								       F9,
+								   max_retry_count
+								       = F10,
+								   prefer_round_robin
+								       = F11,
+								   checkpoint_after_time
+								       = F12,
+								   checkpoint_max_count
+								       = F13,
+								   checkpoint_min_count
+								       = F14,
+								   subscriber_max_count
+								       = F15,
+								   named_consumer_strategy
+								       = F16},
+				   Bin, TrUserData) ->
     B1 = begin
 	   TrF1 = id(F1, TrUserData),
 	   e_type_string(TrF1, <<Bin/binary, 10>>)
 	 end,
     B2 = begin
 	   TrF2 = id(F2, TrUserData),
-	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	   e_type_string(TrF2, <<B1/binary, 18>>)
 	 end,
     B3 = begin
 	   TrF3 = id(F3, TrUserData),
 	   e_type_bool(TrF3, <<B2/binary, 24>>)
 	 end,
-    begin
-      TrF4 = id(F4, TrUserData),
-      e_type_bool(TrF4, <<B3/binary, 32>>)
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_int32(TrF4, <<B3/binary, 32>>)
+	 end,
+    B5 = begin
+	   TrF5 = id(F5, TrUserData),
+	   e_type_int32(TrF5, <<B4/binary, 40>>)
+	 end,
+    B6 = begin
+	   TrF6 = id(F6, TrUserData),
+	   e_type_bool(TrF6, <<B5/binary, 48>>)
+	 end,
+    B7 = begin
+	   TrF7 = id(F7, TrUserData),
+	   e_type_int32(TrF7, <<B6/binary, 56>>)
+	 end,
+    B8 = begin
+	   TrF8 = id(F8, TrUserData),
+	   e_type_int32(TrF8, <<B7/binary, 64>>)
+	 end,
+    B9 = begin
+	   TrF9 = id(F9, TrUserData),
+	   e_type_int32(TrF9, <<B8/binary, 72>>)
+	 end,
+    B10 = begin
+	    TrF10 = id(F10, TrUserData),
+	    e_type_int32(TrF10, <<B9/binary, 80>>)
+	  end,
+    B11 = begin
+	    TrF11 = id(F11, TrUserData),
+	    e_type_bool(TrF11, <<B10/binary, 88>>)
+	  end,
+    B12 = begin
+	    TrF12 = id(F12, TrUserData),
+	    e_type_int32(TrF12, <<B11/binary, 96>>)
+	  end,
+    B13 = begin
+	    TrF13 = id(F13, TrUserData),
+	    e_type_int32(TrF13, <<B12/binary, 104>>)
+	  end,
+    B14 = begin
+	    TrF14 = id(F14, TrUserData),
+	    e_type_int32(TrF14, <<B13/binary, 112>>)
+	  end,
+    B15 = begin
+	    TrF15 = id(F15, TrUserData),
+	    e_type_int32(TrF15, <<B14/binary, 120>>)
+	  end,
+    if F16 == undefined -> B15;
+       true ->
+	   begin
+	     TrF16 = id(F16, TrUserData),
+	     e_type_string(TrF16, <<B15/binary, 130, 1>>)
+	   end
     end.
 
-e_msg_UpdatePersistentSubscriptionCompleted(Msg,
+e_msg_DeletePersistentSubscriptionCompleted(Msg,
 					    TrUserData) ->
-    e_msg_UpdatePersistentSubscriptionCompleted(Msg, <<>>,
+    e_msg_DeletePersistentSubscriptionCompleted(Msg, <<>>,
 						TrUserData).
 
 
-e_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionCompleted'{result
+e_msg_DeletePersistentSubscriptionCompleted(#'DeletePersistentSubscriptionCompleted'{result
 											 =
 											 F1,
 										     reason
@@ -1218,7 +1219,7 @@ e_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionComple
 					    Bin, TrUserData) ->
     B1 = begin
 	   TrF1 = id(F1, TrUserData),
-	   'e_enum_UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'(TrF1,
+	   'e_enum_DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'(TrF1,
 											     <<Bin/binary,
 											       8>>)
 	 end,
@@ -1228,24 +1229,6 @@ e_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionComple
 	     TrF2 = id(F2, TrUserData),
 	     e_type_string(TrF2, <<B1/binary, 18>>)
 	   end
-    end.
-
-e_msg_PersistentSubscriptionStreamEventAppeared(Msg,
-						TrUserData) ->
-    e_msg_PersistentSubscriptionStreamEventAppeared(Msg,
-						    <<>>, TrUserData).
-
-
-e_msg_PersistentSubscriptionStreamEventAppeared(#'PersistentSubscriptionStreamEventAppeared'{event
-												 =
-												 F1},
-						Bin, TrUserData) ->
-    begin
-      TrF1 = id(F1, TrUserData),
-      e_mfield_PersistentSubscriptionStreamEventAppeared_event(TrF1,
-							       <<Bin/binary,
-								 10>>,
-							       TrUserData)
     end.
 
 e_msg_ReadEventCompleted(Msg, TrUserData) ->
@@ -1293,17 +1276,132 @@ e_msg_DeletePersistentSubscription(#'DeletePersistentSubscription'{subscription_
       e_type_string(TrF2, <<B1/binary, 18>>)
     end.
 
-e_msg_StreamEventAppeared(Msg, TrUserData) ->
-    e_msg_StreamEventAppeared(Msg, <<>>, TrUserData).
+e_msg_UpdatePersistentSubscriptionCompleted(Msg,
+					    TrUserData) ->
+    e_msg_UpdatePersistentSubscriptionCompleted(Msg, <<>>,
+						TrUserData).
 
 
-e_msg_StreamEventAppeared(#'StreamEventAppeared'{event =
-						     F1},
-			  Bin, TrUserData) ->
-    begin
-      TrF1 = id(F1, TrUserData),
-      e_mfield_StreamEventAppeared_event(TrF1,
-					 <<Bin/binary, 10>>, TrUserData)
+e_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionCompleted'{result
+											 =
+											 F1,
+										     reason
+											 =
+											 F2},
+					    Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   'e_enum_UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'(TrF1,
+											     <<Bin/binary,
+											       8>>)
+	 end,
+    if F2 == undefined -> B1;
+       true ->
+	   begin
+	     TrF2 = id(F2, TrUserData),
+	     e_type_string(TrF2, <<B1/binary, 18>>)
+	   end
+    end.
+
+'e_msg_NotHandled.MasterInfo'(Msg, TrUserData) ->
+    'e_msg_NotHandled.MasterInfo'(Msg, <<>>, TrUserData).
+
+
+'e_msg_NotHandled.MasterInfo'(#'NotHandled.MasterInfo'{external_tcp_address
+							   = F1,
+						       external_tcp_port = F2,
+						       external_http_address =
+							   F3,
+						       external_http_port = F4,
+						       external_secure_tcp_address
+							   = F5,
+						       external_secure_tcp_port
+							   = F6},
+			      Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_string(TrF1, <<Bin/binary, 10>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int32(TrF2, <<B1/binary, 16>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   e_type_string(TrF3, <<B2/binary, 26>>)
+	 end,
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_int32(TrF4, <<B3/binary, 32>>)
+	 end,
+    B5 = if F5 == undefined -> B4;
+	    true ->
+		begin
+		  TrF5 = id(F5, TrUserData),
+		  e_type_string(TrF5, <<B4/binary, 42>>)
+		end
+	 end,
+    if F6 == undefined -> B5;
+       true ->
+	   begin
+	     TrF6 = id(F6, TrUserData),
+	     e_type_int32(TrF6, <<B5/binary, 48>>)
+	   end
+    end.
+
+e_msg_ReadAllEventsCompleted(Msg, TrUserData) ->
+    e_msg_ReadAllEventsCompleted(Msg, <<>>, TrUserData).
+
+
+e_msg_ReadAllEventsCompleted(#'ReadAllEventsCompleted'{commit_position
+							   = F1,
+						       prepare_position = F2,
+						       events = F3,
+						       next_commit_position =
+							   F4,
+						       next_prepare_position =
+							   F5,
+						       result = F6, error = F7},
+			     Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_int64(TrF1, <<Bin/binary, 8>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   e_type_int64(TrF2, <<B1/binary, 16>>)
+	 end,
+    B3 = begin
+	   TrF3 = id(F3, TrUserData),
+	   if TrF3 == [] -> B2;
+	      true ->
+		  e_field_ReadAllEventsCompleted_events(TrF3, B2,
+							TrUserData)
+	   end
+	 end,
+    B4 = begin
+	   TrF4 = id(F4, TrUserData),
+	   e_type_int64(TrF4, <<B3/binary, 32>>)
+	 end,
+    B5 = begin
+	   TrF5 = id(F5, TrUserData),
+	   e_type_int64(TrF5, <<B4/binary, 40>>)
+	 end,
+    B6 = if F6 == undefined -> B5;
+	    true ->
+		begin
+		  TrF6 = id(F6, TrUserData),
+		  'e_enum_ReadAllEventsCompleted.ReadAllResult'(TrF6,
+								<<B5/binary,
+								  48>>)
+		end
+	 end,
+    if F7 == undefined -> B6;
+       true ->
+	   begin
+	     TrF7 = id(F7, TrUserData),
+	     e_type_string(TrF7, <<B6/binary, 58>>)
+	   end
     end.
 
 e_msg_ConnectToPersistentSubscription(Msg,
@@ -1333,6 +1431,30 @@ e_msg_ConnectToPersistentSubscription(#'ConnectToPersistentSubscription'{subscri
     begin
       TrF3 = id(F3, TrUserData),
       e_type_int32(TrF3, <<B2/binary, 24>>)
+    end.
+
+e_msg_TransactionWrite(Msg, TrUserData) ->
+    e_msg_TransactionWrite(Msg, <<>>, TrUserData).
+
+
+e_msg_TransactionWrite(#'TransactionWrite'{transaction_id
+					       = F1,
+					   events = F2, require_master = F3},
+		       Bin, TrUserData) ->
+    B1 = begin
+	   TrF1 = id(F1, TrUserData),
+	   e_type_int64(TrF1, <<Bin/binary, 8>>)
+	 end,
+    B2 = begin
+	   TrF2 = id(F2, TrUserData),
+	   if TrF2 == [] -> B1;
+	      true ->
+		  e_field_TransactionWrite_events(TrF2, B1, TrUserData)
+	   end
+	 end,
+    begin
+      TrF3 = id(F3, TrUserData),
+      e_type_bool(TrF3, <<B2/binary, 24>>)
     end.
 
 e_msg_PersistentSubscriptionNakEvents(Msg,
@@ -1380,171 +1502,24 @@ e_msg_PersistentSubscriptionNakEvents(#'PersistentSubscriptionNakEvents'{subscri
 							 <<B3/binary, 32>>)
     end.
 
-e_msg_ReadStreamEvents(Msg, TrUserData) ->
-    e_msg_ReadStreamEvents(Msg, <<>>, TrUserData).
-
-
-e_msg_ReadStreamEvents(#'ReadStreamEvents'{event_stream_id
-					       = F1,
-					   from_event_number = F2,
-					   max_count = F3,
-					   resolve_link_tos = F4,
-					   require_master = F5},
-		       Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int32(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_int32(TrF3, <<B2/binary, 24>>)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_bool(TrF4, <<B3/binary, 32>>)
-	 end,
-    begin
-      TrF5 = id(F5, TrUserData),
-      e_type_bool(TrF5, <<B4/binary, 40>>)
-    end.
-
-e_msg_ReadAllEvents(Msg, TrUserData) ->
-    e_msg_ReadAllEvents(Msg, <<>>, TrUserData).
-
-
-e_msg_ReadAllEvents(#'ReadAllEvents'{commit_position =
-					 F1,
-				     prepare_position = F2, max_count = F3,
-				     resolve_link_tos = F4,
-				     require_master = F5},
-		    Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_int64(TrF1, <<Bin/binary, 8>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_int64(TrF2, <<B1/binary, 16>>)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_int32(TrF3, <<B2/binary, 24>>)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_bool(TrF4, <<B3/binary, 32>>)
-	 end,
-    begin
-      TrF5 = id(F5, TrUserData),
-      e_type_bool(TrF5, <<B4/binary, 40>>)
-    end.
-
-e_msg_PersistentSubscriptionConfirmation(Msg,
-					 TrUserData) ->
-    e_msg_PersistentSubscriptionConfirmation(Msg, <<>>,
-					     TrUserData).
-
-
-e_msg_PersistentSubscriptionConfirmation(#'PersistentSubscriptionConfirmation'{last_commit_position
-										   =
-										   F1,
-									       subscription_id
-										   =
-										   F2,
-									       last_event_number
-										   =
-										   F3},
-					 Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_int64(TrF1, <<Bin/binary, 8>>)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_string(TrF2, <<B1/binary, 18>>)
-	 end,
-    if F3 == undefined -> B2;
-       true ->
-	   begin
-	     TrF3 = id(F3, TrUserData),
-	     e_type_int32(TrF3, <<B2/binary, 24>>)
-	   end
-    end.
-
-e_msg_PersistentSubscriptionAckEvents(Msg,
-				      TrUserData) ->
-    e_msg_PersistentSubscriptionAckEvents(Msg, <<>>,
-					  TrUserData).
-
-
-e_msg_PersistentSubscriptionAckEvents(#'PersistentSubscriptionAckEvents'{subscription_id
-									     =
-									     F1,
-									 processed_event_ids
-									     =
-									     F2},
-				      Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>)
-	 end,
-    begin
-      TrF2 = id(F2, TrUserData),
-      if TrF2 == [] -> B1;
-	 true ->
-	     e_field_PersistentSubscriptionAckEvents_processed_event_ids(TrF2,
-									 B1,
-									 TrUserData)
-      end
-    end.
-
-e_mfield_TransactionWrite_events(Msg, Bin,
-				 TrUserData) ->
-    SubBin = e_msg_NewEvent(Msg, <<>>, TrUserData),
-    Bin2 = e_varint(byte_size(SubBin), Bin),
-    <<Bin2/binary, SubBin/binary>>.
-
-e_field_TransactionWrite_events([Elem | Rest], Bin,
-				TrUserData) ->
-    Bin2 = <<Bin/binary, 18>>,
-    Bin3 = e_mfield_TransactionWrite_events(id(Elem,
-					       TrUserData),
-					    Bin2, TrUserData),
-    e_field_TransactionWrite_events(Rest, Bin3, TrUserData);
-e_field_TransactionWrite_events([], Bin, _TrUserData) ->
-    Bin.
-
-e_mfield_ResolvedEvent_event(Msg, Bin, TrUserData) ->
+e_mfield_ResolvedIndexedEvent_event(Msg, Bin,
+				    TrUserData) ->
     SubBin = e_msg_EventRecord(Msg, <<>>, TrUserData),
     Bin2 = e_varint(byte_size(SubBin), Bin),
     <<Bin2/binary, SubBin/binary>>.
 
-e_mfield_ResolvedEvent_link(Msg, Bin, TrUserData) ->
+e_mfield_ResolvedIndexedEvent_link(Msg, Bin,
+				   TrUserData) ->
     SubBin = e_msg_EventRecord(Msg, <<>>, TrUserData),
     Bin2 = e_varint(byte_size(SubBin), Bin),
     <<Bin2/binary, SubBin/binary>>.
 
-e_mfield_ReadAllEventsCompleted_events(Msg, Bin,
-				       TrUserData) ->
-    SubBin = e_msg_ResolvedEvent(Msg, <<>>, TrUserData),
+e_mfield_PersistentSubscriptionStreamEventAppeared_event(Msg,
+							 Bin, TrUserData) ->
+    SubBin = e_msg_ResolvedIndexedEvent(Msg, <<>>,
+					TrUserData),
     Bin2 = e_varint(byte_size(SubBin), Bin),
     <<Bin2/binary, SubBin/binary>>.
-
-e_field_ReadAllEventsCompleted_events([Elem | Rest],
-				      Bin, TrUserData) ->
-    Bin2 = <<Bin/binary, 26>>,
-    Bin3 = e_mfield_ReadAllEventsCompleted_events(id(Elem,
-						     TrUserData),
-						  Bin2, TrUserData),
-    e_field_ReadAllEventsCompleted_events(Rest, Bin3,
-					  TrUserData);
-e_field_ReadAllEventsCompleted_events([], Bin,
-				      _TrUserData) ->
-    Bin.
 
 e_mfield_WriteEvents_events(Msg, Bin, TrUserData) ->
     SubBin = e_msg_NewEvent(Msg, <<>>, TrUserData),
@@ -1559,15 +1534,19 @@ e_field_WriteEvents_events([Elem | Rest], Bin,
     e_field_WriteEvents_events(Rest, Bin3, TrUserData);
 e_field_WriteEvents_events([], Bin, _TrUserData) -> Bin.
 
-e_mfield_ResolvedIndexedEvent_event(Msg, Bin,
-				    TrUserData) ->
+e_mfield_ResolvedEvent_event(Msg, Bin, TrUserData) ->
     SubBin = e_msg_EventRecord(Msg, <<>>, TrUserData),
     Bin2 = e_varint(byte_size(SubBin), Bin),
     <<Bin2/binary, SubBin/binary>>.
 
-e_mfield_ResolvedIndexedEvent_link(Msg, Bin,
-				   TrUserData) ->
+e_mfield_ResolvedEvent_link(Msg, Bin, TrUserData) ->
     SubBin = e_msg_EventRecord(Msg, <<>>, TrUserData),
+    Bin2 = e_varint(byte_size(SubBin), Bin),
+    <<Bin2/binary, SubBin/binary>>.
+
+e_mfield_StreamEventAppeared_event(Msg, Bin,
+				   TrUserData) ->
+    SubBin = e_msg_ResolvedEvent(Msg, <<>>, TrUserData),
     Bin2 = e_varint(byte_size(SubBin), Bin),
     <<Bin2/binary, SubBin/binary>>.
 
@@ -1591,12 +1570,17 @@ e_field_ReadStreamEventsCompleted_events([], Bin,
 					 _TrUserData) ->
     Bin.
 
-e_mfield_PersistentSubscriptionStreamEventAppeared_event(Msg,
-							 Bin, TrUserData) ->
-    SubBin = e_msg_ResolvedIndexedEvent(Msg, <<>>,
-					TrUserData),
-    Bin2 = e_varint(byte_size(SubBin), Bin),
-    <<Bin2/binary, SubBin/binary>>.
+e_field_PersistentSubscriptionAckEvents_processed_event_ids([Elem
+							     | Rest],
+							    Bin, TrUserData) ->
+    Bin2 = <<Bin/binary, 18>>,
+    Bin3 = e_type_bytes(id(Elem, TrUserData), Bin2),
+    e_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
+								Bin3,
+								TrUserData);
+e_field_PersistentSubscriptionAckEvents_processed_event_ids([],
+							    Bin, _TrUserData) ->
+    Bin.
 
 e_mfield_ReadEventCompleted_event(Msg, Bin,
 				  TrUserData) ->
@@ -1605,11 +1589,39 @@ e_mfield_ReadEventCompleted_event(Msg, Bin,
     Bin2 = e_varint(byte_size(SubBin), Bin),
     <<Bin2/binary, SubBin/binary>>.
 
-e_mfield_StreamEventAppeared_event(Msg, Bin,
-				   TrUserData) ->
+e_mfield_ReadAllEventsCompleted_events(Msg, Bin,
+				       TrUserData) ->
     SubBin = e_msg_ResolvedEvent(Msg, <<>>, TrUserData),
     Bin2 = e_varint(byte_size(SubBin), Bin),
     <<Bin2/binary, SubBin/binary>>.
+
+e_field_ReadAllEventsCompleted_events([Elem | Rest],
+				      Bin, TrUserData) ->
+    Bin2 = <<Bin/binary, 26>>,
+    Bin3 = e_mfield_ReadAllEventsCompleted_events(id(Elem,
+						     TrUserData),
+						  Bin2, TrUserData),
+    e_field_ReadAllEventsCompleted_events(Rest, Bin3,
+					  TrUserData);
+e_field_ReadAllEventsCompleted_events([], Bin,
+				      _TrUserData) ->
+    Bin.
+
+e_mfield_TransactionWrite_events(Msg, Bin,
+				 TrUserData) ->
+    SubBin = e_msg_NewEvent(Msg, <<>>, TrUserData),
+    Bin2 = e_varint(byte_size(SubBin), Bin),
+    <<Bin2/binary, SubBin/binary>>.
+
+e_field_TransactionWrite_events([Elem | Rest], Bin,
+				TrUserData) ->
+    Bin2 = <<Bin/binary, 18>>,
+    Bin3 = e_mfield_TransactionWrite_events(id(Elem,
+					       TrUserData),
+					    Bin2, TrUserData),
+    e_field_TransactionWrite_events(Rest, Bin3, TrUserData);
+e_field_TransactionWrite_events([], Bin, _TrUserData) ->
+    Bin.
 
 e_field_PersistentSubscriptionNakEvents_processed_event_ids([Elem
 							     | Rest],
@@ -1620,18 +1632,6 @@ e_field_PersistentSubscriptionNakEvents_processed_event_ids([Elem
 								Bin3,
 								TrUserData);
 e_field_PersistentSubscriptionNakEvents_processed_event_ids([],
-							    Bin, _TrUserData) ->
-    Bin.
-
-e_field_PersistentSubscriptionAckEvents_processed_event_ids([Elem
-							     | Rest],
-							    Bin, TrUserData) ->
-    Bin2 = <<Bin/binary, 18>>,
-    Bin3 = e_type_bytes(id(Elem, TrUserData), Bin2),
-    e_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
-								Bin3,
-								TrUserData);
-e_field_PersistentSubscriptionAckEvents_processed_event_ids([],
 							    Bin, _TrUserData) ->
     Bin.
 
@@ -1867,1795 +1867,450 @@ decode_msg(Bin, MsgName) when is_binary(Bin) ->
 decode_msg(Bin, MsgName, Opts) when is_binary(Bin) ->
     TrUserData = proplists:get_value(user_data, Opts),
     case MsgName of
-      'NewEvent' -> d_msg_NewEvent(Bin, TrUserData);
-      'TransactionWrite' ->
-	  d_msg_TransactionWrite(Bin, TrUserData);
-      'TransactionCommitCompleted' ->
-	  d_msg_TransactionCommitCompleted(Bin, TrUserData);
-      'NotHandled.MasterInfo' ->
-	  'd_msg_NotHandled.MasterInfo'(Bin, TrUserData);
-      'ScavengeDatabase' ->
-	  d_msg_ScavengeDatabase(Bin, TrUserData);
-      'WriteEventsCompleted' ->
-	  d_msg_WriteEventsCompleted(Bin, TrUserData);
-      'SubscribeToStream' ->
-	  d_msg_SubscribeToStream(Bin, TrUserData);
-      'SubscriptionDropped' ->
-	  d_msg_SubscriptionDropped(Bin, TrUserData);
-      'TransactionWriteCompleted' ->
-	  d_msg_TransactionWriteCompleted(Bin, TrUserData);
-      'TransactionStart' ->
-	  d_msg_TransactionStart(Bin, TrUserData);
-      'CreatePersistentSubscription' ->
-	  d_msg_CreatePersistentSubscription(Bin, TrUserData);
-      'TransactionStartCompleted' ->
-	  d_msg_TransactionStartCompleted(Bin, TrUserData);
-      'EventRecord' -> d_msg_EventRecord(Bin, TrUserData);
-      'ResolvedEvent' -> d_msg_ResolvedEvent(Bin, TrUserData);
-      'ReadAllEventsCompleted' ->
-	  d_msg_ReadAllEventsCompleted(Bin, TrUserData);
-      'NotHandled' -> d_msg_NotHandled(Bin, TrUserData);
+      'ReadAllEvents' -> d_msg_ReadAllEvents(Bin, TrUserData);
       'SubscriptionConfirmation' ->
 	  d_msg_SubscriptionConfirmation(Bin, TrUserData);
-      'DeleteStreamCompleted' ->
-	  d_msg_DeleteStreamCompleted(Bin, TrUserData);
-      'WriteEvents' -> d_msg_WriteEvents(Bin, TrUserData);
-      'DeleteStream' -> d_msg_DeleteStream(Bin, TrUserData);
-      'ScavengeDatabaseCompleted' ->
-	  d_msg_ScavengeDatabaseCompleted(Bin, TrUserData);
-      'UnsubscribeFromStream' ->
-	  d_msg_UnsubscribeFromStream(Bin, TrUserData);
-      'DeletePersistentSubscriptionCompleted' ->
-	  d_msg_DeletePersistentSubscriptionCompleted(Bin,
-						      TrUserData);
-      'UpdatePersistentSubscription' ->
-	  d_msg_UpdatePersistentSubscription(Bin, TrUserData);
-      'ResolvedIndexedEvent' ->
-	  d_msg_ResolvedIndexedEvent(Bin, TrUserData);
-      'ReadStreamEventsCompleted' ->
-	  d_msg_ReadStreamEventsCompleted(Bin, TrUserData);
+      'TransactionWriteCompleted' ->
+	  d_msg_TransactionWriteCompleted(Bin, TrUserData);
       'TransactionCommit' ->
 	  d_msg_TransactionCommit(Bin, TrUserData);
-      'CreatePersistentSubscriptionCompleted' ->
-	  d_msg_CreatePersistentSubscriptionCompleted(Bin,
-						      TrUserData);
-      'ReadEvent' -> d_msg_ReadEvent(Bin, TrUserData);
-      'UpdatePersistentSubscriptionCompleted' ->
-	  d_msg_UpdatePersistentSubscriptionCompleted(Bin,
-						      TrUserData);
+      'UpdatePersistentSubscription' ->
+	  d_msg_UpdatePersistentSubscription(Bin, TrUserData);
+      'EventRecord' -> d_msg_EventRecord(Bin, TrUserData);
+      'ResolvedIndexedEvent' ->
+	  d_msg_ResolvedIndexedEvent(Bin, TrUserData);
       'PersistentSubscriptionStreamEventAppeared' ->
 	  d_msg_PersistentSubscriptionStreamEventAppeared(Bin,
 							  TrUserData);
+      'ReadEvent' -> d_msg_ReadEvent(Bin, TrUserData);
+      'TransactionStartCompleted' ->
+	  d_msg_TransactionStartCompleted(Bin, TrUserData);
+      'ScavengeDatabaseCompleted' ->
+	  d_msg_ScavengeDatabaseCompleted(Bin, TrUserData);
+      'WriteEventsCompleted' ->
+	  d_msg_WriteEventsCompleted(Bin, TrUserData);
+      'DeleteStream' -> d_msg_DeleteStream(Bin, TrUserData);
+      'UnsubscribeFromStream' ->
+	  d_msg_UnsubscribeFromStream(Bin, TrUserData);
+      'NewEvent' -> d_msg_NewEvent(Bin, TrUserData);
+      'NotHandled' -> d_msg_NotHandled(Bin, TrUserData);
+      'WriteEvents' -> d_msg_WriteEvents(Bin, TrUserData);
+      'ScavengeDatabase' ->
+	  d_msg_ScavengeDatabase(Bin, TrUserData);
+      'ResolvedEvent' -> d_msg_ResolvedEvent(Bin, TrUserData);
+      'StreamEventAppeared' ->
+	  d_msg_StreamEventAppeared(Bin, TrUserData);
+      'ReadStreamEvents' ->
+	  d_msg_ReadStreamEvents(Bin, TrUserData);
+      'SubscriptionDropped' ->
+	  d_msg_SubscriptionDropped(Bin, TrUserData);
+      'SubscribeToStream' ->
+	  d_msg_SubscribeToStream(Bin, TrUserData);
+      'PersistentSubscriptionConfirmation' ->
+	  d_msg_PersistentSubscriptionConfirmation(Bin,
+						   TrUserData);
+      'TransactionStart' ->
+	  d_msg_TransactionStart(Bin, TrUserData);
+      'CreatePersistentSubscriptionCompleted' ->
+	  d_msg_CreatePersistentSubscriptionCompleted(Bin,
+						      TrUserData);
+      'ReadStreamEventsCompleted' ->
+	  d_msg_ReadStreamEventsCompleted(Bin, TrUserData);
+      'TransactionCommitCompleted' ->
+	  d_msg_TransactionCommitCompleted(Bin, TrUserData);
+      'PersistentSubscriptionAckEvents' ->
+	  d_msg_PersistentSubscriptionAckEvents(Bin, TrUserData);
+      'DeleteStreamCompleted' ->
+	  d_msg_DeleteStreamCompleted(Bin, TrUserData);
+      'CreatePersistentSubscription' ->
+	  d_msg_CreatePersistentSubscription(Bin, TrUserData);
+      'DeletePersistentSubscriptionCompleted' ->
+	  d_msg_DeletePersistentSubscriptionCompleted(Bin,
+						      TrUserData);
       'ReadEventCompleted' ->
 	  d_msg_ReadEventCompleted(Bin, TrUserData);
       'DeletePersistentSubscription' ->
 	  d_msg_DeletePersistentSubscription(Bin, TrUserData);
-      'StreamEventAppeared' ->
-	  d_msg_StreamEventAppeared(Bin, TrUserData);
+      'UpdatePersistentSubscriptionCompleted' ->
+	  d_msg_UpdatePersistentSubscriptionCompleted(Bin,
+						      TrUserData);
+      'NotHandled.MasterInfo' ->
+	  'd_msg_NotHandled.MasterInfo'(Bin, TrUserData);
+      'ReadAllEventsCompleted' ->
+	  d_msg_ReadAllEventsCompleted(Bin, TrUserData);
       'ConnectToPersistentSubscription' ->
 	  d_msg_ConnectToPersistentSubscription(Bin, TrUserData);
+      'TransactionWrite' ->
+	  d_msg_TransactionWrite(Bin, TrUserData);
       'PersistentSubscriptionNakEvents' ->
-	  d_msg_PersistentSubscriptionNakEvents(Bin, TrUserData);
-      'ReadStreamEvents' ->
-	  d_msg_ReadStreamEvents(Bin, TrUserData);
-      'ReadAllEvents' -> d_msg_ReadAllEvents(Bin, TrUserData);
-      'PersistentSubscriptionConfirmation' ->
-	  d_msg_PersistentSubscriptionConfirmation(Bin,
-						   TrUserData);
-      'PersistentSubscriptionAckEvents' ->
-	  d_msg_PersistentSubscriptionAckEvents(Bin, TrUserData)
+	  d_msg_PersistentSubscriptionNakEvents(Bin, TrUserData)
     end.
 
 
 
-d_msg_NewEvent(Bin, TrUserData) ->
-    dfp_read_field_def_NewEvent(Bin, 0, 0,
-				id(undefined, TrUserData),
-				id(undefined, TrUserData),
-				id(undefined, TrUserData),
-				id(undefined, TrUserData),
-				id(undefined, TrUserData), id(<<>>, TrUserData),
-				TrUserData).
+d_msg_ReadAllEvents(Bin, TrUserData) ->
+    dfp_read_field_def_ReadAllEvents(Bin, 0, 0,
+				     id(undefined, TrUserData),
+				     id(undefined, TrUserData),
+				     id(undefined, TrUserData),
+				     id(undefined, TrUserData),
+				     id(undefined, TrUserData), TrUserData).
 
-dfp_read_field_def_NewEvent(<<10, Rest/binary>>, Z1, Z2,
-			    F1, F2, F3, F4, F5, F6, TrUserData) ->
-    d_field_NewEvent_event_id(Rest, Z1, Z2, F1, F2, F3, F4,
-			      F5, F6, TrUserData);
-dfp_read_field_def_NewEvent(<<18, Rest/binary>>, Z1, Z2,
-			    F1, F2, F3, F4, F5, F6, TrUserData) ->
-    d_field_NewEvent_event_type(Rest, Z1, Z2, F1, F2, F3,
-				F4, F5, F6, TrUserData);
-dfp_read_field_def_NewEvent(<<24, Rest/binary>>, Z1, Z2,
-			    F1, F2, F3, F4, F5, F6, TrUserData) ->
-    d_field_NewEvent_data_content_type(Rest, Z1, Z2, F1, F2,
-				       F3, F4, F5, F6, TrUserData);
-dfp_read_field_def_NewEvent(<<32, Rest/binary>>, Z1, Z2,
-			    F1, F2, F3, F4, F5, F6, TrUserData) ->
-    d_field_NewEvent_metadata_content_type(Rest, Z1, Z2, F1,
-					   F2, F3, F4, F5, F6, TrUserData);
-dfp_read_field_def_NewEvent(<<42, Rest/binary>>, Z1, Z2,
-			    F1, F2, F3, F4, F5, F6, TrUserData) ->
-    d_field_NewEvent_data(Rest, Z1, Z2, F1, F2, F3, F4, F5,
-			  F6, TrUserData);
-dfp_read_field_def_NewEvent(<<50, Rest/binary>>, Z1, Z2,
-			    F1, F2, F3, F4, F5, F6, TrUserData) ->
-    d_field_NewEvent_metadata(Rest, Z1, Z2, F1, F2, F3, F4,
-			      F5, F6, TrUserData);
-dfp_read_field_def_NewEvent(<<>>, 0, 0, F1, F2, F3, F4,
-			    F5, F6, _) ->
-    #'NewEvent'{event_id = F1, event_type = F2,
-		data_content_type = F3, metadata_content_type = F4,
-		data = F5, metadata = F6};
-dfp_read_field_def_NewEvent(Other, Z1, Z2, F1, F2, F3,
-			    F4, F5, F6, TrUserData) ->
-    dg_read_field_def_NewEvent(Other, Z1, Z2, F1, F2, F3,
-			       F4, F5, F6, TrUserData).
+dfp_read_field_def_ReadAllEvents(<<8, Rest/binary>>, Z1,
+				 Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadAllEvents_commit_position(Rest, Z1, Z2, F1,
+					  F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadAllEvents(<<16, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadAllEvents_prepare_position(Rest, Z1, Z2, F1,
+					   F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadAllEvents(<<24, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadAllEvents_max_count(Rest, Z1, Z2, F1, F2,
+				    F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadAllEvents(<<32, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadAllEvents_resolve_link_tos(Rest, Z1, Z2, F1,
+					   F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadAllEvents(<<40, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadAllEvents_require_master(Rest, Z1, Z2, F1,
+					 F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadAllEvents(<<>>, 0, 0, F1, F2, F3,
+				 F4, F5, _) ->
+    #'ReadAllEvents'{commit_position = F1,
+		     prepare_position = F2, max_count = F3,
+		     resolve_link_tos = F4, require_master = F5};
+dfp_read_field_def_ReadAllEvents(Other, Z1, Z2, F1, F2,
+				 F3, F4, F5, TrUserData) ->
+    dg_read_field_def_ReadAllEvents(Other, Z1, Z2, F1, F2,
+				    F3, F4, F5, TrUserData).
 
-dg_read_field_def_NewEvent(<<1:1, X:7, Rest/binary>>, N,
-			   Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+dg_read_field_def_ReadAllEvents(<<1:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, F4, F5, TrUserData)
     when N < 32 - 7 ->
-    dg_read_field_def_NewEvent(Rest, N + 7, X bsl N + Acc,
-			       F1, F2, F3, F4, F5, F6, TrUserData);
-dg_read_field_def_NewEvent(<<0:1, X:7, Rest/binary>>, N,
-			   Acc, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_NewEvent_event_id(Rest, 0, 0, F1, F2, F3, F4,
-				    F5, F6, TrUserData);
-      18 ->
-	  d_field_NewEvent_event_type(Rest, 0, 0, F1, F2, F3, F4,
-				      F5, F6, TrUserData);
-      24 ->
-	  d_field_NewEvent_data_content_type(Rest, 0, 0, F1, F2,
-					     F3, F4, F5, F6, TrUserData);
-      32 ->
-	  d_field_NewEvent_metadata_content_type(Rest, 0, 0, F1,
-						 F2, F3, F4, F5, F6,
-						 TrUserData);
-      42 ->
-	  d_field_NewEvent_data(Rest, 0, 0, F1, F2, F3, F4, F5,
-				F6, TrUserData);
-      50 ->
-	  d_field_NewEvent_metadata(Rest, 0, 0, F1, F2, F3, F4,
-				    F5, F6, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_NewEvent(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
-				     TrUserData);
-	    1 ->
-		skip_64_NewEvent(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
-				 TrUserData);
-	    2 ->
-		skip_length_delimited_NewEvent(Rest, 0, 0, F1, F2, F3,
-					       F4, F5, F6, TrUserData);
-	    3 ->
-		skip_group_NewEvent(Rest, Key bsr 3, 0, F1, F2, F3, F4,
-				    F5, F6, TrUserData);
-	    5 ->
-		skip_32_NewEvent(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
-				 TrUserData)
-	  end
-    end;
-dg_read_field_def_NewEvent(<<>>, 0, 0, F1, F2, F3, F4,
-			   F5, F6, _) ->
-    #'NewEvent'{event_id = F1, event_type = F2,
-		data_content_type = F3, metadata_content_type = F4,
-		data = F5, metadata = F6}.
-
-d_field_NewEvent_event_id(<<1:1, X:7, Rest/binary>>, N,
-			  Acc, F1, F2, F3, F4, F5, F6, TrUserData)
-    when N < 57 ->
-    d_field_NewEvent_event_id(Rest, N + 7, X bsl N + Acc,
-			      F1, F2, F3, F4, F5, F6, TrUserData);
-d_field_NewEvent_event_id(<<0:1, X:7, Rest/binary>>, N,
-			  Acc, _, F2, F3, F4, F5, F6, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_NewEvent(Rest2, 0, 0, NewFValue, F2,
-				F3, F4, F5, F6, TrUserData).
-
-
-d_field_NewEvent_event_type(<<1:1, X:7, Rest/binary>>,
-			    N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
-    when N < 57 ->
-    d_field_NewEvent_event_type(Rest, N + 7, X bsl N + Acc,
-				F1, F2, F3, F4, F5, F6, TrUserData);
-d_field_NewEvent_event_type(<<0:1, X:7, Rest/binary>>,
-			    N, Acc, F1, _, F3, F4, F5, F6, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, NewFValue,
-				F3, F4, F5, F6, TrUserData).
-
-
-d_field_NewEvent_data_content_type(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
-    when N < 57 ->
-    d_field_NewEvent_data_content_type(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-				       TrUserData);
-d_field_NewEvent_data_content_type(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, _, F4, F5, F6, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_NewEvent(Rest, 0, 0, F1, F2,
-				NewFValue, F4, F5, F6, TrUserData).
-
-
-d_field_NewEvent_metadata_content_type(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, F5, F6,
-				       TrUserData)
-    when N < 57 ->
-    d_field_NewEvent_metadata_content_type(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3, F4, F5,
-					   F6, TrUserData);
-d_field_NewEvent_metadata_content_type(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, _, F5, F6,
-				       TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_NewEvent(Rest, 0, 0, F1, F2, F3,
-				NewFValue, F5, F6, TrUserData).
-
-
-d_field_NewEvent_data(<<1:1, X:7, Rest/binary>>, N, Acc,
-		      F1, F2, F3, F4, F5, F6, TrUserData)
-    when N < 57 ->
-    d_field_NewEvent_data(Rest, N + 7, X bsl N + Acc, F1,
-			  F2, F3, F4, F5, F6, TrUserData);
-d_field_NewEvent_data(<<0:1, X:7, Rest/binary>>, N, Acc,
-		      F1, F2, F3, F4, _, F6, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, F2, F3, F4,
-				NewFValue, F6, TrUserData).
-
-
-d_field_NewEvent_metadata(<<1:1, X:7, Rest/binary>>, N,
-			  Acc, F1, F2, F3, F4, F5, F6, TrUserData)
-    when N < 57 ->
-    d_field_NewEvent_metadata(Rest, N + 7, X bsl N + Acc,
-			      F1, F2, F3, F4, F5, F6, TrUserData);
-d_field_NewEvent_metadata(<<0:1, X:7, Rest/binary>>, N,
-			  Acc, F1, F2, F3, F4, F5, _, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, F2, F3, F4,
-				F5, NewFValue, TrUserData).
-
-
-skip_varint_NewEvent(<<1:1, _:7, Rest/binary>>, Z1, Z2,
-		     F1, F2, F3, F4, F5, F6, TrUserData) ->
-    skip_varint_NewEvent(Rest, Z1, Z2, F1, F2, F3, F4, F5,
-			 F6, TrUserData);
-skip_varint_NewEvent(<<0:1, _:7, Rest/binary>>, Z1, Z2,
-		     F1, F2, F3, F4, F5, F6, TrUserData) ->
-    dfp_read_field_def_NewEvent(Rest, Z1, Z2, F1, F2, F3,
-				F4, F5, F6, TrUserData).
-
-
-skip_length_delimited_NewEvent(<<1:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_NewEvent(Rest, N + 7,
-				   X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-				   TrUserData);
-skip_length_delimited_NewEvent(<<0:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, F2, F3, F4,
-				F5, F6, TrUserData).
-
-
-skip_group_NewEvent(Bin, FNum, Z2, F1, F2, F3, F4, F5,
-		    F6, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_NewEvent(Rest, 0, Z2, F1, F2, F3, F4,
-				F5, F6, TrUserData).
-
-
-skip_32_NewEvent(<<_:32, Rest/binary>>, Z1, Z2, F1, F2,
-		 F3, F4, F5, F6, TrUserData) ->
-    dfp_read_field_def_NewEvent(Rest, Z1, Z2, F1, F2, F3,
-				F4, F5, F6, TrUserData).
-
-
-skip_64_NewEvent(<<_:64, Rest/binary>>, Z1, Z2, F1, F2,
-		 F3, F4, F5, F6, TrUserData) ->
-    dfp_read_field_def_NewEvent(Rest, Z1, Z2, F1, F2, F3,
-				F4, F5, F6, TrUserData).
-
-
-d_msg_TransactionWrite(Bin, TrUserData) ->
-    dfp_read_field_def_TransactionWrite(Bin, 0, 0,
-					id(undefined, TrUserData),
-					id([], TrUserData),
-					id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_TransactionWrite(<<8, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionWrite_transaction_id(Rest, Z1, Z2,
-					    F1, F2, F3, TrUserData);
-dfp_read_field_def_TransactionWrite(<<18, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionWrite_events(Rest, Z1, Z2, F1, F2,
-				    F3, TrUserData);
-dfp_read_field_def_TransactionWrite(<<24, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionWrite_require_master(Rest, Z1, Z2,
-					    F1, F2, F3, TrUserData);
-dfp_read_field_def_TransactionWrite(<<>>, 0, 0, F1, F2,
-				    F3, TrUserData) ->
-    #'TransactionWrite'{transaction_id = F1,
-			events = lists_reverse(F2, TrUserData),
-			require_master = F3};
-dfp_read_field_def_TransactionWrite(Other, Z1, Z2, F1,
-				    F2, F3, TrUserData) ->
-    dg_read_field_def_TransactionWrite(Other, Z1, Z2, F1,
-				       F2, F3, TrUserData).
-
-dg_read_field_def_TransactionWrite(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_TransactionWrite(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, TrUserData);
-dg_read_field_def_TransactionWrite(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, TrUserData) ->
+    dg_read_field_def_ReadAllEvents(Rest, N + 7,
+				    X bsl N + Acc, F1, F2, F3, F4, F5,
+				    TrUserData);
+dg_read_field_def_ReadAllEvents(<<0:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, F4, F5, TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
       8 ->
-	  d_field_TransactionWrite_transaction_id(Rest, 0, 0, F1,
-						  F2, F3, TrUserData);
-      18 ->
-	  d_field_TransactionWrite_events(Rest, 0, 0, F1, F2, F3,
-					  TrUserData);
-      24 ->
-	  d_field_TransactionWrite_require_master(Rest, 0, 0, F1,
-						  F2, F3, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_TransactionWrite(Rest, 0, 0, F1, F2, F3,
-					     TrUserData);
-	    1 ->
-		skip_64_TransactionWrite(Rest, 0, 0, F1, F2, F3,
-					 TrUserData);
-	    2 ->
-		skip_length_delimited_TransactionWrite(Rest, 0, 0, F1,
-						       F2, F3, TrUserData);
-	    3 ->
-		skip_group_TransactionWrite(Rest, Key bsr 3, 0, F1, F2,
-					    F3, TrUserData);
-	    5 ->
-		skip_32_TransactionWrite(Rest, 0, 0, F1, F2, F3,
-					 TrUserData)
-	  end
-    end;
-dg_read_field_def_TransactionWrite(<<>>, 0, 0, F1, F2,
-				   F3, TrUserData) ->
-    #'TransactionWrite'{transaction_id = F1,
-			events = lists_reverse(F2, TrUserData),
-			require_master = F3}.
-
-d_field_TransactionWrite_transaction_id(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionWrite_transaction_id(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, F3,
-					    TrUserData);
-d_field_TransactionWrite_transaction_id(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, _, F2, F3, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_TransactionWrite(Rest, 0, 0,
-					NewFValue, F2, F3, TrUserData).
-
-
-d_field_TransactionWrite_events(<<1:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionWrite_events(Rest, N + 7,
-				    X bsl N + Acc, F1, F2, F3, TrUserData);
-d_field_TransactionWrite_events(<<0:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bs:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = id(d_msg_NewEvent(Bs, TrUserData),
-		   TrUserData),
-    dfp_read_field_def_TransactionWrite(Rest2, 0, 0, F1,
-					cons(NewFValue, F2, TrUserData), F3,
-					TrUserData).
-
-
-d_field_TransactionWrite_require_master(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionWrite_require_master(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, F3,
-					    TrUserData);
-d_field_TransactionWrite_require_master(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_TransactionWrite(Rest, 0, 0, F1, F2,
-					NewFValue, TrUserData).
-
-
-skip_varint_TransactionWrite(<<1:1, _:7, Rest/binary>>,
-			     Z1, Z2, F1, F2, F3, TrUserData) ->
-    skip_varint_TransactionWrite(Rest, Z1, Z2, F1, F2, F3,
-				 TrUserData);
-skip_varint_TransactionWrite(<<0:1, _:7, Rest/binary>>,
-			     Z1, Z2, F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionWrite(Rest, Z1, Z2, F1,
-					F2, F3, TrUserData).
-
-
-skip_length_delimited_TransactionWrite(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_TransactionWrite(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3,
-					   TrUserData);
-skip_length_delimited_TransactionWrite(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_TransactionWrite(Rest2, 0, 0, F1, F2,
-					F3, TrUserData).
-
-
-skip_group_TransactionWrite(Bin, FNum, Z2, F1, F2, F3,
-			    TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_TransactionWrite(Rest, 0, Z2, F1, F2,
-					F3, TrUserData).
-
-
-skip_32_TransactionWrite(<<_:32, Rest/binary>>, Z1, Z2,
-			 F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionWrite(Rest, Z1, Z2, F1,
-					F2, F3, TrUserData).
-
-
-skip_64_TransactionWrite(<<_:64, Rest/binary>>, Z1, Z2,
-			 F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionWrite(Rest, Z1, Z2, F1,
-					F2, F3, TrUserData).
-
-
-d_msg_TransactionCommitCompleted(Bin, TrUserData) ->
-    dfp_read_field_def_TransactionCommitCompleted(Bin, 0, 0,
-						  id(undefined, TrUserData),
-						  id(undefined, TrUserData),
-						  id(<<>>, TrUserData),
-						  id(undefined, TrUserData),
-						  id(undefined, TrUserData),
-						  id(0, TrUserData),
-						  id(0, TrUserData),
-						  TrUserData).
-
-dfp_read_field_def_TransactionCommitCompleted(<<8,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, F3, F4, F5, F6,
-					      F7, TrUserData) ->
-    d_field_TransactionCommitCompleted_transaction_id(Rest,
-						      Z1, Z2, F1, F2, F3, F4,
-						      F5, F6, F7, TrUserData);
-dfp_read_field_def_TransactionCommitCompleted(<<16,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, F3, F4, F5, F6,
-					      F7, TrUserData) ->
-    d_field_TransactionCommitCompleted_result(Rest, Z1, Z2,
-					      F1, F2, F3, F4, F5, F6, F7,
-					      TrUserData);
-dfp_read_field_def_TransactionCommitCompleted(<<26,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, F3, F4, F5, F6,
-					      F7, TrUserData) ->
-    d_field_TransactionCommitCompleted_message(Rest, Z1, Z2,
-					       F1, F2, F3, F4, F5, F6, F7,
-					       TrUserData);
-dfp_read_field_def_TransactionCommitCompleted(<<32,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, F3, F4, F5, F6,
-					      F7, TrUserData) ->
-    d_field_TransactionCommitCompleted_first_event_number(Rest,
-							  Z1, Z2, F1, F2, F3,
-							  F4, F5, F6, F7,
-							  TrUserData);
-dfp_read_field_def_TransactionCommitCompleted(<<40,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, F3, F4, F5, F6,
-					      F7, TrUserData) ->
-    d_field_TransactionCommitCompleted_last_event_number(Rest,
-							 Z1, Z2, F1, F2, F3, F4,
-							 F5, F6, F7,
-							 TrUserData);
-dfp_read_field_def_TransactionCommitCompleted(<<48,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, F3, F4, F5, F6,
-					      F7, TrUserData) ->
-    d_field_TransactionCommitCompleted_prepare_position(Rest,
-							Z1, Z2, F1, F2, F3, F4,
-							F5, F6, F7, TrUserData);
-dfp_read_field_def_TransactionCommitCompleted(<<56,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, F3, F4, F5, F6,
-					      F7, TrUserData) ->
-    d_field_TransactionCommitCompleted_commit_position(Rest,
-						       Z1, Z2, F1, F2, F3, F4,
-						       F5, F6, F7, TrUserData);
-dfp_read_field_def_TransactionCommitCompleted(<<>>, 0,
-					      0, F1, F2, F3, F4, F5, F6, F7,
-					      _) ->
-    #'TransactionCommitCompleted'{transaction_id = F1,
-				  result = F2, message = F3,
-				  first_event_number = F4,
-				  last_event_number = F5, prepare_position = F6,
-				  commit_position = F7};
-dfp_read_field_def_TransactionCommitCompleted(Other, Z1,
-					      Z2, F1, F2, F3, F4, F5, F6, F7,
-					      TrUserData) ->
-    dg_read_field_def_TransactionCommitCompleted(Other, Z1,
-						 Z2, F1, F2, F3, F4, F5, F6, F7,
-						 TrUserData).
-
-dg_read_field_def_TransactionCommitCompleted(<<1:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					     TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_TransactionCommitCompleted(Rest,
-						 N + 7, X bsl N + Acc, F1, F2,
-						 F3, F4, F5, F6, F7,
-						 TrUserData);
-dg_read_field_def_TransactionCommitCompleted(<<0:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					     TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_TransactionCommitCompleted_transaction_id(Rest,
-							    0, 0, F1, F2, F3,
-							    F4, F5, F6, F7,
-							    TrUserData);
+	  d_field_ReadAllEvents_commit_position(Rest, 0, 0, F1,
+						F2, F3, F4, F5, TrUserData);
       16 ->
-	  d_field_TransactionCommitCompleted_result(Rest, 0, 0,
-						    F1, F2, F3, F4, F5, F6, F7,
-						    TrUserData);
-      26 ->
-	  d_field_TransactionCommitCompleted_message(Rest, 0, 0,
-						     F1, F2, F3, F4, F5, F6, F7,
-						     TrUserData);
+	  d_field_ReadAllEvents_prepare_position(Rest, 0, 0, F1,
+						 F2, F3, F4, F5, TrUserData);
+      24 ->
+	  d_field_ReadAllEvents_max_count(Rest, 0, 0, F1, F2, F3,
+					  F4, F5, TrUserData);
       32 ->
-	  d_field_TransactionCommitCompleted_first_event_number(Rest,
-								0, 0, F1, F2,
-								F3, F4, F5, F6,
-								F7, TrUserData);
+	  d_field_ReadAllEvents_resolve_link_tos(Rest, 0, 0, F1,
+						 F2, F3, F4, F5, TrUserData);
       40 ->
-	  d_field_TransactionCommitCompleted_last_event_number(Rest,
-							       0, 0, F1, F2, F3,
-							       F4, F5, F6, F7,
-							       TrUserData);
-      48 ->
-	  d_field_TransactionCommitCompleted_prepare_position(Rest,
-							      0, 0, F1, F2, F3,
-							      F4, F5, F6, F7,
-							      TrUserData);
-      56 ->
-	  d_field_TransactionCommitCompleted_commit_position(Rest,
-							     0, 0, F1, F2, F3,
-							     F4, F5, F6, F7,
-							     TrUserData);
+	  d_field_ReadAllEvents_require_master(Rest, 0, 0, F1, F2,
+					       F3, F4, F5, TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
-		skip_varint_TransactionCommitCompleted(Rest, 0, 0, F1,
-						       F2, F3, F4, F5, F6, F7,
-						       TrUserData);
+		skip_varint_ReadAllEvents(Rest, 0, 0, F1, F2, F3, F4,
+					  F5, TrUserData);
 	    1 ->
-		skip_64_TransactionCommitCompleted(Rest, 0, 0, F1, F2,
-						   F3, F4, F5, F6, F7,
-						   TrUserData);
-	    2 ->
-		skip_length_delimited_TransactionCommitCompleted(Rest,
-								 0, 0, F1, F2,
-								 F3, F4, F5, F6,
-								 F7,
-								 TrUserData);
-	    3 ->
-		skip_group_TransactionCommitCompleted(Rest, Key bsr 3,
-						      0, F1, F2, F3, F4, F5, F6,
-						      F7, TrUserData);
-	    5 ->
-		skip_32_TransactionCommitCompleted(Rest, 0, 0, F1, F2,
-						   F3, F4, F5, F6, F7,
-						   TrUserData)
-	  end
-    end;
-dg_read_field_def_TransactionCommitCompleted(<<>>, 0, 0,
-					     F1, F2, F3, F4, F5, F6, F7, _) ->
-    #'TransactionCommitCompleted'{transaction_id = F1,
-				  result = F2, message = F3,
-				  first_event_number = F4,
-				  last_event_number = F5, prepare_position = F6,
-				  commit_position = F7}.
-
-d_field_TransactionCommitCompleted_transaction_id(<<1:1,
-						    X:7, Rest/binary>>,
-						  N, Acc, F1, F2, F3, F4, F5,
-						  F6, F7, TrUserData)
-    when N < 57 ->
-    d_field_TransactionCommitCompleted_transaction_id(Rest,
-						      N + 7, X bsl N + Acc, F1,
-						      F2, F3, F4, F5, F6, F7,
-						      TrUserData);
-d_field_TransactionCommitCompleted_transaction_id(<<0:1,
-						    X:7, Rest/binary>>,
-						  N, Acc, _, F2, F3, F4, F5, F6,
-						  F7, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
-						  0, NewFValue, F2, F3, F4, F5,
-						  F6, F7, TrUserData).
-
-
-d_field_TransactionCommitCompleted_result(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData)
-    when N < 57 ->
-    d_field_TransactionCommitCompleted_result(Rest, N + 7,
-					      X bsl N + Acc, F1, F2, F3, F4, F5,
-					      F6, F7, TrUserData);
-d_field_TransactionCommitCompleted_result(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, _, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue = d_enum_OperationResult(Tmp),
-    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
-						  0, F1, NewFValue, F3, F4, F5,
-						  F6, F7, TrUserData).
-
-
-d_field_TransactionCommitCompleted_message(<<1:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					   TrUserData)
-    when N < 57 ->
-    d_field_TransactionCommitCompleted_message(Rest, N + 7,
-					       X bsl N + Acc, F1, F2, F3, F4,
-					       F5, F6, F7, TrUserData);
-d_field_TransactionCommitCompleted_message(<<0:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, F2, _, F4, F5, F6, F7,
-					   TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_TransactionCommitCompleted(Rest2, 0,
-						  0, F1, F2, NewFValue, F4, F5,
-						  F6, F7, TrUserData).
-
-
-d_field_TransactionCommitCompleted_first_event_number(<<1:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, F3, F4,
-						      F5, F6, F7, TrUserData)
-    when N < 57 ->
-    d_field_TransactionCommitCompleted_first_event_number(Rest,
-							  N + 7, X bsl N + Acc,
-							  F1, F2, F3, F4, F5,
-							  F6, F7, TrUserData);
-d_field_TransactionCommitCompleted_first_event_number(<<0:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, F3, _, F5,
-						      F6, F7, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
-						  0, F1, F2, F3, NewFValue, F5,
-						  F6, F7, TrUserData).
-
-
-d_field_TransactionCommitCompleted_last_event_number(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, F7, TrUserData)
-    when N < 57 ->
-    d_field_TransactionCommitCompleted_last_event_number(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, F3, F4, F5, F6,
-							 F7, TrUserData);
-d_field_TransactionCommitCompleted_last_event_number(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, _,
-						     F6, F7, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
-						  0, F1, F2, F3, F4, NewFValue,
-						  F6, F7, TrUserData).
-
-
-d_field_TransactionCommitCompleted_prepare_position(<<1:1,
-						      X:7, Rest/binary>>,
-						    N, Acc, F1, F2, F3, F4, F5,
-						    F6, F7, TrUserData)
-    when N < 57 ->
-    d_field_TransactionCommitCompleted_prepare_position(Rest,
-							N + 7, X bsl N + Acc,
-							F1, F2, F3, F4, F5, F6,
-							F7, TrUserData);
-d_field_TransactionCommitCompleted_prepare_position(<<0:1,
-						      X:7, Rest/binary>>,
-						    N, Acc, F1, F2, F3, F4, F5,
-						    _, F7, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
-						  0, F1, F2, F3, F4, F5,
-						  NewFValue, F7, TrUserData).
-
-
-d_field_TransactionCommitCompleted_commit_position(<<1:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, F2, F3, F4, F5,
-						   F6, F7, TrUserData)
-    when N < 57 ->
-    d_field_TransactionCommitCompleted_commit_position(Rest,
-						       N + 7, X bsl N + Acc, F1,
-						       F2, F3, F4, F5, F6, F7,
-						       TrUserData);
-d_field_TransactionCommitCompleted_commit_position(<<0:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, F2, F3, F4, F5,
-						   F6, _, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
-						  0, F1, F2, F3, F4, F5, F6,
-						  NewFValue, TrUserData).
-
-
-skip_varint_TransactionCommitCompleted(<<1:1, _:7,
-					 Rest/binary>>,
-				       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-				       TrUserData) ->
-    skip_varint_TransactionCommitCompleted(Rest, Z1, Z2, F1,
-					   F2, F3, F4, F5, F6, F7, TrUserData);
-skip_varint_TransactionCommitCompleted(<<0:1, _:7,
-					 Rest/binary>>,
-				       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-				       TrUserData) ->
-    dfp_read_field_def_TransactionCommitCompleted(Rest, Z1,
-						  Z2, F1, F2, F3, F4, F5, F6,
-						  F7, TrUserData).
-
-
-skip_length_delimited_TransactionCommitCompleted(<<1:1,
-						   X:7, Rest/binary>>,
-						 N, Acc, F1, F2, F3, F4, F5, F6,
-						 F7, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_TransactionCommitCompleted(Rest,
-						     N + 7, X bsl N + Acc, F1,
-						     F2, F3, F4, F5, F6, F7,
-						     TrUserData);
-skip_length_delimited_TransactionCommitCompleted(<<0:1,
-						   X:7, Rest/binary>>,
-						 N, Acc, F1, F2, F3, F4, F5, F6,
-						 F7, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_TransactionCommitCompleted(Rest2, 0,
-						  0, F1, F2, F3, F4, F5, F6, F7,
-						  TrUserData).
-
-
-skip_group_TransactionCommitCompleted(Bin, FNum, Z2, F1,
-				      F2, F3, F4, F5, F6, F7, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
-						  Z2, F1, F2, F3, F4, F5, F6,
-						  F7, TrUserData).
-
-
-skip_32_TransactionCommitCompleted(<<_:32,
-				     Rest/binary>>,
-				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-				   TrUserData) ->
-    dfp_read_field_def_TransactionCommitCompleted(Rest, Z1,
-						  Z2, F1, F2, F3, F4, F5, F6,
-						  F7, TrUserData).
-
-
-skip_64_TransactionCommitCompleted(<<_:64,
-				     Rest/binary>>,
-				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-				   TrUserData) ->
-    dfp_read_field_def_TransactionCommitCompleted(Rest, Z1,
-						  Z2, F1, F2, F3, F4, F5, F6,
-						  F7, TrUserData).
-
-
-'d_msg_NotHandled.MasterInfo'(Bin, TrUserData) ->
-    'dfp_read_field_def_NotHandled.MasterInfo'(Bin, 0, 0,
-					       id(undefined, TrUserData),
-					       id(undefined, TrUserData),
-					       id(undefined, TrUserData),
-					       id(undefined, TrUserData),
-					       id(<<>>, TrUserData),
-					       id(0, TrUserData), TrUserData).
-
-'dfp_read_field_def_NotHandled.MasterInfo'(<<10,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    'd_field_NotHandled.MasterInfo_external_tcp_address'(Rest,
-							 Z1, Z2, F1, F2, F3, F4,
-							 F5, F6, TrUserData);
-'dfp_read_field_def_NotHandled.MasterInfo'(<<16,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    'd_field_NotHandled.MasterInfo_external_tcp_port'(Rest,
-						      Z1, Z2, F1, F2, F3, F4,
-						      F5, F6, TrUserData);
-'dfp_read_field_def_NotHandled.MasterInfo'(<<26,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    'd_field_NotHandled.MasterInfo_external_http_address'(Rest,
-							  Z1, Z2, F1, F2, F3,
-							  F4, F5, F6,
-							  TrUserData);
-'dfp_read_field_def_NotHandled.MasterInfo'(<<32,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    'd_field_NotHandled.MasterInfo_external_http_port'(Rest,
-						       Z1, Z2, F1, F2, F3, F4,
-						       F5, F6, TrUserData);
-'dfp_read_field_def_NotHandled.MasterInfo'(<<42,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    'd_field_NotHandled.MasterInfo_external_secure_tcp_address'(Rest,
-								Z1, Z2, F1, F2,
-								F3, F4, F5, F6,
-								TrUserData);
-'dfp_read_field_def_NotHandled.MasterInfo'(<<48,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    'd_field_NotHandled.MasterInfo_external_secure_tcp_port'(Rest,
-							     Z1, Z2, F1, F2, F3,
-							     F4, F5, F6,
-							     TrUserData);
-'dfp_read_field_def_NotHandled.MasterInfo'(<<>>, 0, 0,
-					   F1, F2, F3, F4, F5, F6, _) ->
-    #'NotHandled.MasterInfo'{external_tcp_address = F1,
-			     external_tcp_port = F2, external_http_address = F3,
-			     external_http_port = F4,
-			     external_secure_tcp_address = F5,
-			     external_secure_tcp_port = F6};
-'dfp_read_field_def_NotHandled.MasterInfo'(Other, Z1,
-					   Z2, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    'dg_read_field_def_NotHandled.MasterInfo'(Other, Z1, Z2,
-					      F1, F2, F3, F4, F5, F6,
-					      TrUserData).
-
-'dg_read_field_def_NotHandled.MasterInfo'(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, F4, F5, F6,
-					  TrUserData)
-    when N < 32 - 7 ->
-    'dg_read_field_def_NotHandled.MasterInfo'(Rest, N + 7,
-					      X bsl N + Acc, F1, F2, F3, F4, F5,
-					      F6, TrUserData);
-'dg_read_field_def_NotHandled.MasterInfo'(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, F4, F5, F6,
-					  TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  'd_field_NotHandled.MasterInfo_external_tcp_address'(Rest,
-							       0, 0, F1, F2, F3,
-							       F4, F5, F6,
-							       TrUserData);
-      16 ->
-	  'd_field_NotHandled.MasterInfo_external_tcp_port'(Rest,
-							    0, 0, F1, F2, F3,
-							    F4, F5, F6,
-							    TrUserData);
-      26 ->
-	  'd_field_NotHandled.MasterInfo_external_http_address'(Rest,
-								0, 0, F1, F2,
-								F3, F4, F5, F6,
-								TrUserData);
-      32 ->
-	  'd_field_NotHandled.MasterInfo_external_http_port'(Rest,
-							     0, 0, F1, F2, F3,
-							     F4, F5, F6,
-							     TrUserData);
-      42 ->
-	  'd_field_NotHandled.MasterInfo_external_secure_tcp_address'(Rest,
-								      0, 0, F1,
-								      F2, F3,
-								      F4, F5,
-								      F6,
-								      TrUserData);
-      48 ->
-	  'd_field_NotHandled.MasterInfo_external_secure_tcp_port'(Rest,
-								   0, 0, F1, F2,
-								   F3, F4, F5,
-								   F6,
-								   TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		'skip_varint_NotHandled.MasterInfo'(Rest, 0, 0, F1, F2,
-						    F3, F4, F5, F6, TrUserData);
-	    1 ->
-		'skip_64_NotHandled.MasterInfo'(Rest, 0, 0, F1, F2, F3,
-						F4, F5, F6, TrUserData);
-	    2 ->
-		'skip_length_delimited_NotHandled.MasterInfo'(Rest, 0,
-							      0, F1, F2, F3, F4,
-							      F5, F6,
-							      TrUserData);
-	    3 ->
-		'skip_group_NotHandled.MasterInfo'(Rest, Key bsr 3, 0,
-						   F1, F2, F3, F4, F5, F6,
-						   TrUserData);
-	    5 ->
-		'skip_32_NotHandled.MasterInfo'(Rest, 0, 0, F1, F2, F3,
-						F4, F5, F6, TrUserData)
-	  end
-    end;
-'dg_read_field_def_NotHandled.MasterInfo'(<<>>, 0, 0,
-					  F1, F2, F3, F4, F5, F6, _) ->
-    #'NotHandled.MasterInfo'{external_tcp_address = F1,
-			     external_tcp_port = F2, external_http_address = F3,
-			     external_http_port = F4,
-			     external_secure_tcp_address = F5,
-			     external_secure_tcp_port = F6}.
-
-'d_field_NotHandled.MasterInfo_external_tcp_address'(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, TrUserData)
-    when N < 57 ->
-    'd_field_NotHandled.MasterInfo_external_tcp_address'(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, F3, F4, F5, F6,
-							 TrUserData);
-'d_field_NotHandled.MasterInfo_external_tcp_address'(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, _, F2, F3, F4, F5,
-						     F6, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
-					       NewFValue, F2, F3, F4, F5, F6,
-					       TrUserData).
-
-
-'d_field_NotHandled.MasterInfo_external_tcp_port'(<<1:1,
-						    X:7, Rest/binary>>,
-						  N, Acc, F1, F2, F3, F4, F5,
-						  F6, TrUserData)
-    when N < 57 ->
-    'd_field_NotHandled.MasterInfo_external_tcp_port'(Rest,
-						      N + 7, X bsl N + Acc, F1,
-						      F2, F3, F4, F5, F6,
-						      TrUserData);
-'d_field_NotHandled.MasterInfo_external_tcp_port'(<<0:1,
-						    X:7, Rest/binary>>,
-						  N, Acc, F1, _, F3, F4, F5, F6,
-						  TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, 0,
-					       F1, NewFValue, F3, F4, F5, F6,
-					       TrUserData).
-
-
-'d_field_NotHandled.MasterInfo_external_http_address'(<<1:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, F3, F4,
-						      F5, F6, TrUserData)
-    when N < 57 ->
-    'd_field_NotHandled.MasterInfo_external_http_address'(Rest,
-							  N + 7, X bsl N + Acc,
-							  F1, F2, F3, F4, F5,
-							  F6, TrUserData);
-'d_field_NotHandled.MasterInfo_external_http_address'(<<0:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, _, F4, F5,
-						      F6, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
-					       F1, F2, NewFValue, F4, F5, F6,
-					       TrUserData).
-
-
-'d_field_NotHandled.MasterInfo_external_http_port'(<<1:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, F2, F3, F4, F5,
-						   F6, TrUserData)
-    when N < 57 ->
-    'd_field_NotHandled.MasterInfo_external_http_port'(Rest,
-						       N + 7, X bsl N + Acc, F1,
-						       F2, F3, F4, F5, F6,
-						       TrUserData);
-'d_field_NotHandled.MasterInfo_external_http_port'(<<0:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, F2, F3, _, F5,
-						   F6, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, 0,
-					       F1, F2, F3, NewFValue, F5, F6,
-					       TrUserData).
-
-
-'d_field_NotHandled.MasterInfo_external_secure_tcp_address'(<<1:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2, F3,
-							    F4, F5, F6,
-							    TrUserData)
-    when N < 57 ->
-    'd_field_NotHandled.MasterInfo_external_secure_tcp_address'(Rest,
-								N + 7,
-								X bsl N + Acc,
-								F1, F2, F3, F4,
-								F5, F6,
-								TrUserData);
-'d_field_NotHandled.MasterInfo_external_secure_tcp_address'(<<0:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2, F3,
-							    F4, _, F6,
-							    TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
-					       F1, F2, F3, F4, NewFValue, F6,
-					       TrUserData).
-
-
-'d_field_NotHandled.MasterInfo_external_secure_tcp_port'(<<1:1,
-							   X:7, Rest/binary>>,
-							 N, Acc, F1, F2, F3, F4,
-							 F5, F6, TrUserData)
-    when N < 57 ->
-    'd_field_NotHandled.MasterInfo_external_secure_tcp_port'(Rest,
-							     N + 7,
-							     X bsl N + Acc, F1,
-							     F2, F3, F4, F5, F6,
-							     TrUserData);
-'d_field_NotHandled.MasterInfo_external_secure_tcp_port'(<<0:1,
-							   X:7, Rest/binary>>,
-							 N, Acc, F1, F2, F3, F4,
-							 F5, _, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, 0,
-					       F1, F2, F3, F4, F5, NewFValue,
-					       TrUserData).
-
-
-'skip_varint_NotHandled.MasterInfo'(<<1:1, _:7,
-				      Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, F4, F5, F6,
-				    TrUserData) ->
-    'skip_varint_NotHandled.MasterInfo'(Rest, Z1, Z2, F1,
-					F2, F3, F4, F5, F6, TrUserData);
-'skip_varint_NotHandled.MasterInfo'(<<0:1, _:7,
-				      Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, F4, F5, F6,
-				    TrUserData) ->
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, Z1, Z2,
-					       F1, F2, F3, F4, F5, F6,
-					       TrUserData).
-
-
-'skip_length_delimited_NotHandled.MasterInfo'(<<1:1,
-						X:7, Rest/binary>>,
-					      N, Acc, F1, F2, F3, F4, F5, F6,
-					      TrUserData)
-    when N < 57 ->
-    'skip_length_delimited_NotHandled.MasterInfo'(Rest,
-						  N + 7, X bsl N + Acc, F1, F2,
-						  F3, F4, F5, F6, TrUserData);
-'skip_length_delimited_NotHandled.MasterInfo'(<<0:1,
-						X:7, Rest/binary>>,
-					      N, Acc, F1, F2, F3, F4, F5, F6,
-					      TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
-					       F1, F2, F3, F4, F5, F6,
-					       TrUserData).
-
-
-'skip_group_NotHandled.MasterInfo'(Bin, FNum, Z2, F1,
-				   F2, F3, F4, F5, F6, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, Z2,
-					       F1, F2, F3, F4, F5, F6,
-					       TrUserData).
-
-
-'skip_32_NotHandled.MasterInfo'(<<_:32, Rest/binary>>,
-				Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, Z1, Z2,
-					       F1, F2, F3, F4, F5, F6,
-					       TrUserData).
-
-
-'skip_64_NotHandled.MasterInfo'(<<_:64, Rest/binary>>,
-				Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, Z1, Z2,
-					       F1, F2, F3, F4, F5, F6,
-					       TrUserData).
-
-
-d_msg_ScavengeDatabase(Bin, TrUserData) ->
-    dfp_read_field_def_ScavengeDatabase(Bin, 0, 0,
-					TrUserData).
-
-dfp_read_field_def_ScavengeDatabase(<<>>, 0, 0, _) ->
-    #'ScavengeDatabase'{};
-dfp_read_field_def_ScavengeDatabase(Other, Z1, Z2,
-				    TrUserData) ->
-    dg_read_field_def_ScavengeDatabase(Other, Z1, Z2,
-				       TrUserData).
-
-dg_read_field_def_ScavengeDatabase(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_ScavengeDatabase(Rest, N + 7,
-				       X bsl N + Acc, TrUserData);
-dg_read_field_def_ScavengeDatabase(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key band 7 of
-      0 ->
-	  skip_varint_ScavengeDatabase(Rest, 0, 0, TrUserData);
-      1 -> skip_64_ScavengeDatabase(Rest, 0, 0, TrUserData);
-      2 ->
-	  skip_length_delimited_ScavengeDatabase(Rest, 0, 0,
-						 TrUserData);
-      3 ->
-	  skip_group_ScavengeDatabase(Rest, Key bsr 3, 0,
+		skip_64_ReadAllEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
 				      TrUserData);
-      5 -> skip_32_ScavengeDatabase(Rest, 0, 0, TrUserData)
-    end;
-dg_read_field_def_ScavengeDatabase(<<>>, 0, 0, _) ->
-    #'ScavengeDatabase'{}.
-
-skip_varint_ScavengeDatabase(<<1:1, _:7, Rest/binary>>,
-			     Z1, Z2, TrUserData) ->
-    skip_varint_ScavengeDatabase(Rest, Z1, Z2, TrUserData);
-skip_varint_ScavengeDatabase(<<0:1, _:7, Rest/binary>>,
-			     Z1, Z2, TrUserData) ->
-    dfp_read_field_def_ScavengeDatabase(Rest, Z1, Z2,
-					TrUserData).
-
-
-skip_length_delimited_ScavengeDatabase(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_ScavengeDatabase(Rest, N + 7,
-					   X bsl N + Acc, TrUserData);
-skip_length_delimited_ScavengeDatabase(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_ScavengeDatabase(Rest2, 0, 0,
-					TrUserData).
-
-
-skip_group_ScavengeDatabase(Bin, FNum, Z2,
-			    TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_ScavengeDatabase(Rest, 0, Z2,
-					TrUserData).
-
-
-skip_32_ScavengeDatabase(<<_:32, Rest/binary>>, Z1, Z2,
-			 TrUserData) ->
-    dfp_read_field_def_ScavengeDatabase(Rest, Z1, Z2,
-					TrUserData).
-
-
-skip_64_ScavengeDatabase(<<_:64, Rest/binary>>, Z1, Z2,
-			 TrUserData) ->
-    dfp_read_field_def_ScavengeDatabase(Rest, Z1, Z2,
-					TrUserData).
-
-
-d_msg_WriteEventsCompleted(Bin, TrUserData) ->
-    dfp_read_field_def_WriteEventsCompleted(Bin, 0, 0,
-					    id(undefined, TrUserData),
-					    id(<<>>, TrUserData),
-					    id(undefined, TrUserData),
-					    id(undefined, TrUserData),
-					    id(0, TrUserData),
-					    id(0, TrUserData), TrUserData).
-
-dfp_read_field_def_WriteEventsCompleted(<<8,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, F3, F4, F5, F6,
-					TrUserData) ->
-    d_field_WriteEventsCompleted_result(Rest, Z1, Z2, F1,
-					F2, F3, F4, F5, F6, TrUserData);
-dfp_read_field_def_WriteEventsCompleted(<<18,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, F3, F4, F5, F6,
-					TrUserData) ->
-    d_field_WriteEventsCompleted_message(Rest, Z1, Z2, F1,
-					 F2, F3, F4, F5, F6, TrUserData);
-dfp_read_field_def_WriteEventsCompleted(<<24,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, F3, F4, F5, F6,
-					TrUserData) ->
-    d_field_WriteEventsCompleted_first_event_number(Rest,
-						    Z1, Z2, F1, F2, F3, F4, F5,
-						    F6, TrUserData);
-dfp_read_field_def_WriteEventsCompleted(<<32,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, F3, F4, F5, F6,
-					TrUserData) ->
-    d_field_WriteEventsCompleted_last_event_number(Rest, Z1,
-						   Z2, F1, F2, F3, F4, F5, F6,
-						   TrUserData);
-dfp_read_field_def_WriteEventsCompleted(<<40,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, F3, F4, F5, F6,
-					TrUserData) ->
-    d_field_WriteEventsCompleted_prepare_position(Rest, Z1,
-						  Z2, F1, F2, F3, F4, F5, F6,
-						  TrUserData);
-dfp_read_field_def_WriteEventsCompleted(<<48,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, F3, F4, F5, F6,
-					TrUserData) ->
-    d_field_WriteEventsCompleted_commit_position(Rest, Z1,
-						 Z2, F1, F2, F3, F4, F5, F6,
-						 TrUserData);
-dfp_read_field_def_WriteEventsCompleted(<<>>, 0, 0, F1,
-					F2, F3, F4, F5, F6, _) ->
-    #'WriteEventsCompleted'{result = F1, message = F2,
-			    first_event_number = F3, last_event_number = F4,
-			    prepare_position = F5, commit_position = F6};
-dfp_read_field_def_WriteEventsCompleted(Other, Z1, Z2,
-					F1, F2, F3, F4, F5, F6, TrUserData) ->
-    dg_read_field_def_WriteEventsCompleted(Other, Z1, Z2,
-					   F1, F2, F3, F4, F5, F6, TrUserData).
-
-dg_read_field_def_WriteEventsCompleted(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, F5, F6,
-				       TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_WriteEventsCompleted(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3, F4, F5,
-					   F6, TrUserData);
-dg_read_field_def_WriteEventsCompleted(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, F5, F6,
-				       TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_WriteEventsCompleted_result(Rest, 0, 0, F1, F2,
-					      F3, F4, F5, F6, TrUserData);
-      18 ->
-	  d_field_WriteEventsCompleted_message(Rest, 0, 0, F1, F2,
-					       F3, F4, F5, F6, TrUserData);
-      24 ->
-	  d_field_WriteEventsCompleted_first_event_number(Rest, 0,
-							  0, F1, F2, F3, F4, F5,
-							  F6, TrUserData);
-      32 ->
-	  d_field_WriteEventsCompleted_last_event_number(Rest, 0,
-							 0, F1, F2, F3, F4, F5,
-							 F6, TrUserData);
-      40 ->
-	  d_field_WriteEventsCompleted_prepare_position(Rest, 0,
-							0, F1, F2, F3, F4, F5,
-							F6, TrUserData);
-      48 ->
-	  d_field_WriteEventsCompleted_commit_position(Rest, 0, 0,
-						       F1, F2, F3, F4, F5, F6,
-						       TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_WriteEventsCompleted(Rest, 0, 0, F1, F2, F3,
-						 F4, F5, F6, TrUserData);
-	    1 ->
-		skip_64_WriteEventsCompleted(Rest, 0, 0, F1, F2, F3, F4,
-					     F5, F6, TrUserData);
 	    2 ->
-		skip_length_delimited_WriteEventsCompleted(Rest, 0, 0,
-							   F1, F2, F3, F4, F5,
-							   F6, TrUserData);
+		skip_length_delimited_ReadAllEvents(Rest, 0, 0, F1, F2,
+						    F3, F4, F5, TrUserData);
 	    3 ->
-		skip_group_WriteEventsCompleted(Rest, Key bsr 3, 0, F1,
-						F2, F3, F4, F5, F6, TrUserData);
+		skip_group_ReadAllEvents(Rest, Key bsr 3, 0, F1, F2, F3,
+					 F4, F5, TrUserData);
 	    5 ->
-		skip_32_WriteEventsCompleted(Rest, 0, 0, F1, F2, F3, F4,
-					     F5, F6, TrUserData)
+		skip_32_ReadAllEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
+				      TrUserData)
 	  end
     end;
-dg_read_field_def_WriteEventsCompleted(<<>>, 0, 0, F1,
-				       F2, F3, F4, F5, F6, _) ->
-    #'WriteEventsCompleted'{result = F1, message = F2,
-			    first_event_number = F3, last_event_number = F4,
-			    prepare_position = F5, commit_position = F6}.
+dg_read_field_def_ReadAllEvents(<<>>, 0, 0, F1, F2, F3,
+				F4, F5, _) ->
+    #'ReadAllEvents'{commit_position = F1,
+		     prepare_position = F2, max_count = F3,
+		     resolve_link_tos = F4, require_master = F5}.
 
-d_field_WriteEventsCompleted_result(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+d_field_ReadAllEvents_commit_position(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, F5, TrUserData)
     when N < 57 ->
-    d_field_WriteEventsCompleted_result(Rest, N + 7,
-					X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-					TrUserData);
-d_field_WriteEventsCompleted_result(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, _, F2, F3, F4, F5, F6,
-				    TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue = d_enum_OperationResult(Tmp),
-    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0,
-					    NewFValue, F2, F3, F4, F5, F6,
-					    TrUserData).
-
-
-d_field_WriteEventsCompleted_message(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
-    when N < 57 ->
-    d_field_WriteEventsCompleted_message(Rest, N + 7,
-					 X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-					 TrUserData);
-d_field_WriteEventsCompleted_message(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, _, F3, F4, F5, F6,
-				     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_WriteEventsCompleted(Rest2, 0, 0, F1,
-					    NewFValue, F3, F4, F5, F6,
-					    TrUserData).
-
-
-d_field_WriteEventsCompleted_first_event_number(<<1:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, F4, F5, F6,
-						TrUserData)
-    when N < 57 ->
-    d_field_WriteEventsCompleted_first_event_number(Rest,
-						    N + 7, X bsl N + Acc, F1,
-						    F2, F3, F4, F5, F6,
-						    TrUserData);
-d_field_WriteEventsCompleted_first_event_number(<<0:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, _, F4, F5, F6,
-						TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
-					    F2, NewFValue, F4, F5, F6,
-					    TrUserData).
-
-
-d_field_WriteEventsCompleted_last_event_number(<<1:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, F3, F4, F5, F6,
-					       TrUserData)
-    when N < 57 ->
-    d_field_WriteEventsCompleted_last_event_number(Rest,
-						   N + 7, X bsl N + Acc, F1, F2,
-						   F3, F4, F5, F6, TrUserData);
-d_field_WriteEventsCompleted_last_event_number(<<0:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, F3, _, F5, F6,
-					       TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
-					    F2, F3, NewFValue, F5, F6,
-					    TrUserData).
-
-
-d_field_WriteEventsCompleted_prepare_position(<<1:1,
-						X:7, Rest/binary>>,
-					      N, Acc, F1, F2, F3, F4, F5, F6,
-					      TrUserData)
-    when N < 57 ->
-    d_field_WriteEventsCompleted_prepare_position(Rest,
-						  N + 7, X bsl N + Acc, F1, F2,
-						  F3, F4, F5, F6, TrUserData);
-d_field_WriteEventsCompleted_prepare_position(<<0:1,
-						X:7, Rest/binary>>,
-					      N, Acc, F1, F2, F3, F4, _, F6,
-					      TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
-					    F2, F3, F4, NewFValue, F6,
-					    TrUserData).
-
-
-d_field_WriteEventsCompleted_commit_position(<<1:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F1, F2, F3, F4, F5, F6,
-					     TrUserData)
-    when N < 57 ->
-    d_field_WriteEventsCompleted_commit_position(Rest,
-						 N + 7, X bsl N + Acc, F1, F2,
-						 F3, F4, F5, F6, TrUserData);
-d_field_WriteEventsCompleted_commit_position(<<0:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F1, F2, F3, F4, F5, _,
-					     TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
-					    F2, F3, F4, F5, NewFValue,
-					    TrUserData).
-
-
-skip_varint_WriteEventsCompleted(<<1:1, _:7,
-				   Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    skip_varint_WriteEventsCompleted(Rest, Z1, Z2, F1, F2,
-				     F3, F4, F5, F6, TrUserData);
-skip_varint_WriteEventsCompleted(<<0:1, _:7,
-				   Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    dfp_read_field_def_WriteEventsCompleted(Rest, Z1, Z2,
-					    F1, F2, F3, F4, F5, F6, TrUserData).
-
-
-skip_length_delimited_WriteEventsCompleted(<<1:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, F2, F3, F4, F5, F6,
-					   TrUserData)
-    when N < 57 ->
-    skip_length_delimited_WriteEventsCompleted(Rest, N + 7,
-					       X bsl N + Acc, F1, F2, F3, F4,
-					       F5, F6, TrUserData);
-skip_length_delimited_WriteEventsCompleted(<<0:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, F2, F3, F4, F5, F6,
-					   TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_WriteEventsCompleted(Rest2, 0, 0, F1,
-					    F2, F3, F4, F5, F6, TrUserData).
-
-
-skip_group_WriteEventsCompleted(Bin, FNum, Z2, F1, F2,
-				F3, F4, F5, F6, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_WriteEventsCompleted(Rest, 0, Z2, F1,
-					    F2, F3, F4, F5, F6, TrUserData).
-
-
-skip_32_WriteEventsCompleted(<<_:32, Rest/binary>>, Z1,
-			     Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    dfp_read_field_def_WriteEventsCompleted(Rest, Z1, Z2,
-					    F1, F2, F3, F4, F5, F6, TrUserData).
-
-
-skip_64_WriteEventsCompleted(<<_:64, Rest/binary>>, Z1,
-			     Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
-    dfp_read_field_def_WriteEventsCompleted(Rest, Z1, Z2,
-					    F1, F2, F3, F4, F5, F6, TrUserData).
-
-
-d_msg_SubscribeToStream(Bin, TrUserData) ->
-    dfp_read_field_def_SubscribeToStream(Bin, 0, 0,
-					 id(undefined, TrUserData),
-					 id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_SubscribeToStream(<<10,
-				       Rest/binary>>,
-				     Z1, Z2, F1, F2, TrUserData) ->
-    d_field_SubscribeToStream_event_stream_id(Rest, Z1, Z2,
-					      F1, F2, TrUserData);
-dfp_read_field_def_SubscribeToStream(<<16,
-				       Rest/binary>>,
-				     Z1, Z2, F1, F2, TrUserData) ->
-    d_field_SubscribeToStream_resolve_link_tos(Rest, Z1, Z2,
-					       F1, F2, TrUserData);
-dfp_read_field_def_SubscribeToStream(<<>>, 0, 0, F1, F2,
-				     _) ->
-    #'SubscribeToStream'{event_stream_id = F1,
-			 resolve_link_tos = F2};
-dfp_read_field_def_SubscribeToStream(Other, Z1, Z2, F1,
-				     F2, TrUserData) ->
-    dg_read_field_def_SubscribeToStream(Other, Z1, Z2, F1,
-					F2, TrUserData).
-
-dg_read_field_def_SubscribeToStream(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_SubscribeToStream(Rest, N + 7,
-					X bsl N + Acc, F1, F2, TrUserData);
-dg_read_field_def_SubscribeToStream(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_SubscribeToStream_event_stream_id(Rest, 0, 0,
-						    F1, F2, TrUserData);
-      16 ->
-	  d_field_SubscribeToStream_resolve_link_tos(Rest, 0, 0,
-						     F1, F2, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_SubscribeToStream(Rest, 0, 0, F1, F2,
-					      TrUserData);
-	    1 ->
-		skip_64_SubscribeToStream(Rest, 0, 0, F1, F2,
+    d_field_ReadAllEvents_commit_position(Rest, N + 7,
+					  X bsl N + Acc, F1, F2, F3, F4, F5,
 					  TrUserData);
-	    2 ->
-		skip_length_delimited_SubscribeToStream(Rest, 0, 0, F1,
-							F2, TrUserData);
-	    3 ->
-		skip_group_SubscribeToStream(Rest, Key bsr 3, 0, F1, F2,
-					     TrUserData);
-	    5 ->
-		skip_32_SubscribeToStream(Rest, 0, 0, F1, F2,
-					  TrUserData)
-	  end
-    end;
-dg_read_field_def_SubscribeToStream(<<>>, 0, 0, F1, F2,
-				    _) ->
-    #'SubscribeToStream'{event_stream_id = F1,
-			 resolve_link_tos = F2}.
+d_field_ReadAllEvents_commit_position(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, _, F2, F3, F4, F5, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, NewFValue,
+				     F2, F3, F4, F5, TrUserData).
 
-d_field_SubscribeToStream_event_stream_id(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, TrUserData)
+
+d_field_ReadAllEvents_prepare_position(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, F5, TrUserData)
     when N < 57 ->
-    d_field_SubscribeToStream_event_stream_id(Rest, N + 7,
-					      X bsl N + Acc, F1, F2,
-					      TrUserData);
-d_field_SubscribeToStream_event_stream_id(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, _, F2, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_SubscribeToStream(Rest2, 0, 0,
-					 NewFValue, F2, TrUserData).
+    d_field_ReadAllEvents_prepare_position(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3, F4, F5,
+					   TrUserData);
+d_field_ReadAllEvents_prepare_position(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, _, F3, F4, F5, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1,
+				     NewFValue, F3, F4, F5, TrUserData).
 
 
-d_field_SubscribeToStream_resolve_link_tos(<<1:1, X:7,
+d_field_ReadAllEvents_max_count(<<1:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEvents_max_count(Rest, N + 7,
+				    X bsl N + Acc, F1, F2, F3, F4, F5,
+				    TrUserData);
+d_field_ReadAllEvents_max_count(<<0:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, _, F4, F5, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1, F2,
+				     NewFValue, F4, F5, TrUserData).
+
+
+d_field_ReadAllEvents_resolve_link_tos(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEvents_resolve_link_tos(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3, F4, F5,
+					   TrUserData);
+d_field_ReadAllEvents_resolve_link_tos(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, _, F5, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1, F2, F3,
+				     NewFValue, F5, TrUserData).
+
+
+d_field_ReadAllEvents_require_master(<<1:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEvents_require_master(Rest, N + 7,
+					 X bsl N + Acc, F1, F2, F3, F4, F5,
+					 TrUserData);
+d_field_ReadAllEvents_require_master(<<0:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1, F2, F3,
+				     F4, NewFValue, TrUserData).
+
+
+skip_varint_ReadAllEvents(<<1:1, _:7, Rest/binary>>, Z1,
+			  Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    skip_varint_ReadAllEvents(Rest, Z1, Z2, F1, F2, F3, F4,
+			      F5, TrUserData);
+skip_varint_ReadAllEvents(<<0:1, _:7, Rest/binary>>, Z1,
+			  Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    dfp_read_field_def_ReadAllEvents(Rest, Z1, Z2, F1, F2,
+				     F3, F4, F5, TrUserData).
+
+
+skip_length_delimited_ReadAllEvents(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_ReadAllEvents(Rest, N + 7,
+					X bsl N + Acc, F1, F2, F3, F4, F5,
+					TrUserData);
+skip_length_delimited_ReadAllEvents(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, F5, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_ReadAllEvents(Rest2, 0, 0, F1, F2,
+				     F3, F4, F5, TrUserData).
+
+
+skip_group_ReadAllEvents(Bin, FNum, Z2, F1, F2, F3, F4,
+			 F5, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_ReadAllEvents(Rest, 0, Z2, F1, F2,
+				     F3, F4, F5, TrUserData).
+
+
+skip_32_ReadAllEvents(<<_:32, Rest/binary>>, Z1, Z2, F1,
+		      F2, F3, F4, F5, TrUserData) ->
+    dfp_read_field_def_ReadAllEvents(Rest, Z1, Z2, F1, F2,
+				     F3, F4, F5, TrUserData).
+
+
+skip_64_ReadAllEvents(<<_:64, Rest/binary>>, Z1, Z2, F1,
+		      F2, F3, F4, F5, TrUserData) ->
+    dfp_read_field_def_ReadAllEvents(Rest, Z1, Z2, F1, F2,
+				     F3, F4, F5, TrUserData).
+
+
+d_msg_SubscriptionConfirmation(Bin, TrUserData) ->
+    dfp_read_field_def_SubscriptionConfirmation(Bin, 0, 0,
+						id(undefined, TrUserData),
+						id(0, TrUserData), TrUserData).
+
+dfp_read_field_def_SubscriptionConfirmation(<<8,
+					      Rest/binary>>,
+					    Z1, Z2, F1, F2, TrUserData) ->
+    d_field_SubscriptionConfirmation_last_commit_position(Rest,
+							  Z1, Z2, F1, F2,
+							  TrUserData);
+dfp_read_field_def_SubscriptionConfirmation(<<16,
+					      Rest/binary>>,
+					    Z1, Z2, F1, F2, TrUserData) ->
+    d_field_SubscriptionConfirmation_last_event_number(Rest,
+						       Z1, Z2, F1, F2,
+						       TrUserData);
+dfp_read_field_def_SubscriptionConfirmation(<<>>, 0, 0,
+					    F1, F2, _) ->
+    #'SubscriptionConfirmation'{last_commit_position = F1,
+				last_event_number = F2};
+dfp_read_field_def_SubscriptionConfirmation(Other, Z1,
+					    Z2, F1, F2, TrUserData) ->
+    dg_read_field_def_SubscriptionConfirmation(Other, Z1,
+					       Z2, F1, F2, TrUserData).
+
+dg_read_field_def_SubscriptionConfirmation(<<1:1, X:7,
 					     Rest/binary>>,
 					   N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    d_field_SubscribeToStream_resolve_link_tos(Rest, N + 7,
+    when N < 32 - 7 ->
+    dg_read_field_def_SubscriptionConfirmation(Rest, N + 7,
 					       X bsl N + Acc, F1, F2,
 					       TrUserData);
-d_field_SubscribeToStream_resolve_link_tos(<<0:1, X:7,
+dg_read_field_def_SubscriptionConfirmation(<<0:1, X:7,
 					     Rest/binary>>,
-					   N, Acc, F1, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_SubscribeToStream(Rest, 0, 0, F1,
-					 NewFValue, TrUserData).
-
-
-skip_varint_SubscribeToStream(<<1:1, _:7, Rest/binary>>,
-			      Z1, Z2, F1, F2, TrUserData) ->
-    skip_varint_SubscribeToStream(Rest, Z1, Z2, F1, F2,
-				  TrUserData);
-skip_varint_SubscribeToStream(<<0:1, _:7, Rest/binary>>,
-			      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_SubscribeToStream(Rest, Z1, Z2, F1,
-					 F2, TrUserData).
-
-
-skip_length_delimited_SubscribeToStream(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_SubscribeToStream(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, TrUserData);
-skip_length_delimited_SubscribeToStream(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_SubscribeToStream(Rest2, 0, 0, F1,
-					 F2, TrUserData).
-
-
-skip_group_SubscribeToStream(Bin, FNum, Z2, F1, F2,
-			     TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_SubscribeToStream(Rest, 0, Z2, F1,
-					 F2, TrUserData).
-
-
-skip_32_SubscribeToStream(<<_:32, Rest/binary>>, Z1, Z2,
-			  F1, F2, TrUserData) ->
-    dfp_read_field_def_SubscribeToStream(Rest, Z1, Z2, F1,
-					 F2, TrUserData).
-
-
-skip_64_SubscribeToStream(<<_:64, Rest/binary>>, Z1, Z2,
-			  F1, F2, TrUserData) ->
-    dfp_read_field_def_SubscribeToStream(Rest, Z1, Z2, F1,
-					 F2, TrUserData).
-
-
-d_msg_SubscriptionDropped(Bin, TrUserData) ->
-    dfp_read_field_def_SubscriptionDropped(Bin, 0, 0,
-					   id('Unsubscribed', TrUserData),
-					   TrUserData).
-
-dfp_read_field_def_SubscriptionDropped(<<8,
-					 Rest/binary>>,
-				       Z1, Z2, F1, TrUserData) ->
-    d_field_SubscriptionDropped_reason(Rest, Z1, Z2, F1,
-				       TrUserData);
-dfp_read_field_def_SubscriptionDropped(<<>>, 0, 0, F1,
-				       _) ->
-    #'SubscriptionDropped'{reason = F1};
-dfp_read_field_def_SubscriptionDropped(Other, Z1, Z2,
-				       F1, TrUserData) ->
-    dg_read_field_def_SubscriptionDropped(Other, Z1, Z2, F1,
-					  TrUserData).
-
-dg_read_field_def_SubscriptionDropped(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_SubscriptionDropped(Rest, N + 7,
-					  X bsl N + Acc, F1, TrUserData);
-dg_read_field_def_SubscriptionDropped(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, TrUserData) ->
+					   N, Acc, F1, F2, TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
       8 ->
-	  d_field_SubscriptionDropped_reason(Rest, 0, 0, F1,
-					     TrUserData);
+	  d_field_SubscriptionConfirmation_last_commit_position(Rest,
+								0, 0, F1, F2,
+								TrUserData);
+      16 ->
+	  d_field_SubscriptionConfirmation_last_event_number(Rest,
+							     0, 0, F1, F2,
+							     TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
-		skip_varint_SubscriptionDropped(Rest, 0, 0, F1,
-						TrUserData);
+		skip_varint_SubscriptionConfirmation(Rest, 0, 0, F1, F2,
+						     TrUserData);
 	    1 ->
-		skip_64_SubscriptionDropped(Rest, 0, 0, F1, TrUserData);
+		skip_64_SubscriptionConfirmation(Rest, 0, 0, F1, F2,
+						 TrUserData);
 	    2 ->
-		skip_length_delimited_SubscriptionDropped(Rest, 0, 0,
-							  F1, TrUserData);
+		skip_length_delimited_SubscriptionConfirmation(Rest, 0,
+							       0, F1, F2,
+							       TrUserData);
 	    3 ->
-		skip_group_SubscriptionDropped(Rest, Key bsr 3, 0, F1,
-					       TrUserData);
+		skip_group_SubscriptionConfirmation(Rest, Key bsr 3, 0,
+						    F1, F2, TrUserData);
 	    5 ->
-		skip_32_SubscriptionDropped(Rest, 0, 0, F1, TrUserData)
+		skip_32_SubscriptionConfirmation(Rest, 0, 0, F1, F2,
+						 TrUserData)
 	  end
     end;
-dg_read_field_def_SubscriptionDropped(<<>>, 0, 0, F1,
-				      _) ->
-    #'SubscriptionDropped'{reason = F1}.
+dg_read_field_def_SubscriptionConfirmation(<<>>, 0, 0,
+					   F1, F2, _) ->
+    #'SubscriptionConfirmation'{last_commit_position = F1,
+				last_event_number = F2}.
 
-d_field_SubscriptionDropped_reason(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, TrUserData)
+d_field_SubscriptionConfirmation_last_commit_position(<<1:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2,
+						      TrUserData)
     when N < 57 ->
-    d_field_SubscriptionDropped_reason(Rest, N + 7,
-				       X bsl N + Acc, F1, TrUserData);
-d_field_SubscriptionDropped_reason(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, _, TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue =
-	'd_enum_SubscriptionDropped.SubscriptionDropReason'(Tmp),
-    dfp_read_field_def_SubscriptionDropped(Rest, 0, 0,
-					   NewFValue, TrUserData).
+    d_field_SubscriptionConfirmation_last_commit_position(Rest,
+							  N + 7, X bsl N + Acc,
+							  F1, F2, TrUserData);
+d_field_SubscriptionConfirmation_last_commit_position(<<0:1,
+							X:7, Rest/binary>>,
+						      N, Acc, _, F2,
+						      TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_SubscriptionConfirmation(Rest, 0, 0,
+						NewFValue, F2, TrUserData).
 
 
-skip_varint_SubscriptionDropped(<<1:1, _:7,
-				  Rest/binary>>,
-				Z1, Z2, F1, TrUserData) ->
-    skip_varint_SubscriptionDropped(Rest, Z1, Z2, F1,
-				    TrUserData);
-skip_varint_SubscriptionDropped(<<0:1, _:7,
-				  Rest/binary>>,
-				Z1, Z2, F1, TrUserData) ->
-    dfp_read_field_def_SubscriptionDropped(Rest, Z1, Z2, F1,
-					   TrUserData).
-
-
-skip_length_delimited_SubscriptionDropped(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, TrUserData)
+d_field_SubscriptionConfirmation_last_event_number(<<1:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, F2, TrUserData)
     when N < 57 ->
-    skip_length_delimited_SubscriptionDropped(Rest, N + 7,
-					      X bsl N + Acc, F1, TrUserData);
-skip_length_delimited_SubscriptionDropped(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, TrUserData) ->
+    d_field_SubscriptionConfirmation_last_event_number(Rest,
+						       N + 7, X bsl N + Acc, F1,
+						       F2, TrUserData);
+d_field_SubscriptionConfirmation_last_event_number(<<0:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, _, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_SubscriptionConfirmation(Rest, 0, 0,
+						F1, NewFValue, TrUserData).
+
+
+skip_varint_SubscriptionConfirmation(<<1:1, _:7,
+				       Rest/binary>>,
+				     Z1, Z2, F1, F2, TrUserData) ->
+    skip_varint_SubscriptionConfirmation(Rest, Z1, Z2, F1,
+					 F2, TrUserData);
+skip_varint_SubscriptionConfirmation(<<0:1, _:7,
+				       Rest/binary>>,
+				     Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_SubscriptionConfirmation(Rest, Z1,
+						Z2, F1, F2, TrUserData).
+
+
+skip_length_delimited_SubscriptionConfirmation(<<1:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_SubscriptionConfirmation(Rest,
+						   N + 7, X bsl N + Acc, F1, F2,
+						   TrUserData);
+skip_length_delimited_SubscriptionConfirmation(<<0:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, TrUserData) ->
     Length = X bsl N + Acc,
     <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_SubscriptionDropped(Rest2, 0, 0, F1,
-					   TrUserData).
+    dfp_read_field_def_SubscriptionConfirmation(Rest2, 0, 0,
+						F1, F2, TrUserData).
 
 
-skip_group_SubscriptionDropped(Bin, FNum, Z2, F1,
-			       TrUserData) ->
+skip_group_SubscriptionConfirmation(Bin, FNum, Z2, F1,
+				    F2, TrUserData) ->
     {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_SubscriptionDropped(Rest, 0, Z2, F1,
-					   TrUserData).
+    dfp_read_field_def_SubscriptionConfirmation(Rest, 0, Z2,
+						F1, F2, TrUserData).
 
 
-skip_32_SubscriptionDropped(<<_:32, Rest/binary>>, Z1,
-			    Z2, F1, TrUserData) ->
-    dfp_read_field_def_SubscriptionDropped(Rest, Z1, Z2, F1,
-					   TrUserData).
+skip_32_SubscriptionConfirmation(<<_:32, Rest/binary>>,
+				 Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_SubscriptionConfirmation(Rest, Z1,
+						Z2, F1, F2, TrUserData).
 
 
-skip_64_SubscriptionDropped(<<_:64, Rest/binary>>, Z1,
-			    Z2, F1, TrUserData) ->
-    dfp_read_field_def_SubscriptionDropped(Rest, Z1, Z2, F1,
-					   TrUserData).
+skip_64_SubscriptionConfirmation(<<_:64, Rest/binary>>,
+				 Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_SubscriptionConfirmation(Rest, Z1,
+						Z2, F1, F2, TrUserData).
 
 
 d_msg_TransactionWriteCompleted(Bin, TrUserData) ->
@@ -3837,3691 +2492,141 @@ skip_64_TransactionWriteCompleted(<<_:64, Rest/binary>>,
 						 Z2, F1, F2, F3, TrUserData).
 
 
-d_msg_TransactionStart(Bin, TrUserData) ->
-    dfp_read_field_def_TransactionStart(Bin, 0, 0,
-					id(undefined, TrUserData),
-					id(undefined, TrUserData),
-					id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_TransactionStart(<<10, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionStart_event_stream_id(Rest, Z1, Z2,
-					     F1, F2, F3, TrUserData);
-dfp_read_field_def_TransactionStart(<<16, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionStart_expected_version(Rest, Z1, Z2,
-					      F1, F2, F3, TrUserData);
-dfp_read_field_def_TransactionStart(<<24, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionStart_require_master(Rest, Z1, Z2,
-					    F1, F2, F3, TrUserData);
-dfp_read_field_def_TransactionStart(<<>>, 0, 0, F1, F2,
-				    F3, _) ->
-    #'TransactionStart'{event_stream_id = F1,
-			expected_version = F2, require_master = F3};
-dfp_read_field_def_TransactionStart(Other, Z1, Z2, F1,
-				    F2, F3, TrUserData) ->
-    dg_read_field_def_TransactionStart(Other, Z1, Z2, F1,
-				       F2, F3, TrUserData).
-
-dg_read_field_def_TransactionStart(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_TransactionStart(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, TrUserData);
-dg_read_field_def_TransactionStart(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_TransactionStart_event_stream_id(Rest, 0, 0, F1,
-						   F2, F3, TrUserData);
-      16 ->
-	  d_field_TransactionStart_expected_version(Rest, 0, 0,
-						    F1, F2, F3, TrUserData);
-      24 ->
-	  d_field_TransactionStart_require_master(Rest, 0, 0, F1,
-						  F2, F3, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_TransactionStart(Rest, 0, 0, F1, F2, F3,
-					     TrUserData);
-	    1 ->
-		skip_64_TransactionStart(Rest, 0, 0, F1, F2, F3,
-					 TrUserData);
-	    2 ->
-		skip_length_delimited_TransactionStart(Rest, 0, 0, F1,
-						       F2, F3, TrUserData);
-	    3 ->
-		skip_group_TransactionStart(Rest, Key bsr 3, 0, F1, F2,
-					    F3, TrUserData);
-	    5 ->
-		skip_32_TransactionStart(Rest, 0, 0, F1, F2, F3,
-					 TrUserData)
-	  end
-    end;
-dg_read_field_def_TransactionStart(<<>>, 0, 0, F1, F2,
-				   F3, _) ->
-    #'TransactionStart'{event_stream_id = F1,
-			expected_version = F2, require_master = F3}.
-
-d_field_TransactionStart_event_stream_id(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionStart_event_stream_id(Rest, N + 7,
-					     X bsl N + Acc, F1, F2, F3,
-					     TrUserData);
-d_field_TransactionStart_event_stream_id(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, _, F2, F3, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_TransactionStart(Rest2, 0, 0,
-					NewFValue, F2, F3, TrUserData).
-
-
-d_field_TransactionStart_expected_version(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionStart_expected_version(Rest, N + 7,
-					      X bsl N + Acc, F1, F2, F3,
-					      TrUserData);
-d_field_TransactionStart_expected_version(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, _, F3, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_TransactionStart(Rest, 0, 0, F1,
-					NewFValue, F3, TrUserData).
-
-
-d_field_TransactionStart_require_master(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionStart_require_master(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, F3,
-					    TrUserData);
-d_field_TransactionStart_require_master(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_TransactionStart(Rest, 0, 0, F1, F2,
-					NewFValue, TrUserData).
-
-
-skip_varint_TransactionStart(<<1:1, _:7, Rest/binary>>,
-			     Z1, Z2, F1, F2, F3, TrUserData) ->
-    skip_varint_TransactionStart(Rest, Z1, Z2, F1, F2, F3,
-				 TrUserData);
-skip_varint_TransactionStart(<<0:1, _:7, Rest/binary>>,
-			     Z1, Z2, F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionStart(Rest, Z1, Z2, F1,
-					F2, F3, TrUserData).
-
-
-skip_length_delimited_TransactionStart(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_TransactionStart(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3,
-					   TrUserData);
-skip_length_delimited_TransactionStart(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_TransactionStart(Rest2, 0, 0, F1, F2,
-					F3, TrUserData).
-
-
-skip_group_TransactionStart(Bin, FNum, Z2, F1, F2, F3,
-			    TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_TransactionStart(Rest, 0, Z2, F1, F2,
-					F3, TrUserData).
-
-
-skip_32_TransactionStart(<<_:32, Rest/binary>>, Z1, Z2,
-			 F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionStart(Rest, Z1, Z2, F1,
-					F2, F3, TrUserData).
-
-
-skip_64_TransactionStart(<<_:64, Rest/binary>>, Z1, Z2,
-			 F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionStart(Rest, Z1, Z2, F1,
-					F2, F3, TrUserData).
-
-
-d_msg_CreatePersistentSubscription(Bin, TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscription(Bin, 0,
-						    0,
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(undefined, TrUserData),
-						    id(<<>>, TrUserData),
-						    TrUserData).
-
-dfp_read_field_def_CreatePersistentSubscription(<<10,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_subscription_group_name(Rest,
-								 Z1, Z2, F1, F2,
-								 F3, F4, F5, F6,
-								 F7, F8, F9,
-								 F10, F11, F12,
-								 F13, F14, F15,
-								 F16,
-								 TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<18,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_event_stream_id(Rest,
-							 Z1, Z2, F1, F2, F3, F4,
-							 F5, F6, F7, F8, F9,
-							 F10, F11, F12, F13,
-							 F14, F15, F16,
-							 TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<24,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_resolve_link_tos(Rest,
-							  Z1, Z2, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12,
-							  F13, F14, F15, F16,
-							  TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<32,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_start_from(Rest,
-						    Z1, Z2, F1, F2, F3, F4, F5,
-						    F6, F7, F8, F9, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<40,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_message_timeout_milliseconds(Rest,
-								      Z1, Z2,
-								      F1, F2,
-								      F3, F4,
-								      F5, F6,
-								      F7, F8,
-								      F9, F10,
-								      F11, F12,
-								      F13, F14,
-								      F15, F16,
-								      TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<48,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_record_statistics(Rest,
-							   Z1, Z2, F1, F2, F3,
-							   F4, F5, F6, F7, F8,
-							   F9, F10, F11, F12,
-							   F13, F14, F15, F16,
-							   TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<56,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_live_buffer_size(Rest,
-							  Z1, Z2, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12,
-							  F13, F14, F15, F16,
-							  TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<64,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_read_batch_size(Rest,
-							 Z1, Z2, F1, F2, F3, F4,
-							 F5, F6, F7, F8, F9,
-							 F10, F11, F12, F13,
-							 F14, F15, F16,
-							 TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<72,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_buffer_size(Rest,
-						     Z1, Z2, F1, F2, F3, F4, F5,
-						     F6, F7, F8, F9, F10, F11,
-						     F12, F13, F14, F15, F16,
-						     TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<80,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_max_retry_count(Rest,
-							 Z1, Z2, F1, F2, F3, F4,
-							 F5, F6, F7, F8, F9,
-							 F10, F11, F12, F13,
-							 F14, F15, F16,
-							 TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<88,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_prefer_round_robin(Rest,
-							    Z1, Z2, F1, F2, F3,
-							    F4, F5, F6, F7, F8,
-							    F9, F10, F11, F12,
-							    F13, F14, F15, F16,
-							    TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<96,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_checkpoint_after_time(Rest,
-							       Z1, Z2, F1, F2,
-							       F3, F4, F5, F6,
-							       F7, F8, F9, F10,
-							       F11, F12, F13,
-							       F14, F15, F16,
-							       TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<104,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_checkpoint_max_count(Rest,
-							      Z1, Z2, F1, F2,
-							      F3, F4, F5, F6,
-							      F7, F8, F9, F10,
-							      F11, F12, F13,
-							      F14, F15, F16,
-							      TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<112,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_checkpoint_min_count(Rest,
-							      Z1, Z2, F1, F2,
-							      F3, F4, F5, F6,
-							      F7, F8, F9, F10,
-							      F11, F12, F13,
-							      F14, F15, F16,
-							      TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<120,
-						  Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_subscriber_max_count(Rest,
-							      Z1, Z2, F1, F2,
-							      F3, F4, F5, F6,
-							      F7, F8, F9, F10,
-							      F11, F12, F13,
-							      F14, F15, F16,
-							      TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<130,
-						  1, Rest/binary>>,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    d_field_CreatePersistentSubscription_named_consumer_strategy(Rest,
-								 Z1, Z2, F1, F2,
-								 F3, F4, F5, F6,
-								 F7, F8, F9,
-								 F10, F11, F12,
-								 F13, F14, F15,
-								 F16,
-								 TrUserData);
-dfp_read_field_def_CreatePersistentSubscription(<<>>, 0,
-						0, F1, F2, F3, F4, F5, F6, F7,
-						F8, F9, F10, F11, F12, F13, F14,
-						F15, F16, _) ->
-    #'CreatePersistentSubscription'{subscription_group_name
-					= F1,
-				    event_stream_id = F2, resolve_link_tos = F3,
-				    start_from = F4,
-				    message_timeout_milliseconds = F5,
-				    record_statistics = F6,
-				    live_buffer_size = F7, read_batch_size = F8,
-				    buffer_size = F9, max_retry_count = F10,
-				    prefer_round_robin = F11,
-				    checkpoint_after_time = F12,
-				    checkpoint_max_count = F13,
-				    checkpoint_min_count = F14,
-				    subscriber_max_count = F15,
-				    named_consumer_strategy = F16};
-dfp_read_field_def_CreatePersistentSubscription(Other,
-						Z1, Z2, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    dg_read_field_def_CreatePersistentSubscription(Other,
-						   Z1, Z2, F1, F2, F3, F4, F5,
-						   F6, F7, F8, F9, F10, F11,
-						   F12, F13, F14, F15, F16,
-						   TrUserData).
-
-dg_read_field_def_CreatePersistentSubscription(<<1:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, F3, F4, F5, F6,
-					       F7, F8, F9, F10, F11, F12, F13,
-					       F14, F15, F16, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_CreatePersistentSubscription(Rest,
-						   N + 7, X bsl N + Acc, F1, F2,
-						   F3, F4, F5, F6, F7, F8, F9,
-						   F10, F11, F12, F13, F14, F15,
-						   F16, TrUserData);
-dg_read_field_def_CreatePersistentSubscription(<<0:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, F3, F4, F5, F6,
-					       F7, F8, F9, F10, F11, F12, F13,
-					       F14, F15, F16, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_CreatePersistentSubscription_subscription_group_name(Rest,
-								       0, 0, F1,
-								       F2, F3,
-								       F4, F5,
-								       F6, F7,
-								       F8, F9,
-								       F10, F11,
-								       F12, F13,
-								       F14, F15,
-								       F16,
-								       TrUserData);
-      18 ->
-	  d_field_CreatePersistentSubscription_event_stream_id(Rest,
-							       0, 0, F1, F2, F3,
-							       F4, F5, F6, F7,
-							       F8, F9, F10, F11,
-							       F12, F13, F14,
-							       F15, F16,
-							       TrUserData);
-      24 ->
-	  d_field_CreatePersistentSubscription_resolve_link_tos(Rest,
-								0, 0, F1, F2,
-								F3, F4, F5, F6,
-								F7, F8, F9, F10,
-								F11, F12, F13,
-								F14, F15, F16,
-								TrUserData);
-      32 ->
-	  d_field_CreatePersistentSubscription_start_from(Rest, 0,
-							  0, F1, F2, F3, F4, F5,
-							  F6, F7, F8, F9, F10,
-							  F11, F12, F13, F14,
-							  F15, F16, TrUserData);
-      40 ->
-	  d_field_CreatePersistentSubscription_message_timeout_milliseconds(Rest,
-									    0,
-									    0,
-									    F1,
-									    F2,
-									    F3,
-									    F4,
-									    F5,
-									    F6,
-									    F7,
-									    F8,
-									    F9,
-									    F10,
-									    F11,
-									    F12,
-									    F13,
-									    F14,
-									    F15,
-									    F16,
-									    TrUserData);
-      48 ->
-	  d_field_CreatePersistentSubscription_record_statistics(Rest,
-								 0, 0, F1, F2,
-								 F3, F4, F5, F6,
-								 F7, F8, F9,
-								 F10, F11, F12,
-								 F13, F14, F15,
-								 F16,
-								 TrUserData);
-      56 ->
-	  d_field_CreatePersistentSubscription_live_buffer_size(Rest,
-								0, 0, F1, F2,
-								F3, F4, F5, F6,
-								F7, F8, F9, F10,
-								F11, F12, F13,
-								F14, F15, F16,
-								TrUserData);
-      64 ->
-	  d_field_CreatePersistentSubscription_read_batch_size(Rest,
-							       0, 0, F1, F2, F3,
-							       F4, F5, F6, F7,
-							       F8, F9, F10, F11,
-							       F12, F13, F14,
-							       F15, F16,
-							       TrUserData);
-      72 ->
-	  d_field_CreatePersistentSubscription_buffer_size(Rest,
-							   0, 0, F1, F2, F3, F4,
-							   F5, F6, F7, F8, F9,
-							   F10, F11, F12, F13,
-							   F14, F15, F16,
-							   TrUserData);
-      80 ->
-	  d_field_CreatePersistentSubscription_max_retry_count(Rest,
-							       0, 0, F1, F2, F3,
-							       F4, F5, F6, F7,
-							       F8, F9, F10, F11,
-							       F12, F13, F14,
-							       F15, F16,
-							       TrUserData);
-      88 ->
-	  d_field_CreatePersistentSubscription_prefer_round_robin(Rest,
-								  0, 0, F1, F2,
-								  F3, F4, F5,
-								  F6, F7, F8,
-								  F9, F10, F11,
-								  F12, F13, F14,
-								  F15, F16,
-								  TrUserData);
-      96 ->
-	  d_field_CreatePersistentSubscription_checkpoint_after_time(Rest,
-								     0, 0, F1,
-								     F2, F3, F4,
-								     F5, F6, F7,
-								     F8, F9,
-								     F10, F11,
-								     F12, F13,
-								     F14, F15,
-								     F16,
-								     TrUserData);
-      104 ->
-	  d_field_CreatePersistentSubscription_checkpoint_max_count(Rest,
-								    0, 0, F1,
-								    F2, F3, F4,
-								    F5, F6, F7,
-								    F8, F9, F10,
-								    F11, F12,
-								    F13, F14,
-								    F15, F16,
-								    TrUserData);
-      112 ->
-	  d_field_CreatePersistentSubscription_checkpoint_min_count(Rest,
-								    0, 0, F1,
-								    F2, F3, F4,
-								    F5, F6, F7,
-								    F8, F9, F10,
-								    F11, F12,
-								    F13, F14,
-								    F15, F16,
-								    TrUserData);
-      120 ->
-	  d_field_CreatePersistentSubscription_subscriber_max_count(Rest,
-								    0, 0, F1,
-								    F2, F3, F4,
-								    F5, F6, F7,
-								    F8, F9, F10,
-								    F11, F12,
-								    F13, F14,
-								    F15, F16,
-								    TrUserData);
-      130 ->
-	  d_field_CreatePersistentSubscription_named_consumer_strategy(Rest,
-								       0, 0, F1,
-								       F2, F3,
-								       F4, F5,
-								       F6, F7,
-								       F8, F9,
-								       F10, F11,
-								       F12, F13,
-								       F14, F15,
-								       F16,
-								       TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_CreatePersistentSubscription(Rest, 0, 0, F1,
-							 F2, F3, F4, F5, F6, F7,
-							 F8, F9, F10, F11, F12,
-							 F13, F14, F15, F16,
-							 TrUserData);
-	    1 ->
-		skip_64_CreatePersistentSubscription(Rest, 0, 0, F1, F2,
-						     F3, F4, F5, F6, F7, F8, F9,
-						     F10, F11, F12, F13, F14,
-						     F15, F16, TrUserData);
-	    2 ->
-		skip_length_delimited_CreatePersistentSubscription(Rest,
-								   0, 0, F1, F2,
-								   F3, F4, F5,
-								   F6, F7, F8,
-								   F9, F10, F11,
-								   F12, F13,
-								   F14, F15,
-								   F16,
-								   TrUserData);
-	    3 ->
-		skip_group_CreatePersistentSubscription(Rest, Key bsr 3,
-							0, F1, F2, F3, F4, F5,
-							F6, F7, F8, F9, F10,
-							F11, F12, F13, F14, F15,
-							F16, TrUserData);
-	    5 ->
-		skip_32_CreatePersistentSubscription(Rest, 0, 0, F1, F2,
-						     F3, F4, F5, F6, F7, F8, F9,
-						     F10, F11, F12, F13, F14,
-						     F15, F16, TrUserData)
-	  end
-    end;
-dg_read_field_def_CreatePersistentSubscription(<<>>, 0,
-					       0, F1, F2, F3, F4, F5, F6, F7,
-					       F8, F9, F10, F11, F12, F13, F14,
-					       F15, F16, _) ->
-    #'CreatePersistentSubscription'{subscription_group_name
-					= F1,
-				    event_stream_id = F2, resolve_link_tos = F3,
-				    start_from = F4,
-				    message_timeout_milliseconds = F5,
-				    record_statistics = F6,
-				    live_buffer_size = F7, read_batch_size = F8,
-				    buffer_size = F9, max_retry_count = F10,
-				    prefer_round_robin = F11,
-				    checkpoint_after_time = F12,
-				    checkpoint_max_count = F13,
-				    checkpoint_min_count = F14,
-				    subscriber_max_count = F15,
-				    named_consumer_strategy = F16}.
-
-d_field_CreatePersistentSubscription_subscription_group_name(<<1:1,
-							       X:7,
-							       Rest/binary>>,
-							     N, Acc, F1, F2, F3,
-							     F4, F5, F6, F7, F8,
-							     F9, F10, F11, F12,
-							     F13, F14, F15, F16,
-							     TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_subscription_group_name(Rest,
-								 N + 7,
-								 X bsl N + Acc,
-								 F1, F2, F3, F4,
-								 F5, F6, F7, F8,
-								 F9, F10, F11,
-								 F12, F13, F14,
-								 F15, F16,
-								 TrUserData);
-d_field_CreatePersistentSubscription_subscription_group_name(<<0:1,
-							       X:7,
-							       Rest/binary>>,
-							     N, Acc, _, F2, F3,
-							     F4, F5, F6, F7, F8,
-							     F9, F10, F11, F12,
-							     F13, F14, F15, F16,
-							     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_CreatePersistentSubscription(Rest2,
-						    0, 0, NewFValue, F2, F3, F4,
-						    F5, F6, F7, F8, F9, F10,
-						    F11, F12, F13, F14, F15,
-						    F16, TrUserData).
-
-
-d_field_CreatePersistentSubscription_event_stream_id(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, F7, F8, F9, F10, F11,
-						     F12, F13, F14, F15, F16,
-						     TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_event_stream_id(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, F3, F4, F5, F6,
-							 F7, F8, F9, F10, F11,
-							 F12, F13, F14, F15,
-							 F16, TrUserData);
-d_field_CreatePersistentSubscription_event_stream_id(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, _, F3, F4, F5,
-						     F6, F7, F8, F9, F10, F11,
-						     F12, F13, F14, F15, F16,
-						     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_CreatePersistentSubscription(Rest2,
-						    0, 0, F1, NewFValue, F3, F4,
-						    F5, F6, F7, F8, F9, F10,
-						    F11, F12, F13, F14, F15,
-						    F16, TrUserData).
-
-
-d_field_CreatePersistentSubscription_resolve_link_tos(<<1:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, F3, F4,
-						      F5, F6, F7, F8, F9, F10,
-						      F11, F12, F13, F14, F15,
-						      F16, TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_resolve_link_tos(Rest,
-							  N + 7, X bsl N + Acc,
-							  F1, F2, F3, F4, F5,
-							  F6, F7, F8, F9, F10,
-							  F11, F12, F13, F14,
-							  F15, F16, TrUserData);
-d_field_CreatePersistentSubscription_resolve_link_tos(<<0:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, _, F4, F5,
-						      F6, F7, F8, F9, F10, F11,
-						      F12, F13, F14, F15, F16,
-						      TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, NewFValue, F4,
-						    F5, F6, F7, F8, F9, F10,
-						    F11, F12, F13, F14, F15,
-						    F16, TrUserData).
-
-
-d_field_CreatePersistentSubscription_start_from(<<1:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, F4, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_start_from(Rest,
-						    N + 7, X bsl N + Acc, F1,
-						    F2, F3, F4, F5, F6, F7, F8,
-						    F9, F10, F11, F12, F13, F14,
-						    F15, F16, TrUserData);
-d_field_CreatePersistentSubscription_start_from(<<0:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, _, F5, F6,
-						F7, F8, F9, F10, F11, F12, F13,
-						F14, F15, F16, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, NewFValue,
-						    F5, F6, F7, F8, F9, F10,
-						    F11, F12, F13, F14, F15,
-						    F16, TrUserData).
-
-
-d_field_CreatePersistentSubscription_message_timeout_milliseconds(<<1:1,
-								    X:7,
-								    Rest/binary>>,
-								  N, Acc, F1,
-								  F2, F3, F4,
-								  F5, F6, F7,
-								  F8, F9, F10,
-								  F11, F12, F13,
-								  F14, F15, F16,
-								  TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_message_timeout_milliseconds(Rest,
-								      N + 7,
-								      X bsl N +
-									Acc,
-								      F1, F2,
-								      F3, F4,
-								      F5, F6,
-								      F7, F8,
-								      F9, F10,
-								      F11, F12,
-								      F13, F14,
-								      F15, F16,
-								      TrUserData);
-d_field_CreatePersistentSubscription_message_timeout_milliseconds(<<0:1,
-								    X:7,
-								    Rest/binary>>,
-								  N, Acc, F1,
-								  F2, F3, F4, _,
-								  F6, F7, F8,
-								  F9, F10, F11,
-								  F12, F13, F14,
-								  F15, F16,
-								  TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4,
-						    NewFValue, F6, F7, F8, F9,
-						    F10, F11, F12, F13, F14,
-						    F15, F16, TrUserData).
-
-
-d_field_CreatePersistentSubscription_record_statistics(<<1:1,
-							 X:7, Rest/binary>>,
-						       N, Acc, F1, F2, F3, F4,
-						       F5, F6, F7, F8, F9, F10,
-						       F11, F12, F13, F14, F15,
-						       F16, TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_record_statistics(Rest,
-							   N + 7, X bsl N + Acc,
-							   F1, F2, F3, F4, F5,
-							   F6, F7, F8, F9, F10,
-							   F11, F12, F13, F14,
-							   F15, F16,
-							   TrUserData);
-d_field_CreatePersistentSubscription_record_statistics(<<0:1,
-							 X:7, Rest/binary>>,
-						       N, Acc, F1, F2, F3, F4,
-						       F5, _, F7, F8, F9, F10,
-						       F11, F12, F13, F14, F15,
-						       F16, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5,
-						    NewFValue, F7, F8, F9, F10,
-						    F11, F12, F13, F14, F15,
-						    F16, TrUserData).
-
-
-d_field_CreatePersistentSubscription_live_buffer_size(<<1:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, F3, F4,
-						      F5, F6, F7, F8, F9, F10,
-						      F11, F12, F13, F14, F15,
-						      F16, TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_live_buffer_size(Rest,
-							  N + 7, X bsl N + Acc,
-							  F1, F2, F3, F4, F5,
-							  F6, F7, F8, F9, F10,
-							  F11, F12, F13, F14,
-							  F15, F16, TrUserData);
-d_field_CreatePersistentSubscription_live_buffer_size(<<0:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2, F3, F4,
-						      F5, F6, _, F8, F9, F10,
-						      F11, F12, F13, F14, F15,
-						      F16, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    NewFValue, F8, F9, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_read_batch_size(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, F7, F8, F9, F10, F11,
-						     F12, F13, F14, F15, F16,
-						     TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_read_batch_size(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, F3, F4, F5, F6,
-							 F7, F8, F9, F10, F11,
-							 F12, F13, F14, F15,
-							 F16, TrUserData);
-d_field_CreatePersistentSubscription_read_batch_size(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, F7, _, F9, F10, F11,
-						     F12, F13, F14, F15, F16,
-						     TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, NewFValue, F9, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_buffer_size(<<1:1,
-						   X:7, Rest/binary>>,
-						 N, Acc, F1, F2, F3, F4, F5, F6,
-						 F7, F8, F9, F10, F11, F12, F13,
-						 F14, F15, F16, TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_buffer_size(Rest,
-						     N + 7, X bsl N + Acc, F1,
-						     F2, F3, F4, F5, F6, F7, F8,
-						     F9, F10, F11, F12, F13,
-						     F14, F15, F16, TrUserData);
-d_field_CreatePersistentSubscription_buffer_size(<<0:1,
-						   X:7, Rest/binary>>,
-						 N, Acc, F1, F2, F3, F4, F5, F6,
-						 F7, F8, _, F10, F11, F12, F13,
-						 F14, F15, F16, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, F8, NewFValue, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_max_retry_count(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, F7, F8, F9, F10, F11,
-						     F12, F13, F14, F15, F16,
-						     TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_max_retry_count(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, F3, F4, F5, F6,
-							 F7, F8, F9, F10, F11,
-							 F12, F13, F14, F15,
-							 F16, TrUserData);
-d_field_CreatePersistentSubscription_max_retry_count(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, F7, F8, F9, _, F11,
-						     F12, F13, F14, F15, F16,
-						     TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, F8, F9, NewFValue, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_prefer_round_robin(<<1:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, F2, F3, F4,
-							F5, F6, F7, F8, F9, F10,
-							F11, F12, F13, F14, F15,
-							F16, TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_prefer_round_robin(Rest,
-							    N + 7,
-							    X bsl N + Acc, F1,
-							    F2, F3, F4, F5, F6,
-							    F7, F8, F9, F10,
-							    F11, F12, F13, F14,
-							    F15, F16,
-							    TrUserData);
-d_field_CreatePersistentSubscription_prefer_round_robin(<<0:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, F2, F3, F4,
-							F5, F6, F7, F8, F9, F10,
-							_, F12, F13, F14, F15,
-							F16, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, F8, F9, F10, NewFValue,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_checkpoint_after_time(<<1:1,
-							     X:7, Rest/binary>>,
-							   N, Acc, F1, F2, F3,
-							   F4, F5, F6, F7, F8,
-							   F9, F10, F11, F12,
-							   F13, F14, F15, F16,
-							   TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_checkpoint_after_time(Rest,
-							       N + 7,
-							       X bsl N + Acc,
-							       F1, F2, F3, F4,
-							       F5, F6, F7, F8,
-							       F9, F10, F11,
-							       F12, F13, F14,
-							       F15, F16,
-							       TrUserData);
-d_field_CreatePersistentSubscription_checkpoint_after_time(<<0:1,
-							     X:7, Rest/binary>>,
-							   N, Acc, F1, F2, F3,
-							   F4, F5, F6, F7, F8,
-							   F9, F10, F11, _, F13,
-							   F14, F15, F16,
-							   TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, F8, F9, F10, F11,
-						    NewFValue, F13, F14, F15,
-						    F16, TrUserData).
-
-
-d_field_CreatePersistentSubscription_checkpoint_max_count(<<1:1,
-							    X:7, Rest/binary>>,
-							  N, Acc, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12,
-							  F13, F14, F15, F16,
-							  TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_checkpoint_max_count(Rest,
-							      N + 7,
-							      X bsl N + Acc, F1,
-							      F2, F3, F4, F5,
-							      F6, F7, F8, F9,
-							      F10, F11, F12,
-							      F13, F14, F15,
-							      F16, TrUserData);
-d_field_CreatePersistentSubscription_checkpoint_max_count(<<0:1,
-							    X:7, Rest/binary>>,
-							  N, Acc, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12, _,
-							  F14, F15, F16,
-							  TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, F8, F9, F10, F11, F12,
-						    NewFValue, F14, F15, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_checkpoint_min_count(<<1:1,
-							    X:7, Rest/binary>>,
-							  N, Acc, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12,
-							  F13, F14, F15, F16,
-							  TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_checkpoint_min_count(Rest,
-							      N + 7,
-							      X bsl N + Acc, F1,
-							      F2, F3, F4, F5,
-							      F6, F7, F8, F9,
-							      F10, F11, F12,
-							      F13, F14, F15,
-							      F16, TrUserData);
-d_field_CreatePersistentSubscription_checkpoint_min_count(<<0:1,
-							    X:7, Rest/binary>>,
-							  N, Acc, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12,
-							  F13, _, F15, F16,
-							  TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, F8, F9, F10, F11, F12,
-						    F13, NewFValue, F15, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_subscriber_max_count(<<1:1,
-							    X:7, Rest/binary>>,
-							  N, Acc, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12,
-							  F13, F14, F15, F16,
-							  TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_subscriber_max_count(Rest,
-							      N + 7,
-							      X bsl N + Acc, F1,
-							      F2, F3, F4, F5,
-							      F6, F7, F8, F9,
-							      F10, F11, F12,
-							      F13, F14, F15,
-							      F16, TrUserData);
-d_field_CreatePersistentSubscription_subscriber_max_count(<<0:1,
-							    X:7, Rest/binary>>,
-							  N, Acc, F1, F2, F3,
-							  F4, F5, F6, F7, F8,
-							  F9, F10, F11, F12,
-							  F13, F14, _, F16,
-							  TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    0, F1, F2, F3, F4, F5, F6,
-						    F7, F8, F9, F10, F11, F12,
-						    F13, F14, NewFValue, F16,
-						    TrUserData).
-
-
-d_field_CreatePersistentSubscription_named_consumer_strategy(<<1:1,
-							       X:7,
-							       Rest/binary>>,
-							     N, Acc, F1, F2, F3,
-							     F4, F5, F6, F7, F8,
-							     F9, F10, F11, F12,
-							     F13, F14, F15, F16,
-							     TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscription_named_consumer_strategy(Rest,
-								 N + 7,
-								 X bsl N + Acc,
-								 F1, F2, F3, F4,
-								 F5, F6, F7, F8,
-								 F9, F10, F11,
-								 F12, F13, F14,
-								 F15, F16,
-								 TrUserData);
-d_field_CreatePersistentSubscription_named_consumer_strategy(<<0:1,
-							       X:7,
-							       Rest/binary>>,
-							     N, Acc, F1, F2, F3,
-							     F4, F5, F6, F7, F8,
-							     F9, F10, F11, F12,
-							     F13, F14, F15, _,
-							     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_CreatePersistentSubscription(Rest2,
-						    0, 0, F1, F2, F3, F4, F5,
-						    F6, F7, F8, F9, F10, F11,
-						    F12, F13, F14, F15,
-						    NewFValue, TrUserData).
-
-
-skip_varint_CreatePersistentSubscription(<<1:1, _:7,
-					   Rest/binary>>,
-					 Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8,
-					 F9, F10, F11, F12, F13, F14, F15, F16,
-					 TrUserData) ->
-    skip_varint_CreatePersistentSubscription(Rest, Z1, Z2,
-					     F1, F2, F3, F4, F5, F6, F7, F8, F9,
-					     F10, F11, F12, F13, F14, F15, F16,
-					     TrUserData);
-skip_varint_CreatePersistentSubscription(<<0:1, _:7,
-					   Rest/binary>>,
-					 Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8,
-					 F9, F10, F11, F12, F13, F14, F15, F16,
-					 TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscription(Rest,
-						    Z1, Z2, F1, F2, F3, F4, F5,
-						    F6, F7, F8, F9, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-skip_length_delimited_CreatePersistentSubscription(<<1:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, F2, F3, F4, F5,
-						   F6, F7, F8, F9, F10, F11,
-						   F12, F13, F14, F15, F16,
-						   TrUserData)
-    when N < 57 ->
-    skip_length_delimited_CreatePersistentSubscription(Rest,
-						       N + 7, X bsl N + Acc, F1,
-						       F2, F3, F4, F5, F6, F7,
-						       F8, F9, F10, F11, F12,
-						       F13, F14, F15, F16,
-						       TrUserData);
-skip_length_delimited_CreatePersistentSubscription(<<0:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, F2, F3, F4, F5,
-						   F6, F7, F8, F9, F10, F11,
-						   F12, F13, F14, F15, F16,
-						   TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_CreatePersistentSubscription(Rest2,
-						    0, 0, F1, F2, F3, F4, F5,
-						    F6, F7, F8, F9, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-skip_group_CreatePersistentSubscription(Bin, FNum, Z2,
-					F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-					F11, F12, F13, F14, F15, F16,
-					TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
-						    Z2, F1, F2, F3, F4, F5, F6,
-						    F7, F8, F9, F10, F11, F12,
-						    F13, F14, F15, F16,
-						    TrUserData).
-
-
-skip_32_CreatePersistentSubscription(<<_:32,
-				       Rest/binary>>,
-				     Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9,
-				     F10, F11, F12, F13, F14, F15, F16,
-				     TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscription(Rest,
-						    Z1, Z2, F1, F2, F3, F4, F5,
-						    F6, F7, F8, F9, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-skip_64_CreatePersistentSubscription(<<_:64,
-				       Rest/binary>>,
-				     Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9,
-				     F10, F11, F12, F13, F14, F15, F16,
-				     TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscription(Rest,
-						    Z1, Z2, F1, F2, F3, F4, F5,
-						    F6, F7, F8, F9, F10, F11,
-						    F12, F13, F14, F15, F16,
-						    TrUserData).
-
-
-d_msg_TransactionStartCompleted(Bin, TrUserData) ->
-    dfp_read_field_def_TransactionStartCompleted(Bin, 0, 0,
-						 id(undefined, TrUserData),
-						 id(undefined, TrUserData),
-						 id(<<>>, TrUserData),
-						 TrUserData).
-
-dfp_read_field_def_TransactionStartCompleted(<<8,
-					       Rest/binary>>,
-					     Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionStartCompleted_transaction_id(Rest,
-						     Z1, Z2, F1, F2, F3,
-						     TrUserData);
-dfp_read_field_def_TransactionStartCompleted(<<16,
-					       Rest/binary>>,
-					     Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionStartCompleted_result(Rest, Z1, Z2,
-					     F1, F2, F3, TrUserData);
-dfp_read_field_def_TransactionStartCompleted(<<26,
-					       Rest/binary>>,
-					     Z1, Z2, F1, F2, F3, TrUserData) ->
-    d_field_TransactionStartCompleted_message(Rest, Z1, Z2,
-					      F1, F2, F3, TrUserData);
-dfp_read_field_def_TransactionStartCompleted(<<>>, 0, 0,
-					     F1, F2, F3, _) ->
-    #'TransactionStartCompleted'{transaction_id = F1,
-				 result = F2, message = F3};
-dfp_read_field_def_TransactionStartCompleted(Other, Z1,
-					     Z2, F1, F2, F3, TrUserData) ->
-    dg_read_field_def_TransactionStartCompleted(Other, Z1,
-						Z2, F1, F2, F3, TrUserData).
-
-dg_read_field_def_TransactionStartCompleted(<<1:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, F1, F2, F3, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_TransactionStartCompleted(Rest, N + 7,
-						X bsl N + Acc, F1, F2, F3,
-						TrUserData);
-dg_read_field_def_TransactionStartCompleted(<<0:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, F1, F2, F3, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_TransactionStartCompleted_transaction_id(Rest,
-							   0, 0, F1, F2, F3,
-							   TrUserData);
-      16 ->
-	  d_field_TransactionStartCompleted_result(Rest, 0, 0, F1,
-						   F2, F3, TrUserData);
-      26 ->
-	  d_field_TransactionStartCompleted_message(Rest, 0, 0,
-						    F1, F2, F3, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_TransactionStartCompleted(Rest, 0, 0, F1,
-						      F2, F3, TrUserData);
-	    1 ->
-		skip_64_TransactionStartCompleted(Rest, 0, 0, F1, F2,
-						  F3, TrUserData);
-	    2 ->
-		skip_length_delimited_TransactionStartCompleted(Rest, 0,
-								0, F1, F2, F3,
-								TrUserData);
-	    3 ->
-		skip_group_TransactionStartCompleted(Rest, Key bsr 3, 0,
-						     F1, F2, F3, TrUserData);
-	    5 ->
-		skip_32_TransactionStartCompleted(Rest, 0, 0, F1, F2,
-						  F3, TrUserData)
-	  end
-    end;
-dg_read_field_def_TransactionStartCompleted(<<>>, 0, 0,
-					    F1, F2, F3, _) ->
-    #'TransactionStartCompleted'{transaction_id = F1,
-				 result = F2, message = F3}.
-
-d_field_TransactionStartCompleted_transaction_id(<<1:1,
-						   X:7, Rest/binary>>,
-						 N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionStartCompleted_transaction_id(Rest,
-						     N + 7, X bsl N + Acc, F1,
-						     F2, F3, TrUserData);
-d_field_TransactionStartCompleted_transaction_id(<<0:1,
-						   X:7, Rest/binary>>,
-						 N, Acc, _, F2, F3,
-						 TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_TransactionStartCompleted(Rest, 0, 0,
-						 NewFValue, F2, F3, TrUserData).
-
-
-d_field_TransactionStartCompleted_result(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionStartCompleted_result(Rest, N + 7,
-					     X bsl N + Acc, F1, F2, F3,
-					     TrUserData);
-d_field_TransactionStartCompleted_result(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, _, F3, TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue = d_enum_OperationResult(Tmp),
-    dfp_read_field_def_TransactionStartCompleted(Rest, 0, 0,
-						 F1, NewFValue, F3, TrUserData).
-
-
-d_field_TransactionStartCompleted_message(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    d_field_TransactionStartCompleted_message(Rest, N + 7,
-					      X bsl N + Acc, F1, F2, F3,
-					      TrUserData);
-d_field_TransactionStartCompleted_message(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, _, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_TransactionStartCompleted(Rest2, 0,
-						 0, F1, F2, NewFValue,
-						 TrUserData).
-
-
-skip_varint_TransactionStartCompleted(<<1:1, _:7,
-					Rest/binary>>,
-				      Z1, Z2, F1, F2, F3, TrUserData) ->
-    skip_varint_TransactionStartCompleted(Rest, Z1, Z2, F1,
-					  F2, F3, TrUserData);
-skip_varint_TransactionStartCompleted(<<0:1, _:7,
-					Rest/binary>>,
-				      Z1, Z2, F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionStartCompleted(Rest, Z1,
-						 Z2, F1, F2, F3, TrUserData).
-
-
-skip_length_delimited_TransactionStartCompleted(<<1:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_TransactionStartCompleted(Rest,
-						    N + 7, X bsl N + Acc, F1,
-						    F2, F3, TrUserData);
-skip_length_delimited_TransactionStartCompleted(<<0:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3,
-						TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_TransactionStartCompleted(Rest2, 0,
-						 0, F1, F2, F3, TrUserData).
-
-
-skip_group_TransactionStartCompleted(Bin, FNum, Z2, F1,
-				     F2, F3, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_TransactionStartCompleted(Rest, 0,
-						 Z2, F1, F2, F3, TrUserData).
-
-
-skip_32_TransactionStartCompleted(<<_:32, Rest/binary>>,
-				  Z1, Z2, F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionStartCompleted(Rest, Z1,
-						 Z2, F1, F2, F3, TrUserData).
-
-
-skip_64_TransactionStartCompleted(<<_:64, Rest/binary>>,
-				  Z1, Z2, F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_TransactionStartCompleted(Rest, Z1,
-						 Z2, F1, F2, F3, TrUserData).
-
-
-d_msg_EventRecord(Bin, TrUserData) ->
-    dfp_read_field_def_EventRecord(Bin, 0, 0,
-				   id(undefined, TrUserData),
-				   id(undefined, TrUserData),
-				   id(undefined, TrUserData),
-				   id(undefined, TrUserData),
-				   id(undefined, TrUserData),
-				   id(undefined, TrUserData),
-				   id(undefined, TrUserData),
-				   id(<<>>, TrUserData), id(0, TrUserData),
-				   id(0, TrUserData), TrUserData).
-
-dfp_read_field_def_EventRecord(<<10, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_event_stream_id(Rest, Z1, Z2, F1,
-					F2, F3, F4, F5, F6, F7, F8, F9, F10,
-					TrUserData);
-dfp_read_field_def_EventRecord(<<16, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_event_number(Rest, Z1, Z2, F1, F2,
-				     F3, F4, F5, F6, F7, F8, F9, F10,
-				     TrUserData);
-dfp_read_field_def_EventRecord(<<26, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_event_id(Rest, Z1, Z2, F1, F2, F3,
-				 F4, F5, F6, F7, F8, F9, F10, TrUserData);
-dfp_read_field_def_EventRecord(<<34, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_event_type(Rest, Z1, Z2, F1, F2, F3,
-				   F4, F5, F6, F7, F8, F9, F10, TrUserData);
-dfp_read_field_def_EventRecord(<<40, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_data_content_type(Rest, Z1, Z2, F1,
-					  F2, F3, F4, F5, F6, F7, F8, F9, F10,
-					  TrUserData);
-dfp_read_field_def_EventRecord(<<48, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_metadata_content_type(Rest, Z1, Z2,
-					      F1, F2, F3, F4, F5, F6, F7, F8,
-					      F9, F10, TrUserData);
-dfp_read_field_def_EventRecord(<<58, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_data(Rest, Z1, Z2, F1, F2, F3, F4,
-			     F5, F6, F7, F8, F9, F10, TrUserData);
-dfp_read_field_def_EventRecord(<<66, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_metadata(Rest, Z1, Z2, F1, F2, F3,
-				 F4, F5, F6, F7, F8, F9, F10, TrUserData);
-dfp_read_field_def_EventRecord(<<72, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_created(Rest, Z1, Z2, F1, F2, F3,
-				F4, F5, F6, F7, F8, F9, F10, TrUserData);
-dfp_read_field_def_EventRecord(<<80, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    d_field_EventRecord_created_epoch(Rest, Z1, Z2, F1, F2,
-				      F3, F4, F5, F6, F7, F8, F9, F10,
-				      TrUserData);
-dfp_read_field_def_EventRecord(<<>>, 0, 0, F1, F2, F3,
-			       F4, F5, F6, F7, F8, F9, F10, _) ->
-    #'EventRecord'{event_stream_id = F1, event_number = F2,
-		   event_id = F3, event_type = F4, data_content_type = F5,
-		   metadata_content_type = F6, data = F7, metadata = F8,
-		   created = F9, created_epoch = F10};
-dfp_read_field_def_EventRecord(Other, Z1, Z2, F1, F2,
-			       F3, F4, F5, F6, F7, F8, F9, F10, TrUserData) ->
-    dg_read_field_def_EventRecord(Other, Z1, Z2, F1, F2, F3,
-				  F4, F5, F6, F7, F8, F9, F10, TrUserData).
-
-dg_read_field_def_EventRecord(<<1:1, X:7, Rest/binary>>,
-			      N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			      TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_EventRecord(Rest, N + 7,
-				  X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7, F8,
-				  F9, F10, TrUserData);
-dg_read_field_def_EventRecord(<<0:1, X:7, Rest/binary>>,
-			      N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			      TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_EventRecord_event_stream_id(Rest, 0, 0, F1, F2,
-					      F3, F4, F5, F6, F7, F8, F9, F10,
-					      TrUserData);
-      16 ->
-	  d_field_EventRecord_event_number(Rest, 0, 0, F1, F2, F3,
-					   F4, F5, F6, F7, F8, F9, F10,
-					   TrUserData);
-      26 ->
-	  d_field_EventRecord_event_id(Rest, 0, 0, F1, F2, F3, F4,
-				       F5, F6, F7, F8, F9, F10, TrUserData);
-      34 ->
-	  d_field_EventRecord_event_type(Rest, 0, 0, F1, F2, F3,
-					 F4, F5, F6, F7, F8, F9, F10,
-					 TrUserData);
-      40 ->
-	  d_field_EventRecord_data_content_type(Rest, 0, 0, F1,
-						F2, F3, F4, F5, F6, F7, F8, F9,
-						F10, TrUserData);
-      48 ->
-	  d_field_EventRecord_metadata_content_type(Rest, 0, 0,
-						    F1, F2, F3, F4, F5, F6, F7,
-						    F8, F9, F10, TrUserData);
-      58 ->
-	  d_field_EventRecord_data(Rest, 0, 0, F1, F2, F3, F4, F5,
-				   F6, F7, F8, F9, F10, TrUserData);
-      66 ->
-	  d_field_EventRecord_metadata(Rest, 0, 0, F1, F2, F3, F4,
-				       F5, F6, F7, F8, F9, F10, TrUserData);
-      72 ->
-	  d_field_EventRecord_created(Rest, 0, 0, F1, F2, F3, F4,
-				      F5, F6, F7, F8, F9, F10, TrUserData);
-      80 ->
-	  d_field_EventRecord_created_epoch(Rest, 0, 0, F1, F2,
-					    F3, F4, F5, F6, F7, F8, F9, F10,
-					    TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_EventRecord(Rest, 0, 0, F1, F2, F3, F4, F5,
-					F6, F7, F8, F9, F10, TrUserData);
-	    1 ->
-		skip_64_EventRecord(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
-				    F7, F8, F9, F10, TrUserData);
-	    2 ->
-		skip_length_delimited_EventRecord(Rest, 0, 0, F1, F2,
-						  F3, F4, F5, F6, F7, F8, F9,
-						  F10, TrUserData);
-	    3 ->
-		skip_group_EventRecord(Rest, Key bsr 3, 0, F1, F2, F3,
-				       F4, F5, F6, F7, F8, F9, F10, TrUserData);
-	    5 ->
-		skip_32_EventRecord(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
-				    F7, F8, F9, F10, TrUserData)
-	  end
-    end;
-dg_read_field_def_EventRecord(<<>>, 0, 0, F1, F2, F3,
-			      F4, F5, F6, F7, F8, F9, F10, _) ->
-    #'EventRecord'{event_stream_id = F1, event_number = F2,
-		   event_id = F3, event_type = F4, data_content_type = F5,
-		   metadata_content_type = F6, data = F7, metadata = F8,
-		   created = F9, created_epoch = F10}.
-
-d_field_EventRecord_event_stream_id(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
-				    F10, TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_event_stream_id(Rest, N + 7,
-					X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-					F7, F8, F9, F10, TrUserData);
-d_field_EventRecord_event_stream_id(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, _, F2, F3, F4, F5, F6, F7, F8, F9,
-				    F10, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_EventRecord(Rest2, 0, 0, NewFValue,
-				   F2, F3, F4, F5, F6, F7, F8, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_event_number(<<1:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
-				 F10, TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_event_number(Rest, N + 7,
-				     X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
-				     F8, F9, F10, TrUserData);
-d_field_EventRecord_event_number(<<0:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, _, F3, F4, F5, F6, F7, F8, F9, F10,
-				 TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_EventRecord(Rest, 0, 0, F1,
-				   NewFValue, F3, F4, F5, F6, F7, F8, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_event_id(<<1:1, X:7, Rest/binary>>,
-			     N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			     TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_event_id(Rest, N + 7, X bsl N + Acc,
-				 F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-				 TrUserData);
-d_field_EventRecord_event_id(<<0:1, X:7, Rest/binary>>,
-			     N, Acc, F1, F2, _, F4, F5, F6, F7, F8, F9, F10,
-			     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2,
-				   NewFValue, F4, F5, F6, F7, F8, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_event_type(<<1:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			       TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_event_type(Rest, N + 7,
-				   X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
-				   F8, F9, F10, TrUserData);
-d_field_EventRecord_event_type(<<0:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, F2, F3, _, F5, F6, F7, F8, F9, F10,
-			       TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
-				   NewFValue, F5, F6, F7, F8, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_data_content_type(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, F5, F6, F7, F8,
-				      F9, F10, TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_data_content_type(Rest, N + 7,
-					  X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-					  F7, F8, F9, F10, TrUserData);
-d_field_EventRecord_data_content_type(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, _, F6, F7, F8, F9,
-				      F10, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
-				   F4, NewFValue, F6, F7, F8, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_metadata_content_type(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					  F8, F9, F10, TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_metadata_content_type(Rest, N + 7,
-					      X bsl N + Acc, F1, F2, F3, F4, F5,
-					      F6, F7, F8, F9, F10, TrUserData);
-d_field_EventRecord_metadata_content_type(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, F4, F5, _, F7, F8,
-					  F9, F10, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
-				   F4, F5, NewFValue, F7, F8, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_data(<<1:1, X:7, Rest/binary>>, N,
-			 Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			 TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_data(Rest, N + 7, X bsl N + Acc, F1,
-			     F2, F3, F4, F5, F6, F7, F8, F9, F10, TrUserData);
-d_field_EventRecord_data(<<0:1, X:7, Rest/binary>>, N,
-			 Acc, F1, F2, F3, F4, F5, F6, _, F8, F9, F10,
-			 TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
-				   F4, F5, F6, NewFValue, F8, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_metadata(<<1:1, X:7, Rest/binary>>,
-			     N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			     TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_metadata(Rest, N + 7, X bsl N + Acc,
-				 F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-				 TrUserData);
-d_field_EventRecord_metadata(<<0:1, X:7, Rest/binary>>,
-			     N, Acc, F1, F2, F3, F4, F5, F6, F7, _, F9, F10,
-			     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
-				   F4, F5, F6, F7, NewFValue, F9, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_created(<<1:1, X:7, Rest/binary>>,
-			    N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			    TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_created(Rest, N + 7, X bsl N + Acc,
-				F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-				TrUserData);
-d_field_EventRecord_created(<<0:1, X:7, Rest/binary>>,
-			    N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, _, F10,
-			    TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
-				   F4, F5, F6, F7, F8, NewFValue, F10,
-				   TrUserData).
-
-
-d_field_EventRecord_created_epoch(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
-				  F10, TrUserData)
-    when N < 57 ->
-    d_field_EventRecord_created_epoch(Rest, N + 7,
-				      X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
-				      F8, F9, F10, TrUserData);
-d_field_EventRecord_created_epoch(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, _,
-				  TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
-				   F4, F5, F6, F7, F8, F9, NewFValue,
-				   TrUserData).
-
-
-skip_varint_EventRecord(<<1:1, _:7, Rest/binary>>, Z1,
-			Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			TrUserData) ->
-    skip_varint_EventRecord(Rest, Z1, Z2, F1, F2, F3, F4,
-			    F5, F6, F7, F8, F9, F10, TrUserData);
-skip_varint_EventRecord(<<0:1, _:7, Rest/binary>>, Z1,
-			Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
-			TrUserData) ->
-    dfp_read_field_def_EventRecord(Rest, Z1, Z2, F1, F2, F3,
-				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
-
-
-skip_length_delimited_EventRecord(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
-				  F10, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_EventRecord(Rest, N + 7,
-				      X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
-				      F8, F9, F10, TrUserData);
-skip_length_delimited_EventRecord(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
-				  F10, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
-				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
-
-
-skip_group_EventRecord(Bin, FNum, Z2, F1, F2, F3, F4,
-		       F5, F6, F7, F8, F9, F10, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_EventRecord(Rest, 0, Z2, F1, F2, F3,
-				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
-
-
-skip_32_EventRecord(<<_:32, Rest/binary>>, Z1, Z2, F1,
-		    F2, F3, F4, F5, F6, F7, F8, F9, F10, TrUserData) ->
-    dfp_read_field_def_EventRecord(Rest, Z1, Z2, F1, F2, F3,
-				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
-
-
-skip_64_EventRecord(<<_:64, Rest/binary>>, Z1, Z2, F1,
-		    F2, F3, F4, F5, F6, F7, F8, F9, F10, TrUserData) ->
-    dfp_read_field_def_EventRecord(Rest, Z1, Z2, F1, F2, F3,
-				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
-
-
-d_msg_ResolvedEvent(Bin, TrUserData) ->
-    dfp_read_field_def_ResolvedEvent(Bin, 0, 0,
-				     id(undefined, TrUserData),
-				     id(undefined, TrUserData),
-				     id(undefined, TrUserData),
-				     id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_ResolvedEvent(<<10, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ResolvedEvent_event(Rest, Z1, Z2, F1, F2, F3,
-				F4, TrUserData);
-dfp_read_field_def_ResolvedEvent(<<18, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ResolvedEvent_link(Rest, Z1, Z2, F1, F2, F3, F4,
-			       TrUserData);
-dfp_read_field_def_ResolvedEvent(<<24, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ResolvedEvent_commit_position(Rest, Z1, Z2, F1,
-					  F2, F3, F4, TrUserData);
-dfp_read_field_def_ResolvedEvent(<<32, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ResolvedEvent_prepare_position(Rest, Z1, Z2, F1,
-					   F2, F3, F4, TrUserData);
-dfp_read_field_def_ResolvedEvent(<<>>, 0, 0, F1, F2, F3,
-				 F4, _) ->
-    #'ResolvedEvent'{event = F1, link = F2,
-		     commit_position = F3, prepare_position = F4};
-dfp_read_field_def_ResolvedEvent(Other, Z1, Z2, F1, F2,
-				 F3, F4, TrUserData) ->
-    dg_read_field_def_ResolvedEvent(Other, Z1, Z2, F1, F2,
-				    F3, F4, TrUserData).
-
-dg_read_field_def_ResolvedEvent(<<1:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_ResolvedEvent(Rest, N + 7,
-				    X bsl N + Acc, F1, F2, F3, F4, TrUserData);
-dg_read_field_def_ResolvedEvent(<<0:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_ResolvedEvent_event(Rest, 0, 0, F1, F2, F3, F4,
-				      TrUserData);
-      18 ->
-	  d_field_ResolvedEvent_link(Rest, 0, 0, F1, F2, F3, F4,
-				     TrUserData);
-      24 ->
-	  d_field_ResolvedEvent_commit_position(Rest, 0, 0, F1,
-						F2, F3, F4, TrUserData);
-      32 ->
-	  d_field_ResolvedEvent_prepare_position(Rest, 0, 0, F1,
-						 F2, F3, F4, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_ResolvedEvent(Rest, 0, 0, F1, F2, F3, F4,
-					  TrUserData);
-	    1 ->
-		skip_64_ResolvedEvent(Rest, 0, 0, F1, F2, F3, F4,
-				      TrUserData);
-	    2 ->
-		skip_length_delimited_ResolvedEvent(Rest, 0, 0, F1, F2,
-						    F3, F4, TrUserData);
-	    3 ->
-		skip_group_ResolvedEvent(Rest, Key bsr 3, 0, F1, F2, F3,
-					 F4, TrUserData);
-	    5 ->
-		skip_32_ResolvedEvent(Rest, 0, 0, F1, F2, F3, F4,
-				      TrUserData)
-	  end
-    end;
-dg_read_field_def_ResolvedEvent(<<>>, 0, 0, F1, F2, F3,
-				F4, _) ->
-    #'ResolvedEvent'{event = F1, link = F2,
-		     commit_position = F3, prepare_position = F4}.
-
-d_field_ResolvedEvent_event(<<1:1, X:7, Rest/binary>>,
-			    N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ResolvedEvent_event(Rest, N + 7, X bsl N + Acc,
-				F1, F2, F3, F4, TrUserData);
-d_field_ResolvedEvent_event(<<0:1, X:7, Rest/binary>>,
-			    N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bs:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = id(d_msg_EventRecord(Bs, TrUserData),
-		   TrUserData),
-    dfp_read_field_def_ResolvedEvent(Rest2, 0, 0,
-				     if F1 == undefined -> NewFValue;
-					true ->
-					    merge_msg_EventRecord(F1, NewFValue,
-								  TrUserData)
-				     end,
-				     F2, F3, F4, TrUserData).
-
-
-d_field_ResolvedEvent_link(<<1:1, X:7, Rest/binary>>, N,
-			   Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ResolvedEvent_link(Rest, N + 7, X bsl N + Acc,
-			       F1, F2, F3, F4, TrUserData);
-d_field_ResolvedEvent_link(<<0:1, X:7, Rest/binary>>, N,
-			   Acc, F1, F2, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bs:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = id(d_msg_EventRecord(Bs, TrUserData),
-		   TrUserData),
-    dfp_read_field_def_ResolvedEvent(Rest2, 0, 0, F1,
-				     if F2 == undefined -> NewFValue;
-					true ->
-					    merge_msg_EventRecord(F2, NewFValue,
-								  TrUserData)
-				     end,
-				     F3, F4, TrUserData).
-
-
-d_field_ResolvedEvent_commit_position(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ResolvedEvent_commit_position(Rest, N + 7,
-					  X bsl N + Acc, F1, F2, F3, F4,
-					  TrUserData);
-d_field_ResolvedEvent_commit_position(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, _, F4, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ResolvedEvent(Rest, 0, 0, F1, F2,
-				     NewFValue, F4, TrUserData).
-
-
-d_field_ResolvedEvent_prepare_position(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ResolvedEvent_prepare_position(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3, F4,
-					   TrUserData);
-d_field_ResolvedEvent_prepare_position(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, _, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ResolvedEvent(Rest, 0, 0, F1, F2, F3,
-				     NewFValue, TrUserData).
-
-
-skip_varint_ResolvedEvent(<<1:1, _:7, Rest/binary>>, Z1,
-			  Z2, F1, F2, F3, F4, TrUserData) ->
-    skip_varint_ResolvedEvent(Rest, Z1, Z2, F1, F2, F3, F4,
-			      TrUserData);
-skip_varint_ResolvedEvent(<<0:1, _:7, Rest/binary>>, Z1,
-			  Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_ResolvedEvent(Rest, Z1, Z2, F1, F2,
-				     F3, F4, TrUserData).
-
-
-skip_length_delimited_ResolvedEvent(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_ResolvedEvent(Rest, N + 7,
-					X bsl N + Acc, F1, F2, F3, F4,
-					TrUserData);
-skip_length_delimited_ResolvedEvent(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_ResolvedEvent(Rest2, 0, 0, F1, F2,
-				     F3, F4, TrUserData).
-
-
-skip_group_ResolvedEvent(Bin, FNum, Z2, F1, F2, F3, F4,
-			 TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_ResolvedEvent(Rest, 0, Z2, F1, F2,
-				     F3, F4, TrUserData).
-
-
-skip_32_ResolvedEvent(<<_:32, Rest/binary>>, Z1, Z2, F1,
-		      F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_ResolvedEvent(Rest, Z1, Z2, F1, F2,
-				     F3, F4, TrUserData).
-
-
-skip_64_ResolvedEvent(<<_:64, Rest/binary>>, Z1, Z2, F1,
-		      F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_ResolvedEvent(Rest, Z1, Z2, F1, F2,
-				     F3, F4, TrUserData).
-
-
-d_msg_ReadAllEventsCompleted(Bin, TrUserData) ->
-    dfp_read_field_def_ReadAllEventsCompleted(Bin, 0, 0,
-					      id(undefined, TrUserData),
-					      id(undefined, TrUserData),
-					      id([], TrUserData),
-					      id(undefined, TrUserData),
-					      id(undefined, TrUserData),
-					      id('Success', TrUserData),
-					      id(<<>>, TrUserData), TrUserData).
-
-dfp_read_field_def_ReadAllEventsCompleted(<<8,
-					    Rest/binary>>,
-					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    d_field_ReadAllEventsCompleted_commit_position(Rest, Z1,
-						   Z2, F1, F2, F3, F4, F5, F6,
-						   F7, TrUserData);
-dfp_read_field_def_ReadAllEventsCompleted(<<16,
-					    Rest/binary>>,
-					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    d_field_ReadAllEventsCompleted_prepare_position(Rest,
-						    Z1, Z2, F1, F2, F3, F4, F5,
-						    F6, F7, TrUserData);
-dfp_read_field_def_ReadAllEventsCompleted(<<26,
-					    Rest/binary>>,
-					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    d_field_ReadAllEventsCompleted_events(Rest, Z1, Z2, F1,
-					  F2, F3, F4, F5, F6, F7, TrUserData);
-dfp_read_field_def_ReadAllEventsCompleted(<<32,
-					    Rest/binary>>,
-					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    d_field_ReadAllEventsCompleted_next_commit_position(Rest,
-							Z1, Z2, F1, F2, F3, F4,
-							F5, F6, F7, TrUserData);
-dfp_read_field_def_ReadAllEventsCompleted(<<40,
-					    Rest/binary>>,
-					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    d_field_ReadAllEventsCompleted_next_prepare_position(Rest,
-							 Z1, Z2, F1, F2, F3, F4,
-							 F5, F6, F7,
-							 TrUserData);
-dfp_read_field_def_ReadAllEventsCompleted(<<48,
-					    Rest/binary>>,
-					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    d_field_ReadAllEventsCompleted_result(Rest, Z1, Z2, F1,
-					  F2, F3, F4, F5, F6, F7, TrUserData);
-dfp_read_field_def_ReadAllEventsCompleted(<<58,
-					    Rest/binary>>,
-					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    d_field_ReadAllEventsCompleted_error(Rest, Z1, Z2, F1,
-					 F2, F3, F4, F5, F6, F7, TrUserData);
-dfp_read_field_def_ReadAllEventsCompleted(<<>>, 0, 0,
-					  F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    #'ReadAllEventsCompleted'{commit_position = F1,
-			      prepare_position = F2,
-			      events = lists_reverse(F3, TrUserData),
-			      next_commit_position = F4,
-			      next_prepare_position = F5, result = F6,
-			      error = F7};
-dfp_read_field_def_ReadAllEventsCompleted(Other, Z1, Z2,
-					  F1, F2, F3, F4, F5, F6, F7,
-					  TrUserData) ->
-    dg_read_field_def_ReadAllEventsCompleted(Other, Z1, Z2,
-					     F1, F2, F3, F4, F5, F6, F7,
-					     TrUserData).
-
-dg_read_field_def_ReadAllEventsCompleted(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					 TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_ReadAllEventsCompleted(Rest, N + 7,
-					     X bsl N + Acc, F1, F2, F3, F4, F5,
-					     F6, F7, TrUserData);
-dg_read_field_def_ReadAllEventsCompleted(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					 TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_ReadAllEventsCompleted_commit_position(Rest, 0,
-							 0, F1, F2, F3, F4, F5,
-							 F6, F7, TrUserData);
-      16 ->
-	  d_field_ReadAllEventsCompleted_prepare_position(Rest, 0,
-							  0, F1, F2, F3, F4, F5,
-							  F6, F7, TrUserData);
-      26 ->
-	  d_field_ReadAllEventsCompleted_events(Rest, 0, 0, F1,
-						F2, F3, F4, F5, F6, F7,
-						TrUserData);
-      32 ->
-	  d_field_ReadAllEventsCompleted_next_commit_position(Rest,
-							      0, 0, F1, F2, F3,
-							      F4, F5, F6, F7,
-							      TrUserData);
-      40 ->
-	  d_field_ReadAllEventsCompleted_next_prepare_position(Rest,
-							       0, 0, F1, F2, F3,
-							       F4, F5, F6, F7,
-							       TrUserData);
-      48 ->
-	  d_field_ReadAllEventsCompleted_result(Rest, 0, 0, F1,
-						F2, F3, F4, F5, F6, F7,
-						TrUserData);
-      58 ->
-	  d_field_ReadAllEventsCompleted_error(Rest, 0, 0, F1, F2,
-					       F3, F4, F5, F6, F7, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_ReadAllEventsCompleted(Rest, 0, 0, F1, F2,
-						   F3, F4, F5, F6, F7,
-						   TrUserData);
-	    1 ->
-		skip_64_ReadAllEventsCompleted(Rest, 0, 0, F1, F2, F3,
-					       F4, F5, F6, F7, TrUserData);
-	    2 ->
-		skip_length_delimited_ReadAllEventsCompleted(Rest, 0, 0,
-							     F1, F2, F3, F4, F5,
-							     F6, F7,
-							     TrUserData);
-	    3 ->
-		skip_group_ReadAllEventsCompleted(Rest, Key bsr 3, 0,
-						  F1, F2, F3, F4, F5, F6, F7,
-						  TrUserData);
-	    5 ->
-		skip_32_ReadAllEventsCompleted(Rest, 0, 0, F1, F2, F3,
-					       F4, F5, F6, F7, TrUserData)
-	  end
-    end;
-dg_read_field_def_ReadAllEventsCompleted(<<>>, 0, 0, F1,
-					 F2, F3, F4, F5, F6, F7, TrUserData) ->
-    #'ReadAllEventsCompleted'{commit_position = F1,
-			      prepare_position = F2,
-			      events = lists_reverse(F3, TrUserData),
-			      next_commit_position = F4,
-			      next_prepare_position = F5, result = F6,
-			      error = F7}.
-
-d_field_ReadAllEventsCompleted_commit_position(<<1:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, F3, F4, F5, F6,
-					       F7, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEventsCompleted_commit_position(Rest,
-						   N + 7, X bsl N + Acc, F1, F2,
-						   F3, F4, F5, F6, F7,
-						   TrUserData);
-d_field_ReadAllEventsCompleted_commit_position(<<0:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, _, F2, F3, F4, F5, F6,
-					       F7, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
-					      NewFValue, F2, F3, F4, F5, F6, F7,
-					      TrUserData).
-
-
-d_field_ReadAllEventsCompleted_prepare_position(<<1:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, F4, F5, F6,
-						F7, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEventsCompleted_prepare_position(Rest,
-						    N + 7, X bsl N + Acc, F1,
-						    F2, F3, F4, F5, F6, F7,
-						    TrUserData);
-d_field_ReadAllEventsCompleted_prepare_position(<<0:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, _, F3, F4, F5, F6,
-						F7, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
-					      F1, NewFValue, F3, F4, F5, F6, F7,
-					      TrUserData).
-
-
-d_field_ReadAllEventsCompleted_events(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, F5, F6, F7,
-				      TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEventsCompleted_events(Rest, N + 7,
-					  X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-					  F7, TrUserData);
-d_field_ReadAllEventsCompleted_events(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, F5, F6, F7,
-				      TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bs:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = id(d_msg_ResolvedEvent(Bs, TrUserData),
-		   TrUserData),
-    dfp_read_field_def_ReadAllEventsCompleted(Rest2, 0, 0,
-					      F1, F2,
-					      cons(NewFValue, F3, TrUserData),
-					      F4, F5, F6, F7, TrUserData).
-
-
-d_field_ReadAllEventsCompleted_next_commit_position(<<1:1,
-						      X:7, Rest/binary>>,
-						    N, Acc, F1, F2, F3, F4, F5,
-						    F6, F7, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEventsCompleted_next_commit_position(Rest,
-							N + 7, X bsl N + Acc,
-							F1, F2, F3, F4, F5, F6,
-							F7, TrUserData);
-d_field_ReadAllEventsCompleted_next_commit_position(<<0:1,
-						      X:7, Rest/binary>>,
-						    N, Acc, F1, F2, F3, _, F5,
-						    F6, F7, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
-					      F1, F2, F3, NewFValue, F5, F6, F7,
-					      TrUserData).
-
-
-d_field_ReadAllEventsCompleted_next_prepare_position(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, F5,
-						     F6, F7, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEventsCompleted_next_prepare_position(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, F3, F4, F5, F6,
-							 F7, TrUserData);
-d_field_ReadAllEventsCompleted_next_prepare_position(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3, F4, _,
-						     F6, F7, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
-					      F1, F2, F3, F4, NewFValue, F6, F7,
-					      TrUserData).
-
-
-d_field_ReadAllEventsCompleted_result(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, F5, F6, F7,
-				      TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEventsCompleted_result(Rest, N + 7,
-					  X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-					  F7, TrUserData);
-d_field_ReadAllEventsCompleted_result(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, F5, _, F7,
-				      TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue =
-	'd_enum_ReadAllEventsCompleted.ReadAllResult'(Tmp),
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
-					      F1, F2, F3, F4, F5, NewFValue, F7,
-					      TrUserData).
-
-
-d_field_ReadAllEventsCompleted_error(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, F5, F6, F7,
-				     TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEventsCompleted_error(Rest, N + 7,
-					 X bsl N + Acc, F1, F2, F3, F4, F5, F6,
-					 F7, TrUserData);
-d_field_ReadAllEventsCompleted_error(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, F5, F6, _,
-				     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_ReadAllEventsCompleted(Rest2, 0, 0,
-					      F1, F2, F3, F4, F5, F6, NewFValue,
-					      TrUserData).
-
-
-skip_varint_ReadAllEventsCompleted(<<1:1, _:7,
-				     Rest/binary>>,
-				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-				   TrUserData) ->
-    skip_varint_ReadAllEventsCompleted(Rest, Z1, Z2, F1, F2,
-				       F3, F4, F5, F6, F7, TrUserData);
-skip_varint_ReadAllEventsCompleted(<<0:1, _:7,
-				     Rest/binary>>,
-				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-				   TrUserData) ->
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, Z1, Z2,
-					      F1, F2, F3, F4, F5, F6, F7,
-					      TrUserData).
-
-
-skip_length_delimited_ReadAllEventsCompleted(<<1:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					     TrUserData)
-    when N < 57 ->
-    skip_length_delimited_ReadAllEventsCompleted(Rest,
-						 N + 7, X bsl N + Acc, F1, F2,
-						 F3, F4, F5, F6, F7,
-						 TrUserData);
-skip_length_delimited_ReadAllEventsCompleted(<<0:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
-					     TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_ReadAllEventsCompleted(Rest2, 0, 0,
-					      F1, F2, F3, F4, F5, F6, F7,
-					      TrUserData).
-
-
-skip_group_ReadAllEventsCompleted(Bin, FNum, Z2, F1, F2,
-				  F3, F4, F5, F6, F7, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, Z2,
-					      F1, F2, F3, F4, F5, F6, F7,
-					      TrUserData).
-
-
-skip_32_ReadAllEventsCompleted(<<_:32, Rest/binary>>,
-			       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-			       TrUserData) ->
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, Z1, Z2,
-					      F1, F2, F3, F4, F5, F6, F7,
-					      TrUserData).
-
-
-skip_64_ReadAllEventsCompleted(<<_:64, Rest/binary>>,
-			       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
-			       TrUserData) ->
-    dfp_read_field_def_ReadAllEventsCompleted(Rest, Z1, Z2,
-					      F1, F2, F3, F4, F5, F6, F7,
-					      TrUserData).
-
-
-d_msg_NotHandled(Bin, TrUserData) ->
-    dfp_read_field_def_NotHandled(Bin, 0, 0,
-				  id(undefined, TrUserData),
-				  id(<<>>, TrUserData), TrUserData).
-
-dfp_read_field_def_NotHandled(<<8, Rest/binary>>, Z1,
-			      Z2, F1, F2, TrUserData) ->
-    d_field_NotHandled_reason(Rest, Z1, Z2, F1, F2,
-			      TrUserData);
-dfp_read_field_def_NotHandled(<<18, Rest/binary>>, Z1,
-			      Z2, F1, F2, TrUserData) ->
-    d_field_NotHandled_additional_info(Rest, Z1, Z2, F1, F2,
-				       TrUserData);
-dfp_read_field_def_NotHandled(<<>>, 0, 0, F1, F2, _) ->
-    #'NotHandled'{reason = F1, additional_info = F2};
-dfp_read_field_def_NotHandled(Other, Z1, Z2, F1, F2,
-			      TrUserData) ->
-    dg_read_field_def_NotHandled(Other, Z1, Z2, F1, F2,
-				 TrUserData).
-
-dg_read_field_def_NotHandled(<<1:1, X:7, Rest/binary>>,
-			     N, Acc, F1, F2, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_NotHandled(Rest, N + 7, X bsl N + Acc,
-				 F1, F2, TrUserData);
-dg_read_field_def_NotHandled(<<0:1, X:7, Rest/binary>>,
-			     N, Acc, F1, F2, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_NotHandled_reason(Rest, 0, 0, F1, F2,
-				    TrUserData);
-      18 ->
-	  d_field_NotHandled_additional_info(Rest, 0, 0, F1, F2,
-					     TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_NotHandled(Rest, 0, 0, F1, F2, TrUserData);
-	    1 -> skip_64_NotHandled(Rest, 0, 0, F1, F2, TrUserData);
-	    2 ->
-		skip_length_delimited_NotHandled(Rest, 0, 0, F1, F2,
-						 TrUserData);
-	    3 ->
-		skip_group_NotHandled(Rest, Key bsr 3, 0, F1, F2,
-				      TrUserData);
-	    5 -> skip_32_NotHandled(Rest, 0, 0, F1, F2, TrUserData)
-	  end
-    end;
-dg_read_field_def_NotHandled(<<>>, 0, 0, F1, F2, _) ->
-    #'NotHandled'{reason = F1, additional_info = F2}.
-
-d_field_NotHandled_reason(<<1:1, X:7, Rest/binary>>, N,
-			  Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    d_field_NotHandled_reason(Rest, N + 7, X bsl N + Acc,
-			      F1, F2, TrUserData);
-d_field_NotHandled_reason(<<0:1, X:7, Rest/binary>>, N,
-			  Acc, _, F2, TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue = 'd_enum_NotHandled.NotHandledReason'(Tmp),
-    dfp_read_field_def_NotHandled(Rest, 0, 0, NewFValue, F2,
-				  TrUserData).
-
-
-d_field_NotHandled_additional_info(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    d_field_NotHandled_additional_info(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, TrUserData);
-d_field_NotHandled_additional_info(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, _, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_NotHandled(Rest2, 0, 0, F1,
-				  NewFValue, TrUserData).
-
-
-skip_varint_NotHandled(<<1:1, _:7, Rest/binary>>, Z1,
-		       Z2, F1, F2, TrUserData) ->
-    skip_varint_NotHandled(Rest, Z1, Z2, F1, F2,
-			   TrUserData);
-skip_varint_NotHandled(<<0:1, _:7, Rest/binary>>, Z1,
-		       Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_NotHandled(Rest, Z1, Z2, F1, F2,
-				  TrUserData).
-
-
-skip_length_delimited_NotHandled(<<1:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_NotHandled(Rest, N + 7,
-				     X bsl N + Acc, F1, F2, TrUserData);
-skip_length_delimited_NotHandled(<<0:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, F2, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_NotHandled(Rest2, 0, 0, F1, F2,
-				  TrUserData).
-
-
-skip_group_NotHandled(Bin, FNum, Z2, F1, F2,
-		      TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_NotHandled(Rest, 0, Z2, F1, F2,
-				  TrUserData).
-
-
-skip_32_NotHandled(<<_:32, Rest/binary>>, Z1, Z2, F1,
-		   F2, TrUserData) ->
-    dfp_read_field_def_NotHandled(Rest, Z1, Z2, F1, F2,
-				  TrUserData).
-
-
-skip_64_NotHandled(<<_:64, Rest/binary>>, Z1, Z2, F1,
-		   F2, TrUserData) ->
-    dfp_read_field_def_NotHandled(Rest, Z1, Z2, F1, F2,
-				  TrUserData).
-
-
-d_msg_SubscriptionConfirmation(Bin, TrUserData) ->
-    dfp_read_field_def_SubscriptionConfirmation(Bin, 0, 0,
-						id(undefined, TrUserData),
-						id(0, TrUserData), TrUserData).
-
-dfp_read_field_def_SubscriptionConfirmation(<<8,
-					      Rest/binary>>,
-					    Z1, Z2, F1, F2, TrUserData) ->
-    d_field_SubscriptionConfirmation_last_commit_position(Rest,
-							  Z1, Z2, F1, F2,
-							  TrUserData);
-dfp_read_field_def_SubscriptionConfirmation(<<16,
-					      Rest/binary>>,
-					    Z1, Z2, F1, F2, TrUserData) ->
-    d_field_SubscriptionConfirmation_last_event_number(Rest,
-						       Z1, Z2, F1, F2,
-						       TrUserData);
-dfp_read_field_def_SubscriptionConfirmation(<<>>, 0, 0,
-					    F1, F2, _) ->
-    #'SubscriptionConfirmation'{last_commit_position = F1,
-				last_event_number = F2};
-dfp_read_field_def_SubscriptionConfirmation(Other, Z1,
-					    Z2, F1, F2, TrUserData) ->
-    dg_read_field_def_SubscriptionConfirmation(Other, Z1,
-					       Z2, F1, F2, TrUserData).
-
-dg_read_field_def_SubscriptionConfirmation(<<1:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, F2, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_SubscriptionConfirmation(Rest, N + 7,
-					       X bsl N + Acc, F1, F2,
-					       TrUserData);
-dg_read_field_def_SubscriptionConfirmation(<<0:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, F2, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_SubscriptionConfirmation_last_commit_position(Rest,
-								0, 0, F1, F2,
-								TrUserData);
-      16 ->
-	  d_field_SubscriptionConfirmation_last_event_number(Rest,
-							     0, 0, F1, F2,
-							     TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_SubscriptionConfirmation(Rest, 0, 0, F1, F2,
-						     TrUserData);
-	    1 ->
-		skip_64_SubscriptionConfirmation(Rest, 0, 0, F1, F2,
-						 TrUserData);
-	    2 ->
-		skip_length_delimited_SubscriptionConfirmation(Rest, 0,
-							       0, F1, F2,
-							       TrUserData);
-	    3 ->
-		skip_group_SubscriptionConfirmation(Rest, Key bsr 3, 0,
-						    F1, F2, TrUserData);
-	    5 ->
-		skip_32_SubscriptionConfirmation(Rest, 0, 0, F1, F2,
-						 TrUserData)
-	  end
-    end;
-dg_read_field_def_SubscriptionConfirmation(<<>>, 0, 0,
-					   F1, F2, _) ->
-    #'SubscriptionConfirmation'{last_commit_position = F1,
-				last_event_number = F2}.
-
-d_field_SubscriptionConfirmation_last_commit_position(<<1:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2,
-						      TrUserData)
-    when N < 57 ->
-    d_field_SubscriptionConfirmation_last_commit_position(Rest,
-							  N + 7, X bsl N + Acc,
-							  F1, F2, TrUserData);
-d_field_SubscriptionConfirmation_last_commit_position(<<0:1,
-							X:7, Rest/binary>>,
-						      N, Acc, _, F2,
-						      TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_SubscriptionConfirmation(Rest, 0, 0,
-						NewFValue, F2, TrUserData).
-
-
-d_field_SubscriptionConfirmation_last_event_number(<<1:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    d_field_SubscriptionConfirmation_last_event_number(Rest,
-						       N + 7, X bsl N + Acc, F1,
-						       F2, TrUserData);
-d_field_SubscriptionConfirmation_last_event_number(<<0:1,
-						     X:7, Rest/binary>>,
-						   N, Acc, F1, _, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_SubscriptionConfirmation(Rest, 0, 0,
-						F1, NewFValue, TrUserData).
-
-
-skip_varint_SubscriptionConfirmation(<<1:1, _:7,
+d_msg_TransactionCommit(Bin, TrUserData) ->
+    dfp_read_field_def_TransactionCommit(Bin, 0, 0,
+					 id(undefined, TrUserData),
+					 id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_TransactionCommit(<<8, Rest/binary>>,
+				     Z1, Z2, F1, F2, TrUserData) ->
+    d_field_TransactionCommit_transaction_id(Rest, Z1, Z2,
+					     F1, F2, TrUserData);
+dfp_read_field_def_TransactionCommit(<<16,
 				       Rest/binary>>,
 				     Z1, Z2, F1, F2, TrUserData) ->
-    skip_varint_SubscriptionConfirmation(Rest, Z1, Z2, F1,
-					 F2, TrUserData);
-skip_varint_SubscriptionConfirmation(<<0:1, _:7,
-				       Rest/binary>>,
-				     Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_SubscriptionConfirmation(Rest, Z1,
-						Z2, F1, F2, TrUserData).
+    d_field_TransactionCommit_require_master(Rest, Z1, Z2,
+					     F1, F2, TrUserData);
+dfp_read_field_def_TransactionCommit(<<>>, 0, 0, F1, F2,
+				     _) ->
+    #'TransactionCommit'{transaction_id = F1,
+			 require_master = F2};
+dfp_read_field_def_TransactionCommit(Other, Z1, Z2, F1,
+				     F2, TrUserData) ->
+    dg_read_field_def_TransactionCommit(Other, Z1, Z2, F1,
+					F2, TrUserData).
 
-
-skip_length_delimited_SubscriptionConfirmation(<<1:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_SubscriptionConfirmation(Rest,
-						   N + 7, X bsl N + Acc, F1, F2,
-						   TrUserData);
-skip_length_delimited_SubscriptionConfirmation(<<0:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_SubscriptionConfirmation(Rest2, 0, 0,
-						F1, F2, TrUserData).
-
-
-skip_group_SubscriptionConfirmation(Bin, FNum, Z2, F1,
-				    F2, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_SubscriptionConfirmation(Rest, 0, Z2,
-						F1, F2, TrUserData).
-
-
-skip_32_SubscriptionConfirmation(<<_:32, Rest/binary>>,
-				 Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_SubscriptionConfirmation(Rest, Z1,
-						Z2, F1, F2, TrUserData).
-
-
-skip_64_SubscriptionConfirmation(<<_:64, Rest/binary>>,
-				 Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_SubscriptionConfirmation(Rest, Z1,
-						Z2, F1, F2, TrUserData).
-
-
-d_msg_DeleteStreamCompleted(Bin, TrUserData) ->
-    dfp_read_field_def_DeleteStreamCompleted(Bin, 0, 0,
-					     id(undefined, TrUserData),
-					     id(<<>>, TrUserData),
-					     id(0, TrUserData),
-					     id(0, TrUserData), TrUserData).
-
-dfp_read_field_def_DeleteStreamCompleted(<<8,
-					   Rest/binary>>,
-					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStreamCompleted_result(Rest, Z1, Z2, F1,
-					 F2, F3, F4, TrUserData);
-dfp_read_field_def_DeleteStreamCompleted(<<18,
-					   Rest/binary>>,
-					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStreamCompleted_message(Rest, Z1, Z2, F1,
-					  F2, F3, F4, TrUserData);
-dfp_read_field_def_DeleteStreamCompleted(<<24,
-					   Rest/binary>>,
-					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStreamCompleted_prepare_position(Rest, Z1,
-						   Z2, F1, F2, F3, F4,
-						   TrUserData);
-dfp_read_field_def_DeleteStreamCompleted(<<32,
-					   Rest/binary>>,
-					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStreamCompleted_commit_position(Rest, Z1,
-						  Z2, F1, F2, F3, F4,
-						  TrUserData);
-dfp_read_field_def_DeleteStreamCompleted(<<>>, 0, 0, F1,
-					 F2, F3, F4, _) ->
-    #'DeleteStreamCompleted'{result = F1, message = F2,
-			     prepare_position = F3, commit_position = F4};
-dfp_read_field_def_DeleteStreamCompleted(Other, Z1, Z2,
-					 F1, F2, F3, F4, TrUserData) ->
-    dg_read_field_def_DeleteStreamCompleted(Other, Z1, Z2,
-					    F1, F2, F3, F4, TrUserData).
-
-dg_read_field_def_DeleteStreamCompleted(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, F4, TrUserData)
+dg_read_field_def_TransactionCommit(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, TrUserData)
     when N < 32 - 7 ->
-    dg_read_field_def_DeleteStreamCompleted(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, F3, F4,
-					    TrUserData);
-dg_read_field_def_DeleteStreamCompleted(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, F4, TrUserData) ->
+    dg_read_field_def_TransactionCommit(Rest, N + 7,
+					X bsl N + Acc, F1, F2, TrUserData);
+dg_read_field_def_TransactionCommit(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
       8 ->
-	  d_field_DeleteStreamCompleted_result(Rest, 0, 0, F1, F2,
-					       F3, F4, TrUserData);
-      18 ->
-	  d_field_DeleteStreamCompleted_message(Rest, 0, 0, F1,
-						F2, F3, F4, TrUserData);
-      24 ->
-	  d_field_DeleteStreamCompleted_prepare_position(Rest, 0,
-							 0, F1, F2, F3, F4,
-							 TrUserData);
-      32 ->
-	  d_field_DeleteStreamCompleted_commit_position(Rest, 0,
-							0, F1, F2, F3, F4,
-							TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_DeleteStreamCompleted(Rest, 0, 0, F1, F2,
-						  F3, F4, TrUserData);
-	    1 ->
-		skip_64_DeleteStreamCompleted(Rest, 0, 0, F1, F2, F3,
-					      F4, TrUserData);
-	    2 ->
-		skip_length_delimited_DeleteStreamCompleted(Rest, 0, 0,
-							    F1, F2, F3, F4,
-							    TrUserData);
-	    3 ->
-		skip_group_DeleteStreamCompleted(Rest, Key bsr 3, 0, F1,
-						 F2, F3, F4, TrUserData);
-	    5 ->
-		skip_32_DeleteStreamCompleted(Rest, 0, 0, F1, F2, F3,
-					      F4, TrUserData)
-	  end
-    end;
-dg_read_field_def_DeleteStreamCompleted(<<>>, 0, 0, F1,
-					F2, F3, F4, _) ->
-    #'DeleteStreamCompleted'{result = F1, message = F2,
-			     prepare_position = F3, commit_position = F4}.
-
-d_field_DeleteStreamCompleted_result(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_DeleteStreamCompleted_result(Rest, N + 7,
-					 X bsl N + Acc, F1, F2, F3, F4,
-					 TrUserData);
-d_field_DeleteStreamCompleted_result(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, _, F2, F3, F4, TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue = d_enum_OperationResult(Tmp),
-    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, 0,
-					     NewFValue, F2, F3, F4, TrUserData).
-
-
-d_field_DeleteStreamCompleted_message(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_DeleteStreamCompleted_message(Rest, N + 7,
-					  X bsl N + Acc, F1, F2, F3, F4,
-					  TrUserData);
-d_field_DeleteStreamCompleted_message(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, _, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_DeleteStreamCompleted(Rest2, 0, 0,
-					     F1, NewFValue, F3, F4, TrUserData).
-
-
-d_field_DeleteStreamCompleted_prepare_position(<<1:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, F3, F4,
-					       TrUserData)
-    when N < 57 ->
-    d_field_DeleteStreamCompleted_prepare_position(Rest,
-						   N + 7, X bsl N + Acc, F1, F2,
-						   F3, F4, TrUserData);
-d_field_DeleteStreamCompleted_prepare_position(<<0:1,
-						 X:7, Rest/binary>>,
-					       N, Acc, F1, F2, _, F4,
-					       TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, 0, F1,
-					     F2, NewFValue, F4, TrUserData).
-
-
-d_field_DeleteStreamCompleted_commit_position(<<1:1,
-						X:7, Rest/binary>>,
-					      N, Acc, F1, F2, F3, F4,
-					      TrUserData)
-    when N < 57 ->
-    d_field_DeleteStreamCompleted_commit_position(Rest,
-						  N + 7, X bsl N + Acc, F1, F2,
-						  F3, F4, TrUserData);
-d_field_DeleteStreamCompleted_commit_position(<<0:1,
-						X:7, Rest/binary>>,
-					      N, Acc, F1, F2, F3, _,
-					      TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, 0, F1,
-					     F2, F3, NewFValue, TrUserData).
-
-
-skip_varint_DeleteStreamCompleted(<<1:1, _:7,
-				    Rest/binary>>,
-				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    skip_varint_DeleteStreamCompleted(Rest, Z1, Z2, F1, F2,
-				      F3, F4, TrUserData);
-skip_varint_DeleteStreamCompleted(<<0:1, _:7,
-				    Rest/binary>>,
-				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_DeleteStreamCompleted(Rest, Z1, Z2,
-					     F1, F2, F3, F4, TrUserData).
-
-
-skip_length_delimited_DeleteStreamCompleted(<<1:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_DeleteStreamCompleted(Rest, N + 7,
-						X bsl N + Acc, F1, F2, F3, F4,
-						TrUserData);
-skip_length_delimited_DeleteStreamCompleted(<<0:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, F1, F2, F3, F4,
-					    TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_DeleteStreamCompleted(Rest2, 0, 0,
-					     F1, F2, F3, F4, TrUserData).
-
-
-skip_group_DeleteStreamCompleted(Bin, FNum, Z2, F1, F2,
-				 F3, F4, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, Z2,
-					     F1, F2, F3, F4, TrUserData).
-
-
-skip_32_DeleteStreamCompleted(<<_:32, Rest/binary>>, Z1,
-			      Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_DeleteStreamCompleted(Rest, Z1, Z2,
-					     F1, F2, F3, F4, TrUserData).
-
-
-skip_64_DeleteStreamCompleted(<<_:64, Rest/binary>>, Z1,
-			      Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_DeleteStreamCompleted(Rest, Z1, Z2,
-					     F1, F2, F3, F4, TrUserData).
-
-
-d_msg_WriteEvents(Bin, TrUserData) ->
-    dfp_read_field_def_WriteEvents(Bin, 0, 0,
-				   id(undefined, TrUserData),
-				   id(undefined, TrUserData),
-				   id([], TrUserData),
-				   id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_WriteEvents(<<10, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_WriteEvents_event_stream_id(Rest, Z1, Z2, F1,
-					F2, F3, F4, TrUserData);
-dfp_read_field_def_WriteEvents(<<16, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_WriteEvents_expected_version(Rest, Z1, Z2, F1,
-					 F2, F3, F4, TrUserData);
-dfp_read_field_def_WriteEvents(<<26, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_WriteEvents_events(Rest, Z1, Z2, F1, F2, F3, F4,
-			       TrUserData);
-dfp_read_field_def_WriteEvents(<<32, Rest/binary>>, Z1,
-			       Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_WriteEvents_require_master(Rest, Z1, Z2, F1, F2,
-				       F3, F4, TrUserData);
-dfp_read_field_def_WriteEvents(<<>>, 0, 0, F1, F2, F3,
-			       F4, TrUserData) ->
-    #'WriteEvents'{event_stream_id = F1,
-		   expected_version = F2,
-		   events = lists_reverse(F3, TrUserData),
-		   require_master = F4};
-dfp_read_field_def_WriteEvents(Other, Z1, Z2, F1, F2,
-			       F3, F4, TrUserData) ->
-    dg_read_field_def_WriteEvents(Other, Z1, Z2, F1, F2, F3,
-				  F4, TrUserData).
-
-dg_read_field_def_WriteEvents(<<1:1, X:7, Rest/binary>>,
-			      N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_WriteEvents(Rest, N + 7,
-				  X bsl N + Acc, F1, F2, F3, F4, TrUserData);
-dg_read_field_def_WriteEvents(<<0:1, X:7, Rest/binary>>,
-			      N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_WriteEvents_event_stream_id(Rest, 0, 0, F1, F2,
-					      F3, F4, TrUserData);
+	  d_field_TransactionCommit_transaction_id(Rest, 0, 0, F1,
+						   F2, TrUserData);
       16 ->
-	  d_field_WriteEvents_expected_version(Rest, 0, 0, F1, F2,
-					       F3, F4, TrUserData);
-      26 ->
-	  d_field_WriteEvents_events(Rest, 0, 0, F1, F2, F3, F4,
-				     TrUserData);
-      32 ->
-	  d_field_WriteEvents_require_master(Rest, 0, 0, F1, F2,
-					     F3, F4, TrUserData);
+	  d_field_TransactionCommit_require_master(Rest, 0, 0, F1,
+						   F2, TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
-		skip_varint_WriteEvents(Rest, 0, 0, F1, F2, F3, F4,
-					TrUserData);
+		skip_varint_TransactionCommit(Rest, 0, 0, F1, F2,
+					      TrUserData);
 	    1 ->
-		skip_64_WriteEvents(Rest, 0, 0, F1, F2, F3, F4,
-				    TrUserData);
-	    2 ->
-		skip_length_delimited_WriteEvents(Rest, 0, 0, F1, F2,
-						  F3, F4, TrUserData);
-	    3 ->
-		skip_group_WriteEvents(Rest, Key bsr 3, 0, F1, F2, F3,
-				       F4, TrUserData);
-	    5 ->
-		skip_32_WriteEvents(Rest, 0, 0, F1, F2, F3, F4,
-				    TrUserData)
-	  end
-    end;
-dg_read_field_def_WriteEvents(<<>>, 0, 0, F1, F2, F3,
-			      F4, TrUserData) ->
-    #'WriteEvents'{event_stream_id = F1,
-		   expected_version = F2,
-		   events = lists_reverse(F3, TrUserData),
-		   require_master = F4}.
-
-d_field_WriteEvents_event_stream_id(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_WriteEvents_event_stream_id(Rest, N + 7,
-					X bsl N + Acc, F1, F2, F3, F4,
-					TrUserData);
-d_field_WriteEvents_event_stream_id(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, _, F2, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_WriteEvents(Rest2, 0, 0, NewFValue,
-				   F2, F3, F4, TrUserData).
-
-
-d_field_WriteEvents_expected_version(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_WriteEvents_expected_version(Rest, N + 7,
-					 X bsl N + Acc, F1, F2, F3, F4,
-					 TrUserData);
-d_field_WriteEvents_expected_version(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, _, F3, F4, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_WriteEvents(Rest, 0, 0, F1,
-				   NewFValue, F3, F4, TrUserData).
-
-
-d_field_WriteEvents_events(<<1:1, X:7, Rest/binary>>, N,
-			   Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_WriteEvents_events(Rest, N + 7, X bsl N + Acc,
-			       F1, F2, F3, F4, TrUserData);
-d_field_WriteEvents_events(<<0:1, X:7, Rest/binary>>, N,
-			   Acc, F1, F2, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bs:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = id(d_msg_NewEvent(Bs, TrUserData),
-		   TrUserData),
-    dfp_read_field_def_WriteEvents(Rest2, 0, 0, F1, F2,
-				   cons(NewFValue, F3, TrUserData), F4,
-				   TrUserData).
-
-
-d_field_WriteEvents_require_master(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_WriteEvents_require_master(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, F4,
-				       TrUserData);
-d_field_WriteEvents_require_master(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_WriteEvents(Rest, 0, 0, F1, F2, F3,
-				   NewFValue, TrUserData).
-
-
-skip_varint_WriteEvents(<<1:1, _:7, Rest/binary>>, Z1,
-			Z2, F1, F2, F3, F4, TrUserData) ->
-    skip_varint_WriteEvents(Rest, Z1, Z2, F1, F2, F3, F4,
-			    TrUserData);
-skip_varint_WriteEvents(<<0:1, _:7, Rest/binary>>, Z1,
-			Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_WriteEvents(Rest, Z1, Z2, F1, F2, F3,
-				   F4, TrUserData).
-
-
-skip_length_delimited_WriteEvents(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_WriteEvents(Rest, N + 7,
-				      X bsl N + Acc, F1, F2, F3, F4,
-				      TrUserData);
-skip_length_delimited_WriteEvents(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_WriteEvents(Rest2, 0, 0, F1, F2, F3,
-				   F4, TrUserData).
-
-
-skip_group_WriteEvents(Bin, FNum, Z2, F1, F2, F3, F4,
-		       TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_WriteEvents(Rest, 0, Z2, F1, F2, F3,
-				   F4, TrUserData).
-
-
-skip_32_WriteEvents(<<_:32, Rest/binary>>, Z1, Z2, F1,
-		    F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_WriteEvents(Rest, Z1, Z2, F1, F2, F3,
-				   F4, TrUserData).
-
-
-skip_64_WriteEvents(<<_:64, Rest/binary>>, Z1, Z2, F1,
-		    F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_WriteEvents(Rest, Z1, Z2, F1, F2, F3,
-				   F4, TrUserData).
-
-
-d_msg_DeleteStream(Bin, TrUserData) ->
-    dfp_read_field_def_DeleteStream(Bin, 0, 0,
-				    id(undefined, TrUserData),
-				    id(undefined, TrUserData),
-				    id(undefined, TrUserData),
-				    id(false, TrUserData), TrUserData).
-
-dfp_read_field_def_DeleteStream(<<10, Rest/binary>>, Z1,
-				Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStream_event_stream_id(Rest, Z1, Z2, F1,
-					 F2, F3, F4, TrUserData);
-dfp_read_field_def_DeleteStream(<<16, Rest/binary>>, Z1,
-				Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStream_expected_version(Rest, Z1, Z2, F1,
-					  F2, F3, F4, TrUserData);
-dfp_read_field_def_DeleteStream(<<24, Rest/binary>>, Z1,
-				Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStream_require_master(Rest, Z1, Z2, F1,
-					F2, F3, F4, TrUserData);
-dfp_read_field_def_DeleteStream(<<32, Rest/binary>>, Z1,
-				Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_DeleteStream_hard_delete(Rest, Z1, Z2, F1, F2,
-				     F3, F4, TrUserData);
-dfp_read_field_def_DeleteStream(<<>>, 0, 0, F1, F2, F3,
-				F4, _) ->
-    #'DeleteStream'{event_stream_id = F1,
-		    expected_version = F2, require_master = F3,
-		    hard_delete = F4};
-dfp_read_field_def_DeleteStream(Other, Z1, Z2, F1, F2,
-				F3, F4, TrUserData) ->
-    dg_read_field_def_DeleteStream(Other, Z1, Z2, F1, F2,
-				   F3, F4, TrUserData).
-
-dg_read_field_def_DeleteStream(<<1:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_DeleteStream(Rest, N + 7,
-				   X bsl N + Acc, F1, F2, F3, F4, TrUserData);
-dg_read_field_def_DeleteStream(<<0:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_DeleteStream_event_stream_id(Rest, 0, 0, F1, F2,
-					       F3, F4, TrUserData);
-      16 ->
-	  d_field_DeleteStream_expected_version(Rest, 0, 0, F1,
-						F2, F3, F4, TrUserData);
-      24 ->
-	  d_field_DeleteStream_require_master(Rest, 0, 0, F1, F2,
-					      F3, F4, TrUserData);
-      32 ->
-	  d_field_DeleteStream_hard_delete(Rest, 0, 0, F1, F2, F3,
-					   F4, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_DeleteStream(Rest, 0, 0, F1, F2, F3, F4,
-					 TrUserData);
-	    1 ->
-		skip_64_DeleteStream(Rest, 0, 0, F1, F2, F3, F4,
-				     TrUserData);
-	    2 ->
-		skip_length_delimited_DeleteStream(Rest, 0, 0, F1, F2,
-						   F3, F4, TrUserData);
-	    3 ->
-		skip_group_DeleteStream(Rest, Key bsr 3, 0, F1, F2, F3,
-					F4, TrUserData);
-	    5 ->
-		skip_32_DeleteStream(Rest, 0, 0, F1, F2, F3, F4,
-				     TrUserData)
-	  end
-    end;
-dg_read_field_def_DeleteStream(<<>>, 0, 0, F1, F2, F3,
-			       F4, _) ->
-    #'DeleteStream'{event_stream_id = F1,
-		    expected_version = F2, require_master = F3,
-		    hard_delete = F4}.
-
-d_field_DeleteStream_event_stream_id(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_DeleteStream_event_stream_id(Rest, N + 7,
-					 X bsl N + Acc, F1, F2, F3, F4,
-					 TrUserData);
-d_field_DeleteStream_event_stream_id(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, _, F2, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_DeleteStream(Rest2, 0, 0, NewFValue,
-				    F2, F3, F4, TrUserData).
-
-
-d_field_DeleteStream_expected_version(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_DeleteStream_expected_version(Rest, N + 7,
-					  X bsl N + Acc, F1, F2, F3, F4,
+		skip_64_TransactionCommit(Rest, 0, 0, F1, F2,
 					  TrUserData);
-d_field_DeleteStream_expected_version(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, _, F3, F4, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_DeleteStream(Rest, 0, 0, F1,
-				    NewFValue, F3, F4, TrUserData).
-
-
-d_field_DeleteStream_require_master(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_DeleteStream_require_master(Rest, N + 7,
-					X bsl N + Acc, F1, F2, F3, F4,
-					TrUserData);
-d_field_DeleteStream_require_master(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, _, F4, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_DeleteStream(Rest, 0, 0, F1, F2,
-				    NewFValue, F4, TrUserData).
-
-
-d_field_DeleteStream_hard_delete(<<1:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_DeleteStream_hard_delete(Rest, N + 7,
-				     X bsl N + Acc, F1, F2, F3, F4, TrUserData);
-d_field_DeleteStream_hard_delete(<<0:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, F2, F3, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_DeleteStream(Rest, 0, 0, F1, F2, F3,
-				    NewFValue, TrUserData).
-
-
-skip_varint_DeleteStream(<<1:1, _:7, Rest/binary>>, Z1,
-			 Z2, F1, F2, F3, F4, TrUserData) ->
-    skip_varint_DeleteStream(Rest, Z1, Z2, F1, F2, F3, F4,
-			     TrUserData);
-skip_varint_DeleteStream(<<0:1, _:7, Rest/binary>>, Z1,
-			 Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_DeleteStream(Rest, Z1, Z2, F1, F2,
-				    F3, F4, TrUserData).
-
-
-skip_length_delimited_DeleteStream(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_DeleteStream(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, F4,
-				       TrUserData);
-skip_length_delimited_DeleteStream(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_DeleteStream(Rest2, 0, 0, F1, F2, F3,
-				    F4, TrUserData).
-
-
-skip_group_DeleteStream(Bin, FNum, Z2, F1, F2, F3, F4,
-			TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_DeleteStream(Rest, 0, Z2, F1, F2, F3,
-				    F4, TrUserData).
-
-
-skip_32_DeleteStream(<<_:32, Rest/binary>>, Z1, Z2, F1,
-		     F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_DeleteStream(Rest, Z1, Z2, F1, F2,
-				    F3, F4, TrUserData).
-
-
-skip_64_DeleteStream(<<_:64, Rest/binary>>, Z1, Z2, F1,
-		     F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_DeleteStream(Rest, Z1, Z2, F1, F2,
-				    F3, F4, TrUserData).
-
-
-d_msg_ScavengeDatabaseCompleted(Bin, TrUserData) ->
-    dfp_read_field_def_ScavengeDatabaseCompleted(Bin, 0, 0,
-						 id(undefined, TrUserData),
-						 id(<<>>, TrUserData),
-						 id(undefined, TrUserData),
-						 id(undefined, TrUserData),
-						 TrUserData).
-
-dfp_read_field_def_ScavengeDatabaseCompleted(<<8,
-					       Rest/binary>>,
-					     Z1, Z2, F1, F2, F3, F4,
-					     TrUserData) ->
-    d_field_ScavengeDatabaseCompleted_result(Rest, Z1, Z2,
-					     F1, F2, F3, F4, TrUserData);
-dfp_read_field_def_ScavengeDatabaseCompleted(<<18,
-					       Rest/binary>>,
-					     Z1, Z2, F1, F2, F3, F4,
-					     TrUserData) ->
-    d_field_ScavengeDatabaseCompleted_error(Rest, Z1, Z2,
-					    F1, F2, F3, F4, TrUserData);
-dfp_read_field_def_ScavengeDatabaseCompleted(<<24,
-					       Rest/binary>>,
-					     Z1, Z2, F1, F2, F3, F4,
-					     TrUserData) ->
-    d_field_ScavengeDatabaseCompleted_total_time_ms(Rest,
-						    Z1, Z2, F1, F2, F3, F4,
-						    TrUserData);
-dfp_read_field_def_ScavengeDatabaseCompleted(<<32,
-					       Rest/binary>>,
-					     Z1, Z2, F1, F2, F3, F4,
-					     TrUserData) ->
-    d_field_ScavengeDatabaseCompleted_total_space_saved(Rest,
-							Z1, Z2, F1, F2, F3, F4,
-							TrUserData);
-dfp_read_field_def_ScavengeDatabaseCompleted(<<>>, 0, 0,
-					     F1, F2, F3, F4, _) ->
-    #'ScavengeDatabaseCompleted'{result = F1, error = F2,
-				 total_time_ms = F3, total_space_saved = F4};
-dfp_read_field_def_ScavengeDatabaseCompleted(Other, Z1,
-					     Z2, F1, F2, F3, F4, TrUserData) ->
-    dg_read_field_def_ScavengeDatabaseCompleted(Other, Z1,
-						Z2, F1, F2, F3, F4, TrUserData).
-
-dg_read_field_def_ScavengeDatabaseCompleted(<<1:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_ScavengeDatabaseCompleted(Rest, N + 7,
-						X bsl N + Acc, F1, F2, F3, F4,
-						TrUserData);
-dg_read_field_def_ScavengeDatabaseCompleted(<<0:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, F1, F2, F3, F4,
-					    TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_ScavengeDatabaseCompleted_result(Rest, 0, 0, F1,
-						   F2, F3, F4, TrUserData);
-      18 ->
-	  d_field_ScavengeDatabaseCompleted_error(Rest, 0, 0, F1,
-						  F2, F3, F4, TrUserData);
-      24 ->
-	  d_field_ScavengeDatabaseCompleted_total_time_ms(Rest, 0,
-							  0, F1, F2, F3, F4,
-							  TrUserData);
-      32 ->
-	  d_field_ScavengeDatabaseCompleted_total_space_saved(Rest,
-							      0, 0, F1, F2, F3,
-							      F4, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_ScavengeDatabaseCompleted(Rest, 0, 0, F1,
-						      F2, F3, F4, TrUserData);
-	    1 ->
-		skip_64_ScavengeDatabaseCompleted(Rest, 0, 0, F1, F2,
-						  F3, F4, TrUserData);
 	    2 ->
-		skip_length_delimited_ScavengeDatabaseCompleted(Rest, 0,
-								0, F1, F2, F3,
-								F4, TrUserData);
+		skip_length_delimited_TransactionCommit(Rest, 0, 0, F1,
+							F2, TrUserData);
 	    3 ->
-		skip_group_ScavengeDatabaseCompleted(Rest, Key bsr 3, 0,
-						     F1, F2, F3, F4,
-						     TrUserData);
-	    5 ->
-		skip_32_ScavengeDatabaseCompleted(Rest, 0, 0, F1, F2,
-						  F3, F4, TrUserData)
-	  end
-    end;
-dg_read_field_def_ScavengeDatabaseCompleted(<<>>, 0, 0,
-					    F1, F2, F3, F4, _) ->
-    #'ScavengeDatabaseCompleted'{result = F1, error = F2,
-				 total_time_ms = F3, total_space_saved = F4}.
-
-d_field_ScavengeDatabaseCompleted_result(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ScavengeDatabaseCompleted_result(Rest, N + 7,
-					     X bsl N + Acc, F1, F2, F3, F4,
+		skip_group_TransactionCommit(Rest, Key bsr 3, 0, F1, F2,
 					     TrUserData);
-d_field_ScavengeDatabaseCompleted_result(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, _, F2, F3, F4, TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue =
-	'd_enum_ScavengeDatabaseCompleted.ScavengeResult'(Tmp),
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0, 0,
-						 NewFValue, F2, F3, F4,
-						 TrUserData).
-
-
-d_field_ScavengeDatabaseCompleted_error(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ScavengeDatabaseCompleted_error(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, F3, F4,
-					    TrUserData);
-d_field_ScavengeDatabaseCompleted_error(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, _, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest2, 0,
-						 0, F1, NewFValue, F3, F4,
-						 TrUserData).
-
-
-d_field_ScavengeDatabaseCompleted_total_time_ms(<<1:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, F4,
-						TrUserData)
-    when N < 57 ->
-    d_field_ScavengeDatabaseCompleted_total_time_ms(Rest,
-						    N + 7, X bsl N + Acc, F1,
-						    F2, F3, F4, TrUserData);
-d_field_ScavengeDatabaseCompleted_total_time_ms(<<0:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, _, F4,
-						TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0, 0,
-						 F1, F2, NewFValue, F4,
-						 TrUserData).
-
-
-d_field_ScavengeDatabaseCompleted_total_space_saved(<<1:1,
-						      X:7, Rest/binary>>,
-						    N, Acc, F1, F2, F3, F4,
-						    TrUserData)
-    when N < 57 ->
-    d_field_ScavengeDatabaseCompleted_total_space_saved(Rest,
-							N + 7, X bsl N + Acc,
-							F1, F2, F3, F4,
-							TrUserData);
-d_field_ScavengeDatabaseCompleted_total_space_saved(<<0:1,
-						      X:7, Rest/binary>>,
-						    N, Acc, F1, F2, F3, _,
-						    TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0, 0,
-						 F1, F2, F3, NewFValue,
-						 TrUserData).
-
-
-skip_varint_ScavengeDatabaseCompleted(<<1:1, _:7,
-					Rest/binary>>,
-				      Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    skip_varint_ScavengeDatabaseCompleted(Rest, Z1, Z2, F1,
-					  F2, F3, F4, TrUserData);
-skip_varint_ScavengeDatabaseCompleted(<<0:1, _:7,
-					Rest/binary>>,
-				      Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, Z1,
-						 Z2, F1, F2, F3, F4,
-						 TrUserData).
-
-
-skip_length_delimited_ScavengeDatabaseCompleted(<<1:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, F4,
-						TrUserData)
-    when N < 57 ->
-    skip_length_delimited_ScavengeDatabaseCompleted(Rest,
-						    N + 7, X bsl N + Acc, F1,
-						    F2, F3, F4, TrUserData);
-skip_length_delimited_ScavengeDatabaseCompleted(<<0:1,
-						  X:7, Rest/binary>>,
-						N, Acc, F1, F2, F3, F4,
-						TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest2, 0,
-						 0, F1, F2, F3, F4, TrUserData).
-
-
-skip_group_ScavengeDatabaseCompleted(Bin, FNum, Z2, F1,
-				     F2, F3, F4, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0,
-						 Z2, F1, F2, F3, F4,
-						 TrUserData).
-
-
-skip_32_ScavengeDatabaseCompleted(<<_:32, Rest/binary>>,
-				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, Z1,
-						 Z2, F1, F2, F3, F4,
-						 TrUserData).
-
-
-skip_64_ScavengeDatabaseCompleted(<<_:64, Rest/binary>>,
-				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, Z1,
-						 Z2, F1, F2, F3, F4,
-						 TrUserData).
-
-
-d_msg_UnsubscribeFromStream(Bin, TrUserData) ->
-    dfp_read_field_def_UnsubscribeFromStream(Bin, 0, 0,
-					     TrUserData).
-
-dfp_read_field_def_UnsubscribeFromStream(<<>>, 0, 0,
-					 _) ->
-    #'UnsubscribeFromStream'{};
-dfp_read_field_def_UnsubscribeFromStream(Other, Z1, Z2,
-					 TrUserData) ->
-    dg_read_field_def_UnsubscribeFromStream(Other, Z1, Z2,
-					    TrUserData).
-
-dg_read_field_def_UnsubscribeFromStream(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_UnsubscribeFromStream(Rest, N + 7,
-					    X bsl N + Acc, TrUserData);
-dg_read_field_def_UnsubscribeFromStream(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key band 7 of
-      0 ->
-	  skip_varint_UnsubscribeFromStream(Rest, 0, 0,
-					    TrUserData);
-      1 ->
-	  skip_64_UnsubscribeFromStream(Rest, 0, 0, TrUserData);
-      2 ->
-	  skip_length_delimited_UnsubscribeFromStream(Rest, 0, 0,
-						      TrUserData);
-      3 ->
-	  skip_group_UnsubscribeFromStream(Rest, Key bsr 3, 0,
-					   TrUserData);
-      5 ->
-	  skip_32_UnsubscribeFromStream(Rest, 0, 0, TrUserData)
-    end;
-dg_read_field_def_UnsubscribeFromStream(<<>>, 0, 0,
-					_) ->
-    #'UnsubscribeFromStream'{}.
-
-skip_varint_UnsubscribeFromStream(<<1:1, _:7,
-				    Rest/binary>>,
-				  Z1, Z2, TrUserData) ->
-    skip_varint_UnsubscribeFromStream(Rest, Z1, Z2,
-				      TrUserData);
-skip_varint_UnsubscribeFromStream(<<0:1, _:7,
-				    Rest/binary>>,
-				  Z1, Z2, TrUserData) ->
-    dfp_read_field_def_UnsubscribeFromStream(Rest, Z1, Z2,
-					     TrUserData).
-
-
-skip_length_delimited_UnsubscribeFromStream(<<1:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_UnsubscribeFromStream(Rest, N + 7,
-						X bsl N + Acc, TrUserData);
-skip_length_delimited_UnsubscribeFromStream(<<0:1, X:7,
-					      Rest/binary>>,
-					    N, Acc, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_UnsubscribeFromStream(Rest2, 0, 0,
-					     TrUserData).
-
-
-skip_group_UnsubscribeFromStream(Bin, FNum, Z2,
-				 TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_UnsubscribeFromStream(Rest, 0, Z2,
-					     TrUserData).
-
-
-skip_32_UnsubscribeFromStream(<<_:32, Rest/binary>>, Z1,
-			      Z2, TrUserData) ->
-    dfp_read_field_def_UnsubscribeFromStream(Rest, Z1, Z2,
-					     TrUserData).
-
-
-skip_64_UnsubscribeFromStream(<<_:64, Rest/binary>>, Z1,
-			      Z2, TrUserData) ->
-    dfp_read_field_def_UnsubscribeFromStream(Rest, Z1, Z2,
-					     TrUserData).
-
-
-d_msg_DeletePersistentSubscriptionCompleted(Bin,
-					    TrUserData) ->
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Bin,
-							     0, 0,
-							     id(undefined,
-								TrUserData),
-							     id(<<>>,
-								TrUserData),
-							     TrUserData).
-
-dfp_read_field_def_DeletePersistentSubscriptionCompleted(<<8,
-							   Rest/binary>>,
-							 Z1, Z2, F1, F2,
-							 TrUserData) ->
-    d_field_DeletePersistentSubscriptionCompleted_result(Rest,
-							 Z1, Z2, F1, F2,
-							 TrUserData);
-dfp_read_field_def_DeletePersistentSubscriptionCompleted(<<18,
-							   Rest/binary>>,
-							 Z1, Z2, F1, F2,
-							 TrUserData) ->
-    d_field_DeletePersistentSubscriptionCompleted_reason(Rest,
-							 Z1, Z2, F1, F2,
-							 TrUserData);
-dfp_read_field_def_DeletePersistentSubscriptionCompleted(<<>>,
-							 0, 0, F1, F2, _) ->
-    #'DeletePersistentSubscriptionCompleted'{result = F1,
-					     reason = F2};
-dfp_read_field_def_DeletePersistentSubscriptionCompleted(Other,
-							 Z1, Z2, F1, F2,
-							 TrUserData) ->
-    dg_read_field_def_DeletePersistentSubscriptionCompleted(Other,
-							    Z1, Z2, F1, F2,
-							    TrUserData).
-
-dg_read_field_def_DeletePersistentSubscriptionCompleted(<<1:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, F2,
-							TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
-							    N + 7,
-							    X bsl N + Acc, F1,
-							    F2, TrUserData);
-dg_read_field_def_DeletePersistentSubscriptionCompleted(<<0:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, F2,
-							TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_DeletePersistentSubscriptionCompleted_result(Rest,
-							       0, 0, F1, F2,
-							       TrUserData);
-      18 ->
-	  d_field_DeletePersistentSubscriptionCompleted_reason(Rest,
-							       0, 0, F1, F2,
-							       TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_DeletePersistentSubscriptionCompleted(Rest,
-								  0, 0, F1, F2,
-								  TrUserData);
-	    1 ->
-		skip_64_DeletePersistentSubscriptionCompleted(Rest, 0,
-							      0, F1, F2,
-							      TrUserData);
-	    2 ->
-		skip_length_delimited_DeletePersistentSubscriptionCompleted(Rest,
-									    0,
-									    0,
-									    F1,
-									    F2,
-									    TrUserData);
-	    3 ->
-		skip_group_DeletePersistentSubscriptionCompleted(Rest,
-								 Key bsr 3, 0,
-								 F1, F2,
-								 TrUserData);
 	    5 ->
-		skip_32_DeletePersistentSubscriptionCompleted(Rest, 0,
-							      0, F1, F2,
-							      TrUserData)
+		skip_32_TransactionCommit(Rest, 0, 0, F1, F2,
+					  TrUserData)
 	  end
     end;
-dg_read_field_def_DeletePersistentSubscriptionCompleted(<<>>,
-							0, 0, F1, F2, _) ->
-    #'DeletePersistentSubscriptionCompleted'{result = F1,
-					     reason = F2}.
+dg_read_field_def_TransactionCommit(<<>>, 0, 0, F1, F2,
+				    _) ->
+    #'TransactionCommit'{transaction_id = F1,
+			 require_master = F2}.
 
-d_field_DeletePersistentSubscriptionCompleted_result(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, TrUserData)
+d_field_TransactionCommit_transaction_id(<<1:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, TrUserData)
     when N < 57 ->
-    d_field_DeletePersistentSubscriptionCompleted_result(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, TrUserData);
-d_field_DeletePersistentSubscriptionCompleted_result(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, _, F2,
-						     TrUserData) ->
-    <<Tmp:32/signed-native>> = <<(X bsl N +
-				    Acc):32/unsigned-native>>,
-    NewFValue =
-	'd_enum_DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'(Tmp),
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
-							     0, 0, NewFValue,
-							     F2, TrUserData).
+    d_field_TransactionCommit_transaction_id(Rest, N + 7,
+					     X bsl N + Acc, F1, F2, TrUserData);
+d_field_TransactionCommit_transaction_id(<<0:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, _, F2, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_TransactionCommit(Rest, 0, 0,
+					 NewFValue, F2, TrUserData).
 
 
-d_field_DeletePersistentSubscriptionCompleted_reason(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, TrUserData)
+d_field_TransactionCommit_require_master(<<1:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, TrUserData)
     when N < 57 ->
-    d_field_DeletePersistentSubscriptionCompleted_reason(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, TrUserData);
-d_field_DeletePersistentSubscriptionCompleted_reason(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, _,
-						     TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest2,
-							     0, 0, F1,
-							     NewFValue,
-							     TrUserData).
+    d_field_TransactionCommit_require_master(Rest, N + 7,
+					     X bsl N + Acc, F1, F2, TrUserData);
+d_field_TransactionCommit_require_master(<<0:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_TransactionCommit(Rest, 0, 0, F1,
+					 NewFValue, TrUserData).
 
 
-skip_varint_DeletePersistentSubscriptionCompleted(<<1:1,
-						    _:7, Rest/binary>>,
-						  Z1, Z2, F1, F2, TrUserData) ->
-    skip_varint_DeletePersistentSubscriptionCompleted(Rest,
-						      Z1, Z2, F1, F2,
-						      TrUserData);
-skip_varint_DeletePersistentSubscriptionCompleted(<<0:1,
-						    _:7, Rest/binary>>,
-						  Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
-							     Z1, Z2, F1, F2,
-							     TrUserData).
+skip_varint_TransactionCommit(<<1:1, _:7, Rest/binary>>,
+			      Z1, Z2, F1, F2, TrUserData) ->
+    skip_varint_TransactionCommit(Rest, Z1, Z2, F1, F2,
+				  TrUserData);
+skip_varint_TransactionCommit(<<0:1, _:7, Rest/binary>>,
+			      Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_TransactionCommit(Rest, Z1, Z2, F1,
+					 F2, TrUserData).
 
 
-skip_length_delimited_DeletePersistentSubscriptionCompleted(<<1:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2,
-							    TrUserData)
+skip_length_delimited_TransactionCommit(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, TrUserData)
     when N < 57 ->
-    skip_length_delimited_DeletePersistentSubscriptionCompleted(Rest,
-								N + 7,
-								X bsl N + Acc,
-								F1, F2,
-								TrUserData);
-skip_length_delimited_DeletePersistentSubscriptionCompleted(<<0:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2,
-							    TrUserData) ->
+    skip_length_delimited_TransactionCommit(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, TrUserData);
+skip_length_delimited_TransactionCommit(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, TrUserData) ->
     Length = X bsl N + Acc,
     <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest2,
-							     0, 0, F1, F2,
-							     TrUserData).
+    dfp_read_field_def_TransactionCommit(Rest2, 0, 0, F1,
+					 F2, TrUserData).
 
 
-skip_group_DeletePersistentSubscriptionCompleted(Bin,
-						 FNum, Z2, F1, F2,
-						 TrUserData) ->
+skip_group_TransactionCommit(Bin, FNum, Z2, F1, F2,
+			     TrUserData) ->
     {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
-							     0, Z2, F1, F2,
-							     TrUserData).
+    dfp_read_field_def_TransactionCommit(Rest, 0, Z2, F1,
+					 F2, TrUserData).
 
 
-skip_32_DeletePersistentSubscriptionCompleted(<<_:32,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
-							     Z1, Z2, F1, F2,
-							     TrUserData).
+skip_32_TransactionCommit(<<_:32, Rest/binary>>, Z1, Z2,
+			  F1, F2, TrUserData) ->
+    dfp_read_field_def_TransactionCommit(Rest, Z1, Z2, F1,
+					 F2, TrUserData).
 
 
-skip_64_DeletePersistentSubscriptionCompleted(<<_:64,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
-							     Z1, Z2, F1, F2,
-							     TrUserData).
+skip_64_TransactionCommit(<<_:64, Rest/binary>>, Z1, Z2,
+			  F1, F2, TrUserData) ->
+    dfp_read_field_def_TransactionCommit(Rest, Z1, Z2, F1,
+					 F2, TrUserData).
 
 
 d_msg_UpdatePersistentSubscription(Bin, TrUserData) ->
@@ -8566,6 +3671,394 @@ skip_64_UpdatePersistentSubscription(<<_:64,
 						    TrUserData).
 
 
+d_msg_EventRecord(Bin, TrUserData) ->
+    dfp_read_field_def_EventRecord(Bin, 0, 0,
+				   id(undefined, TrUserData),
+				   id(undefined, TrUserData),
+				   id(undefined, TrUserData),
+				   id(undefined, TrUserData),
+				   id(undefined, TrUserData),
+				   id(undefined, TrUserData),
+				   id(undefined, TrUserData),
+				   id(<<>>, TrUserData), id(0, TrUserData),
+				   id(0, TrUserData), TrUserData).
+
+dfp_read_field_def_EventRecord(<<10, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_event_stream_id(Rest, Z1, Z2, F1,
+					F2, F3, F4, F5, F6, F7, F8, F9, F10,
+					TrUserData);
+dfp_read_field_def_EventRecord(<<16, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_event_number(Rest, Z1, Z2, F1, F2,
+				     F3, F4, F5, F6, F7, F8, F9, F10,
+				     TrUserData);
+dfp_read_field_def_EventRecord(<<26, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_event_id(Rest, Z1, Z2, F1, F2, F3,
+				 F4, F5, F6, F7, F8, F9, F10, TrUserData);
+dfp_read_field_def_EventRecord(<<34, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_event_type(Rest, Z1, Z2, F1, F2, F3,
+				   F4, F5, F6, F7, F8, F9, F10, TrUserData);
+dfp_read_field_def_EventRecord(<<40, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_data_content_type(Rest, Z1, Z2, F1,
+					  F2, F3, F4, F5, F6, F7, F8, F9, F10,
+					  TrUserData);
+dfp_read_field_def_EventRecord(<<48, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_metadata_content_type(Rest, Z1, Z2,
+					      F1, F2, F3, F4, F5, F6, F7, F8,
+					      F9, F10, TrUserData);
+dfp_read_field_def_EventRecord(<<58, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_data(Rest, Z1, Z2, F1, F2, F3, F4,
+			     F5, F6, F7, F8, F9, F10, TrUserData);
+dfp_read_field_def_EventRecord(<<66, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_metadata(Rest, Z1, Z2, F1, F2, F3,
+				 F4, F5, F6, F7, F8, F9, F10, TrUserData);
+dfp_read_field_def_EventRecord(<<72, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_created(Rest, Z1, Z2, F1, F2, F3,
+				F4, F5, F6, F7, F8, F9, F10, TrUserData);
+dfp_read_field_def_EventRecord(<<80, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    d_field_EventRecord_created_epoch(Rest, Z1, Z2, F1, F2,
+				      F3, F4, F5, F6, F7, F8, F9, F10,
+				      TrUserData);
+dfp_read_field_def_EventRecord(<<>>, 0, 0, F1, F2, F3,
+			       F4, F5, F6, F7, F8, F9, F10, _) ->
+    #'EventRecord'{event_stream_id = F1, event_number = F2,
+		   event_id = F3, event_type = F4, data_content_type = F5,
+		   metadata_content_type = F6, data = F7, metadata = F8,
+		   created = F9, created_epoch = F10};
+dfp_read_field_def_EventRecord(Other, Z1, Z2, F1, F2,
+			       F3, F4, F5, F6, F7, F8, F9, F10, TrUserData) ->
+    dg_read_field_def_EventRecord(Other, Z1, Z2, F1, F2, F3,
+				  F4, F5, F6, F7, F8, F9, F10, TrUserData).
+
+dg_read_field_def_EventRecord(<<1:1, X:7, Rest/binary>>,
+			      N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			      TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_EventRecord(Rest, N + 7,
+				  X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7, F8,
+				  F9, F10, TrUserData);
+dg_read_field_def_EventRecord(<<0:1, X:7, Rest/binary>>,
+			      N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			      TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_EventRecord_event_stream_id(Rest, 0, 0, F1, F2,
+					      F3, F4, F5, F6, F7, F8, F9, F10,
+					      TrUserData);
+      16 ->
+	  d_field_EventRecord_event_number(Rest, 0, 0, F1, F2, F3,
+					   F4, F5, F6, F7, F8, F9, F10,
+					   TrUserData);
+      26 ->
+	  d_field_EventRecord_event_id(Rest, 0, 0, F1, F2, F3, F4,
+				       F5, F6, F7, F8, F9, F10, TrUserData);
+      34 ->
+	  d_field_EventRecord_event_type(Rest, 0, 0, F1, F2, F3,
+					 F4, F5, F6, F7, F8, F9, F10,
+					 TrUserData);
+      40 ->
+	  d_field_EventRecord_data_content_type(Rest, 0, 0, F1,
+						F2, F3, F4, F5, F6, F7, F8, F9,
+						F10, TrUserData);
+      48 ->
+	  d_field_EventRecord_metadata_content_type(Rest, 0, 0,
+						    F1, F2, F3, F4, F5, F6, F7,
+						    F8, F9, F10, TrUserData);
+      58 ->
+	  d_field_EventRecord_data(Rest, 0, 0, F1, F2, F3, F4, F5,
+				   F6, F7, F8, F9, F10, TrUserData);
+      66 ->
+	  d_field_EventRecord_metadata(Rest, 0, 0, F1, F2, F3, F4,
+				       F5, F6, F7, F8, F9, F10, TrUserData);
+      72 ->
+	  d_field_EventRecord_created(Rest, 0, 0, F1, F2, F3, F4,
+				      F5, F6, F7, F8, F9, F10, TrUserData);
+      80 ->
+	  d_field_EventRecord_created_epoch(Rest, 0, 0, F1, F2,
+					    F3, F4, F5, F6, F7, F8, F9, F10,
+					    TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_EventRecord(Rest, 0, 0, F1, F2, F3, F4, F5,
+					F6, F7, F8, F9, F10, TrUserData);
+	    1 ->
+		skip_64_EventRecord(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
+				    F7, F8, F9, F10, TrUserData);
+	    2 ->
+		skip_length_delimited_EventRecord(Rest, 0, 0, F1, F2,
+						  F3, F4, F5, F6, F7, F8, F9,
+						  F10, TrUserData);
+	    3 ->
+		skip_group_EventRecord(Rest, Key bsr 3, 0, F1, F2, F3,
+				       F4, F5, F6, F7, F8, F9, F10, TrUserData);
+	    5 ->
+		skip_32_EventRecord(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
+				    F7, F8, F9, F10, TrUserData)
+	  end
+    end;
+dg_read_field_def_EventRecord(<<>>, 0, 0, F1, F2, F3,
+			      F4, F5, F6, F7, F8, F9, F10, _) ->
+    #'EventRecord'{event_stream_id = F1, event_number = F2,
+		   event_id = F3, event_type = F4, data_content_type = F5,
+		   metadata_content_type = F6, data = F7, metadata = F8,
+		   created = F9, created_epoch = F10}.
+
+d_field_EventRecord_event_stream_id(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
+				    F10, TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_event_stream_id(Rest, N + 7,
+					X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+					F7, F8, F9, F10, TrUserData);
+d_field_EventRecord_event_stream_id(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, _, F2, F3, F4, F5, F6, F7, F8, F9,
+				    F10, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_EventRecord(Rest2, 0, 0, NewFValue,
+				   F2, F3, F4, F5, F6, F7, F8, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_event_number(<<1:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
+				 F10, TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_event_number(Rest, N + 7,
+				     X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
+				     F8, F9, F10, TrUserData);
+d_field_EventRecord_event_number(<<0:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, _, F3, F4, F5, F6, F7, F8, F9, F10,
+				 TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_EventRecord(Rest, 0, 0, F1,
+				   NewFValue, F3, F4, F5, F6, F7, F8, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_event_id(<<1:1, X:7, Rest/binary>>,
+			     N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			     TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_event_id(Rest, N + 7, X bsl N + Acc,
+				 F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+				 TrUserData);
+d_field_EventRecord_event_id(<<0:1, X:7, Rest/binary>>,
+			     N, Acc, F1, F2, _, F4, F5, F6, F7, F8, F9, F10,
+			     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2,
+				   NewFValue, F4, F5, F6, F7, F8, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_event_type(<<1:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			       TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_event_type(Rest, N + 7,
+				   X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
+				   F8, F9, F10, TrUserData);
+d_field_EventRecord_event_type(<<0:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, F2, F3, _, F5, F6, F7, F8, F9, F10,
+			       TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
+				   NewFValue, F5, F6, F7, F8, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_data_content_type(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, F5, F6, F7, F8,
+				      F9, F10, TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_data_content_type(Rest, N + 7,
+					  X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+					  F7, F8, F9, F10, TrUserData);
+d_field_EventRecord_data_content_type(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, _, F6, F7, F8, F9,
+				      F10, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
+				   F4, NewFValue, F6, F7, F8, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_metadata_content_type(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					  F8, F9, F10, TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_metadata_content_type(Rest, N + 7,
+					      X bsl N + Acc, F1, F2, F3, F4, F5,
+					      F6, F7, F8, F9, F10, TrUserData);
+d_field_EventRecord_metadata_content_type(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, F4, F5, _, F7, F8,
+					  F9, F10, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
+				   F4, F5, NewFValue, F7, F8, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_data(<<1:1, X:7, Rest/binary>>, N,
+			 Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			 TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_data(Rest, N + 7, X bsl N + Acc, F1,
+			     F2, F3, F4, F5, F6, F7, F8, F9, F10, TrUserData);
+d_field_EventRecord_data(<<0:1, X:7, Rest/binary>>, N,
+			 Acc, F1, F2, F3, F4, F5, F6, _, F8, F9, F10,
+			 TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
+				   F4, F5, F6, NewFValue, F8, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_metadata(<<1:1, X:7, Rest/binary>>,
+			     N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			     TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_metadata(Rest, N + 7, X bsl N + Acc,
+				 F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+				 TrUserData);
+d_field_EventRecord_metadata(<<0:1, X:7, Rest/binary>>,
+			     N, Acc, F1, F2, F3, F4, F5, F6, F7, _, F9, F10,
+			     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
+				   F4, F5, F6, F7, NewFValue, F9, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_created(<<1:1, X:7, Rest/binary>>,
+			    N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			    TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_created(Rest, N + 7, X bsl N + Acc,
+				F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+				TrUserData);
+d_field_EventRecord_created(<<0:1, X:7, Rest/binary>>,
+			    N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, _, F10,
+			    TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
+				   F4, F5, F6, F7, F8, NewFValue, F10,
+				   TrUserData).
+
+
+d_field_EventRecord_created_epoch(<<1:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
+				  F10, TrUserData)
+    when N < 57 ->
+    d_field_EventRecord_created_epoch(Rest, N + 7,
+				      X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
+				      F8, F9, F10, TrUserData);
+d_field_EventRecord_created_epoch(<<0:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9, _,
+				  TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_EventRecord(Rest, 0, 0, F1, F2, F3,
+				   F4, F5, F6, F7, F8, F9, NewFValue,
+				   TrUserData).
+
+
+skip_varint_EventRecord(<<1:1, _:7, Rest/binary>>, Z1,
+			Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			TrUserData) ->
+    skip_varint_EventRecord(Rest, Z1, Z2, F1, F2, F3, F4,
+			    F5, F6, F7, F8, F9, F10, TrUserData);
+skip_varint_EventRecord(<<0:1, _:7, Rest/binary>>, Z1,
+			Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+			TrUserData) ->
+    dfp_read_field_def_EventRecord(Rest, Z1, Z2, F1, F2, F3,
+				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
+
+
+skip_length_delimited_EventRecord(<<1:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
+				  F10, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_EventRecord(Rest, N + 7,
+				      X bsl N + Acc, F1, F2, F3, F4, F5, F6, F7,
+				      F8, F9, F10, TrUserData);
+skip_length_delimited_EventRecord(<<0:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, F2, F3, F4, F5, F6, F7, F8, F9,
+				  F10, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_EventRecord(Rest2, 0, 0, F1, F2, F3,
+				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
+
+
+skip_group_EventRecord(Bin, FNum, Z2, F1, F2, F3, F4,
+		       F5, F6, F7, F8, F9, F10, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_EventRecord(Rest, 0, Z2, F1, F2, F3,
+				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
+
+
+skip_32_EventRecord(<<_:32, Rest/binary>>, Z1, Z2, F1,
+		    F2, F3, F4, F5, F6, F7, F8, F9, F10, TrUserData) ->
+    dfp_read_field_def_EventRecord(Rest, Z1, Z2, F1, F2, F3,
+				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
+
+
+skip_64_EventRecord(<<_:64, Rest/binary>>, Z1, Z2, F1,
+		    F2, F3, F4, F5, F6, F7, F8, F9, F10, TrUserData) ->
+    dfp_read_field_def_EventRecord(Rest, Z1, Z2, F1, F2, F3,
+				   F4, F5, F6, F7, F8, F9, F10, TrUserData).
+
+
 d_msg_ResolvedIndexedEvent(Bin, TrUserData) ->
     dfp_read_field_def_ResolvedIndexedEvent(Bin, 0, 0,
 					    id(undefined, TrUserData),
@@ -8721,6 +4214,3350 @@ skip_64_ResolvedIndexedEvent(<<_:64, Rest/binary>>, Z1,
 			     Z2, F1, F2, TrUserData) ->
     dfp_read_field_def_ResolvedIndexedEvent(Rest, Z1, Z2,
 					    F1, F2, TrUserData).
+
+
+d_msg_PersistentSubscriptionStreamEventAppeared(Bin,
+						TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Bin,
+								 0, 0,
+								 id(undefined,
+								    TrUserData),
+								 TrUserData).
+
+dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(<<10,
+							       Rest/binary>>,
+							     Z1, Z2, F1,
+							     TrUserData) ->
+    d_field_PersistentSubscriptionStreamEventAppeared_event(Rest,
+							    Z1, Z2, F1,
+							    TrUserData);
+dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(<<>>,
+							     0, 0, F1, _) ->
+    #'PersistentSubscriptionStreamEventAppeared'{event =
+						     F1};
+dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Other,
+							     Z1, Z2, F1,
+							     TrUserData) ->
+    dg_read_field_def_PersistentSubscriptionStreamEventAppeared(Other,
+								Z1, Z2, F1,
+								TrUserData).
+
+dg_read_field_def_PersistentSubscriptionStreamEventAppeared(<<1:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1,
+							    TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
+								N + 7,
+								X bsl N + Acc,
+								F1, TrUserData);
+dg_read_field_def_PersistentSubscriptionStreamEventAppeared(<<0:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1,
+							    TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_PersistentSubscriptionStreamEventAppeared_event(Rest,
+								  0, 0, F1,
+								  TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_PersistentSubscriptionStreamEventAppeared(Rest,
+								      0, 0, F1,
+								      TrUserData);
+	    1 ->
+		skip_64_PersistentSubscriptionStreamEventAppeared(Rest,
+								  0, 0, F1,
+								  TrUserData);
+	    2 ->
+		skip_length_delimited_PersistentSubscriptionStreamEventAppeared(Rest,
+										0,
+										0,
+										F1,
+										TrUserData);
+	    3 ->
+		skip_group_PersistentSubscriptionStreamEventAppeared(Rest,
+								     Key bsr 3,
+								     0, F1,
+								     TrUserData);
+	    5 ->
+		skip_32_PersistentSubscriptionStreamEventAppeared(Rest,
+								  0, 0, F1,
+								  TrUserData)
+	  end
+    end;
+dg_read_field_def_PersistentSubscriptionStreamEventAppeared(<<>>,
+							    0, 0, F1, _) ->
+    #'PersistentSubscriptionStreamEventAppeared'{event =
+						     F1}.
+
+d_field_PersistentSubscriptionStreamEventAppeared_event(<<1:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, TrUserData)
+    when N < 57 ->
+    d_field_PersistentSubscriptionStreamEventAppeared_event(Rest,
+							    N + 7,
+							    X bsl N + Acc, F1,
+							    TrUserData);
+d_field_PersistentSubscriptionStreamEventAppeared_event(<<0:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1,
+							TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bs:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = id(d_msg_ResolvedIndexedEvent(Bs,
+					      TrUserData),
+		   TrUserData),
+    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest2,
+								 0, 0,
+								 if F1 ==
+								      undefined ->
+									NewFValue;
+								    true ->
+									merge_msg_ResolvedIndexedEvent(F1,
+												       NewFValue,
+												       TrUserData)
+								 end,
+								 TrUserData).
+
+
+skip_varint_PersistentSubscriptionStreamEventAppeared(<<1:1,
+							_:7, Rest/binary>>,
+						      Z1, Z2, F1, TrUserData) ->
+    skip_varint_PersistentSubscriptionStreamEventAppeared(Rest,
+							  Z1, Z2, F1,
+							  TrUserData);
+skip_varint_PersistentSubscriptionStreamEventAppeared(<<0:1,
+							_:7, Rest/binary>>,
+						      Z1, Z2, F1, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
+								 Z1, Z2, F1,
+								 TrUserData).
+
+
+skip_length_delimited_PersistentSubscriptionStreamEventAppeared(<<1:1,
+								  X:7,
+								  Rest/binary>>,
+								N, Acc, F1,
+								TrUserData)
+    when N < 57 ->
+    skip_length_delimited_PersistentSubscriptionStreamEventAppeared(Rest,
+								    N + 7,
+								    X bsl N +
+								      Acc,
+								    F1,
+								    TrUserData);
+skip_length_delimited_PersistentSubscriptionStreamEventAppeared(<<0:1,
+								  X:7,
+								  Rest/binary>>,
+								N, Acc, F1,
+								TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest2,
+								 0, 0, F1,
+								 TrUserData).
+
+
+skip_group_PersistentSubscriptionStreamEventAppeared(Bin,
+						     FNum, Z2, F1,
+						     TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
+								 0, Z2, F1,
+								 TrUserData).
+
+
+skip_32_PersistentSubscriptionStreamEventAppeared(<<_:32,
+						    Rest/binary>>,
+						  Z1, Z2, F1, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
+								 Z1, Z2, F1,
+								 TrUserData).
+
+
+skip_64_PersistentSubscriptionStreamEventAppeared(<<_:64,
+						    Rest/binary>>,
+						  Z1, Z2, F1, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
+								 Z1, Z2, F1,
+								 TrUserData).
+
+
+d_msg_ReadEvent(Bin, TrUserData) ->
+    dfp_read_field_def_ReadEvent(Bin, 0, 0,
+				 id(undefined, TrUserData),
+				 id(undefined, TrUserData),
+				 id(undefined, TrUserData),
+				 id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_ReadEvent(<<10, Rest/binary>>, Z1,
+			     Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ReadEvent_event_stream_id(Rest, Z1, Z2, F1, F2,
+				      F3, F4, TrUserData);
+dfp_read_field_def_ReadEvent(<<16, Rest/binary>>, Z1,
+			     Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ReadEvent_event_number(Rest, Z1, Z2, F1, F2, F3,
+				   F4, TrUserData);
+dfp_read_field_def_ReadEvent(<<24, Rest/binary>>, Z1,
+			     Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ReadEvent_resolve_link_tos(Rest, Z1, Z2, F1, F2,
+				       F3, F4, TrUserData);
+dfp_read_field_def_ReadEvent(<<32, Rest/binary>>, Z1,
+			     Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ReadEvent_require_master(Rest, Z1, Z2, F1, F2,
+				     F3, F4, TrUserData);
+dfp_read_field_def_ReadEvent(<<>>, 0, 0, F1, F2, F3, F4,
+			     _) ->
+    #'ReadEvent'{event_stream_id = F1, event_number = F2,
+		 resolve_link_tos = F3, require_master = F4};
+dfp_read_field_def_ReadEvent(Other, Z1, Z2, F1, F2, F3,
+			     F4, TrUserData) ->
+    dg_read_field_def_ReadEvent(Other, Z1, Z2, F1, F2, F3,
+				F4, TrUserData).
+
+dg_read_field_def_ReadEvent(<<1:1, X:7, Rest/binary>>,
+			    N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_ReadEvent(Rest, N + 7, X bsl N + Acc,
+				F1, F2, F3, F4, TrUserData);
+dg_read_field_def_ReadEvent(<<0:1, X:7, Rest/binary>>,
+			    N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_ReadEvent_event_stream_id(Rest, 0, 0, F1, F2,
+					    F3, F4, TrUserData);
+      16 ->
+	  d_field_ReadEvent_event_number(Rest, 0, 0, F1, F2, F3,
+					 F4, TrUserData);
+      24 ->
+	  d_field_ReadEvent_resolve_link_tos(Rest, 0, 0, F1, F2,
+					     F3, F4, TrUserData);
+      32 ->
+	  d_field_ReadEvent_require_master(Rest, 0, 0, F1, F2, F3,
+					   F4, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_ReadEvent(Rest, 0, 0, F1, F2, F3, F4,
+				      TrUserData);
+	    1 ->
+		skip_64_ReadEvent(Rest, 0, 0, F1, F2, F3, F4,
+				  TrUserData);
+	    2 ->
+		skip_length_delimited_ReadEvent(Rest, 0, 0, F1, F2, F3,
+						F4, TrUserData);
+	    3 ->
+		skip_group_ReadEvent(Rest, Key bsr 3, 0, F1, F2, F3, F4,
+				     TrUserData);
+	    5 ->
+		skip_32_ReadEvent(Rest, 0, 0, F1, F2, F3, F4,
+				  TrUserData)
+	  end
+    end;
+dg_read_field_def_ReadEvent(<<>>, 0, 0, F1, F2, F3, F4,
+			    _) ->
+    #'ReadEvent'{event_stream_id = F1, event_number = F2,
+		 resolve_link_tos = F3, require_master = F4}.
+
+d_field_ReadEvent_event_stream_id(<<1:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ReadEvent_event_stream_id(Rest, N + 7,
+				      X bsl N + Acc, F1, F2, F3, F4,
+				      TrUserData);
+d_field_ReadEvent_event_stream_id(<<0:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, _, F2, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_ReadEvent(Rest2, 0, 0, NewFValue, F2,
+				 F3, F4, TrUserData).
+
+
+d_field_ReadEvent_event_number(<<1:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ReadEvent_event_number(Rest, N + 7,
+				   X bsl N + Acc, F1, F2, F3, F4, TrUserData);
+d_field_ReadEvent_event_number(<<0:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, _, F3, F4, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_ReadEvent(Rest, 0, 0, F1, NewFValue,
+				 F3, F4, TrUserData).
+
+
+d_field_ReadEvent_resolve_link_tos(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ReadEvent_resolve_link_tos(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, F4,
+				       TrUserData);
+d_field_ReadEvent_resolve_link_tos(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, _, F4, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_ReadEvent(Rest, 0, 0, F1, F2,
+				 NewFValue, F4, TrUserData).
+
+
+d_field_ReadEvent_require_master(<<1:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ReadEvent_require_master(Rest, N + 7,
+				     X bsl N + Acc, F1, F2, F3, F4, TrUserData);
+d_field_ReadEvent_require_master(<<0:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, F2, F3, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_ReadEvent(Rest, 0, 0, F1, F2, F3,
+				 NewFValue, TrUserData).
+
+
+skip_varint_ReadEvent(<<1:1, _:7, Rest/binary>>, Z1, Z2,
+		      F1, F2, F3, F4, TrUserData) ->
+    skip_varint_ReadEvent(Rest, Z1, Z2, F1, F2, F3, F4,
+			  TrUserData);
+skip_varint_ReadEvent(<<0:1, _:7, Rest/binary>>, Z1, Z2,
+		      F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_ReadEvent(Rest, Z1, Z2, F1, F2, F3,
+				 F4, TrUserData).
+
+
+skip_length_delimited_ReadEvent(<<1:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_ReadEvent(Rest, N + 7,
+				    X bsl N + Acc, F1, F2, F3, F4, TrUserData);
+skip_length_delimited_ReadEvent(<<0:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_ReadEvent(Rest2, 0, 0, F1, F2, F3,
+				 F4, TrUserData).
+
+
+skip_group_ReadEvent(Bin, FNum, Z2, F1, F2, F3, F4,
+		     TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_ReadEvent(Rest, 0, Z2, F1, F2, F3,
+				 F4, TrUserData).
+
+
+skip_32_ReadEvent(<<_:32, Rest/binary>>, Z1, Z2, F1, F2,
+		  F3, F4, TrUserData) ->
+    dfp_read_field_def_ReadEvent(Rest, Z1, Z2, F1, F2, F3,
+				 F4, TrUserData).
+
+
+skip_64_ReadEvent(<<_:64, Rest/binary>>, Z1, Z2, F1, F2,
+		  F3, F4, TrUserData) ->
+    dfp_read_field_def_ReadEvent(Rest, Z1, Z2, F1, F2, F3,
+				 F4, TrUserData).
+
+
+d_msg_TransactionStartCompleted(Bin, TrUserData) ->
+    dfp_read_field_def_TransactionStartCompleted(Bin, 0, 0,
+						 id(undefined, TrUserData),
+						 id(undefined, TrUserData),
+						 id(<<>>, TrUserData),
+						 TrUserData).
+
+dfp_read_field_def_TransactionStartCompleted(<<8,
+					       Rest/binary>>,
+					     Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionStartCompleted_transaction_id(Rest,
+						     Z1, Z2, F1, F2, F3,
+						     TrUserData);
+dfp_read_field_def_TransactionStartCompleted(<<16,
+					       Rest/binary>>,
+					     Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionStartCompleted_result(Rest, Z1, Z2,
+					     F1, F2, F3, TrUserData);
+dfp_read_field_def_TransactionStartCompleted(<<26,
+					       Rest/binary>>,
+					     Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionStartCompleted_message(Rest, Z1, Z2,
+					      F1, F2, F3, TrUserData);
+dfp_read_field_def_TransactionStartCompleted(<<>>, 0, 0,
+					     F1, F2, F3, _) ->
+    #'TransactionStartCompleted'{transaction_id = F1,
+				 result = F2, message = F3};
+dfp_read_field_def_TransactionStartCompleted(Other, Z1,
+					     Z2, F1, F2, F3, TrUserData) ->
+    dg_read_field_def_TransactionStartCompleted(Other, Z1,
+						Z2, F1, F2, F3, TrUserData).
+
+dg_read_field_def_TransactionStartCompleted(<<1:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, F1, F2, F3, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_TransactionStartCompleted(Rest, N + 7,
+						X bsl N + Acc, F1, F2, F3,
+						TrUserData);
+dg_read_field_def_TransactionStartCompleted(<<0:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, F1, F2, F3, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_TransactionStartCompleted_transaction_id(Rest,
+							   0, 0, F1, F2, F3,
+							   TrUserData);
+      16 ->
+	  d_field_TransactionStartCompleted_result(Rest, 0, 0, F1,
+						   F2, F3, TrUserData);
+      26 ->
+	  d_field_TransactionStartCompleted_message(Rest, 0, 0,
+						    F1, F2, F3, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_TransactionStartCompleted(Rest, 0, 0, F1,
+						      F2, F3, TrUserData);
+	    1 ->
+		skip_64_TransactionStartCompleted(Rest, 0, 0, F1, F2,
+						  F3, TrUserData);
+	    2 ->
+		skip_length_delimited_TransactionStartCompleted(Rest, 0,
+								0, F1, F2, F3,
+								TrUserData);
+	    3 ->
+		skip_group_TransactionStartCompleted(Rest, Key bsr 3, 0,
+						     F1, F2, F3, TrUserData);
+	    5 ->
+		skip_32_TransactionStartCompleted(Rest, 0, 0, F1, F2,
+						  F3, TrUserData)
+	  end
+    end;
+dg_read_field_def_TransactionStartCompleted(<<>>, 0, 0,
+					    F1, F2, F3, _) ->
+    #'TransactionStartCompleted'{transaction_id = F1,
+				 result = F2, message = F3}.
+
+d_field_TransactionStartCompleted_transaction_id(<<1:1,
+						   X:7, Rest/binary>>,
+						 N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionStartCompleted_transaction_id(Rest,
+						     N + 7, X bsl N + Acc, F1,
+						     F2, F3, TrUserData);
+d_field_TransactionStartCompleted_transaction_id(<<0:1,
+						   X:7, Rest/binary>>,
+						 N, Acc, _, F2, F3,
+						 TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_TransactionStartCompleted(Rest, 0, 0,
+						 NewFValue, F2, F3, TrUserData).
+
+
+d_field_TransactionStartCompleted_result(<<1:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionStartCompleted_result(Rest, N + 7,
+					     X bsl N + Acc, F1, F2, F3,
+					     TrUserData);
+d_field_TransactionStartCompleted_result(<<0:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, _, F3, TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue = d_enum_OperationResult(Tmp),
+    dfp_read_field_def_TransactionStartCompleted(Rest, 0, 0,
+						 F1, NewFValue, F3, TrUserData).
+
+
+d_field_TransactionStartCompleted_message(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionStartCompleted_message(Rest, N + 7,
+					      X bsl N + Acc, F1, F2, F3,
+					      TrUserData);
+d_field_TransactionStartCompleted_message(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, _, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_TransactionStartCompleted(Rest2, 0,
+						 0, F1, F2, NewFValue,
+						 TrUserData).
+
+
+skip_varint_TransactionStartCompleted(<<1:1, _:7,
+					Rest/binary>>,
+				      Z1, Z2, F1, F2, F3, TrUserData) ->
+    skip_varint_TransactionStartCompleted(Rest, Z1, Z2, F1,
+					  F2, F3, TrUserData);
+skip_varint_TransactionStartCompleted(<<0:1, _:7,
+					Rest/binary>>,
+				      Z1, Z2, F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionStartCompleted(Rest, Z1,
+						 Z2, F1, F2, F3, TrUserData).
+
+
+skip_length_delimited_TransactionStartCompleted(<<1:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_TransactionStartCompleted(Rest,
+						    N + 7, X bsl N + Acc, F1,
+						    F2, F3, TrUserData);
+skip_length_delimited_TransactionStartCompleted(<<0:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3,
+						TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_TransactionStartCompleted(Rest2, 0,
+						 0, F1, F2, F3, TrUserData).
+
+
+skip_group_TransactionStartCompleted(Bin, FNum, Z2, F1,
+				     F2, F3, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_TransactionStartCompleted(Rest, 0,
+						 Z2, F1, F2, F3, TrUserData).
+
+
+skip_32_TransactionStartCompleted(<<_:32, Rest/binary>>,
+				  Z1, Z2, F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionStartCompleted(Rest, Z1,
+						 Z2, F1, F2, F3, TrUserData).
+
+
+skip_64_TransactionStartCompleted(<<_:64, Rest/binary>>,
+				  Z1, Z2, F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionStartCompleted(Rest, Z1,
+						 Z2, F1, F2, F3, TrUserData).
+
+
+d_msg_ScavengeDatabaseCompleted(Bin, TrUserData) ->
+    dfp_read_field_def_ScavengeDatabaseCompleted(Bin, 0, 0,
+						 id(undefined, TrUserData),
+						 id(<<>>, TrUserData),
+						 id(undefined, TrUserData),
+						 id(undefined, TrUserData),
+						 TrUserData).
+
+dfp_read_field_def_ScavengeDatabaseCompleted(<<8,
+					       Rest/binary>>,
+					     Z1, Z2, F1, F2, F3, F4,
+					     TrUserData) ->
+    d_field_ScavengeDatabaseCompleted_result(Rest, Z1, Z2,
+					     F1, F2, F3, F4, TrUserData);
+dfp_read_field_def_ScavengeDatabaseCompleted(<<18,
+					       Rest/binary>>,
+					     Z1, Z2, F1, F2, F3, F4,
+					     TrUserData) ->
+    d_field_ScavengeDatabaseCompleted_error(Rest, Z1, Z2,
+					    F1, F2, F3, F4, TrUserData);
+dfp_read_field_def_ScavengeDatabaseCompleted(<<24,
+					       Rest/binary>>,
+					     Z1, Z2, F1, F2, F3, F4,
+					     TrUserData) ->
+    d_field_ScavengeDatabaseCompleted_total_time_ms(Rest,
+						    Z1, Z2, F1, F2, F3, F4,
+						    TrUserData);
+dfp_read_field_def_ScavengeDatabaseCompleted(<<32,
+					       Rest/binary>>,
+					     Z1, Z2, F1, F2, F3, F4,
+					     TrUserData) ->
+    d_field_ScavengeDatabaseCompleted_total_space_saved(Rest,
+							Z1, Z2, F1, F2, F3, F4,
+							TrUserData);
+dfp_read_field_def_ScavengeDatabaseCompleted(<<>>, 0, 0,
+					     F1, F2, F3, F4, _) ->
+    #'ScavengeDatabaseCompleted'{result = F1, error = F2,
+				 total_time_ms = F3, total_space_saved = F4};
+dfp_read_field_def_ScavengeDatabaseCompleted(Other, Z1,
+					     Z2, F1, F2, F3, F4, TrUserData) ->
+    dg_read_field_def_ScavengeDatabaseCompleted(Other, Z1,
+						Z2, F1, F2, F3, F4, TrUserData).
+
+dg_read_field_def_ScavengeDatabaseCompleted(<<1:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_ScavengeDatabaseCompleted(Rest, N + 7,
+						X bsl N + Acc, F1, F2, F3, F4,
+						TrUserData);
+dg_read_field_def_ScavengeDatabaseCompleted(<<0:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, F1, F2, F3, F4,
+					    TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_ScavengeDatabaseCompleted_result(Rest, 0, 0, F1,
+						   F2, F3, F4, TrUserData);
+      18 ->
+	  d_field_ScavengeDatabaseCompleted_error(Rest, 0, 0, F1,
+						  F2, F3, F4, TrUserData);
+      24 ->
+	  d_field_ScavengeDatabaseCompleted_total_time_ms(Rest, 0,
+							  0, F1, F2, F3, F4,
+							  TrUserData);
+      32 ->
+	  d_field_ScavengeDatabaseCompleted_total_space_saved(Rest,
+							      0, 0, F1, F2, F3,
+							      F4, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_ScavengeDatabaseCompleted(Rest, 0, 0, F1,
+						      F2, F3, F4, TrUserData);
+	    1 ->
+		skip_64_ScavengeDatabaseCompleted(Rest, 0, 0, F1, F2,
+						  F3, F4, TrUserData);
+	    2 ->
+		skip_length_delimited_ScavengeDatabaseCompleted(Rest, 0,
+								0, F1, F2, F3,
+								F4, TrUserData);
+	    3 ->
+		skip_group_ScavengeDatabaseCompleted(Rest, Key bsr 3, 0,
+						     F1, F2, F3, F4,
+						     TrUserData);
+	    5 ->
+		skip_32_ScavengeDatabaseCompleted(Rest, 0, 0, F1, F2,
+						  F3, F4, TrUserData)
+	  end
+    end;
+dg_read_field_def_ScavengeDatabaseCompleted(<<>>, 0, 0,
+					    F1, F2, F3, F4, _) ->
+    #'ScavengeDatabaseCompleted'{result = F1, error = F2,
+				 total_time_ms = F3, total_space_saved = F4}.
+
+d_field_ScavengeDatabaseCompleted_result(<<1:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ScavengeDatabaseCompleted_result(Rest, N + 7,
+					     X bsl N + Acc, F1, F2, F3, F4,
+					     TrUserData);
+d_field_ScavengeDatabaseCompleted_result(<<0:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, _, F2, F3, F4, TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue =
+	'd_enum_ScavengeDatabaseCompleted.ScavengeResult'(Tmp),
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0, 0,
+						 NewFValue, F2, F3, F4,
+						 TrUserData).
+
+
+d_field_ScavengeDatabaseCompleted_error(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ScavengeDatabaseCompleted_error(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, F3, F4,
+					    TrUserData);
+d_field_ScavengeDatabaseCompleted_error(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, _, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest2, 0,
+						 0, F1, NewFValue, F3, F4,
+						 TrUserData).
+
+
+d_field_ScavengeDatabaseCompleted_total_time_ms(<<1:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, F4,
+						TrUserData)
+    when N < 57 ->
+    d_field_ScavengeDatabaseCompleted_total_time_ms(Rest,
+						    N + 7, X bsl N + Acc, F1,
+						    F2, F3, F4, TrUserData);
+d_field_ScavengeDatabaseCompleted_total_time_ms(<<0:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, _, F4,
+						TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0, 0,
+						 F1, F2, NewFValue, F4,
+						 TrUserData).
+
+
+d_field_ScavengeDatabaseCompleted_total_space_saved(<<1:1,
+						      X:7, Rest/binary>>,
+						    N, Acc, F1, F2, F3, F4,
+						    TrUserData)
+    when N < 57 ->
+    d_field_ScavengeDatabaseCompleted_total_space_saved(Rest,
+							N + 7, X bsl N + Acc,
+							F1, F2, F3, F4,
+							TrUserData);
+d_field_ScavengeDatabaseCompleted_total_space_saved(<<0:1,
+						      X:7, Rest/binary>>,
+						    N, Acc, F1, F2, F3, _,
+						    TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0, 0,
+						 F1, F2, F3, NewFValue,
+						 TrUserData).
+
+
+skip_varint_ScavengeDatabaseCompleted(<<1:1, _:7,
+					Rest/binary>>,
+				      Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    skip_varint_ScavengeDatabaseCompleted(Rest, Z1, Z2, F1,
+					  F2, F3, F4, TrUserData);
+skip_varint_ScavengeDatabaseCompleted(<<0:1, _:7,
+					Rest/binary>>,
+				      Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, Z1,
+						 Z2, F1, F2, F3, F4,
+						 TrUserData).
+
+
+skip_length_delimited_ScavengeDatabaseCompleted(<<1:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, F4,
+						TrUserData)
+    when N < 57 ->
+    skip_length_delimited_ScavengeDatabaseCompleted(Rest,
+						    N + 7, X bsl N + Acc, F1,
+						    F2, F3, F4, TrUserData);
+skip_length_delimited_ScavengeDatabaseCompleted(<<0:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, F4,
+						TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest2, 0,
+						 0, F1, F2, F3, F4, TrUserData).
+
+
+skip_group_ScavengeDatabaseCompleted(Bin, FNum, Z2, F1,
+				     F2, F3, F4, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, 0,
+						 Z2, F1, F2, F3, F4,
+						 TrUserData).
+
+
+skip_32_ScavengeDatabaseCompleted(<<_:32, Rest/binary>>,
+				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, Z1,
+						 Z2, F1, F2, F3, F4,
+						 TrUserData).
+
+
+skip_64_ScavengeDatabaseCompleted(<<_:64, Rest/binary>>,
+				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_ScavengeDatabaseCompleted(Rest, Z1,
+						 Z2, F1, F2, F3, F4,
+						 TrUserData).
+
+
+d_msg_WriteEventsCompleted(Bin, TrUserData) ->
+    dfp_read_field_def_WriteEventsCompleted(Bin, 0, 0,
+					    id(undefined, TrUserData),
+					    id(<<>>, TrUserData),
+					    id(undefined, TrUserData),
+					    id(undefined, TrUserData),
+					    id(0, TrUserData),
+					    id(0, TrUserData), TrUserData).
+
+dfp_read_field_def_WriteEventsCompleted(<<8,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, F3, F4, F5, F6,
+					TrUserData) ->
+    d_field_WriteEventsCompleted_result(Rest, Z1, Z2, F1,
+					F2, F3, F4, F5, F6, TrUserData);
+dfp_read_field_def_WriteEventsCompleted(<<18,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, F3, F4, F5, F6,
+					TrUserData) ->
+    d_field_WriteEventsCompleted_message(Rest, Z1, Z2, F1,
+					 F2, F3, F4, F5, F6, TrUserData);
+dfp_read_field_def_WriteEventsCompleted(<<24,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, F3, F4, F5, F6,
+					TrUserData) ->
+    d_field_WriteEventsCompleted_first_event_number(Rest,
+						    Z1, Z2, F1, F2, F3, F4, F5,
+						    F6, TrUserData);
+dfp_read_field_def_WriteEventsCompleted(<<32,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, F3, F4, F5, F6,
+					TrUserData) ->
+    d_field_WriteEventsCompleted_last_event_number(Rest, Z1,
+						   Z2, F1, F2, F3, F4, F5, F6,
+						   TrUserData);
+dfp_read_field_def_WriteEventsCompleted(<<40,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, F3, F4, F5, F6,
+					TrUserData) ->
+    d_field_WriteEventsCompleted_prepare_position(Rest, Z1,
+						  Z2, F1, F2, F3, F4, F5, F6,
+						  TrUserData);
+dfp_read_field_def_WriteEventsCompleted(<<48,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, F3, F4, F5, F6,
+					TrUserData) ->
+    d_field_WriteEventsCompleted_commit_position(Rest, Z1,
+						 Z2, F1, F2, F3, F4, F5, F6,
+						 TrUserData);
+dfp_read_field_def_WriteEventsCompleted(<<>>, 0, 0, F1,
+					F2, F3, F4, F5, F6, _) ->
+    #'WriteEventsCompleted'{result = F1, message = F2,
+			    first_event_number = F3, last_event_number = F4,
+			    prepare_position = F5, commit_position = F6};
+dfp_read_field_def_WriteEventsCompleted(Other, Z1, Z2,
+					F1, F2, F3, F4, F5, F6, TrUserData) ->
+    dg_read_field_def_WriteEventsCompleted(Other, Z1, Z2,
+					   F1, F2, F3, F4, F5, F6, TrUserData).
+
+dg_read_field_def_WriteEventsCompleted(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, F5, F6,
+				       TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_WriteEventsCompleted(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3, F4, F5,
+					   F6, TrUserData);
+dg_read_field_def_WriteEventsCompleted(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, F5, F6,
+				       TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_WriteEventsCompleted_result(Rest, 0, 0, F1, F2,
+					      F3, F4, F5, F6, TrUserData);
+      18 ->
+	  d_field_WriteEventsCompleted_message(Rest, 0, 0, F1, F2,
+					       F3, F4, F5, F6, TrUserData);
+      24 ->
+	  d_field_WriteEventsCompleted_first_event_number(Rest, 0,
+							  0, F1, F2, F3, F4, F5,
+							  F6, TrUserData);
+      32 ->
+	  d_field_WriteEventsCompleted_last_event_number(Rest, 0,
+							 0, F1, F2, F3, F4, F5,
+							 F6, TrUserData);
+      40 ->
+	  d_field_WriteEventsCompleted_prepare_position(Rest, 0,
+							0, F1, F2, F3, F4, F5,
+							F6, TrUserData);
+      48 ->
+	  d_field_WriteEventsCompleted_commit_position(Rest, 0, 0,
+						       F1, F2, F3, F4, F5, F6,
+						       TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_WriteEventsCompleted(Rest, 0, 0, F1, F2, F3,
+						 F4, F5, F6, TrUserData);
+	    1 ->
+		skip_64_WriteEventsCompleted(Rest, 0, 0, F1, F2, F3, F4,
+					     F5, F6, TrUserData);
+	    2 ->
+		skip_length_delimited_WriteEventsCompleted(Rest, 0, 0,
+							   F1, F2, F3, F4, F5,
+							   F6, TrUserData);
+	    3 ->
+		skip_group_WriteEventsCompleted(Rest, Key bsr 3, 0, F1,
+						F2, F3, F4, F5, F6, TrUserData);
+	    5 ->
+		skip_32_WriteEventsCompleted(Rest, 0, 0, F1, F2, F3, F4,
+					     F5, F6, TrUserData)
+	  end
+    end;
+dg_read_field_def_WriteEventsCompleted(<<>>, 0, 0, F1,
+				       F2, F3, F4, F5, F6, _) ->
+    #'WriteEventsCompleted'{result = F1, message = F2,
+			    first_event_number = F3, last_event_number = F4,
+			    prepare_position = F5, commit_position = F6}.
+
+d_field_WriteEventsCompleted_result(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    d_field_WriteEventsCompleted_result(Rest, N + 7,
+					X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+					TrUserData);
+d_field_WriteEventsCompleted_result(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, _, F2, F3, F4, F5, F6,
+				    TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue = d_enum_OperationResult(Tmp),
+    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0,
+					    NewFValue, F2, F3, F4, F5, F6,
+					    TrUserData).
+
+
+d_field_WriteEventsCompleted_message(<<1:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    d_field_WriteEventsCompleted_message(Rest, N + 7,
+					 X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+					 TrUserData);
+d_field_WriteEventsCompleted_message(<<0:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, _, F3, F4, F5, F6,
+				     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_WriteEventsCompleted(Rest2, 0, 0, F1,
+					    NewFValue, F3, F4, F5, F6,
+					    TrUserData).
+
+
+d_field_WriteEventsCompleted_first_event_number(<<1:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, F4, F5, F6,
+						TrUserData)
+    when N < 57 ->
+    d_field_WriteEventsCompleted_first_event_number(Rest,
+						    N + 7, X bsl N + Acc, F1,
+						    F2, F3, F4, F5, F6,
+						    TrUserData);
+d_field_WriteEventsCompleted_first_event_number(<<0:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, _, F4, F5, F6,
+						TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
+					    F2, NewFValue, F4, F5, F6,
+					    TrUserData).
+
+
+d_field_WriteEventsCompleted_last_event_number(<<1:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, F3, F4, F5, F6,
+					       TrUserData)
+    when N < 57 ->
+    d_field_WriteEventsCompleted_last_event_number(Rest,
+						   N + 7, X bsl N + Acc, F1, F2,
+						   F3, F4, F5, F6, TrUserData);
+d_field_WriteEventsCompleted_last_event_number(<<0:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, F3, _, F5, F6,
+					       TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
+					    F2, F3, NewFValue, F5, F6,
+					    TrUserData).
+
+
+d_field_WriteEventsCompleted_prepare_position(<<1:1,
+						X:7, Rest/binary>>,
+					      N, Acc, F1, F2, F3, F4, F5, F6,
+					      TrUserData)
+    when N < 57 ->
+    d_field_WriteEventsCompleted_prepare_position(Rest,
+						  N + 7, X bsl N + Acc, F1, F2,
+						  F3, F4, F5, F6, TrUserData);
+d_field_WriteEventsCompleted_prepare_position(<<0:1,
+						X:7, Rest/binary>>,
+					      N, Acc, F1, F2, F3, F4, _, F6,
+					      TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
+					    F2, F3, F4, NewFValue, F6,
+					    TrUserData).
+
+
+d_field_WriteEventsCompleted_commit_position(<<1:1, X:7,
+					       Rest/binary>>,
+					     N, Acc, F1, F2, F3, F4, F5, F6,
+					     TrUserData)
+    when N < 57 ->
+    d_field_WriteEventsCompleted_commit_position(Rest,
+						 N + 7, X bsl N + Acc, F1, F2,
+						 F3, F4, F5, F6, TrUserData);
+d_field_WriteEventsCompleted_commit_position(<<0:1, X:7,
+					       Rest/binary>>,
+					     N, Acc, F1, F2, F3, F4, F5, _,
+					     TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_WriteEventsCompleted(Rest, 0, 0, F1,
+					    F2, F3, F4, F5, NewFValue,
+					    TrUserData).
+
+
+skip_varint_WriteEventsCompleted(<<1:1, _:7,
+				   Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    skip_varint_WriteEventsCompleted(Rest, Z1, Z2, F1, F2,
+				     F3, F4, F5, F6, TrUserData);
+skip_varint_WriteEventsCompleted(<<0:1, _:7,
+				   Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    dfp_read_field_def_WriteEventsCompleted(Rest, Z1, Z2,
+					    F1, F2, F3, F4, F5, F6, TrUserData).
+
+
+skip_length_delimited_WriteEventsCompleted(<<1:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, F2, F3, F4, F5, F6,
+					   TrUserData)
+    when N < 57 ->
+    skip_length_delimited_WriteEventsCompleted(Rest, N + 7,
+					       X bsl N + Acc, F1, F2, F3, F4,
+					       F5, F6, TrUserData);
+skip_length_delimited_WriteEventsCompleted(<<0:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_WriteEventsCompleted(Rest2, 0, 0, F1,
+					    F2, F3, F4, F5, F6, TrUserData).
+
+
+skip_group_WriteEventsCompleted(Bin, FNum, Z2, F1, F2,
+				F3, F4, F5, F6, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_WriteEventsCompleted(Rest, 0, Z2, F1,
+					    F2, F3, F4, F5, F6, TrUserData).
+
+
+skip_32_WriteEventsCompleted(<<_:32, Rest/binary>>, Z1,
+			     Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    dfp_read_field_def_WriteEventsCompleted(Rest, Z1, Z2,
+					    F1, F2, F3, F4, F5, F6, TrUserData).
+
+
+skip_64_WriteEventsCompleted(<<_:64, Rest/binary>>, Z1,
+			     Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    dfp_read_field_def_WriteEventsCompleted(Rest, Z1, Z2,
+					    F1, F2, F3, F4, F5, F6, TrUserData).
+
+
+d_msg_DeleteStream(Bin, TrUserData) ->
+    dfp_read_field_def_DeleteStream(Bin, 0, 0,
+				    id(undefined, TrUserData),
+				    id(undefined, TrUserData),
+				    id(undefined, TrUserData),
+				    id(false, TrUserData), TrUserData).
+
+dfp_read_field_def_DeleteStream(<<10, Rest/binary>>, Z1,
+				Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStream_event_stream_id(Rest, Z1, Z2, F1,
+					 F2, F3, F4, TrUserData);
+dfp_read_field_def_DeleteStream(<<16, Rest/binary>>, Z1,
+				Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStream_expected_version(Rest, Z1, Z2, F1,
+					  F2, F3, F4, TrUserData);
+dfp_read_field_def_DeleteStream(<<24, Rest/binary>>, Z1,
+				Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStream_require_master(Rest, Z1, Z2, F1,
+					F2, F3, F4, TrUserData);
+dfp_read_field_def_DeleteStream(<<32, Rest/binary>>, Z1,
+				Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStream_hard_delete(Rest, Z1, Z2, F1, F2,
+				     F3, F4, TrUserData);
+dfp_read_field_def_DeleteStream(<<>>, 0, 0, F1, F2, F3,
+				F4, _) ->
+    #'DeleteStream'{event_stream_id = F1,
+		    expected_version = F2, require_master = F3,
+		    hard_delete = F4};
+dfp_read_field_def_DeleteStream(Other, Z1, Z2, F1, F2,
+				F3, F4, TrUserData) ->
+    dg_read_field_def_DeleteStream(Other, Z1, Z2, F1, F2,
+				   F3, F4, TrUserData).
+
+dg_read_field_def_DeleteStream(<<1:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_DeleteStream(Rest, N + 7,
+				   X bsl N + Acc, F1, F2, F3, F4, TrUserData);
+dg_read_field_def_DeleteStream(<<0:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_DeleteStream_event_stream_id(Rest, 0, 0, F1, F2,
+					       F3, F4, TrUserData);
+      16 ->
+	  d_field_DeleteStream_expected_version(Rest, 0, 0, F1,
+						F2, F3, F4, TrUserData);
+      24 ->
+	  d_field_DeleteStream_require_master(Rest, 0, 0, F1, F2,
+					      F3, F4, TrUserData);
+      32 ->
+	  d_field_DeleteStream_hard_delete(Rest, 0, 0, F1, F2, F3,
+					   F4, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_DeleteStream(Rest, 0, 0, F1, F2, F3, F4,
+					 TrUserData);
+	    1 ->
+		skip_64_DeleteStream(Rest, 0, 0, F1, F2, F3, F4,
+				     TrUserData);
+	    2 ->
+		skip_length_delimited_DeleteStream(Rest, 0, 0, F1, F2,
+						   F3, F4, TrUserData);
+	    3 ->
+		skip_group_DeleteStream(Rest, Key bsr 3, 0, F1, F2, F3,
+					F4, TrUserData);
+	    5 ->
+		skip_32_DeleteStream(Rest, 0, 0, F1, F2, F3, F4,
+				     TrUserData)
+	  end
+    end;
+dg_read_field_def_DeleteStream(<<>>, 0, 0, F1, F2, F3,
+			       F4, _) ->
+    #'DeleteStream'{event_stream_id = F1,
+		    expected_version = F2, require_master = F3,
+		    hard_delete = F4}.
+
+d_field_DeleteStream_event_stream_id(<<1:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_DeleteStream_event_stream_id(Rest, N + 7,
+					 X bsl N + Acc, F1, F2, F3, F4,
+					 TrUserData);
+d_field_DeleteStream_event_stream_id(<<0:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, _, F2, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_DeleteStream(Rest2, 0, 0, NewFValue,
+				    F2, F3, F4, TrUserData).
+
+
+d_field_DeleteStream_expected_version(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_DeleteStream_expected_version(Rest, N + 7,
+					  X bsl N + Acc, F1, F2, F3, F4,
+					  TrUserData);
+d_field_DeleteStream_expected_version(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, _, F3, F4, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_DeleteStream(Rest, 0, 0, F1,
+				    NewFValue, F3, F4, TrUserData).
+
+
+d_field_DeleteStream_require_master(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_DeleteStream_require_master(Rest, N + 7,
+					X bsl N + Acc, F1, F2, F3, F4,
+					TrUserData);
+d_field_DeleteStream_require_master(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, _, F4, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_DeleteStream(Rest, 0, 0, F1, F2,
+				    NewFValue, F4, TrUserData).
+
+
+d_field_DeleteStream_hard_delete(<<1:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_DeleteStream_hard_delete(Rest, N + 7,
+				     X bsl N + Acc, F1, F2, F3, F4, TrUserData);
+d_field_DeleteStream_hard_delete(<<0:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, F2, F3, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_DeleteStream(Rest, 0, 0, F1, F2, F3,
+				    NewFValue, TrUserData).
+
+
+skip_varint_DeleteStream(<<1:1, _:7, Rest/binary>>, Z1,
+			 Z2, F1, F2, F3, F4, TrUserData) ->
+    skip_varint_DeleteStream(Rest, Z1, Z2, F1, F2, F3, F4,
+			     TrUserData);
+skip_varint_DeleteStream(<<0:1, _:7, Rest/binary>>, Z1,
+			 Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_DeleteStream(Rest, Z1, Z2, F1, F2,
+				    F3, F4, TrUserData).
+
+
+skip_length_delimited_DeleteStream(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_DeleteStream(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, F4,
+				       TrUserData);
+skip_length_delimited_DeleteStream(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_DeleteStream(Rest2, 0, 0, F1, F2, F3,
+				    F4, TrUserData).
+
+
+skip_group_DeleteStream(Bin, FNum, Z2, F1, F2, F3, F4,
+			TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_DeleteStream(Rest, 0, Z2, F1, F2, F3,
+				    F4, TrUserData).
+
+
+skip_32_DeleteStream(<<_:32, Rest/binary>>, Z1, Z2, F1,
+		     F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_DeleteStream(Rest, Z1, Z2, F1, F2,
+				    F3, F4, TrUserData).
+
+
+skip_64_DeleteStream(<<_:64, Rest/binary>>, Z1, Z2, F1,
+		     F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_DeleteStream(Rest, Z1, Z2, F1, F2,
+				    F3, F4, TrUserData).
+
+
+d_msg_UnsubscribeFromStream(Bin, TrUserData) ->
+    dfp_read_field_def_UnsubscribeFromStream(Bin, 0, 0,
+					     TrUserData).
+
+dfp_read_field_def_UnsubscribeFromStream(<<>>, 0, 0,
+					 _) ->
+    #'UnsubscribeFromStream'{};
+dfp_read_field_def_UnsubscribeFromStream(Other, Z1, Z2,
+					 TrUserData) ->
+    dg_read_field_def_UnsubscribeFromStream(Other, Z1, Z2,
+					    TrUserData).
+
+dg_read_field_def_UnsubscribeFromStream(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_UnsubscribeFromStream(Rest, N + 7,
+					    X bsl N + Acc, TrUserData);
+dg_read_field_def_UnsubscribeFromStream(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key band 7 of
+      0 ->
+	  skip_varint_UnsubscribeFromStream(Rest, 0, 0,
+					    TrUserData);
+      1 ->
+	  skip_64_UnsubscribeFromStream(Rest, 0, 0, TrUserData);
+      2 ->
+	  skip_length_delimited_UnsubscribeFromStream(Rest, 0, 0,
+						      TrUserData);
+      3 ->
+	  skip_group_UnsubscribeFromStream(Rest, Key bsr 3, 0,
+					   TrUserData);
+      5 ->
+	  skip_32_UnsubscribeFromStream(Rest, 0, 0, TrUserData)
+    end;
+dg_read_field_def_UnsubscribeFromStream(<<>>, 0, 0,
+					_) ->
+    #'UnsubscribeFromStream'{}.
+
+skip_varint_UnsubscribeFromStream(<<1:1, _:7,
+				    Rest/binary>>,
+				  Z1, Z2, TrUserData) ->
+    skip_varint_UnsubscribeFromStream(Rest, Z1, Z2,
+				      TrUserData);
+skip_varint_UnsubscribeFromStream(<<0:1, _:7,
+				    Rest/binary>>,
+				  Z1, Z2, TrUserData) ->
+    dfp_read_field_def_UnsubscribeFromStream(Rest, Z1, Z2,
+					     TrUserData).
+
+
+skip_length_delimited_UnsubscribeFromStream(<<1:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_UnsubscribeFromStream(Rest, N + 7,
+						X bsl N + Acc, TrUserData);
+skip_length_delimited_UnsubscribeFromStream(<<0:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_UnsubscribeFromStream(Rest2, 0, 0,
+					     TrUserData).
+
+
+skip_group_UnsubscribeFromStream(Bin, FNum, Z2,
+				 TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_UnsubscribeFromStream(Rest, 0, Z2,
+					     TrUserData).
+
+
+skip_32_UnsubscribeFromStream(<<_:32, Rest/binary>>, Z1,
+			      Z2, TrUserData) ->
+    dfp_read_field_def_UnsubscribeFromStream(Rest, Z1, Z2,
+					     TrUserData).
+
+
+skip_64_UnsubscribeFromStream(<<_:64, Rest/binary>>, Z1,
+			      Z2, TrUserData) ->
+    dfp_read_field_def_UnsubscribeFromStream(Rest, Z1, Z2,
+					     TrUserData).
+
+
+d_msg_NewEvent(Bin, TrUserData) ->
+    dfp_read_field_def_NewEvent(Bin, 0, 0,
+				id(undefined, TrUserData),
+				id(undefined, TrUserData),
+				id(undefined, TrUserData),
+				id(undefined, TrUserData),
+				id(undefined, TrUserData), id(<<>>, TrUserData),
+				TrUserData).
+
+dfp_read_field_def_NewEvent(<<10, Rest/binary>>, Z1, Z2,
+			    F1, F2, F3, F4, F5, F6, TrUserData) ->
+    d_field_NewEvent_event_id(Rest, Z1, Z2, F1, F2, F3, F4,
+			      F5, F6, TrUserData);
+dfp_read_field_def_NewEvent(<<18, Rest/binary>>, Z1, Z2,
+			    F1, F2, F3, F4, F5, F6, TrUserData) ->
+    d_field_NewEvent_event_type(Rest, Z1, Z2, F1, F2, F3,
+				F4, F5, F6, TrUserData);
+dfp_read_field_def_NewEvent(<<24, Rest/binary>>, Z1, Z2,
+			    F1, F2, F3, F4, F5, F6, TrUserData) ->
+    d_field_NewEvent_data_content_type(Rest, Z1, Z2, F1, F2,
+				       F3, F4, F5, F6, TrUserData);
+dfp_read_field_def_NewEvent(<<32, Rest/binary>>, Z1, Z2,
+			    F1, F2, F3, F4, F5, F6, TrUserData) ->
+    d_field_NewEvent_metadata_content_type(Rest, Z1, Z2, F1,
+					   F2, F3, F4, F5, F6, TrUserData);
+dfp_read_field_def_NewEvent(<<42, Rest/binary>>, Z1, Z2,
+			    F1, F2, F3, F4, F5, F6, TrUserData) ->
+    d_field_NewEvent_data(Rest, Z1, Z2, F1, F2, F3, F4, F5,
+			  F6, TrUserData);
+dfp_read_field_def_NewEvent(<<50, Rest/binary>>, Z1, Z2,
+			    F1, F2, F3, F4, F5, F6, TrUserData) ->
+    d_field_NewEvent_metadata(Rest, Z1, Z2, F1, F2, F3, F4,
+			      F5, F6, TrUserData);
+dfp_read_field_def_NewEvent(<<>>, 0, 0, F1, F2, F3, F4,
+			    F5, F6, _) ->
+    #'NewEvent'{event_id = F1, event_type = F2,
+		data_content_type = F3, metadata_content_type = F4,
+		data = F5, metadata = F6};
+dfp_read_field_def_NewEvent(Other, Z1, Z2, F1, F2, F3,
+			    F4, F5, F6, TrUserData) ->
+    dg_read_field_def_NewEvent(Other, Z1, Z2, F1, F2, F3,
+			       F4, F5, F6, TrUserData).
+
+dg_read_field_def_NewEvent(<<1:1, X:7, Rest/binary>>, N,
+			   Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_NewEvent(Rest, N + 7, X bsl N + Acc,
+			       F1, F2, F3, F4, F5, F6, TrUserData);
+dg_read_field_def_NewEvent(<<0:1, X:7, Rest/binary>>, N,
+			   Acc, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_NewEvent_event_id(Rest, 0, 0, F1, F2, F3, F4,
+				    F5, F6, TrUserData);
+      18 ->
+	  d_field_NewEvent_event_type(Rest, 0, 0, F1, F2, F3, F4,
+				      F5, F6, TrUserData);
+      24 ->
+	  d_field_NewEvent_data_content_type(Rest, 0, 0, F1, F2,
+					     F3, F4, F5, F6, TrUserData);
+      32 ->
+	  d_field_NewEvent_metadata_content_type(Rest, 0, 0, F1,
+						 F2, F3, F4, F5, F6,
+						 TrUserData);
+      42 ->
+	  d_field_NewEvent_data(Rest, 0, 0, F1, F2, F3, F4, F5,
+				F6, TrUserData);
+      50 ->
+	  d_field_NewEvent_metadata(Rest, 0, 0, F1, F2, F3, F4,
+				    F5, F6, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_NewEvent(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
+				     TrUserData);
+	    1 ->
+		skip_64_NewEvent(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
+				 TrUserData);
+	    2 ->
+		skip_length_delimited_NewEvent(Rest, 0, 0, F1, F2, F3,
+					       F4, F5, F6, TrUserData);
+	    3 ->
+		skip_group_NewEvent(Rest, Key bsr 3, 0, F1, F2, F3, F4,
+				    F5, F6, TrUserData);
+	    5 ->
+		skip_32_NewEvent(Rest, 0, 0, F1, F2, F3, F4, F5, F6,
+				 TrUserData)
+	  end
+    end;
+dg_read_field_def_NewEvent(<<>>, 0, 0, F1, F2, F3, F4,
+			   F5, F6, _) ->
+    #'NewEvent'{event_id = F1, event_type = F2,
+		data_content_type = F3, metadata_content_type = F4,
+		data = F5, metadata = F6}.
+
+d_field_NewEvent_event_id(<<1:1, X:7, Rest/binary>>, N,
+			  Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    d_field_NewEvent_event_id(Rest, N + 7, X bsl N + Acc,
+			      F1, F2, F3, F4, F5, F6, TrUserData);
+d_field_NewEvent_event_id(<<0:1, X:7, Rest/binary>>, N,
+			  Acc, _, F2, F3, F4, F5, F6, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_NewEvent(Rest2, 0, 0, NewFValue, F2,
+				F3, F4, F5, F6, TrUserData).
+
+
+d_field_NewEvent_event_type(<<1:1, X:7, Rest/binary>>,
+			    N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    d_field_NewEvent_event_type(Rest, N + 7, X bsl N + Acc,
+				F1, F2, F3, F4, F5, F6, TrUserData);
+d_field_NewEvent_event_type(<<0:1, X:7, Rest/binary>>,
+			    N, Acc, F1, _, F3, F4, F5, F6, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, NewFValue,
+				F3, F4, F5, F6, TrUserData).
+
+
+d_field_NewEvent_data_content_type(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    d_field_NewEvent_data_content_type(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+				       TrUserData);
+d_field_NewEvent_data_content_type(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, _, F4, F5, F6, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_NewEvent(Rest, 0, 0, F1, F2,
+				NewFValue, F4, F5, F6, TrUserData).
+
+
+d_field_NewEvent_metadata_content_type(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, F5, F6,
+				       TrUserData)
+    when N < 57 ->
+    d_field_NewEvent_metadata_content_type(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3, F4, F5,
+					   F6, TrUserData);
+d_field_NewEvent_metadata_content_type(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, _, F5, F6,
+				       TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_NewEvent(Rest, 0, 0, F1, F2, F3,
+				NewFValue, F5, F6, TrUserData).
+
+
+d_field_NewEvent_data(<<1:1, X:7, Rest/binary>>, N, Acc,
+		      F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    d_field_NewEvent_data(Rest, N + 7, X bsl N + Acc, F1,
+			  F2, F3, F4, F5, F6, TrUserData);
+d_field_NewEvent_data(<<0:1, X:7, Rest/binary>>, N, Acc,
+		      F1, F2, F3, F4, _, F6, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, F2, F3, F4,
+				NewFValue, F6, TrUserData).
+
+
+d_field_NewEvent_metadata(<<1:1, X:7, Rest/binary>>, N,
+			  Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    d_field_NewEvent_metadata(Rest, N + 7, X bsl N + Acc,
+			      F1, F2, F3, F4, F5, F6, TrUserData);
+d_field_NewEvent_metadata(<<0:1, X:7, Rest/binary>>, N,
+			  Acc, F1, F2, F3, F4, F5, _, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, F2, F3, F4,
+				F5, NewFValue, TrUserData).
+
+
+skip_varint_NewEvent(<<1:1, _:7, Rest/binary>>, Z1, Z2,
+		     F1, F2, F3, F4, F5, F6, TrUserData) ->
+    skip_varint_NewEvent(Rest, Z1, Z2, F1, F2, F3, F4, F5,
+			 F6, TrUserData);
+skip_varint_NewEvent(<<0:1, _:7, Rest/binary>>, Z1, Z2,
+		     F1, F2, F3, F4, F5, F6, TrUserData) ->
+    dfp_read_field_def_NewEvent(Rest, Z1, Z2, F1, F2, F3,
+				F4, F5, F6, TrUserData).
+
+
+skip_length_delimited_NewEvent(<<1:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, F2, F3, F4, F5, F6, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_NewEvent(Rest, N + 7,
+				   X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+				   TrUserData);
+skip_length_delimited_NewEvent(<<0:1, X:7,
+				 Rest/binary>>,
+			       N, Acc, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_NewEvent(Rest2, 0, 0, F1, F2, F3, F4,
+				F5, F6, TrUserData).
+
+
+skip_group_NewEvent(Bin, FNum, Z2, F1, F2, F3, F4, F5,
+		    F6, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_NewEvent(Rest, 0, Z2, F1, F2, F3, F4,
+				F5, F6, TrUserData).
+
+
+skip_32_NewEvent(<<_:32, Rest/binary>>, Z1, Z2, F1, F2,
+		 F3, F4, F5, F6, TrUserData) ->
+    dfp_read_field_def_NewEvent(Rest, Z1, Z2, F1, F2, F3,
+				F4, F5, F6, TrUserData).
+
+
+skip_64_NewEvent(<<_:64, Rest/binary>>, Z1, Z2, F1, F2,
+		 F3, F4, F5, F6, TrUserData) ->
+    dfp_read_field_def_NewEvent(Rest, Z1, Z2, F1, F2, F3,
+				F4, F5, F6, TrUserData).
+
+
+d_msg_NotHandled(Bin, TrUserData) ->
+    dfp_read_field_def_NotHandled(Bin, 0, 0,
+				  id(undefined, TrUserData),
+				  id(<<>>, TrUserData), TrUserData).
+
+dfp_read_field_def_NotHandled(<<8, Rest/binary>>, Z1,
+			      Z2, F1, F2, TrUserData) ->
+    d_field_NotHandled_reason(Rest, Z1, Z2, F1, F2,
+			      TrUserData);
+dfp_read_field_def_NotHandled(<<18, Rest/binary>>, Z1,
+			      Z2, F1, F2, TrUserData) ->
+    d_field_NotHandled_additional_info(Rest, Z1, Z2, F1, F2,
+				       TrUserData);
+dfp_read_field_def_NotHandled(<<>>, 0, 0, F1, F2, _) ->
+    #'NotHandled'{reason = F1, additional_info = F2};
+dfp_read_field_def_NotHandled(Other, Z1, Z2, F1, F2,
+			      TrUserData) ->
+    dg_read_field_def_NotHandled(Other, Z1, Z2, F1, F2,
+				 TrUserData).
+
+dg_read_field_def_NotHandled(<<1:1, X:7, Rest/binary>>,
+			     N, Acc, F1, F2, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_NotHandled(Rest, N + 7, X bsl N + Acc,
+				 F1, F2, TrUserData);
+dg_read_field_def_NotHandled(<<0:1, X:7, Rest/binary>>,
+			     N, Acc, F1, F2, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_NotHandled_reason(Rest, 0, 0, F1, F2,
+				    TrUserData);
+      18 ->
+	  d_field_NotHandled_additional_info(Rest, 0, 0, F1, F2,
+					     TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_NotHandled(Rest, 0, 0, F1, F2, TrUserData);
+	    1 -> skip_64_NotHandled(Rest, 0, 0, F1, F2, TrUserData);
+	    2 ->
+		skip_length_delimited_NotHandled(Rest, 0, 0, F1, F2,
+						 TrUserData);
+	    3 ->
+		skip_group_NotHandled(Rest, Key bsr 3, 0, F1, F2,
+				      TrUserData);
+	    5 -> skip_32_NotHandled(Rest, 0, 0, F1, F2, TrUserData)
+	  end
+    end;
+dg_read_field_def_NotHandled(<<>>, 0, 0, F1, F2, _) ->
+    #'NotHandled'{reason = F1, additional_info = F2}.
+
+d_field_NotHandled_reason(<<1:1, X:7, Rest/binary>>, N,
+			  Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    d_field_NotHandled_reason(Rest, N + 7, X bsl N + Acc,
+			      F1, F2, TrUserData);
+d_field_NotHandled_reason(<<0:1, X:7, Rest/binary>>, N,
+			  Acc, _, F2, TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue = 'd_enum_NotHandled.NotHandledReason'(Tmp),
+    dfp_read_field_def_NotHandled(Rest, 0, 0, NewFValue, F2,
+				  TrUserData).
+
+
+d_field_NotHandled_additional_info(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    d_field_NotHandled_additional_info(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, TrUserData);
+d_field_NotHandled_additional_info(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, _, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_NotHandled(Rest2, 0, 0, F1,
+				  NewFValue, TrUserData).
+
+
+skip_varint_NotHandled(<<1:1, _:7, Rest/binary>>, Z1,
+		       Z2, F1, F2, TrUserData) ->
+    skip_varint_NotHandled(Rest, Z1, Z2, F1, F2,
+			   TrUserData);
+skip_varint_NotHandled(<<0:1, _:7, Rest/binary>>, Z1,
+		       Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_NotHandled(Rest, Z1, Z2, F1, F2,
+				  TrUserData).
+
+
+skip_length_delimited_NotHandled(<<1:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_NotHandled(Rest, N + 7,
+				     X bsl N + Acc, F1, F2, TrUserData);
+skip_length_delimited_NotHandled(<<0:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F1, F2, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_NotHandled(Rest2, 0, 0, F1, F2,
+				  TrUserData).
+
+
+skip_group_NotHandled(Bin, FNum, Z2, F1, F2,
+		      TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_NotHandled(Rest, 0, Z2, F1, F2,
+				  TrUserData).
+
+
+skip_32_NotHandled(<<_:32, Rest/binary>>, Z1, Z2, F1,
+		   F2, TrUserData) ->
+    dfp_read_field_def_NotHandled(Rest, Z1, Z2, F1, F2,
+				  TrUserData).
+
+
+skip_64_NotHandled(<<_:64, Rest/binary>>, Z1, Z2, F1,
+		   F2, TrUserData) ->
+    dfp_read_field_def_NotHandled(Rest, Z1, Z2, F1, F2,
+				  TrUserData).
+
+
+d_msg_WriteEvents(Bin, TrUserData) ->
+    dfp_read_field_def_WriteEvents(Bin, 0, 0,
+				   id(undefined, TrUserData),
+				   id(undefined, TrUserData),
+				   id([], TrUserData),
+				   id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_WriteEvents(<<10, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_WriteEvents_event_stream_id(Rest, Z1, Z2, F1,
+					F2, F3, F4, TrUserData);
+dfp_read_field_def_WriteEvents(<<16, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_WriteEvents_expected_version(Rest, Z1, Z2, F1,
+					 F2, F3, F4, TrUserData);
+dfp_read_field_def_WriteEvents(<<26, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_WriteEvents_events(Rest, Z1, Z2, F1, F2, F3, F4,
+			       TrUserData);
+dfp_read_field_def_WriteEvents(<<32, Rest/binary>>, Z1,
+			       Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_WriteEvents_require_master(Rest, Z1, Z2, F1, F2,
+				       F3, F4, TrUserData);
+dfp_read_field_def_WriteEvents(<<>>, 0, 0, F1, F2, F3,
+			       F4, TrUserData) ->
+    #'WriteEvents'{event_stream_id = F1,
+		   expected_version = F2,
+		   events = lists_reverse(F3, TrUserData),
+		   require_master = F4};
+dfp_read_field_def_WriteEvents(Other, Z1, Z2, F1, F2,
+			       F3, F4, TrUserData) ->
+    dg_read_field_def_WriteEvents(Other, Z1, Z2, F1, F2, F3,
+				  F4, TrUserData).
+
+dg_read_field_def_WriteEvents(<<1:1, X:7, Rest/binary>>,
+			      N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_WriteEvents(Rest, N + 7,
+				  X bsl N + Acc, F1, F2, F3, F4, TrUserData);
+dg_read_field_def_WriteEvents(<<0:1, X:7, Rest/binary>>,
+			      N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_WriteEvents_event_stream_id(Rest, 0, 0, F1, F2,
+					      F3, F4, TrUserData);
+      16 ->
+	  d_field_WriteEvents_expected_version(Rest, 0, 0, F1, F2,
+					       F3, F4, TrUserData);
+      26 ->
+	  d_field_WriteEvents_events(Rest, 0, 0, F1, F2, F3, F4,
+				     TrUserData);
+      32 ->
+	  d_field_WriteEvents_require_master(Rest, 0, 0, F1, F2,
+					     F3, F4, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_WriteEvents(Rest, 0, 0, F1, F2, F3, F4,
+					TrUserData);
+	    1 ->
+		skip_64_WriteEvents(Rest, 0, 0, F1, F2, F3, F4,
+				    TrUserData);
+	    2 ->
+		skip_length_delimited_WriteEvents(Rest, 0, 0, F1, F2,
+						  F3, F4, TrUserData);
+	    3 ->
+		skip_group_WriteEvents(Rest, Key bsr 3, 0, F1, F2, F3,
+				       F4, TrUserData);
+	    5 ->
+		skip_32_WriteEvents(Rest, 0, 0, F1, F2, F3, F4,
+				    TrUserData)
+	  end
+    end;
+dg_read_field_def_WriteEvents(<<>>, 0, 0, F1, F2, F3,
+			      F4, TrUserData) ->
+    #'WriteEvents'{event_stream_id = F1,
+		   expected_version = F2,
+		   events = lists_reverse(F3, TrUserData),
+		   require_master = F4}.
+
+d_field_WriteEvents_event_stream_id(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_WriteEvents_event_stream_id(Rest, N + 7,
+					X bsl N + Acc, F1, F2, F3, F4,
+					TrUserData);
+d_field_WriteEvents_event_stream_id(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, _, F2, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_WriteEvents(Rest2, 0, 0, NewFValue,
+				   F2, F3, F4, TrUserData).
+
+
+d_field_WriteEvents_expected_version(<<1:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_WriteEvents_expected_version(Rest, N + 7,
+					 X bsl N + Acc, F1, F2, F3, F4,
+					 TrUserData);
+d_field_WriteEvents_expected_version(<<0:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, _, F3, F4, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_WriteEvents(Rest, 0, 0, F1,
+				   NewFValue, F3, F4, TrUserData).
+
+
+d_field_WriteEvents_events(<<1:1, X:7, Rest/binary>>, N,
+			   Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_WriteEvents_events(Rest, N + 7, X bsl N + Acc,
+			       F1, F2, F3, F4, TrUserData);
+d_field_WriteEvents_events(<<0:1, X:7, Rest/binary>>, N,
+			   Acc, F1, F2, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bs:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = id(d_msg_NewEvent(Bs, TrUserData),
+		   TrUserData),
+    dfp_read_field_def_WriteEvents(Rest2, 0, 0, F1, F2,
+				   cons(NewFValue, F3, TrUserData), F4,
+				   TrUserData).
+
+
+d_field_WriteEvents_require_master(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_WriteEvents_require_master(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, F4,
+				       TrUserData);
+d_field_WriteEvents_require_master(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_WriteEvents(Rest, 0, 0, F1, F2, F3,
+				   NewFValue, TrUserData).
+
+
+skip_varint_WriteEvents(<<1:1, _:7, Rest/binary>>, Z1,
+			Z2, F1, F2, F3, F4, TrUserData) ->
+    skip_varint_WriteEvents(Rest, Z1, Z2, F1, F2, F3, F4,
+			    TrUserData);
+skip_varint_WriteEvents(<<0:1, _:7, Rest/binary>>, Z1,
+			Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_WriteEvents(Rest, Z1, Z2, F1, F2, F3,
+				   F4, TrUserData).
+
+
+skip_length_delimited_WriteEvents(<<1:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_WriteEvents(Rest, N + 7,
+				      X bsl N + Acc, F1, F2, F3, F4,
+				      TrUserData);
+skip_length_delimited_WriteEvents(<<0:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_WriteEvents(Rest2, 0, 0, F1, F2, F3,
+				   F4, TrUserData).
+
+
+skip_group_WriteEvents(Bin, FNum, Z2, F1, F2, F3, F4,
+		       TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_WriteEvents(Rest, 0, Z2, F1, F2, F3,
+				   F4, TrUserData).
+
+
+skip_32_WriteEvents(<<_:32, Rest/binary>>, Z1, Z2, F1,
+		    F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_WriteEvents(Rest, Z1, Z2, F1, F2, F3,
+				   F4, TrUserData).
+
+
+skip_64_WriteEvents(<<_:64, Rest/binary>>, Z1, Z2, F1,
+		    F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_WriteEvents(Rest, Z1, Z2, F1, F2, F3,
+				   F4, TrUserData).
+
+
+d_msg_ScavengeDatabase(Bin, TrUserData) ->
+    dfp_read_field_def_ScavengeDatabase(Bin, 0, 0,
+					TrUserData).
+
+dfp_read_field_def_ScavengeDatabase(<<>>, 0, 0, _) ->
+    #'ScavengeDatabase'{};
+dfp_read_field_def_ScavengeDatabase(Other, Z1, Z2,
+				    TrUserData) ->
+    dg_read_field_def_ScavengeDatabase(Other, Z1, Z2,
+				       TrUserData).
+
+dg_read_field_def_ScavengeDatabase(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_ScavengeDatabase(Rest, N + 7,
+				       X bsl N + Acc, TrUserData);
+dg_read_field_def_ScavengeDatabase(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key band 7 of
+      0 ->
+	  skip_varint_ScavengeDatabase(Rest, 0, 0, TrUserData);
+      1 -> skip_64_ScavengeDatabase(Rest, 0, 0, TrUserData);
+      2 ->
+	  skip_length_delimited_ScavengeDatabase(Rest, 0, 0,
+						 TrUserData);
+      3 ->
+	  skip_group_ScavengeDatabase(Rest, Key bsr 3, 0,
+				      TrUserData);
+      5 -> skip_32_ScavengeDatabase(Rest, 0, 0, TrUserData)
+    end;
+dg_read_field_def_ScavengeDatabase(<<>>, 0, 0, _) ->
+    #'ScavengeDatabase'{}.
+
+skip_varint_ScavengeDatabase(<<1:1, _:7, Rest/binary>>,
+			     Z1, Z2, TrUserData) ->
+    skip_varint_ScavengeDatabase(Rest, Z1, Z2, TrUserData);
+skip_varint_ScavengeDatabase(<<0:1, _:7, Rest/binary>>,
+			     Z1, Z2, TrUserData) ->
+    dfp_read_field_def_ScavengeDatabase(Rest, Z1, Z2,
+					TrUserData).
+
+
+skip_length_delimited_ScavengeDatabase(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_ScavengeDatabase(Rest, N + 7,
+					   X bsl N + Acc, TrUserData);
+skip_length_delimited_ScavengeDatabase(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_ScavengeDatabase(Rest2, 0, 0,
+					TrUserData).
+
+
+skip_group_ScavengeDatabase(Bin, FNum, Z2,
+			    TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_ScavengeDatabase(Rest, 0, Z2,
+					TrUserData).
+
+
+skip_32_ScavengeDatabase(<<_:32, Rest/binary>>, Z1, Z2,
+			 TrUserData) ->
+    dfp_read_field_def_ScavengeDatabase(Rest, Z1, Z2,
+					TrUserData).
+
+
+skip_64_ScavengeDatabase(<<_:64, Rest/binary>>, Z1, Z2,
+			 TrUserData) ->
+    dfp_read_field_def_ScavengeDatabase(Rest, Z1, Z2,
+					TrUserData).
+
+
+d_msg_ResolvedEvent(Bin, TrUserData) ->
+    dfp_read_field_def_ResolvedEvent(Bin, 0, 0,
+				     id(undefined, TrUserData),
+				     id(undefined, TrUserData),
+				     id(undefined, TrUserData),
+				     id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_ResolvedEvent(<<10, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ResolvedEvent_event(Rest, Z1, Z2, F1, F2, F3,
+				F4, TrUserData);
+dfp_read_field_def_ResolvedEvent(<<18, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ResolvedEvent_link(Rest, Z1, Z2, F1, F2, F3, F4,
+			       TrUserData);
+dfp_read_field_def_ResolvedEvent(<<24, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ResolvedEvent_commit_position(Rest, Z1, Z2, F1,
+					  F2, F3, F4, TrUserData);
+dfp_read_field_def_ResolvedEvent(<<32, Rest/binary>>,
+				 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_ResolvedEvent_prepare_position(Rest, Z1, Z2, F1,
+					   F2, F3, F4, TrUserData);
+dfp_read_field_def_ResolvedEvent(<<>>, 0, 0, F1, F2, F3,
+				 F4, _) ->
+    #'ResolvedEvent'{event = F1, link = F2,
+		     commit_position = F3, prepare_position = F4};
+dfp_read_field_def_ResolvedEvent(Other, Z1, Z2, F1, F2,
+				 F3, F4, TrUserData) ->
+    dg_read_field_def_ResolvedEvent(Other, Z1, Z2, F1, F2,
+				    F3, F4, TrUserData).
+
+dg_read_field_def_ResolvedEvent(<<1:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_ResolvedEvent(Rest, N + 7,
+				    X bsl N + Acc, F1, F2, F3, F4, TrUserData);
+dg_read_field_def_ResolvedEvent(<<0:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_ResolvedEvent_event(Rest, 0, 0, F1, F2, F3, F4,
+				      TrUserData);
+      18 ->
+	  d_field_ResolvedEvent_link(Rest, 0, 0, F1, F2, F3, F4,
+				     TrUserData);
+      24 ->
+	  d_field_ResolvedEvent_commit_position(Rest, 0, 0, F1,
+						F2, F3, F4, TrUserData);
+      32 ->
+	  d_field_ResolvedEvent_prepare_position(Rest, 0, 0, F1,
+						 F2, F3, F4, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_ResolvedEvent(Rest, 0, 0, F1, F2, F3, F4,
+					  TrUserData);
+	    1 ->
+		skip_64_ResolvedEvent(Rest, 0, 0, F1, F2, F3, F4,
+				      TrUserData);
+	    2 ->
+		skip_length_delimited_ResolvedEvent(Rest, 0, 0, F1, F2,
+						    F3, F4, TrUserData);
+	    3 ->
+		skip_group_ResolvedEvent(Rest, Key bsr 3, 0, F1, F2, F3,
+					 F4, TrUserData);
+	    5 ->
+		skip_32_ResolvedEvent(Rest, 0, 0, F1, F2, F3, F4,
+				      TrUserData)
+	  end
+    end;
+dg_read_field_def_ResolvedEvent(<<>>, 0, 0, F1, F2, F3,
+				F4, _) ->
+    #'ResolvedEvent'{event = F1, link = F2,
+		     commit_position = F3, prepare_position = F4}.
+
+d_field_ResolvedEvent_event(<<1:1, X:7, Rest/binary>>,
+			    N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ResolvedEvent_event(Rest, N + 7, X bsl N + Acc,
+				F1, F2, F3, F4, TrUserData);
+d_field_ResolvedEvent_event(<<0:1, X:7, Rest/binary>>,
+			    N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bs:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = id(d_msg_EventRecord(Bs, TrUserData),
+		   TrUserData),
+    dfp_read_field_def_ResolvedEvent(Rest2, 0, 0,
+				     if F1 == undefined -> NewFValue;
+					true ->
+					    merge_msg_EventRecord(F1, NewFValue,
+								  TrUserData)
+				     end,
+				     F2, F3, F4, TrUserData).
+
+
+d_field_ResolvedEvent_link(<<1:1, X:7, Rest/binary>>, N,
+			   Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ResolvedEvent_link(Rest, N + 7, X bsl N + Acc,
+			       F1, F2, F3, F4, TrUserData);
+d_field_ResolvedEvent_link(<<0:1, X:7, Rest/binary>>, N,
+			   Acc, F1, F2, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bs:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = id(d_msg_EventRecord(Bs, TrUserData),
+		   TrUserData),
+    dfp_read_field_def_ResolvedEvent(Rest2, 0, 0, F1,
+				     if F2 == undefined -> NewFValue;
+					true ->
+					    merge_msg_EventRecord(F2, NewFValue,
+								  TrUserData)
+				     end,
+				     F3, F4, TrUserData).
+
+
+d_field_ResolvedEvent_commit_position(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ResolvedEvent_commit_position(Rest, N + 7,
+					  X bsl N + Acc, F1, F2, F3, F4,
+					  TrUserData);
+d_field_ResolvedEvent_commit_position(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, _, F4, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ResolvedEvent(Rest, 0, 0, F1, F2,
+				     NewFValue, F4, TrUserData).
+
+
+d_field_ResolvedEvent_prepare_position(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_ResolvedEvent_prepare_position(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3, F4,
+					   TrUserData);
+d_field_ResolvedEvent_prepare_position(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, _, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ResolvedEvent(Rest, 0, 0, F1, F2, F3,
+				     NewFValue, TrUserData).
+
+
+skip_varint_ResolvedEvent(<<1:1, _:7, Rest/binary>>, Z1,
+			  Z2, F1, F2, F3, F4, TrUserData) ->
+    skip_varint_ResolvedEvent(Rest, Z1, Z2, F1, F2, F3, F4,
+			      TrUserData);
+skip_varint_ResolvedEvent(<<0:1, _:7, Rest/binary>>, Z1,
+			  Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_ResolvedEvent(Rest, Z1, Z2, F1, F2,
+				     F3, F4, TrUserData).
+
+
+skip_length_delimited_ResolvedEvent(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_ResolvedEvent(Rest, N + 7,
+					X bsl N + Acc, F1, F2, F3, F4,
+					TrUserData);
+skip_length_delimited_ResolvedEvent(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_ResolvedEvent(Rest2, 0, 0, F1, F2,
+				     F3, F4, TrUserData).
+
+
+skip_group_ResolvedEvent(Bin, FNum, Z2, F1, F2, F3, F4,
+			 TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_ResolvedEvent(Rest, 0, Z2, F1, F2,
+				     F3, F4, TrUserData).
+
+
+skip_32_ResolvedEvent(<<_:32, Rest/binary>>, Z1, Z2, F1,
+		      F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_ResolvedEvent(Rest, Z1, Z2, F1, F2,
+				     F3, F4, TrUserData).
+
+
+skip_64_ResolvedEvent(<<_:64, Rest/binary>>, Z1, Z2, F1,
+		      F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_ResolvedEvent(Rest, Z1, Z2, F1, F2,
+				     F3, F4, TrUserData).
+
+
+d_msg_StreamEventAppeared(Bin, TrUserData) ->
+    dfp_read_field_def_StreamEventAppeared(Bin, 0, 0,
+					   id(undefined, TrUserData),
+					   TrUserData).
+
+dfp_read_field_def_StreamEventAppeared(<<10,
+					 Rest/binary>>,
+				       Z1, Z2, F1, TrUserData) ->
+    d_field_StreamEventAppeared_event(Rest, Z1, Z2, F1,
+				      TrUserData);
+dfp_read_field_def_StreamEventAppeared(<<>>, 0, 0, F1,
+				       _) ->
+    #'StreamEventAppeared'{event = F1};
+dfp_read_field_def_StreamEventAppeared(Other, Z1, Z2,
+				       F1, TrUserData) ->
+    dg_read_field_def_StreamEventAppeared(Other, Z1, Z2, F1,
+					  TrUserData).
+
+dg_read_field_def_StreamEventAppeared(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_StreamEventAppeared(Rest, N + 7,
+					  X bsl N + Acc, F1, TrUserData);
+dg_read_field_def_StreamEventAppeared(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_StreamEventAppeared_event(Rest, 0, 0, F1,
+					    TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_StreamEventAppeared(Rest, 0, 0, F1,
+						TrUserData);
+	    1 ->
+		skip_64_StreamEventAppeared(Rest, 0, 0, F1, TrUserData);
+	    2 ->
+		skip_length_delimited_StreamEventAppeared(Rest, 0, 0,
+							  F1, TrUserData);
+	    3 ->
+		skip_group_StreamEventAppeared(Rest, Key bsr 3, 0, F1,
+					       TrUserData);
+	    5 ->
+		skip_32_StreamEventAppeared(Rest, 0, 0, F1, TrUserData)
+	  end
+    end;
+dg_read_field_def_StreamEventAppeared(<<>>, 0, 0, F1,
+				      _) ->
+    #'StreamEventAppeared'{event = F1}.
+
+d_field_StreamEventAppeared_event(<<1:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, TrUserData)
+    when N < 57 ->
+    d_field_StreamEventAppeared_event(Rest, N + 7,
+				      X bsl N + Acc, F1, TrUserData);
+d_field_StreamEventAppeared_event(<<0:1, X:7,
+				    Rest/binary>>,
+				  N, Acc, F1, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bs:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = id(d_msg_ResolvedEvent(Bs, TrUserData),
+		   TrUserData),
+    dfp_read_field_def_StreamEventAppeared(Rest2, 0, 0,
+					   if F1 == undefined -> NewFValue;
+					      true ->
+						  merge_msg_ResolvedEvent(F1,
+									  NewFValue,
+									  TrUserData)
+					   end,
+					   TrUserData).
+
+
+skip_varint_StreamEventAppeared(<<1:1, _:7,
+				  Rest/binary>>,
+				Z1, Z2, F1, TrUserData) ->
+    skip_varint_StreamEventAppeared(Rest, Z1, Z2, F1,
+				    TrUserData);
+skip_varint_StreamEventAppeared(<<0:1, _:7,
+				  Rest/binary>>,
+				Z1, Z2, F1, TrUserData) ->
+    dfp_read_field_def_StreamEventAppeared(Rest, Z1, Z2, F1,
+					   TrUserData).
+
+
+skip_length_delimited_StreamEventAppeared(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_StreamEventAppeared(Rest, N + 7,
+					      X bsl N + Acc, F1, TrUserData);
+skip_length_delimited_StreamEventAppeared(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_StreamEventAppeared(Rest2, 0, 0, F1,
+					   TrUserData).
+
+
+skip_group_StreamEventAppeared(Bin, FNum, Z2, F1,
+			       TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_StreamEventAppeared(Rest, 0, Z2, F1,
+					   TrUserData).
+
+
+skip_32_StreamEventAppeared(<<_:32, Rest/binary>>, Z1,
+			    Z2, F1, TrUserData) ->
+    dfp_read_field_def_StreamEventAppeared(Rest, Z1, Z2, F1,
+					   TrUserData).
+
+
+skip_64_StreamEventAppeared(<<_:64, Rest/binary>>, Z1,
+			    Z2, F1, TrUserData) ->
+    dfp_read_field_def_StreamEventAppeared(Rest, Z1, Z2, F1,
+					   TrUserData).
+
+
+d_msg_ReadStreamEvents(Bin, TrUserData) ->
+    dfp_read_field_def_ReadStreamEvents(Bin, 0, 0,
+					id(undefined, TrUserData),
+					id(undefined, TrUserData),
+					id(undefined, TrUserData),
+					id(undefined, TrUserData),
+					id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_ReadStreamEvents(<<10, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadStreamEvents_event_stream_id(Rest, Z1, Z2,
+					     F1, F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadStreamEvents(<<16, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadStreamEvents_from_event_number(Rest, Z1, Z2,
+					       F1, F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadStreamEvents(<<24, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadStreamEvents_max_count(Rest, Z1, Z2, F1, F2,
+				       F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadStreamEvents(<<32, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadStreamEvents_resolve_link_tos(Rest, Z1, Z2,
+					      F1, F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadStreamEvents(<<40, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    d_field_ReadStreamEvents_require_master(Rest, Z1, Z2,
+					    F1, F2, F3, F4, F5, TrUserData);
+dfp_read_field_def_ReadStreamEvents(<<>>, 0, 0, F1, F2,
+				    F3, F4, F5, _) ->
+    #'ReadStreamEvents'{event_stream_id = F1,
+			from_event_number = F2, max_count = F3,
+			resolve_link_tos = F4, require_master = F5};
+dfp_read_field_def_ReadStreamEvents(Other, Z1, Z2, F1,
+				    F2, F3, F4, F5, TrUserData) ->
+    dg_read_field_def_ReadStreamEvents(Other, Z1, Z2, F1,
+				       F2, F3, F4, F5, TrUserData).
+
+dg_read_field_def_ReadStreamEvents(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_ReadStreamEvents(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, F4, F5,
+				       TrUserData);
+dg_read_field_def_ReadStreamEvents(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, F5, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_ReadStreamEvents_event_stream_id(Rest, 0, 0, F1,
+						   F2, F3, F4, F5, TrUserData);
+      16 ->
+	  d_field_ReadStreamEvents_from_event_number(Rest, 0, 0,
+						     F1, F2, F3, F4, F5,
+						     TrUserData);
+      24 ->
+	  d_field_ReadStreamEvents_max_count(Rest, 0, 0, F1, F2,
+					     F3, F4, F5, TrUserData);
+      32 ->
+	  d_field_ReadStreamEvents_resolve_link_tos(Rest, 0, 0,
+						    F1, F2, F3, F4, F5,
+						    TrUserData);
+      40 ->
+	  d_field_ReadStreamEvents_require_master(Rest, 0, 0, F1,
+						  F2, F3, F4, F5, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_ReadStreamEvents(Rest, 0, 0, F1, F2, F3, F4,
+					     F5, TrUserData);
+	    1 ->
+		skip_64_ReadStreamEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
+					 TrUserData);
+	    2 ->
+		skip_length_delimited_ReadStreamEvents(Rest, 0, 0, F1,
+						       F2, F3, F4, F5,
+						       TrUserData);
+	    3 ->
+		skip_group_ReadStreamEvents(Rest, Key bsr 3, 0, F1, F2,
+					    F3, F4, F5, TrUserData);
+	    5 ->
+		skip_32_ReadStreamEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
+					 TrUserData)
+	  end
+    end;
+dg_read_field_def_ReadStreamEvents(<<>>, 0, 0, F1, F2,
+				   F3, F4, F5, _) ->
+    #'ReadStreamEvents'{event_stream_id = F1,
+			from_event_number = F2, max_count = F3,
+			resolve_link_tos = F4, require_master = F5}.
+
+d_field_ReadStreamEvents_event_stream_id(<<1:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    d_field_ReadStreamEvents_event_stream_id(Rest, N + 7,
+					     X bsl N + Acc, F1, F2, F3, F4, F5,
+					     TrUserData);
+d_field_ReadStreamEvents_event_stream_id(<<0:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, _, F2, F3, F4, F5,
+					 TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_ReadStreamEvents(Rest2, 0, 0,
+					NewFValue, F2, F3, F4, F5, TrUserData).
+
+
+d_field_ReadStreamEvents_from_event_number(<<1:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, F2, F3, F4, F5,
+					   TrUserData)
+    when N < 57 ->
+    d_field_ReadStreamEvents_from_event_number(Rest, N + 7,
+					       X bsl N + Acc, F1, F2, F3, F4,
+					       F5, TrUserData);
+d_field_ReadStreamEvents_from_event_number(<<0:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, _, F3, F4, F5,
+					   TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1,
+					NewFValue, F3, F4, F5, TrUserData).
+
+
+d_field_ReadStreamEvents_max_count(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    d_field_ReadStreamEvents_max_count(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, F4, F5,
+				       TrUserData);
+d_field_ReadStreamEvents_max_count(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, _, F4, F5, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1, F2,
+					NewFValue, F4, F5, TrUserData).
+
+
+d_field_ReadStreamEvents_resolve_link_tos(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, F4, F5,
+					  TrUserData)
+    when N < 57 ->
+    d_field_ReadStreamEvents_resolve_link_tos(Rest, N + 7,
+					      X bsl N + Acc, F1, F2, F3, F4, F5,
+					      TrUserData);
+d_field_ReadStreamEvents_resolve_link_tos(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, _, F5,
+					  TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1, F2,
+					F3, NewFValue, F5, TrUserData).
+
+
+d_field_ReadStreamEvents_require_master(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    d_field_ReadStreamEvents_require_master(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, F3, F4, F5,
+					    TrUserData);
+d_field_ReadStreamEvents_require_master(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, F4, _,
+					TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1, F2,
+					F3, F4, NewFValue, TrUserData).
+
+
+skip_varint_ReadStreamEvents(<<1:1, _:7, Rest/binary>>,
+			     Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    skip_varint_ReadStreamEvents(Rest, Z1, Z2, F1, F2, F3,
+				 F4, F5, TrUserData);
+skip_varint_ReadStreamEvents(<<0:1, _:7, Rest/binary>>,
+			     Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
+    dfp_read_field_def_ReadStreamEvents(Rest, Z1, Z2, F1,
+					F2, F3, F4, F5, TrUserData).
+
+
+skip_length_delimited_ReadStreamEvents(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, F5, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_ReadStreamEvents(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3, F4, F5,
+					   TrUserData);
+skip_length_delimited_ReadStreamEvents(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, F4, F5,
+				       TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_ReadStreamEvents(Rest2, 0, 0, F1, F2,
+					F3, F4, F5, TrUserData).
+
+
+skip_group_ReadStreamEvents(Bin, FNum, Z2, F1, F2, F3,
+			    F4, F5, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_ReadStreamEvents(Rest, 0, Z2, F1, F2,
+					F3, F4, F5, TrUserData).
+
+
+skip_32_ReadStreamEvents(<<_:32, Rest/binary>>, Z1, Z2,
+			 F1, F2, F3, F4, F5, TrUserData) ->
+    dfp_read_field_def_ReadStreamEvents(Rest, Z1, Z2, F1,
+					F2, F3, F4, F5, TrUserData).
+
+
+skip_64_ReadStreamEvents(<<_:64, Rest/binary>>, Z1, Z2,
+			 F1, F2, F3, F4, F5, TrUserData) ->
+    dfp_read_field_def_ReadStreamEvents(Rest, Z1, Z2, F1,
+					F2, F3, F4, F5, TrUserData).
+
+
+d_msg_SubscriptionDropped(Bin, TrUserData) ->
+    dfp_read_field_def_SubscriptionDropped(Bin, 0, 0,
+					   id('Unsubscribed', TrUserData),
+					   TrUserData).
+
+dfp_read_field_def_SubscriptionDropped(<<8,
+					 Rest/binary>>,
+				       Z1, Z2, F1, TrUserData) ->
+    d_field_SubscriptionDropped_reason(Rest, Z1, Z2, F1,
+				       TrUserData);
+dfp_read_field_def_SubscriptionDropped(<<>>, 0, 0, F1,
+				       _) ->
+    #'SubscriptionDropped'{reason = F1};
+dfp_read_field_def_SubscriptionDropped(Other, Z1, Z2,
+				       F1, TrUserData) ->
+    dg_read_field_def_SubscriptionDropped(Other, Z1, Z2, F1,
+					  TrUserData).
+
+dg_read_field_def_SubscriptionDropped(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_SubscriptionDropped(Rest, N + 7,
+					  X bsl N + Acc, F1, TrUserData);
+dg_read_field_def_SubscriptionDropped(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_SubscriptionDropped_reason(Rest, 0, 0, F1,
+					     TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_SubscriptionDropped(Rest, 0, 0, F1,
+						TrUserData);
+	    1 ->
+		skip_64_SubscriptionDropped(Rest, 0, 0, F1, TrUserData);
+	    2 ->
+		skip_length_delimited_SubscriptionDropped(Rest, 0, 0,
+							  F1, TrUserData);
+	    3 ->
+		skip_group_SubscriptionDropped(Rest, Key bsr 3, 0, F1,
+					       TrUserData);
+	    5 ->
+		skip_32_SubscriptionDropped(Rest, 0, 0, F1, TrUserData)
+	  end
+    end;
+dg_read_field_def_SubscriptionDropped(<<>>, 0, 0, F1,
+				      _) ->
+    #'SubscriptionDropped'{reason = F1}.
+
+d_field_SubscriptionDropped_reason(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, TrUserData)
+    when N < 57 ->
+    d_field_SubscriptionDropped_reason(Rest, N + 7,
+				       X bsl N + Acc, F1, TrUserData);
+d_field_SubscriptionDropped_reason(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, _, TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue =
+	'd_enum_SubscriptionDropped.SubscriptionDropReason'(Tmp),
+    dfp_read_field_def_SubscriptionDropped(Rest, 0, 0,
+					   NewFValue, TrUserData).
+
+
+skip_varint_SubscriptionDropped(<<1:1, _:7,
+				  Rest/binary>>,
+				Z1, Z2, F1, TrUserData) ->
+    skip_varint_SubscriptionDropped(Rest, Z1, Z2, F1,
+				    TrUserData);
+skip_varint_SubscriptionDropped(<<0:1, _:7,
+				  Rest/binary>>,
+				Z1, Z2, F1, TrUserData) ->
+    dfp_read_field_def_SubscriptionDropped(Rest, Z1, Z2, F1,
+					   TrUserData).
+
+
+skip_length_delimited_SubscriptionDropped(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_SubscriptionDropped(Rest, N + 7,
+					      X bsl N + Acc, F1, TrUserData);
+skip_length_delimited_SubscriptionDropped(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_SubscriptionDropped(Rest2, 0, 0, F1,
+					   TrUserData).
+
+
+skip_group_SubscriptionDropped(Bin, FNum, Z2, F1,
+			       TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_SubscriptionDropped(Rest, 0, Z2, F1,
+					   TrUserData).
+
+
+skip_32_SubscriptionDropped(<<_:32, Rest/binary>>, Z1,
+			    Z2, F1, TrUserData) ->
+    dfp_read_field_def_SubscriptionDropped(Rest, Z1, Z2, F1,
+					   TrUserData).
+
+
+skip_64_SubscriptionDropped(<<_:64, Rest/binary>>, Z1,
+			    Z2, F1, TrUserData) ->
+    dfp_read_field_def_SubscriptionDropped(Rest, Z1, Z2, F1,
+					   TrUserData).
+
+
+d_msg_SubscribeToStream(Bin, TrUserData) ->
+    dfp_read_field_def_SubscribeToStream(Bin, 0, 0,
+					 id(undefined, TrUserData),
+					 id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_SubscribeToStream(<<10,
+				       Rest/binary>>,
+				     Z1, Z2, F1, F2, TrUserData) ->
+    d_field_SubscribeToStream_event_stream_id(Rest, Z1, Z2,
+					      F1, F2, TrUserData);
+dfp_read_field_def_SubscribeToStream(<<16,
+				       Rest/binary>>,
+				     Z1, Z2, F1, F2, TrUserData) ->
+    d_field_SubscribeToStream_resolve_link_tos(Rest, Z1, Z2,
+					       F1, F2, TrUserData);
+dfp_read_field_def_SubscribeToStream(<<>>, 0, 0, F1, F2,
+				     _) ->
+    #'SubscribeToStream'{event_stream_id = F1,
+			 resolve_link_tos = F2};
+dfp_read_field_def_SubscribeToStream(Other, Z1, Z2, F1,
+				     F2, TrUserData) ->
+    dg_read_field_def_SubscribeToStream(Other, Z1, Z2, F1,
+					F2, TrUserData).
+
+dg_read_field_def_SubscribeToStream(<<1:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_SubscribeToStream(Rest, N + 7,
+					X bsl N + Acc, F1, F2, TrUserData);
+dg_read_field_def_SubscribeToStream(<<0:1, X:7,
+				      Rest/binary>>,
+				    N, Acc, F1, F2, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_SubscribeToStream_event_stream_id(Rest, 0, 0,
+						    F1, F2, TrUserData);
+      16 ->
+	  d_field_SubscribeToStream_resolve_link_tos(Rest, 0, 0,
+						     F1, F2, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_SubscribeToStream(Rest, 0, 0, F1, F2,
+					      TrUserData);
+	    1 ->
+		skip_64_SubscribeToStream(Rest, 0, 0, F1, F2,
+					  TrUserData);
+	    2 ->
+		skip_length_delimited_SubscribeToStream(Rest, 0, 0, F1,
+							F2, TrUserData);
+	    3 ->
+		skip_group_SubscribeToStream(Rest, Key bsr 3, 0, F1, F2,
+					     TrUserData);
+	    5 ->
+		skip_32_SubscribeToStream(Rest, 0, 0, F1, F2,
+					  TrUserData)
+	  end
+    end;
+dg_read_field_def_SubscribeToStream(<<>>, 0, 0, F1, F2,
+				    _) ->
+    #'SubscribeToStream'{event_stream_id = F1,
+			 resolve_link_tos = F2}.
+
+d_field_SubscribeToStream_event_stream_id(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    d_field_SubscribeToStream_event_stream_id(Rest, N + 7,
+					      X bsl N + Acc, F1, F2,
+					      TrUserData);
+d_field_SubscribeToStream_event_stream_id(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, _, F2, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_SubscribeToStream(Rest2, 0, 0,
+					 NewFValue, F2, TrUserData).
+
+
+d_field_SubscribeToStream_resolve_link_tos(<<1:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    d_field_SubscribeToStream_resolve_link_tos(Rest, N + 7,
+					       X bsl N + Acc, F1, F2,
+					       TrUserData);
+d_field_SubscribeToStream_resolve_link_tos(<<0:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_SubscribeToStream(Rest, 0, 0, F1,
+					 NewFValue, TrUserData).
+
+
+skip_varint_SubscribeToStream(<<1:1, _:7, Rest/binary>>,
+			      Z1, Z2, F1, F2, TrUserData) ->
+    skip_varint_SubscribeToStream(Rest, Z1, Z2, F1, F2,
+				  TrUserData);
+skip_varint_SubscribeToStream(<<0:1, _:7, Rest/binary>>,
+			      Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_SubscribeToStream(Rest, Z1, Z2, F1,
+					 F2, TrUserData).
+
+
+skip_length_delimited_SubscribeToStream(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_SubscribeToStream(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, TrUserData);
+skip_length_delimited_SubscribeToStream(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_SubscribeToStream(Rest2, 0, 0, F1,
+					 F2, TrUserData).
+
+
+skip_group_SubscribeToStream(Bin, FNum, Z2, F1, F2,
+			     TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_SubscribeToStream(Rest, 0, Z2, F1,
+					 F2, TrUserData).
+
+
+skip_32_SubscribeToStream(<<_:32, Rest/binary>>, Z1, Z2,
+			  F1, F2, TrUserData) ->
+    dfp_read_field_def_SubscribeToStream(Rest, Z1, Z2, F1,
+					 F2, TrUserData).
+
+
+skip_64_SubscribeToStream(<<_:64, Rest/binary>>, Z1, Z2,
+			  F1, F2, TrUserData) ->
+    dfp_read_field_def_SubscribeToStream(Rest, Z1, Z2, F1,
+					 F2, TrUserData).
+
+
+d_msg_PersistentSubscriptionConfirmation(Bin,
+					 TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Bin,
+							  0, 0,
+							  id(undefined,
+							     TrUserData),
+							  id(undefined,
+							     TrUserData),
+							  id(0, TrUserData),
+							  TrUserData).
+
+dfp_read_field_def_PersistentSubscriptionConfirmation(<<8,
+							Rest/binary>>,
+						      Z1, Z2, F1, F2, F3,
+						      TrUserData) ->
+    d_field_PersistentSubscriptionConfirmation_last_commit_position(Rest,
+								    Z1, Z2, F1,
+								    F2, F3,
+								    TrUserData);
+dfp_read_field_def_PersistentSubscriptionConfirmation(<<18,
+							Rest/binary>>,
+						      Z1, Z2, F1, F2, F3,
+						      TrUserData) ->
+    d_field_PersistentSubscriptionConfirmation_subscription_id(Rest,
+							       Z1, Z2, F1, F2,
+							       F3, TrUserData);
+dfp_read_field_def_PersistentSubscriptionConfirmation(<<24,
+							Rest/binary>>,
+						      Z1, Z2, F1, F2, F3,
+						      TrUserData) ->
+    d_field_PersistentSubscriptionConfirmation_last_event_number(Rest,
+								 Z1, Z2, F1, F2,
+								 F3,
+								 TrUserData);
+dfp_read_field_def_PersistentSubscriptionConfirmation(<<>>,
+						      0, 0, F1, F2, F3, _) ->
+    #'PersistentSubscriptionConfirmation'{last_commit_position
+					      = F1,
+					  subscription_id = F2,
+					  last_event_number = F3};
+dfp_read_field_def_PersistentSubscriptionConfirmation(Other,
+						      Z1, Z2, F1, F2, F3,
+						      TrUserData) ->
+    dg_read_field_def_PersistentSubscriptionConfirmation(Other,
+							 Z1, Z2, F1, F2, F3,
+							 TrUserData).
+
+dg_read_field_def_PersistentSubscriptionConfirmation(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3,
+						     TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_PersistentSubscriptionConfirmation(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, F3,
+							 TrUserData);
+dg_read_field_def_PersistentSubscriptionConfirmation(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3,
+						     TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_PersistentSubscriptionConfirmation_last_commit_position(Rest,
+									  0, 0,
+									  F1,
+									  F2,
+									  F3,
+									  TrUserData);
+      18 ->
+	  d_field_PersistentSubscriptionConfirmation_subscription_id(Rest,
+								     0, 0, F1,
+								     F2, F3,
+								     TrUserData);
+      24 ->
+	  d_field_PersistentSubscriptionConfirmation_last_event_number(Rest,
+								       0, 0, F1,
+								       F2, F3,
+								       TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_PersistentSubscriptionConfirmation(Rest, 0,
+							       0, F1, F2, F3,
+							       TrUserData);
+	    1 ->
+		skip_64_PersistentSubscriptionConfirmation(Rest, 0, 0,
+							   F1, F2, F3,
+							   TrUserData);
+	    2 ->
+		skip_length_delimited_PersistentSubscriptionConfirmation(Rest,
+									 0, 0,
+									 F1, F2,
+									 F3,
+									 TrUserData);
+	    3 ->
+		skip_group_PersistentSubscriptionConfirmation(Rest,
+							      Key bsr 3, 0, F1,
+							      F2, F3,
+							      TrUserData);
+	    5 ->
+		skip_32_PersistentSubscriptionConfirmation(Rest, 0, 0,
+							   F1, F2, F3,
+							   TrUserData)
+	  end
+    end;
+dg_read_field_def_PersistentSubscriptionConfirmation(<<>>,
+						     0, 0, F1, F2, F3, _) ->
+    #'PersistentSubscriptionConfirmation'{last_commit_position
+					      = F1,
+					  subscription_id = F2,
+					  last_event_number = F3}.
+
+d_field_PersistentSubscriptionConfirmation_last_commit_position(<<1:1,
+								  X:7,
+								  Rest/binary>>,
+								N, Acc, F1, F2,
+								F3, TrUserData)
+    when N < 57 ->
+    d_field_PersistentSubscriptionConfirmation_last_commit_position(Rest,
+								    N + 7,
+								    X bsl N +
+								      Acc,
+								    F1, F2, F3,
+								    TrUserData);
+d_field_PersistentSubscriptionConfirmation_last_commit_position(<<0:1,
+								  X:7,
+								  Rest/binary>>,
+								N, Acc, _, F2,
+								F3,
+								TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
+							  0, 0, NewFValue, F2,
+							  F3, TrUserData).
+
+
+d_field_PersistentSubscriptionConfirmation_subscription_id(<<1:1,
+							     X:7, Rest/binary>>,
+							   N, Acc, F1, F2, F3,
+							   TrUserData)
+    when N < 57 ->
+    d_field_PersistentSubscriptionConfirmation_subscription_id(Rest,
+							       N + 7,
+							       X bsl N + Acc,
+							       F1, F2, F3,
+							       TrUserData);
+d_field_PersistentSubscriptionConfirmation_subscription_id(<<0:1,
+							     X:7, Rest/binary>>,
+							   N, Acc, F1, _, F3,
+							   TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest2,
+							  0, 0, F1, NewFValue,
+							  F3, TrUserData).
+
+
+d_field_PersistentSubscriptionConfirmation_last_event_number(<<1:1,
+							       X:7,
+							       Rest/binary>>,
+							     N, Acc, F1, F2, F3,
+							     TrUserData)
+    when N < 57 ->
+    d_field_PersistentSubscriptionConfirmation_last_event_number(Rest,
+								 N + 7,
+								 X bsl N + Acc,
+								 F1, F2, F3,
+								 TrUserData);
+d_field_PersistentSubscriptionConfirmation_last_event_number(<<0:1,
+							       X:7,
+							       Rest/binary>>,
+							     N, Acc, F1, F2, _,
+							     TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
+							  0, 0, F1, F2,
+							  NewFValue,
+							  TrUserData).
+
+
+skip_varint_PersistentSubscriptionConfirmation(<<1:1,
+						 _:7, Rest/binary>>,
+					       Z1, Z2, F1, F2, F3,
+					       TrUserData) ->
+    skip_varint_PersistentSubscriptionConfirmation(Rest, Z1,
+						   Z2, F1, F2, F3, TrUserData);
+skip_varint_PersistentSubscriptionConfirmation(<<0:1,
+						 _:7, Rest/binary>>,
+					       Z1, Z2, F1, F2, F3,
+					       TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
+							  Z1, Z2, F1, F2, F3,
+							  TrUserData).
+
+
+skip_length_delimited_PersistentSubscriptionConfirmation(<<1:1,
+							   X:7, Rest/binary>>,
+							 N, Acc, F1, F2, F3,
+							 TrUserData)
+    when N < 57 ->
+    skip_length_delimited_PersistentSubscriptionConfirmation(Rest,
+							     N + 7,
+							     X bsl N + Acc, F1,
+							     F2, F3,
+							     TrUserData);
+skip_length_delimited_PersistentSubscriptionConfirmation(<<0:1,
+							   X:7, Rest/binary>>,
+							 N, Acc, F1, F2, F3,
+							 TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest2,
+							  0, 0, F1, F2, F3,
+							  TrUserData).
+
+
+skip_group_PersistentSubscriptionConfirmation(Bin, FNum,
+					      Z2, F1, F2, F3, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
+							  0, Z2, F1, F2, F3,
+							  TrUserData).
+
+
+skip_32_PersistentSubscriptionConfirmation(<<_:32,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
+							  Z1, Z2, F1, F2, F3,
+							  TrUserData).
+
+
+skip_64_PersistentSubscriptionConfirmation(<<_:64,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
+							  Z1, Z2, F1, F2, F3,
+							  TrUserData).
+
+
+d_msg_TransactionStart(Bin, TrUserData) ->
+    dfp_read_field_def_TransactionStart(Bin, 0, 0,
+					id(undefined, TrUserData),
+					id(undefined, TrUserData),
+					id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_TransactionStart(<<10, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionStart_event_stream_id(Rest, Z1, Z2,
+					     F1, F2, F3, TrUserData);
+dfp_read_field_def_TransactionStart(<<16, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionStart_expected_version(Rest, Z1, Z2,
+					      F1, F2, F3, TrUserData);
+dfp_read_field_def_TransactionStart(<<24, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionStart_require_master(Rest, Z1, Z2,
+					    F1, F2, F3, TrUserData);
+dfp_read_field_def_TransactionStart(<<>>, 0, 0, F1, F2,
+				    F3, _) ->
+    #'TransactionStart'{event_stream_id = F1,
+			expected_version = F2, require_master = F3};
+dfp_read_field_def_TransactionStart(Other, Z1, Z2, F1,
+				    F2, F3, TrUserData) ->
+    dg_read_field_def_TransactionStart(Other, Z1, Z2, F1,
+				       F2, F3, TrUserData).
+
+dg_read_field_def_TransactionStart(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_TransactionStart(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, TrUserData);
+dg_read_field_def_TransactionStart(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_TransactionStart_event_stream_id(Rest, 0, 0, F1,
+						   F2, F3, TrUserData);
+      16 ->
+	  d_field_TransactionStart_expected_version(Rest, 0, 0,
+						    F1, F2, F3, TrUserData);
+      24 ->
+	  d_field_TransactionStart_require_master(Rest, 0, 0, F1,
+						  F2, F3, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_TransactionStart(Rest, 0, 0, F1, F2, F3,
+					     TrUserData);
+	    1 ->
+		skip_64_TransactionStart(Rest, 0, 0, F1, F2, F3,
+					 TrUserData);
+	    2 ->
+		skip_length_delimited_TransactionStart(Rest, 0, 0, F1,
+						       F2, F3, TrUserData);
+	    3 ->
+		skip_group_TransactionStart(Rest, Key bsr 3, 0, F1, F2,
+					    F3, TrUserData);
+	    5 ->
+		skip_32_TransactionStart(Rest, 0, 0, F1, F2, F3,
+					 TrUserData)
+	  end
+    end;
+dg_read_field_def_TransactionStart(<<>>, 0, 0, F1, F2,
+				   F3, _) ->
+    #'TransactionStart'{event_stream_id = F1,
+			expected_version = F2, require_master = F3}.
+
+d_field_TransactionStart_event_stream_id(<<1:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionStart_event_stream_id(Rest, N + 7,
+					     X bsl N + Acc, F1, F2, F3,
+					     TrUserData);
+d_field_TransactionStart_event_stream_id(<<0:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, _, F2, F3, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_TransactionStart(Rest2, 0, 0,
+					NewFValue, F2, F3, TrUserData).
+
+
+d_field_TransactionStart_expected_version(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionStart_expected_version(Rest, N + 7,
+					      X bsl N + Acc, F1, F2, F3,
+					      TrUserData);
+d_field_TransactionStart_expected_version(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, _, F3, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_TransactionStart(Rest, 0, 0, F1,
+					NewFValue, F3, TrUserData).
+
+
+d_field_TransactionStart_require_master(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionStart_require_master(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, F3,
+					    TrUserData);
+d_field_TransactionStart_require_master(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_TransactionStart(Rest, 0, 0, F1, F2,
+					NewFValue, TrUserData).
+
+
+skip_varint_TransactionStart(<<1:1, _:7, Rest/binary>>,
+			     Z1, Z2, F1, F2, F3, TrUserData) ->
+    skip_varint_TransactionStart(Rest, Z1, Z2, F1, F2, F3,
+				 TrUserData);
+skip_varint_TransactionStart(<<0:1, _:7, Rest/binary>>,
+			     Z1, Z2, F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionStart(Rest, Z1, Z2, F1,
+					F2, F3, TrUserData).
+
+
+skip_length_delimited_TransactionStart(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_TransactionStart(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3,
+					   TrUserData);
+skip_length_delimited_TransactionStart(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_TransactionStart(Rest2, 0, 0, F1, F2,
+					F3, TrUserData).
+
+
+skip_group_TransactionStart(Bin, FNum, Z2, F1, F2, F3,
+			    TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_TransactionStart(Rest, 0, Z2, F1, F2,
+					F3, TrUserData).
+
+
+skip_32_TransactionStart(<<_:32, Rest/binary>>, Z1, Z2,
+			 F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionStart(Rest, Z1, Z2, F1,
+					F2, F3, TrUserData).
+
+
+skip_64_TransactionStart(<<_:64, Rest/binary>>, Z1, Z2,
+			 F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionStart(Rest, Z1, Z2, F1,
+					F2, F3, TrUserData).
+
+
+d_msg_CreatePersistentSubscriptionCompleted(Bin,
+					    TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Bin,
+							     0, 0,
+							     id(undefined,
+								TrUserData),
+							     id(<<>>,
+								TrUserData),
+							     TrUserData).
+
+dfp_read_field_def_CreatePersistentSubscriptionCompleted(<<8,
+							   Rest/binary>>,
+							 Z1, Z2, F1, F2,
+							 TrUserData) ->
+    d_field_CreatePersistentSubscriptionCompleted_result(Rest,
+							 Z1, Z2, F1, F2,
+							 TrUserData);
+dfp_read_field_def_CreatePersistentSubscriptionCompleted(<<18,
+							   Rest/binary>>,
+							 Z1, Z2, F1, F2,
+							 TrUserData) ->
+    d_field_CreatePersistentSubscriptionCompleted_reason(Rest,
+							 Z1, Z2, F1, F2,
+							 TrUserData);
+dfp_read_field_def_CreatePersistentSubscriptionCompleted(<<>>,
+							 0, 0, F1, F2, _) ->
+    #'CreatePersistentSubscriptionCompleted'{result = F1,
+					     reason = F2};
+dfp_read_field_def_CreatePersistentSubscriptionCompleted(Other,
+							 Z1, Z2, F1, F2,
+							 TrUserData) ->
+    dg_read_field_def_CreatePersistentSubscriptionCompleted(Other,
+							    Z1, Z2, F1, F2,
+							    TrUserData).
+
+dg_read_field_def_CreatePersistentSubscriptionCompleted(<<1:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, F2,
+							TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
+							    N + 7,
+							    X bsl N + Acc, F1,
+							    F2, TrUserData);
+dg_read_field_def_CreatePersistentSubscriptionCompleted(<<0:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, F2,
+							TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_CreatePersistentSubscriptionCompleted_result(Rest,
+							       0, 0, F1, F2,
+							       TrUserData);
+      18 ->
+	  d_field_CreatePersistentSubscriptionCompleted_reason(Rest,
+							       0, 0, F1, F2,
+							       TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_CreatePersistentSubscriptionCompleted(Rest,
+								  0, 0, F1, F2,
+								  TrUserData);
+	    1 ->
+		skip_64_CreatePersistentSubscriptionCompleted(Rest, 0,
+							      0, F1, F2,
+							      TrUserData);
+	    2 ->
+		skip_length_delimited_CreatePersistentSubscriptionCompleted(Rest,
+									    0,
+									    0,
+									    F1,
+									    F2,
+									    TrUserData);
+	    3 ->
+		skip_group_CreatePersistentSubscriptionCompleted(Rest,
+								 Key bsr 3, 0,
+								 F1, F2,
+								 TrUserData);
+	    5 ->
+		skip_32_CreatePersistentSubscriptionCompleted(Rest, 0,
+							      0, F1, F2,
+							      TrUserData)
+	  end
+    end;
+dg_read_field_def_CreatePersistentSubscriptionCompleted(<<>>,
+							0, 0, F1, F2, _) ->
+    #'CreatePersistentSubscriptionCompleted'{result = F1,
+					     reason = F2}.
+
+d_field_CreatePersistentSubscriptionCompleted_result(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscriptionCompleted_result(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, TrUserData);
+d_field_CreatePersistentSubscriptionCompleted_result(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, _, F2,
+						     TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue =
+	'd_enum_CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'(Tmp),
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
+							     0, 0, NewFValue,
+							     F2, TrUserData).
+
+
+d_field_CreatePersistentSubscriptionCompleted_reason(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscriptionCompleted_reason(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, TrUserData);
+d_field_CreatePersistentSubscriptionCompleted_reason(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, _,
+						     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest2,
+							     0, 0, F1,
+							     NewFValue,
+							     TrUserData).
+
+
+skip_varint_CreatePersistentSubscriptionCompleted(<<1:1,
+						    _:7, Rest/binary>>,
+						  Z1, Z2, F1, F2, TrUserData) ->
+    skip_varint_CreatePersistentSubscriptionCompleted(Rest,
+						      Z1, Z2, F1, F2,
+						      TrUserData);
+skip_varint_CreatePersistentSubscriptionCompleted(<<0:1,
+						    _:7, Rest/binary>>,
+						  Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
+							     Z1, Z2, F1, F2,
+							     TrUserData).
+
+
+skip_length_delimited_CreatePersistentSubscriptionCompleted(<<1:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2,
+							    TrUserData)
+    when N < 57 ->
+    skip_length_delimited_CreatePersistentSubscriptionCompleted(Rest,
+								N + 7,
+								X bsl N + Acc,
+								F1, F2,
+								TrUserData);
+skip_length_delimited_CreatePersistentSubscriptionCompleted(<<0:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2,
+							    TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest2,
+							     0, 0, F1, F2,
+							     TrUserData).
+
+
+skip_group_CreatePersistentSubscriptionCompleted(Bin,
+						 FNum, Z2, F1, F2,
+						 TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
+							     0, Z2, F1, F2,
+							     TrUserData).
+
+
+skip_32_CreatePersistentSubscriptionCompleted(<<_:32,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
+							     Z1, Z2, F1, F2,
+							     TrUserData).
+
+
+skip_64_CreatePersistentSubscriptionCompleted(<<_:64,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
+							     Z1, Z2, F1, F2,
+							     TrUserData).
 
 
 d_msg_ReadStreamEventsCompleted(Bin, TrUserData) ->
@@ -9084,521 +7921,1805 @@ skip_64_ReadStreamEventsCompleted(<<_:64, Rest/binary>>,
 						 TrUserData).
 
 
-d_msg_TransactionCommit(Bin, TrUserData) ->
-    dfp_read_field_def_TransactionCommit(Bin, 0, 0,
-					 id(undefined, TrUserData),
-					 id(undefined, TrUserData), TrUserData).
+d_msg_TransactionCommitCompleted(Bin, TrUserData) ->
+    dfp_read_field_def_TransactionCommitCompleted(Bin, 0, 0,
+						  id(undefined, TrUserData),
+						  id(undefined, TrUserData),
+						  id(<<>>, TrUserData),
+						  id(undefined, TrUserData),
+						  id(undefined, TrUserData),
+						  id(0, TrUserData),
+						  id(0, TrUserData),
+						  TrUserData).
 
-dfp_read_field_def_TransactionCommit(<<8, Rest/binary>>,
-				     Z1, Z2, F1, F2, TrUserData) ->
-    d_field_TransactionCommit_transaction_id(Rest, Z1, Z2,
-					     F1, F2, TrUserData);
-dfp_read_field_def_TransactionCommit(<<16,
-				       Rest/binary>>,
-				     Z1, Z2, F1, F2, TrUserData) ->
-    d_field_TransactionCommit_require_master(Rest, Z1, Z2,
-					     F1, F2, TrUserData);
-dfp_read_field_def_TransactionCommit(<<>>, 0, 0, F1, F2,
-				     _) ->
-    #'TransactionCommit'{transaction_id = F1,
-			 require_master = F2};
-dfp_read_field_def_TransactionCommit(Other, Z1, Z2, F1,
-				     F2, TrUserData) ->
-    dg_read_field_def_TransactionCommit(Other, Z1, Z2, F1,
-					F2, TrUserData).
+dfp_read_field_def_TransactionCommitCompleted(<<8,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, F3, F4, F5, F6,
+					      F7, TrUserData) ->
+    d_field_TransactionCommitCompleted_transaction_id(Rest,
+						      Z1, Z2, F1, F2, F3, F4,
+						      F5, F6, F7, TrUserData);
+dfp_read_field_def_TransactionCommitCompleted(<<16,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, F3, F4, F5, F6,
+					      F7, TrUserData) ->
+    d_field_TransactionCommitCompleted_result(Rest, Z1, Z2,
+					      F1, F2, F3, F4, F5, F6, F7,
+					      TrUserData);
+dfp_read_field_def_TransactionCommitCompleted(<<26,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, F3, F4, F5, F6,
+					      F7, TrUserData) ->
+    d_field_TransactionCommitCompleted_message(Rest, Z1, Z2,
+					       F1, F2, F3, F4, F5, F6, F7,
+					       TrUserData);
+dfp_read_field_def_TransactionCommitCompleted(<<32,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, F3, F4, F5, F6,
+					      F7, TrUserData) ->
+    d_field_TransactionCommitCompleted_first_event_number(Rest,
+							  Z1, Z2, F1, F2, F3,
+							  F4, F5, F6, F7,
+							  TrUserData);
+dfp_read_field_def_TransactionCommitCompleted(<<40,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, F3, F4, F5, F6,
+					      F7, TrUserData) ->
+    d_field_TransactionCommitCompleted_last_event_number(Rest,
+							 Z1, Z2, F1, F2, F3, F4,
+							 F5, F6, F7,
+							 TrUserData);
+dfp_read_field_def_TransactionCommitCompleted(<<48,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, F3, F4, F5, F6,
+					      F7, TrUserData) ->
+    d_field_TransactionCommitCompleted_prepare_position(Rest,
+							Z1, Z2, F1, F2, F3, F4,
+							F5, F6, F7, TrUserData);
+dfp_read_field_def_TransactionCommitCompleted(<<56,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, F3, F4, F5, F6,
+					      F7, TrUserData) ->
+    d_field_TransactionCommitCompleted_commit_position(Rest,
+						       Z1, Z2, F1, F2, F3, F4,
+						       F5, F6, F7, TrUserData);
+dfp_read_field_def_TransactionCommitCompleted(<<>>, 0,
+					      0, F1, F2, F3, F4, F5, F6, F7,
+					      _) ->
+    #'TransactionCommitCompleted'{transaction_id = F1,
+				  result = F2, message = F3,
+				  first_event_number = F4,
+				  last_event_number = F5, prepare_position = F6,
+				  commit_position = F7};
+dfp_read_field_def_TransactionCommitCompleted(Other, Z1,
+					      Z2, F1, F2, F3, F4, F5, F6, F7,
+					      TrUserData) ->
+    dg_read_field_def_TransactionCommitCompleted(Other, Z1,
+						 Z2, F1, F2, F3, F4, F5, F6, F7,
+						 TrUserData).
 
-dg_read_field_def_TransactionCommit(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, TrUserData)
+dg_read_field_def_TransactionCommitCompleted(<<1:1, X:7,
+					       Rest/binary>>,
+					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					     TrUserData)
     when N < 32 - 7 ->
-    dg_read_field_def_TransactionCommit(Rest, N + 7,
-					X bsl N + Acc, F1, F2, TrUserData);
-dg_read_field_def_TransactionCommit(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, TrUserData) ->
+    dg_read_field_def_TransactionCommitCompleted(Rest,
+						 N + 7, X bsl N + Acc, F1, F2,
+						 F3, F4, F5, F6, F7,
+						 TrUserData);
+dg_read_field_def_TransactionCommitCompleted(<<0:1, X:7,
+					       Rest/binary>>,
+					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					     TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
       8 ->
-	  d_field_TransactionCommit_transaction_id(Rest, 0, 0, F1,
-						   F2, TrUserData);
+	  d_field_TransactionCommitCompleted_transaction_id(Rest,
+							    0, 0, F1, F2, F3,
+							    F4, F5, F6, F7,
+							    TrUserData);
       16 ->
-	  d_field_TransactionCommit_require_master(Rest, 0, 0, F1,
-						   F2, TrUserData);
+	  d_field_TransactionCommitCompleted_result(Rest, 0, 0,
+						    F1, F2, F3, F4, F5, F6, F7,
+						    TrUserData);
+      26 ->
+	  d_field_TransactionCommitCompleted_message(Rest, 0, 0,
+						     F1, F2, F3, F4, F5, F6, F7,
+						     TrUserData);
+      32 ->
+	  d_field_TransactionCommitCompleted_first_event_number(Rest,
+								0, 0, F1, F2,
+								F3, F4, F5, F6,
+								F7, TrUserData);
+      40 ->
+	  d_field_TransactionCommitCompleted_last_event_number(Rest,
+							       0, 0, F1, F2, F3,
+							       F4, F5, F6, F7,
+							       TrUserData);
+      48 ->
+	  d_field_TransactionCommitCompleted_prepare_position(Rest,
+							      0, 0, F1, F2, F3,
+							      F4, F5, F6, F7,
+							      TrUserData);
+      56 ->
+	  d_field_TransactionCommitCompleted_commit_position(Rest,
+							     0, 0, F1, F2, F3,
+							     F4, F5, F6, F7,
+							     TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
-		skip_varint_TransactionCommit(Rest, 0, 0, F1, F2,
-					      TrUserData);
+		skip_varint_TransactionCommitCompleted(Rest, 0, 0, F1,
+						       F2, F3, F4, F5, F6, F7,
+						       TrUserData);
 	    1 ->
-		skip_64_TransactionCommit(Rest, 0, 0, F1, F2,
-					  TrUserData);
+		skip_64_TransactionCommitCompleted(Rest, 0, 0, F1, F2,
+						   F3, F4, F5, F6, F7,
+						   TrUserData);
 	    2 ->
-		skip_length_delimited_TransactionCommit(Rest, 0, 0, F1,
-							F2, TrUserData);
+		skip_length_delimited_TransactionCommitCompleted(Rest,
+								 0, 0, F1, F2,
+								 F3, F4, F5, F6,
+								 F7,
+								 TrUserData);
 	    3 ->
-		skip_group_TransactionCommit(Rest, Key bsr 3, 0, F1, F2,
-					     TrUserData);
+		skip_group_TransactionCommitCompleted(Rest, Key bsr 3,
+						      0, F1, F2, F3, F4, F5, F6,
+						      F7, TrUserData);
 	    5 ->
-		skip_32_TransactionCommit(Rest, 0, 0, F1, F2,
-					  TrUserData)
+		skip_32_TransactionCommitCompleted(Rest, 0, 0, F1, F2,
+						   F3, F4, F5, F6, F7,
+						   TrUserData)
 	  end
     end;
-dg_read_field_def_TransactionCommit(<<>>, 0, 0, F1, F2,
-				    _) ->
-    #'TransactionCommit'{transaction_id = F1,
-			 require_master = F2}.
+dg_read_field_def_TransactionCommitCompleted(<<>>, 0, 0,
+					     F1, F2, F3, F4, F5, F6, F7, _) ->
+    #'TransactionCommitCompleted'{transaction_id = F1,
+				  result = F2, message = F3,
+				  first_event_number = F4,
+				  last_event_number = F5, prepare_position = F6,
+				  commit_position = F7}.
 
-d_field_TransactionCommit_transaction_id(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, TrUserData)
+d_field_TransactionCommitCompleted_transaction_id(<<1:1,
+						    X:7, Rest/binary>>,
+						  N, Acc, F1, F2, F3, F4, F5,
+						  F6, F7, TrUserData)
     when N < 57 ->
-    d_field_TransactionCommit_transaction_id(Rest, N + 7,
-					     X bsl N + Acc, F1, F2, TrUserData);
-d_field_TransactionCommit_transaction_id(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, _, F2, TrUserData) ->
+    d_field_TransactionCommitCompleted_transaction_id(Rest,
+						      N + 7, X bsl N + Acc, F1,
+						      F2, F3, F4, F5, F6, F7,
+						      TrUserData);
+d_field_TransactionCommitCompleted_transaction_id(<<0:1,
+						    X:7, Rest/binary>>,
+						  N, Acc, _, F2, F3, F4, F5, F6,
+						  F7, TrUserData) ->
     <<NewFValue:64/signed-native>> = <<(X bsl N +
 					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_TransactionCommit(Rest, 0, 0,
-					 NewFValue, F2, TrUserData).
+    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
+						  0, NewFValue, F2, F3, F4, F5,
+						  F6, F7, TrUserData).
 
 
-d_field_TransactionCommit_require_master(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, TrUserData)
+d_field_TransactionCommitCompleted_result(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData)
     when N < 57 ->
-    d_field_TransactionCommit_require_master(Rest, N + 7,
-					     X bsl N + Acc, F1, F2, TrUserData);
-d_field_TransactionCommit_require_master(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_TransactionCommit(Rest, 0, 0, F1,
-					 NewFValue, TrUserData).
-
-
-skip_varint_TransactionCommit(<<1:1, _:7, Rest/binary>>,
-			      Z1, Z2, F1, F2, TrUserData) ->
-    skip_varint_TransactionCommit(Rest, Z1, Z2, F1, F2,
-				  TrUserData);
-skip_varint_TransactionCommit(<<0:1, _:7, Rest/binary>>,
-			      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_TransactionCommit(Rest, Z1, Z2, F1,
-					 F2, TrUserData).
-
-
-skip_length_delimited_TransactionCommit(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_TransactionCommit(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, TrUserData);
-skip_length_delimited_TransactionCommit(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_TransactionCommit(Rest2, 0, 0, F1,
-					 F2, TrUserData).
-
-
-skip_group_TransactionCommit(Bin, FNum, Z2, F1, F2,
-			     TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_TransactionCommit(Rest, 0, Z2, F1,
-					 F2, TrUserData).
-
-
-skip_32_TransactionCommit(<<_:32, Rest/binary>>, Z1, Z2,
-			  F1, F2, TrUserData) ->
-    dfp_read_field_def_TransactionCommit(Rest, Z1, Z2, F1,
-					 F2, TrUserData).
-
-
-skip_64_TransactionCommit(<<_:64, Rest/binary>>, Z1, Z2,
-			  F1, F2, TrUserData) ->
-    dfp_read_field_def_TransactionCommit(Rest, Z1, Z2, F1,
-					 F2, TrUserData).
-
-
-d_msg_CreatePersistentSubscriptionCompleted(Bin,
-					    TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Bin,
-							     0, 0,
-							     id(undefined,
-								TrUserData),
-							     id(<<>>,
-								TrUserData),
-							     TrUserData).
-
-dfp_read_field_def_CreatePersistentSubscriptionCompleted(<<8,
-							   Rest/binary>>,
-							 Z1, Z2, F1, F2,
-							 TrUserData) ->
-    d_field_CreatePersistentSubscriptionCompleted_result(Rest,
-							 Z1, Z2, F1, F2,
-							 TrUserData);
-dfp_read_field_def_CreatePersistentSubscriptionCompleted(<<18,
-							   Rest/binary>>,
-							 Z1, Z2, F1, F2,
-							 TrUserData) ->
-    d_field_CreatePersistentSubscriptionCompleted_reason(Rest,
-							 Z1, Z2, F1, F2,
-							 TrUserData);
-dfp_read_field_def_CreatePersistentSubscriptionCompleted(<<>>,
-							 0, 0, F1, F2, _) ->
-    #'CreatePersistentSubscriptionCompleted'{result = F1,
-					     reason = F2};
-dfp_read_field_def_CreatePersistentSubscriptionCompleted(Other,
-							 Z1, Z2, F1, F2,
-							 TrUserData) ->
-    dg_read_field_def_CreatePersistentSubscriptionCompleted(Other,
-							    Z1, Z2, F1, F2,
-							    TrUserData).
-
-dg_read_field_def_CreatePersistentSubscriptionCompleted(<<1:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, F2,
-							TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
-							    N + 7,
-							    X bsl N + Acc, F1,
-							    F2, TrUserData);
-dg_read_field_def_CreatePersistentSubscriptionCompleted(<<0:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, F2,
-							TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_CreatePersistentSubscriptionCompleted_result(Rest,
-							       0, 0, F1, F2,
-							       TrUserData);
-      18 ->
-	  d_field_CreatePersistentSubscriptionCompleted_reason(Rest,
-							       0, 0, F1, F2,
-							       TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_CreatePersistentSubscriptionCompleted(Rest,
-								  0, 0, F1, F2,
-								  TrUserData);
-	    1 ->
-		skip_64_CreatePersistentSubscriptionCompleted(Rest, 0,
-							      0, F1, F2,
-							      TrUserData);
-	    2 ->
-		skip_length_delimited_CreatePersistentSubscriptionCompleted(Rest,
-									    0,
-									    0,
-									    F1,
-									    F2,
-									    TrUserData);
-	    3 ->
-		skip_group_CreatePersistentSubscriptionCompleted(Rest,
-								 Key bsr 3, 0,
-								 F1, F2,
-								 TrUserData);
-	    5 ->
-		skip_32_CreatePersistentSubscriptionCompleted(Rest, 0,
-							      0, F1, F2,
-							      TrUserData)
-	  end
-    end;
-dg_read_field_def_CreatePersistentSubscriptionCompleted(<<>>,
-							0, 0, F1, F2, _) ->
-    #'CreatePersistentSubscriptionCompleted'{result = F1,
-					     reason = F2}.
-
-d_field_CreatePersistentSubscriptionCompleted_result(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, TrUserData)
-    when N < 57 ->
-    d_field_CreatePersistentSubscriptionCompleted_result(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, TrUserData);
-d_field_CreatePersistentSubscriptionCompleted_result(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, _, F2,
-						     TrUserData) ->
+    d_field_TransactionCommitCompleted_result(Rest, N + 7,
+					      X bsl N + Acc, F1, F2, F3, F4, F5,
+					      F6, F7, TrUserData);
+d_field_TransactionCommitCompleted_result(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, _, F3, F4, F5, F6, F7,
+					  TrUserData) ->
     <<Tmp:32/signed-native>> = <<(X bsl N +
 				    Acc):32/unsigned-native>>,
-    NewFValue =
-	'd_enum_CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'(Tmp),
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
-							     0, 0, NewFValue,
-							     F2, TrUserData).
+    NewFValue = d_enum_OperationResult(Tmp),
+    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
+						  0, F1, NewFValue, F3, F4, F5,
+						  F6, F7, TrUserData).
 
 
-d_field_CreatePersistentSubscriptionCompleted_reason(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, TrUserData)
+d_field_TransactionCommitCompleted_message(<<1:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					   TrUserData)
     when N < 57 ->
-    d_field_CreatePersistentSubscriptionCompleted_reason(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, TrUserData);
-d_field_CreatePersistentSubscriptionCompleted_reason(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, _,
-						     TrUserData) ->
+    d_field_TransactionCommitCompleted_message(Rest, N + 7,
+					       X bsl N + Acc, F1, F2, F3, F4,
+					       F5, F6, F7, TrUserData);
+d_field_TransactionCommitCompleted_message(<<0:1, X:7,
+					     Rest/binary>>,
+					   N, Acc, F1, F2, _, F4, F5, F6, F7,
+					   TrUserData) ->
     Len = X bsl N + Acc,
     <<Bytes:Len/binary, Rest2/binary>> = Rest,
     NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest2,
-							     0, 0, F1,
-							     NewFValue,
-							     TrUserData).
+    dfp_read_field_def_TransactionCommitCompleted(Rest2, 0,
+						  0, F1, F2, NewFValue, F4, F5,
+						  F6, F7, TrUserData).
 
 
-skip_varint_CreatePersistentSubscriptionCompleted(<<1:1,
-						    _:7, Rest/binary>>,
-						  Z1, Z2, F1, F2, TrUserData) ->
-    skip_varint_CreatePersistentSubscriptionCompleted(Rest,
-						      Z1, Z2, F1, F2,
-						      TrUserData);
-skip_varint_CreatePersistentSubscriptionCompleted(<<0:1,
-						    _:7, Rest/binary>>,
-						  Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
-							     Z1, Z2, F1, F2,
-							     TrUserData).
-
-
-skip_length_delimited_CreatePersistentSubscriptionCompleted(<<1:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2,
-							    TrUserData)
+d_field_TransactionCommitCompleted_first_event_number(<<1:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, F3, F4,
+						      F5, F6, F7, TrUserData)
     when N < 57 ->
-    skip_length_delimited_CreatePersistentSubscriptionCompleted(Rest,
-								N + 7,
-								X bsl N + Acc,
-								F1, F2,
-								TrUserData);
-skip_length_delimited_CreatePersistentSubscriptionCompleted(<<0:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2,
-							    TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest2,
-							     0, 0, F1, F2,
-							     TrUserData).
-
-
-skip_group_CreatePersistentSubscriptionCompleted(Bin,
-						 FNum, Z2, F1, F2,
-						 TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
-							     0, Z2, F1, F2,
-							     TrUserData).
-
-
-skip_32_CreatePersistentSubscriptionCompleted(<<_:32,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
-							     Z1, Z2, F1, F2,
-							     TrUserData).
-
-
-skip_64_CreatePersistentSubscriptionCompleted(<<_:64,
-						Rest/binary>>,
-					      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_CreatePersistentSubscriptionCompleted(Rest,
-							     Z1, Z2, F1, F2,
-							     TrUserData).
-
-
-d_msg_ReadEvent(Bin, TrUserData) ->
-    dfp_read_field_def_ReadEvent(Bin, 0, 0,
-				 id(undefined, TrUserData),
-				 id(undefined, TrUserData),
-				 id(undefined, TrUserData),
-				 id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_ReadEvent(<<10, Rest/binary>>, Z1,
-			     Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ReadEvent_event_stream_id(Rest, Z1, Z2, F1, F2,
-				      F3, F4, TrUserData);
-dfp_read_field_def_ReadEvent(<<16, Rest/binary>>, Z1,
-			     Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ReadEvent_event_number(Rest, Z1, Z2, F1, F2, F3,
-				   F4, TrUserData);
-dfp_read_field_def_ReadEvent(<<24, Rest/binary>>, Z1,
-			     Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ReadEvent_resolve_link_tos(Rest, Z1, Z2, F1, F2,
-				       F3, F4, TrUserData);
-dfp_read_field_def_ReadEvent(<<32, Rest/binary>>, Z1,
-			     Z2, F1, F2, F3, F4, TrUserData) ->
-    d_field_ReadEvent_require_master(Rest, Z1, Z2, F1, F2,
-				     F3, F4, TrUserData);
-dfp_read_field_def_ReadEvent(<<>>, 0, 0, F1, F2, F3, F4,
-			     _) ->
-    #'ReadEvent'{event_stream_id = F1, event_number = F2,
-		 resolve_link_tos = F3, require_master = F4};
-dfp_read_field_def_ReadEvent(Other, Z1, Z2, F1, F2, F3,
-			     F4, TrUserData) ->
-    dg_read_field_def_ReadEvent(Other, Z1, Z2, F1, F2, F3,
-				F4, TrUserData).
-
-dg_read_field_def_ReadEvent(<<1:1, X:7, Rest/binary>>,
-			    N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_ReadEvent(Rest, N + 7, X bsl N + Acc,
-				F1, F2, F3, F4, TrUserData);
-dg_read_field_def_ReadEvent(<<0:1, X:7, Rest/binary>>,
-			    N, Acc, F1, F2, F3, F4, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_ReadEvent_event_stream_id(Rest, 0, 0, F1, F2,
-					    F3, F4, TrUserData);
-      16 ->
-	  d_field_ReadEvent_event_number(Rest, 0, 0, F1, F2, F3,
-					 F4, TrUserData);
-      24 ->
-	  d_field_ReadEvent_resolve_link_tos(Rest, 0, 0, F1, F2,
-					     F3, F4, TrUserData);
-      32 ->
-	  d_field_ReadEvent_require_master(Rest, 0, 0, F1, F2, F3,
-					   F4, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_ReadEvent(Rest, 0, 0, F1, F2, F3, F4,
-				      TrUserData);
-	    1 ->
-		skip_64_ReadEvent(Rest, 0, 0, F1, F2, F3, F4,
-				  TrUserData);
-	    2 ->
-		skip_length_delimited_ReadEvent(Rest, 0, 0, F1, F2, F3,
-						F4, TrUserData);
-	    3 ->
-		skip_group_ReadEvent(Rest, Key bsr 3, 0, F1, F2, F3, F4,
-				     TrUserData);
-	    5 ->
-		skip_32_ReadEvent(Rest, 0, 0, F1, F2, F3, F4,
-				  TrUserData)
-	  end
-    end;
-dg_read_field_def_ReadEvent(<<>>, 0, 0, F1, F2, F3, F4,
-			    _) ->
-    #'ReadEvent'{event_stream_id = F1, event_number = F2,
-		 resolve_link_tos = F3, require_master = F4}.
-
-d_field_ReadEvent_event_stream_id(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ReadEvent_event_stream_id(Rest, N + 7,
-				      X bsl N + Acc, F1, F2, F3, F4,
-				      TrUserData);
-d_field_ReadEvent_event_stream_id(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, _, F2, F3, F4, TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_ReadEvent(Rest2, 0, 0, NewFValue, F2,
-				 F3, F4, TrUserData).
-
-
-d_field_ReadEvent_event_number(<<1:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, F2, F3, F4, TrUserData)
-    when N < 57 ->
-    d_field_ReadEvent_event_number(Rest, N + 7,
-				   X bsl N + Acc, F1, F2, F3, F4, TrUserData);
-d_field_ReadEvent_event_number(<<0:1, X:7,
-				 Rest/binary>>,
-			       N, Acc, F1, _, F3, F4, TrUserData) ->
+    d_field_TransactionCommitCompleted_first_event_number(Rest,
+							  N + 7, X bsl N + Acc,
+							  F1, F2, F3, F4, F5,
+							  F6, F7, TrUserData);
+d_field_TransactionCommitCompleted_first_event_number(<<0:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, F3, _, F5,
+						      F6, F7, TrUserData) ->
     <<NewFValue:32/signed-native>> = <<(X bsl N +
 					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_ReadEvent(Rest, 0, 0, F1, NewFValue,
-				 F3, F4, TrUserData).
+    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
+						  0, F1, F2, F3, NewFValue, F5,
+						  F6, F7, TrUserData).
 
 
-d_field_ReadEvent_resolve_link_tos(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, TrUserData)
+d_field_TransactionCommitCompleted_last_event_number(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, F7, TrUserData)
     when N < 57 ->
-    d_field_ReadEvent_resolve_link_tos(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, F4,
-				       TrUserData);
-d_field_ReadEvent_resolve_link_tos(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, _, F4, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_ReadEvent(Rest, 0, 0, F1, F2,
-				 NewFValue, F4, TrUserData).
+    d_field_TransactionCommitCompleted_last_event_number(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, F3, F4, F5, F6,
+							 F7, TrUserData);
+d_field_TransactionCommitCompleted_last_event_number(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, _,
+						     F6, F7, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
+						  0, F1, F2, F3, F4, NewFValue,
+						  F6, F7, TrUserData).
 
 
-d_field_ReadEvent_require_master(<<1:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, F2, F3, F4, TrUserData)
+d_field_TransactionCommitCompleted_prepare_position(<<1:1,
+						      X:7, Rest/binary>>,
+						    N, Acc, F1, F2, F3, F4, F5,
+						    F6, F7, TrUserData)
     when N < 57 ->
-    d_field_ReadEvent_require_master(Rest, N + 7,
-				     X bsl N + Acc, F1, F2, F3, F4, TrUserData);
-d_field_ReadEvent_require_master(<<0:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F1, F2, F3, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_ReadEvent(Rest, 0, 0, F1, F2, F3,
-				 NewFValue, TrUserData).
+    d_field_TransactionCommitCompleted_prepare_position(Rest,
+							N + 7, X bsl N + Acc,
+							F1, F2, F3, F4, F5, F6,
+							F7, TrUserData);
+d_field_TransactionCommitCompleted_prepare_position(<<0:1,
+						      X:7, Rest/binary>>,
+						    N, Acc, F1, F2, F3, F4, F5,
+						    _, F7, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
+						  0, F1, F2, F3, F4, F5,
+						  NewFValue, F7, TrUserData).
 
 
-skip_varint_ReadEvent(<<1:1, _:7, Rest/binary>>, Z1, Z2,
-		      F1, F2, F3, F4, TrUserData) ->
-    skip_varint_ReadEvent(Rest, Z1, Z2, F1, F2, F3, F4,
-			  TrUserData);
-skip_varint_ReadEvent(<<0:1, _:7, Rest/binary>>, Z1, Z2,
-		      F1, F2, F3, F4, TrUserData) ->
-    dfp_read_field_def_ReadEvent(Rest, Z1, Z2, F1, F2, F3,
-				 F4, TrUserData).
-
-
-skip_length_delimited_ReadEvent(<<1:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, F4, TrUserData)
+d_field_TransactionCommitCompleted_commit_position(<<1:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, F2, F3, F4, F5,
+						   F6, F7, TrUserData)
     when N < 57 ->
-    skip_length_delimited_ReadEvent(Rest, N + 7,
-				    X bsl N + Acc, F1, F2, F3, F4, TrUserData);
-skip_length_delimited_ReadEvent(<<0:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, F4, TrUserData) ->
+    d_field_TransactionCommitCompleted_commit_position(Rest,
+						       N + 7, X bsl N + Acc, F1,
+						       F2, F3, F4, F5, F6, F7,
+						       TrUserData);
+d_field_TransactionCommitCompleted_commit_position(<<0:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, F2, F3, F4, F5,
+						   F6, _, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
+						  0, F1, F2, F3, F4, F5, F6,
+						  NewFValue, TrUserData).
+
+
+skip_varint_TransactionCommitCompleted(<<1:1, _:7,
+					 Rest/binary>>,
+				       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+				       TrUserData) ->
+    skip_varint_TransactionCommitCompleted(Rest, Z1, Z2, F1,
+					   F2, F3, F4, F5, F6, F7, TrUserData);
+skip_varint_TransactionCommitCompleted(<<0:1, _:7,
+					 Rest/binary>>,
+				       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+				       TrUserData) ->
+    dfp_read_field_def_TransactionCommitCompleted(Rest, Z1,
+						  Z2, F1, F2, F3, F4, F5, F6,
+						  F7, TrUserData).
+
+
+skip_length_delimited_TransactionCommitCompleted(<<1:1,
+						   X:7, Rest/binary>>,
+						 N, Acc, F1, F2, F3, F4, F5, F6,
+						 F7, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_TransactionCommitCompleted(Rest,
+						     N + 7, X bsl N + Acc, F1,
+						     F2, F3, F4, F5, F6, F7,
+						     TrUserData);
+skip_length_delimited_TransactionCommitCompleted(<<0:1,
+						   X:7, Rest/binary>>,
+						 N, Acc, F1, F2, F3, F4, F5, F6,
+						 F7, TrUserData) ->
     Length = X bsl N + Acc,
     <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_ReadEvent(Rest2, 0, 0, F1, F2, F3,
-				 F4, TrUserData).
+    dfp_read_field_def_TransactionCommitCompleted(Rest2, 0,
+						  0, F1, F2, F3, F4, F5, F6, F7,
+						  TrUserData).
 
 
-skip_group_ReadEvent(Bin, FNum, Z2, F1, F2, F3, F4,
-		     TrUserData) ->
+skip_group_TransactionCommitCompleted(Bin, FNum, Z2, F1,
+				      F2, F3, F4, F5, F6, F7, TrUserData) ->
     {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_ReadEvent(Rest, 0, Z2, F1, F2, F3,
-				 F4, TrUserData).
+    dfp_read_field_def_TransactionCommitCompleted(Rest, 0,
+						  Z2, F1, F2, F3, F4, F5, F6,
+						  F7, TrUserData).
 
 
-skip_32_ReadEvent(<<_:32, Rest/binary>>, Z1, Z2, F1, F2,
-		  F3, F4, TrUserData) ->
-    dfp_read_field_def_ReadEvent(Rest, Z1, Z2, F1, F2, F3,
-				 F4, TrUserData).
+skip_32_TransactionCommitCompleted(<<_:32,
+				     Rest/binary>>,
+				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+				   TrUserData) ->
+    dfp_read_field_def_TransactionCommitCompleted(Rest, Z1,
+						  Z2, F1, F2, F3, F4, F5, F6,
+						  F7, TrUserData).
 
 
-skip_64_ReadEvent(<<_:64, Rest/binary>>, Z1, Z2, F1, F2,
-		  F3, F4, TrUserData) ->
-    dfp_read_field_def_ReadEvent(Rest, Z1, Z2, F1, F2, F3,
-				 F4, TrUserData).
+skip_64_TransactionCommitCompleted(<<_:64,
+				     Rest/binary>>,
+				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+				   TrUserData) ->
+    dfp_read_field_def_TransactionCommitCompleted(Rest, Z1,
+						  Z2, F1, F2, F3, F4, F5, F6,
+						  F7, TrUserData).
 
 
-d_msg_UpdatePersistentSubscriptionCompleted(Bin,
+d_msg_PersistentSubscriptionAckEvents(Bin,
+				      TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Bin,
+						       0, 0,
+						       id(undefined,
+							  TrUserData),
+						       id([], TrUserData),
+						       TrUserData).
+
+dfp_read_field_def_PersistentSubscriptionAckEvents(<<10,
+						     Rest/binary>>,
+						   Z1, Z2, F1, F2,
+						   TrUserData) ->
+    d_field_PersistentSubscriptionAckEvents_subscription_id(Rest,
+							    Z1, Z2, F1, F2,
+							    TrUserData);
+dfp_read_field_def_PersistentSubscriptionAckEvents(<<18,
+						     Rest/binary>>,
+						   Z1, Z2, F1, F2,
+						   TrUserData) ->
+    d_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
+								Z1, Z2, F1, F2,
+								TrUserData);
+dfp_read_field_def_PersistentSubscriptionAckEvents(<<>>,
+						   0, 0, F1, F2, TrUserData) ->
+    #'PersistentSubscriptionAckEvents'{subscription_id = F1,
+				       processed_event_ids =
+					   lists_reverse(F2, TrUserData)};
+dfp_read_field_def_PersistentSubscriptionAckEvents(Other,
+						   Z1, Z2, F1, F2,
+						   TrUserData) ->
+    dg_read_field_def_PersistentSubscriptionAckEvents(Other,
+						      Z1, Z2, F1, F2,
+						      TrUserData).
+
+dg_read_field_def_PersistentSubscriptionAckEvents(<<1:1,
+						    X:7, Rest/binary>>,
+						  N, Acc, F1, F2, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_PersistentSubscriptionAckEvents(Rest,
+						      N + 7, X bsl N + Acc, F1,
+						      F2, TrUserData);
+dg_read_field_def_PersistentSubscriptionAckEvents(<<0:1,
+						    X:7, Rest/binary>>,
+						  N, Acc, F1, F2, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_PersistentSubscriptionAckEvents_subscription_id(Rest,
+								  0, 0, F1, F2,
+								  TrUserData);
+      18 ->
+	  d_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
+								      0, 0, F1,
+								      F2,
+								      TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_PersistentSubscriptionAckEvents(Rest, 0, 0,
+							    F1, F2, TrUserData);
+	    1 ->
+		skip_64_PersistentSubscriptionAckEvents(Rest, 0, 0, F1,
+							F2, TrUserData);
+	    2 ->
+		skip_length_delimited_PersistentSubscriptionAckEvents(Rest,
+								      0, 0, F1,
+								      F2,
+								      TrUserData);
+	    3 ->
+		skip_group_PersistentSubscriptionAckEvents(Rest,
+							   Key bsr 3, 0, F1, F2,
+							   TrUserData);
+	    5 ->
+		skip_32_PersistentSubscriptionAckEvents(Rest, 0, 0, F1,
+							F2, TrUserData)
+	  end
+    end;
+dg_read_field_def_PersistentSubscriptionAckEvents(<<>>,
+						  0, 0, F1, F2, TrUserData) ->
+    #'PersistentSubscriptionAckEvents'{subscription_id = F1,
+				       processed_event_ids =
+					   lists_reverse(F2, TrUserData)}.
+
+d_field_PersistentSubscriptionAckEvents_subscription_id(<<1:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, F2,
+							TrUserData)
+    when N < 57 ->
+    d_field_PersistentSubscriptionAckEvents_subscription_id(Rest,
+							    N + 7,
+							    X bsl N + Acc, F1,
+							    F2, TrUserData);
+d_field_PersistentSubscriptionAckEvents_subscription_id(<<0:1,
+							  X:7, Rest/binary>>,
+							N, Acc, _, F2,
+							TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest2,
+						       0, 0, NewFValue, F2,
+						       TrUserData).
+
+
+d_field_PersistentSubscriptionAckEvents_processed_event_ids(<<1:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2,
+							    TrUserData)
+    when N < 57 ->
+    d_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
+								N + 7,
+								X bsl N + Acc,
+								F1, F2,
+								TrUserData);
+d_field_PersistentSubscriptionAckEvents_processed_event_ids(<<0:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2,
+							    TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest2,
+						       0, 0, F1,
+						       cons(NewFValue, F2,
+							    TrUserData),
+						       TrUserData).
+
+
+skip_varint_PersistentSubscriptionAckEvents(<<1:1, _:7,
+					      Rest/binary>>,
+					    Z1, Z2, F1, F2, TrUserData) ->
+    skip_varint_PersistentSubscriptionAckEvents(Rest, Z1,
+						Z2, F1, F2, TrUserData);
+skip_varint_PersistentSubscriptionAckEvents(<<0:1, _:7,
+					      Rest/binary>>,
+					    Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
+						       Z1, Z2, F1, F2,
+						       TrUserData).
+
+
+skip_length_delimited_PersistentSubscriptionAckEvents(<<1:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2,
+						      TrUserData)
+    when N < 57 ->
+    skip_length_delimited_PersistentSubscriptionAckEvents(Rest,
+							  N + 7, X bsl N + Acc,
+							  F1, F2, TrUserData);
+skip_length_delimited_PersistentSubscriptionAckEvents(<<0:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2,
+						      TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest2,
+						       0, 0, F1, F2,
+						       TrUserData).
+
+
+skip_group_PersistentSubscriptionAckEvents(Bin, FNum,
+					   Z2, F1, F2, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
+						       0, Z2, F1, F2,
+						       TrUserData).
+
+
+skip_32_PersistentSubscriptionAckEvents(<<_:32,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
+						       Z1, Z2, F1, F2,
+						       TrUserData).
+
+
+skip_64_PersistentSubscriptionAckEvents(<<_:64,
+					  Rest/binary>>,
+					Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
+						       Z1, Z2, F1, F2,
+						       TrUserData).
+
+
+d_msg_DeleteStreamCompleted(Bin, TrUserData) ->
+    dfp_read_field_def_DeleteStreamCompleted(Bin, 0, 0,
+					     id(undefined, TrUserData),
+					     id(<<>>, TrUserData),
+					     id(0, TrUserData),
+					     id(0, TrUserData), TrUserData).
+
+dfp_read_field_def_DeleteStreamCompleted(<<8,
+					   Rest/binary>>,
+					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStreamCompleted_result(Rest, Z1, Z2, F1,
+					 F2, F3, F4, TrUserData);
+dfp_read_field_def_DeleteStreamCompleted(<<18,
+					   Rest/binary>>,
+					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStreamCompleted_message(Rest, Z1, Z2, F1,
+					  F2, F3, F4, TrUserData);
+dfp_read_field_def_DeleteStreamCompleted(<<24,
+					   Rest/binary>>,
+					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStreamCompleted_prepare_position(Rest, Z1,
+						   Z2, F1, F2, F3, F4,
+						   TrUserData);
+dfp_read_field_def_DeleteStreamCompleted(<<32,
+					   Rest/binary>>,
+					 Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    d_field_DeleteStreamCompleted_commit_position(Rest, Z1,
+						  Z2, F1, F2, F3, F4,
+						  TrUserData);
+dfp_read_field_def_DeleteStreamCompleted(<<>>, 0, 0, F1,
+					 F2, F3, F4, _) ->
+    #'DeleteStreamCompleted'{result = F1, message = F2,
+			     prepare_position = F3, commit_position = F4};
+dfp_read_field_def_DeleteStreamCompleted(Other, Z1, Z2,
+					 F1, F2, F3, F4, TrUserData) ->
+    dg_read_field_def_DeleteStreamCompleted(Other, Z1, Z2,
+					    F1, F2, F3, F4, TrUserData).
+
+dg_read_field_def_DeleteStreamCompleted(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_DeleteStreamCompleted(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, F3, F4,
+					    TrUserData);
+dg_read_field_def_DeleteStreamCompleted(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, F4, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_DeleteStreamCompleted_result(Rest, 0, 0, F1, F2,
+					       F3, F4, TrUserData);
+      18 ->
+	  d_field_DeleteStreamCompleted_message(Rest, 0, 0, F1,
+						F2, F3, F4, TrUserData);
+      24 ->
+	  d_field_DeleteStreamCompleted_prepare_position(Rest, 0,
+							 0, F1, F2, F3, F4,
+							 TrUserData);
+      32 ->
+	  d_field_DeleteStreamCompleted_commit_position(Rest, 0,
+							0, F1, F2, F3, F4,
+							TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_DeleteStreamCompleted(Rest, 0, 0, F1, F2,
+						  F3, F4, TrUserData);
+	    1 ->
+		skip_64_DeleteStreamCompleted(Rest, 0, 0, F1, F2, F3,
+					      F4, TrUserData);
+	    2 ->
+		skip_length_delimited_DeleteStreamCompleted(Rest, 0, 0,
+							    F1, F2, F3, F4,
+							    TrUserData);
+	    3 ->
+		skip_group_DeleteStreamCompleted(Rest, Key bsr 3, 0, F1,
+						 F2, F3, F4, TrUserData);
+	    5 ->
+		skip_32_DeleteStreamCompleted(Rest, 0, 0, F1, F2, F3,
+					      F4, TrUserData)
+	  end
+    end;
+dg_read_field_def_DeleteStreamCompleted(<<>>, 0, 0, F1,
+					F2, F3, F4, _) ->
+    #'DeleteStreamCompleted'{result = F1, message = F2,
+			     prepare_position = F3, commit_position = F4}.
+
+d_field_DeleteStreamCompleted_result(<<1:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_DeleteStreamCompleted_result(Rest, N + 7,
+					 X bsl N + Acc, F1, F2, F3, F4,
+					 TrUserData);
+d_field_DeleteStreamCompleted_result(<<0:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, _, F2, F3, F4, TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue = d_enum_OperationResult(Tmp),
+    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, 0,
+					     NewFValue, F2, F3, F4, TrUserData).
+
+
+d_field_DeleteStreamCompleted_message(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    d_field_DeleteStreamCompleted_message(Rest, N + 7,
+					  X bsl N + Acc, F1, F2, F3, F4,
+					  TrUserData);
+d_field_DeleteStreamCompleted_message(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, _, F3, F4, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_DeleteStreamCompleted(Rest2, 0, 0,
+					     F1, NewFValue, F3, F4, TrUserData).
+
+
+d_field_DeleteStreamCompleted_prepare_position(<<1:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, F3, F4,
+					       TrUserData)
+    when N < 57 ->
+    d_field_DeleteStreamCompleted_prepare_position(Rest,
+						   N + 7, X bsl N + Acc, F1, F2,
+						   F3, F4, TrUserData);
+d_field_DeleteStreamCompleted_prepare_position(<<0:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, _, F4,
+					       TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, 0, F1,
+					     F2, NewFValue, F4, TrUserData).
+
+
+d_field_DeleteStreamCompleted_commit_position(<<1:1,
+						X:7, Rest/binary>>,
+					      N, Acc, F1, F2, F3, F4,
+					      TrUserData)
+    when N < 57 ->
+    d_field_DeleteStreamCompleted_commit_position(Rest,
+						  N + 7, X bsl N + Acc, F1, F2,
+						  F3, F4, TrUserData);
+d_field_DeleteStreamCompleted_commit_position(<<0:1,
+						X:7, Rest/binary>>,
+					      N, Acc, F1, F2, F3, _,
+					      TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, 0, F1,
+					     F2, F3, NewFValue, TrUserData).
+
+
+skip_varint_DeleteStreamCompleted(<<1:1, _:7,
+				    Rest/binary>>,
+				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    skip_varint_DeleteStreamCompleted(Rest, Z1, Z2, F1, F2,
+				      F3, F4, TrUserData);
+skip_varint_DeleteStreamCompleted(<<0:1, _:7,
+				    Rest/binary>>,
+				  Z1, Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_DeleteStreamCompleted(Rest, Z1, Z2,
+					     F1, F2, F3, F4, TrUserData).
+
+
+skip_length_delimited_DeleteStreamCompleted(<<1:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, F1, F2, F3, F4, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_DeleteStreamCompleted(Rest, N + 7,
+						X bsl N + Acc, F1, F2, F3, F4,
+						TrUserData);
+skip_length_delimited_DeleteStreamCompleted(<<0:1, X:7,
+					      Rest/binary>>,
+					    N, Acc, F1, F2, F3, F4,
 					    TrUserData) ->
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Bin,
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_DeleteStreamCompleted(Rest2, 0, 0,
+					     F1, F2, F3, F4, TrUserData).
+
+
+skip_group_DeleteStreamCompleted(Bin, FNum, Z2, F1, F2,
+				 F3, F4, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_DeleteStreamCompleted(Rest, 0, Z2,
+					     F1, F2, F3, F4, TrUserData).
+
+
+skip_32_DeleteStreamCompleted(<<_:32, Rest/binary>>, Z1,
+			      Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_DeleteStreamCompleted(Rest, Z1, Z2,
+					     F1, F2, F3, F4, TrUserData).
+
+
+skip_64_DeleteStreamCompleted(<<_:64, Rest/binary>>, Z1,
+			      Z2, F1, F2, F3, F4, TrUserData) ->
+    dfp_read_field_def_DeleteStreamCompleted(Rest, Z1, Z2,
+					     F1, F2, F3, F4, TrUserData).
+
+
+d_msg_CreatePersistentSubscription(Bin, TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscription(Bin, 0,
+						    0,
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(undefined, TrUserData),
+						    id(<<>>, TrUserData),
+						    TrUserData).
+
+dfp_read_field_def_CreatePersistentSubscription(<<10,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_subscription_group_name(Rest,
+								 Z1, Z2, F1, F2,
+								 F3, F4, F5, F6,
+								 F7, F8, F9,
+								 F10, F11, F12,
+								 F13, F14, F15,
+								 F16,
+								 TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<18,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_event_stream_id(Rest,
+							 Z1, Z2, F1, F2, F3, F4,
+							 F5, F6, F7, F8, F9,
+							 F10, F11, F12, F13,
+							 F14, F15, F16,
+							 TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<24,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_resolve_link_tos(Rest,
+							  Z1, Z2, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12,
+							  F13, F14, F15, F16,
+							  TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<32,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_start_from(Rest,
+						    Z1, Z2, F1, F2, F3, F4, F5,
+						    F6, F7, F8, F9, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<40,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_message_timeout_milliseconds(Rest,
+								      Z1, Z2,
+								      F1, F2,
+								      F3, F4,
+								      F5, F6,
+								      F7, F8,
+								      F9, F10,
+								      F11, F12,
+								      F13, F14,
+								      F15, F16,
+								      TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<48,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_record_statistics(Rest,
+							   Z1, Z2, F1, F2, F3,
+							   F4, F5, F6, F7, F8,
+							   F9, F10, F11, F12,
+							   F13, F14, F15, F16,
+							   TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<56,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_live_buffer_size(Rest,
+							  Z1, Z2, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12,
+							  F13, F14, F15, F16,
+							  TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<64,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_read_batch_size(Rest,
+							 Z1, Z2, F1, F2, F3, F4,
+							 F5, F6, F7, F8, F9,
+							 F10, F11, F12, F13,
+							 F14, F15, F16,
+							 TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<72,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_buffer_size(Rest,
+						     Z1, Z2, F1, F2, F3, F4, F5,
+						     F6, F7, F8, F9, F10, F11,
+						     F12, F13, F14, F15, F16,
+						     TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<80,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_max_retry_count(Rest,
+							 Z1, Z2, F1, F2, F3, F4,
+							 F5, F6, F7, F8, F9,
+							 F10, F11, F12, F13,
+							 F14, F15, F16,
+							 TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<88,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_prefer_round_robin(Rest,
+							    Z1, Z2, F1, F2, F3,
+							    F4, F5, F6, F7, F8,
+							    F9, F10, F11, F12,
+							    F13, F14, F15, F16,
+							    TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<96,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_checkpoint_after_time(Rest,
+							       Z1, Z2, F1, F2,
+							       F3, F4, F5, F6,
+							       F7, F8, F9, F10,
+							       F11, F12, F13,
+							       F14, F15, F16,
+							       TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<104,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_checkpoint_max_count(Rest,
+							      Z1, Z2, F1, F2,
+							      F3, F4, F5, F6,
+							      F7, F8, F9, F10,
+							      F11, F12, F13,
+							      F14, F15, F16,
+							      TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<112,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_checkpoint_min_count(Rest,
+							      Z1, Z2, F1, F2,
+							      F3, F4, F5, F6,
+							      F7, F8, F9, F10,
+							      F11, F12, F13,
+							      F14, F15, F16,
+							      TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<120,
+						  Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_subscriber_max_count(Rest,
+							      Z1, Z2, F1, F2,
+							      F3, F4, F5, F6,
+							      F7, F8, F9, F10,
+							      F11, F12, F13,
+							      F14, F15, F16,
+							      TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<130,
+						  1, Rest/binary>>,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    d_field_CreatePersistentSubscription_named_consumer_strategy(Rest,
+								 Z1, Z2, F1, F2,
+								 F3, F4, F5, F6,
+								 F7, F8, F9,
+								 F10, F11, F12,
+								 F13, F14, F15,
+								 F16,
+								 TrUserData);
+dfp_read_field_def_CreatePersistentSubscription(<<>>, 0,
+						0, F1, F2, F3, F4, F5, F6, F7,
+						F8, F9, F10, F11, F12, F13, F14,
+						F15, F16, _) ->
+    #'CreatePersistentSubscription'{subscription_group_name
+					= F1,
+				    event_stream_id = F2, resolve_link_tos = F3,
+				    start_from = F4,
+				    message_timeout_milliseconds = F5,
+				    record_statistics = F6,
+				    live_buffer_size = F7, read_batch_size = F8,
+				    buffer_size = F9, max_retry_count = F10,
+				    prefer_round_robin = F11,
+				    checkpoint_after_time = F12,
+				    checkpoint_max_count = F13,
+				    checkpoint_min_count = F14,
+				    subscriber_max_count = F15,
+				    named_consumer_strategy = F16};
+dfp_read_field_def_CreatePersistentSubscription(Other,
+						Z1, Z2, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    dg_read_field_def_CreatePersistentSubscription(Other,
+						   Z1, Z2, F1, F2, F3, F4, F5,
+						   F6, F7, F8, F9, F10, F11,
+						   F12, F13, F14, F15, F16,
+						   TrUserData).
+
+dg_read_field_def_CreatePersistentSubscription(<<1:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, F3, F4, F5, F6,
+					       F7, F8, F9, F10, F11, F12, F13,
+					       F14, F15, F16, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_CreatePersistentSubscription(Rest,
+						   N + 7, X bsl N + Acc, F1, F2,
+						   F3, F4, F5, F6, F7, F8, F9,
+						   F10, F11, F12, F13, F14, F15,
+						   F16, TrUserData);
+dg_read_field_def_CreatePersistentSubscription(<<0:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, F3, F4, F5, F6,
+					       F7, F8, F9, F10, F11, F12, F13,
+					       F14, F15, F16, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  d_field_CreatePersistentSubscription_subscription_group_name(Rest,
+								       0, 0, F1,
+								       F2, F3,
+								       F4, F5,
+								       F6, F7,
+								       F8, F9,
+								       F10, F11,
+								       F12, F13,
+								       F14, F15,
+								       F16,
+								       TrUserData);
+      18 ->
+	  d_field_CreatePersistentSubscription_event_stream_id(Rest,
+							       0, 0, F1, F2, F3,
+							       F4, F5, F6, F7,
+							       F8, F9, F10, F11,
+							       F12, F13, F14,
+							       F15, F16,
+							       TrUserData);
+      24 ->
+	  d_field_CreatePersistentSubscription_resolve_link_tos(Rest,
+								0, 0, F1, F2,
+								F3, F4, F5, F6,
+								F7, F8, F9, F10,
+								F11, F12, F13,
+								F14, F15, F16,
+								TrUserData);
+      32 ->
+	  d_field_CreatePersistentSubscription_start_from(Rest, 0,
+							  0, F1, F2, F3, F4, F5,
+							  F6, F7, F8, F9, F10,
+							  F11, F12, F13, F14,
+							  F15, F16, TrUserData);
+      40 ->
+	  d_field_CreatePersistentSubscription_message_timeout_milliseconds(Rest,
+									    0,
+									    0,
+									    F1,
+									    F2,
+									    F3,
+									    F4,
+									    F5,
+									    F6,
+									    F7,
+									    F8,
+									    F9,
+									    F10,
+									    F11,
+									    F12,
+									    F13,
+									    F14,
+									    F15,
+									    F16,
+									    TrUserData);
+      48 ->
+	  d_field_CreatePersistentSubscription_record_statistics(Rest,
+								 0, 0, F1, F2,
+								 F3, F4, F5, F6,
+								 F7, F8, F9,
+								 F10, F11, F12,
+								 F13, F14, F15,
+								 F16,
+								 TrUserData);
+      56 ->
+	  d_field_CreatePersistentSubscription_live_buffer_size(Rest,
+								0, 0, F1, F2,
+								F3, F4, F5, F6,
+								F7, F8, F9, F10,
+								F11, F12, F13,
+								F14, F15, F16,
+								TrUserData);
+      64 ->
+	  d_field_CreatePersistentSubscription_read_batch_size(Rest,
+							       0, 0, F1, F2, F3,
+							       F4, F5, F6, F7,
+							       F8, F9, F10, F11,
+							       F12, F13, F14,
+							       F15, F16,
+							       TrUserData);
+      72 ->
+	  d_field_CreatePersistentSubscription_buffer_size(Rest,
+							   0, 0, F1, F2, F3, F4,
+							   F5, F6, F7, F8, F9,
+							   F10, F11, F12, F13,
+							   F14, F15, F16,
+							   TrUserData);
+      80 ->
+	  d_field_CreatePersistentSubscription_max_retry_count(Rest,
+							       0, 0, F1, F2, F3,
+							       F4, F5, F6, F7,
+							       F8, F9, F10, F11,
+							       F12, F13, F14,
+							       F15, F16,
+							       TrUserData);
+      88 ->
+	  d_field_CreatePersistentSubscription_prefer_round_robin(Rest,
+								  0, 0, F1, F2,
+								  F3, F4, F5,
+								  F6, F7, F8,
+								  F9, F10, F11,
+								  F12, F13, F14,
+								  F15, F16,
+								  TrUserData);
+      96 ->
+	  d_field_CreatePersistentSubscription_checkpoint_after_time(Rest,
+								     0, 0, F1,
+								     F2, F3, F4,
+								     F5, F6, F7,
+								     F8, F9,
+								     F10, F11,
+								     F12, F13,
+								     F14, F15,
+								     F16,
+								     TrUserData);
+      104 ->
+	  d_field_CreatePersistentSubscription_checkpoint_max_count(Rest,
+								    0, 0, F1,
+								    F2, F3, F4,
+								    F5, F6, F7,
+								    F8, F9, F10,
+								    F11, F12,
+								    F13, F14,
+								    F15, F16,
+								    TrUserData);
+      112 ->
+	  d_field_CreatePersistentSubscription_checkpoint_min_count(Rest,
+								    0, 0, F1,
+								    F2, F3, F4,
+								    F5, F6, F7,
+								    F8, F9, F10,
+								    F11, F12,
+								    F13, F14,
+								    F15, F16,
+								    TrUserData);
+      120 ->
+	  d_field_CreatePersistentSubscription_subscriber_max_count(Rest,
+								    0, 0, F1,
+								    F2, F3, F4,
+								    F5, F6, F7,
+								    F8, F9, F10,
+								    F11, F12,
+								    F13, F14,
+								    F15, F16,
+								    TrUserData);
+      130 ->
+	  d_field_CreatePersistentSubscription_named_consumer_strategy(Rest,
+								       0, 0, F1,
+								       F2, F3,
+								       F4, F5,
+								       F6, F7,
+								       F8, F9,
+								       F10, F11,
+								       F12, F13,
+								       F14, F15,
+								       F16,
+								       TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_CreatePersistentSubscription(Rest, 0, 0, F1,
+							 F2, F3, F4, F5, F6, F7,
+							 F8, F9, F10, F11, F12,
+							 F13, F14, F15, F16,
+							 TrUserData);
+	    1 ->
+		skip_64_CreatePersistentSubscription(Rest, 0, 0, F1, F2,
+						     F3, F4, F5, F6, F7, F8, F9,
+						     F10, F11, F12, F13, F14,
+						     F15, F16, TrUserData);
+	    2 ->
+		skip_length_delimited_CreatePersistentSubscription(Rest,
+								   0, 0, F1, F2,
+								   F3, F4, F5,
+								   F6, F7, F8,
+								   F9, F10, F11,
+								   F12, F13,
+								   F14, F15,
+								   F16,
+								   TrUserData);
+	    3 ->
+		skip_group_CreatePersistentSubscription(Rest, Key bsr 3,
+							0, F1, F2, F3, F4, F5,
+							F6, F7, F8, F9, F10,
+							F11, F12, F13, F14, F15,
+							F16, TrUserData);
+	    5 ->
+		skip_32_CreatePersistentSubscription(Rest, 0, 0, F1, F2,
+						     F3, F4, F5, F6, F7, F8, F9,
+						     F10, F11, F12, F13, F14,
+						     F15, F16, TrUserData)
+	  end
+    end;
+dg_read_field_def_CreatePersistentSubscription(<<>>, 0,
+					       0, F1, F2, F3, F4, F5, F6, F7,
+					       F8, F9, F10, F11, F12, F13, F14,
+					       F15, F16, _) ->
+    #'CreatePersistentSubscription'{subscription_group_name
+					= F1,
+				    event_stream_id = F2, resolve_link_tos = F3,
+				    start_from = F4,
+				    message_timeout_milliseconds = F5,
+				    record_statistics = F6,
+				    live_buffer_size = F7, read_batch_size = F8,
+				    buffer_size = F9, max_retry_count = F10,
+				    prefer_round_robin = F11,
+				    checkpoint_after_time = F12,
+				    checkpoint_max_count = F13,
+				    checkpoint_min_count = F14,
+				    subscriber_max_count = F15,
+				    named_consumer_strategy = F16}.
+
+d_field_CreatePersistentSubscription_subscription_group_name(<<1:1,
+							       X:7,
+							       Rest/binary>>,
+							     N, Acc, F1, F2, F3,
+							     F4, F5, F6, F7, F8,
+							     F9, F10, F11, F12,
+							     F13, F14, F15, F16,
+							     TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_subscription_group_name(Rest,
+								 N + 7,
+								 X bsl N + Acc,
+								 F1, F2, F3, F4,
+								 F5, F6, F7, F8,
+								 F9, F10, F11,
+								 F12, F13, F14,
+								 F15, F16,
+								 TrUserData);
+d_field_CreatePersistentSubscription_subscription_group_name(<<0:1,
+							       X:7,
+							       Rest/binary>>,
+							     N, Acc, _, F2, F3,
+							     F4, F5, F6, F7, F8,
+							     F9, F10, F11, F12,
+							     F13, F14, F15, F16,
+							     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_CreatePersistentSubscription(Rest2,
+						    0, 0, NewFValue, F2, F3, F4,
+						    F5, F6, F7, F8, F9, F10,
+						    F11, F12, F13, F14, F15,
+						    F16, TrUserData).
+
+
+d_field_CreatePersistentSubscription_event_stream_id(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, F7, F8, F9, F10, F11,
+						     F12, F13, F14, F15, F16,
+						     TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_event_stream_id(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, F3, F4, F5, F6,
+							 F7, F8, F9, F10, F11,
+							 F12, F13, F14, F15,
+							 F16, TrUserData);
+d_field_CreatePersistentSubscription_event_stream_id(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, _, F3, F4, F5,
+						     F6, F7, F8, F9, F10, F11,
+						     F12, F13, F14, F15, F16,
+						     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_CreatePersistentSubscription(Rest2,
+						    0, 0, F1, NewFValue, F3, F4,
+						    F5, F6, F7, F8, F9, F10,
+						    F11, F12, F13, F14, F15,
+						    F16, TrUserData).
+
+
+d_field_CreatePersistentSubscription_resolve_link_tos(<<1:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, F3, F4,
+						      F5, F6, F7, F8, F9, F10,
+						      F11, F12, F13, F14, F15,
+						      F16, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_resolve_link_tos(Rest,
+							  N + 7, X bsl N + Acc,
+							  F1, F2, F3, F4, F5,
+							  F6, F7, F8, F9, F10,
+							  F11, F12, F13, F14,
+							  F15, F16, TrUserData);
+d_field_CreatePersistentSubscription_resolve_link_tos(<<0:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, _, F4, F5,
+						      F6, F7, F8, F9, F10, F11,
+						      F12, F13, F14, F15, F16,
+						      TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, NewFValue, F4,
+						    F5, F6, F7, F8, F9, F10,
+						    F11, F12, F13, F14, F15,
+						    F16, TrUserData).
+
+
+d_field_CreatePersistentSubscription_start_from(<<1:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, F4, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_start_from(Rest,
+						    N + 7, X bsl N + Acc, F1,
+						    F2, F3, F4, F5, F6, F7, F8,
+						    F9, F10, F11, F12, F13, F14,
+						    F15, F16, TrUserData);
+d_field_CreatePersistentSubscription_start_from(<<0:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, _, F5, F6,
+						F7, F8, F9, F10, F11, F12, F13,
+						F14, F15, F16, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, NewFValue,
+						    F5, F6, F7, F8, F9, F10,
+						    F11, F12, F13, F14, F15,
+						    F16, TrUserData).
+
+
+d_field_CreatePersistentSubscription_message_timeout_milliseconds(<<1:1,
+								    X:7,
+								    Rest/binary>>,
+								  N, Acc, F1,
+								  F2, F3, F4,
+								  F5, F6, F7,
+								  F8, F9, F10,
+								  F11, F12, F13,
+								  F14, F15, F16,
+								  TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_message_timeout_milliseconds(Rest,
+								      N + 7,
+								      X bsl N +
+									Acc,
+								      F1, F2,
+								      F3, F4,
+								      F5, F6,
+								      F7, F8,
+								      F9, F10,
+								      F11, F12,
+								      F13, F14,
+								      F15, F16,
+								      TrUserData);
+d_field_CreatePersistentSubscription_message_timeout_milliseconds(<<0:1,
+								    X:7,
+								    Rest/binary>>,
+								  N, Acc, F1,
+								  F2, F3, F4, _,
+								  F6, F7, F8,
+								  F9, F10, F11,
+								  F12, F13, F14,
+								  F15, F16,
+								  TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4,
+						    NewFValue, F6, F7, F8, F9,
+						    F10, F11, F12, F13, F14,
+						    F15, F16, TrUserData).
+
+
+d_field_CreatePersistentSubscription_record_statistics(<<1:1,
+							 X:7, Rest/binary>>,
+						       N, Acc, F1, F2, F3, F4,
+						       F5, F6, F7, F8, F9, F10,
+						       F11, F12, F13, F14, F15,
+						       F16, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_record_statistics(Rest,
+							   N + 7, X bsl N + Acc,
+							   F1, F2, F3, F4, F5,
+							   F6, F7, F8, F9, F10,
+							   F11, F12, F13, F14,
+							   F15, F16,
+							   TrUserData);
+d_field_CreatePersistentSubscription_record_statistics(<<0:1,
+							 X:7, Rest/binary>>,
+						       N, Acc, F1, F2, F3, F4,
+						       F5, _, F7, F8, F9, F10,
+						       F11, F12, F13, F14, F15,
+						       F16, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5,
+						    NewFValue, F7, F8, F9, F10,
+						    F11, F12, F13, F14, F15,
+						    F16, TrUserData).
+
+
+d_field_CreatePersistentSubscription_live_buffer_size(<<1:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, F3, F4,
+						      F5, F6, F7, F8, F9, F10,
+						      F11, F12, F13, F14, F15,
+						      F16, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_live_buffer_size(Rest,
+							  N + 7, X bsl N + Acc,
+							  F1, F2, F3, F4, F5,
+							  F6, F7, F8, F9, F10,
+							  F11, F12, F13, F14,
+							  F15, F16, TrUserData);
+d_field_CreatePersistentSubscription_live_buffer_size(<<0:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, F3, F4,
+						      F5, F6, _, F8, F9, F10,
+						      F11, F12, F13, F14, F15,
+						      F16, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    NewFValue, F8, F9, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_read_batch_size(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, F7, F8, F9, F10, F11,
+						     F12, F13, F14, F15, F16,
+						     TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_read_batch_size(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, F3, F4, F5, F6,
+							 F7, F8, F9, F10, F11,
+							 F12, F13, F14, F15,
+							 F16, TrUserData);
+d_field_CreatePersistentSubscription_read_batch_size(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, F7, _, F9, F10, F11,
+						     F12, F13, F14, F15, F16,
+						     TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, NewFValue, F9, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_buffer_size(<<1:1,
+						   X:7, Rest/binary>>,
+						 N, Acc, F1, F2, F3, F4, F5, F6,
+						 F7, F8, F9, F10, F11, F12, F13,
+						 F14, F15, F16, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_buffer_size(Rest,
+						     N + 7, X bsl N + Acc, F1,
+						     F2, F3, F4, F5, F6, F7, F8,
+						     F9, F10, F11, F12, F13,
+						     F14, F15, F16, TrUserData);
+d_field_CreatePersistentSubscription_buffer_size(<<0:1,
+						   X:7, Rest/binary>>,
+						 N, Acc, F1, F2, F3, F4, F5, F6,
+						 F7, F8, _, F10, F11, F12, F13,
+						 F14, F15, F16, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, F8, NewFValue, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_max_retry_count(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, F7, F8, F9, F10, F11,
+						     F12, F13, F14, F15, F16,
+						     TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_max_retry_count(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, F3, F4, F5, F6,
+							 F7, F8, F9, F10, F11,
+							 F12, F13, F14, F15,
+							 F16, TrUserData);
+d_field_CreatePersistentSubscription_max_retry_count(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, F7, F8, F9, _, F11,
+						     F12, F13, F14, F15, F16,
+						     TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, F8, F9, NewFValue, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_prefer_round_robin(<<1:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, F2, F3, F4,
+							F5, F6, F7, F8, F9, F10,
+							F11, F12, F13, F14, F15,
+							F16, TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_prefer_round_robin(Rest,
+							    N + 7,
+							    X bsl N + Acc, F1,
+							    F2, F3, F4, F5, F6,
+							    F7, F8, F9, F10,
+							    F11, F12, F13, F14,
+							    F15, F16,
+							    TrUserData);
+d_field_CreatePersistentSubscription_prefer_round_robin(<<0:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, F2, F3, F4,
+							F5, F6, F7, F8, F9, F10,
+							_, F12, F13, F14, F15,
+							F16, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, F8, F9, F10, NewFValue,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_checkpoint_after_time(<<1:1,
+							     X:7, Rest/binary>>,
+							   N, Acc, F1, F2, F3,
+							   F4, F5, F6, F7, F8,
+							   F9, F10, F11, F12,
+							   F13, F14, F15, F16,
+							   TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_checkpoint_after_time(Rest,
+							       N + 7,
+							       X bsl N + Acc,
+							       F1, F2, F3, F4,
+							       F5, F6, F7, F8,
+							       F9, F10, F11,
+							       F12, F13, F14,
+							       F15, F16,
+							       TrUserData);
+d_field_CreatePersistentSubscription_checkpoint_after_time(<<0:1,
+							     X:7, Rest/binary>>,
+							   N, Acc, F1, F2, F3,
+							   F4, F5, F6, F7, F8,
+							   F9, F10, F11, _, F13,
+							   F14, F15, F16,
+							   TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, F8, F9, F10, F11,
+						    NewFValue, F13, F14, F15,
+						    F16, TrUserData).
+
+
+d_field_CreatePersistentSubscription_checkpoint_max_count(<<1:1,
+							    X:7, Rest/binary>>,
+							  N, Acc, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12,
+							  F13, F14, F15, F16,
+							  TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_checkpoint_max_count(Rest,
+							      N + 7,
+							      X bsl N + Acc, F1,
+							      F2, F3, F4, F5,
+							      F6, F7, F8, F9,
+							      F10, F11, F12,
+							      F13, F14, F15,
+							      F16, TrUserData);
+d_field_CreatePersistentSubscription_checkpoint_max_count(<<0:1,
+							    X:7, Rest/binary>>,
+							  N, Acc, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12, _,
+							  F14, F15, F16,
+							  TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, F8, F9, F10, F11, F12,
+						    NewFValue, F14, F15, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_checkpoint_min_count(<<1:1,
+							    X:7, Rest/binary>>,
+							  N, Acc, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12,
+							  F13, F14, F15, F16,
+							  TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_checkpoint_min_count(Rest,
+							      N + 7,
+							      X bsl N + Acc, F1,
+							      F2, F3, F4, F5,
+							      F6, F7, F8, F9,
+							      F10, F11, F12,
+							      F13, F14, F15,
+							      F16, TrUserData);
+d_field_CreatePersistentSubscription_checkpoint_min_count(<<0:1,
+							    X:7, Rest/binary>>,
+							  N, Acc, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12,
+							  F13, _, F15, F16,
+							  TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, F8, F9, F10, F11, F12,
+						    F13, NewFValue, F15, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_subscriber_max_count(<<1:1,
+							    X:7, Rest/binary>>,
+							  N, Acc, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12,
+							  F13, F14, F15, F16,
+							  TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_subscriber_max_count(Rest,
+							      N + 7,
+							      X bsl N + Acc, F1,
+							      F2, F3, F4, F5,
+							      F6, F7, F8, F9,
+							      F10, F11, F12,
+							      F13, F14, F15,
+							      F16, TrUserData);
+d_field_CreatePersistentSubscription_subscriber_max_count(<<0:1,
+							    X:7, Rest/binary>>,
+							  N, Acc, F1, F2, F3,
+							  F4, F5, F6, F7, F8,
+							  F9, F10, F11, F12,
+							  F13, F14, _, F16,
+							  TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    0, F1, F2, F3, F4, F5, F6,
+						    F7, F8, F9, F10, F11, F12,
+						    F13, F14, NewFValue, F16,
+						    TrUserData).
+
+
+d_field_CreatePersistentSubscription_named_consumer_strategy(<<1:1,
+							       X:7,
+							       Rest/binary>>,
+							     N, Acc, F1, F2, F3,
+							     F4, F5, F6, F7, F8,
+							     F9, F10, F11, F12,
+							     F13, F14, F15, F16,
+							     TrUserData)
+    when N < 57 ->
+    d_field_CreatePersistentSubscription_named_consumer_strategy(Rest,
+								 N + 7,
+								 X bsl N + Acc,
+								 F1, F2, F3, F4,
+								 F5, F6, F7, F8,
+								 F9, F10, F11,
+								 F12, F13, F14,
+								 F15, F16,
+								 TrUserData);
+d_field_CreatePersistentSubscription_named_consumer_strategy(<<0:1,
+							       X:7,
+							       Rest/binary>>,
+							     N, Acc, F1, F2, F3,
+							     F4, F5, F6, F7, F8,
+							     F9, F10, F11, F12,
+							     F13, F14, F15, _,
+							     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_CreatePersistentSubscription(Rest2,
+						    0, 0, F1, F2, F3, F4, F5,
+						    F6, F7, F8, F9, F10, F11,
+						    F12, F13, F14, F15,
+						    NewFValue, TrUserData).
+
+
+skip_varint_CreatePersistentSubscription(<<1:1, _:7,
+					   Rest/binary>>,
+					 Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8,
+					 F9, F10, F11, F12, F13, F14, F15, F16,
+					 TrUserData) ->
+    skip_varint_CreatePersistentSubscription(Rest, Z1, Z2,
+					     F1, F2, F3, F4, F5, F6, F7, F8, F9,
+					     F10, F11, F12, F13, F14, F15, F16,
+					     TrUserData);
+skip_varint_CreatePersistentSubscription(<<0:1, _:7,
+					   Rest/binary>>,
+					 Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8,
+					 F9, F10, F11, F12, F13, F14, F15, F16,
+					 TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscription(Rest,
+						    Z1, Z2, F1, F2, F3, F4, F5,
+						    F6, F7, F8, F9, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+skip_length_delimited_CreatePersistentSubscription(<<1:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, F2, F3, F4, F5,
+						   F6, F7, F8, F9, F10, F11,
+						   F12, F13, F14, F15, F16,
+						   TrUserData)
+    when N < 57 ->
+    skip_length_delimited_CreatePersistentSubscription(Rest,
+						       N + 7, X bsl N + Acc, F1,
+						       F2, F3, F4, F5, F6, F7,
+						       F8, F9, F10, F11, F12,
+						       F13, F14, F15, F16,
+						       TrUserData);
+skip_length_delimited_CreatePersistentSubscription(<<0:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, F2, F3, F4, F5,
+						   F6, F7, F8, F9, F10, F11,
+						   F12, F13, F14, F15, F16,
+						   TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_CreatePersistentSubscription(Rest2,
+						    0, 0, F1, F2, F3, F4, F5,
+						    F6, F7, F8, F9, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+skip_group_CreatePersistentSubscription(Bin, FNum, Z2,
+					F1, F2, F3, F4, F5, F6, F7, F8, F9, F10,
+					F11, F12, F13, F14, F15, F16,
+					TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_CreatePersistentSubscription(Rest, 0,
+						    Z2, F1, F2, F3, F4, F5, F6,
+						    F7, F8, F9, F10, F11, F12,
+						    F13, F14, F15, F16,
+						    TrUserData).
+
+
+skip_32_CreatePersistentSubscription(<<_:32,
+				       Rest/binary>>,
+				     Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9,
+				     F10, F11, F12, F13, F14, F15, F16,
+				     TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscription(Rest,
+						    Z1, Z2, F1, F2, F3, F4, F5,
+						    F6, F7, F8, F9, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+skip_64_CreatePersistentSubscription(<<_:64,
+				       Rest/binary>>,
+				     Z1, Z2, F1, F2, F3, F4, F5, F6, F7, F8, F9,
+				     F10, F11, F12, F13, F14, F15, F16,
+				     TrUserData) ->
+    dfp_read_field_def_CreatePersistentSubscription(Rest,
+						    Z1, Z2, F1, F2, F3, F4, F5,
+						    F6, F7, F8, F9, F10, F11,
+						    F12, F13, F14, F15, F16,
+						    TrUserData).
+
+
+d_msg_DeletePersistentSubscriptionCompleted(Bin,
+					    TrUserData) ->
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Bin,
 							     0, 0,
 							     id(undefined,
 								TrUserData),
@@ -9606,359 +9727,187 @@ d_msg_UpdatePersistentSubscriptionCompleted(Bin,
 								TrUserData),
 							     TrUserData).
 
-dfp_read_field_def_UpdatePersistentSubscriptionCompleted(<<8,
+dfp_read_field_def_DeletePersistentSubscriptionCompleted(<<8,
 							   Rest/binary>>,
 							 Z1, Z2, F1, F2,
 							 TrUserData) ->
-    d_field_UpdatePersistentSubscriptionCompleted_result(Rest,
+    d_field_DeletePersistentSubscriptionCompleted_result(Rest,
 							 Z1, Z2, F1, F2,
 							 TrUserData);
-dfp_read_field_def_UpdatePersistentSubscriptionCompleted(<<18,
+dfp_read_field_def_DeletePersistentSubscriptionCompleted(<<18,
 							   Rest/binary>>,
 							 Z1, Z2, F1, F2,
 							 TrUserData) ->
-    d_field_UpdatePersistentSubscriptionCompleted_reason(Rest,
+    d_field_DeletePersistentSubscriptionCompleted_reason(Rest,
 							 Z1, Z2, F1, F2,
 							 TrUserData);
-dfp_read_field_def_UpdatePersistentSubscriptionCompleted(<<>>,
+dfp_read_field_def_DeletePersistentSubscriptionCompleted(<<>>,
 							 0, 0, F1, F2, _) ->
-    #'UpdatePersistentSubscriptionCompleted'{result = F1,
+    #'DeletePersistentSubscriptionCompleted'{result = F1,
 					     reason = F2};
-dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Other,
+dfp_read_field_def_DeletePersistentSubscriptionCompleted(Other,
 							 Z1, Z2, F1, F2,
 							 TrUserData) ->
-    dg_read_field_def_UpdatePersistentSubscriptionCompleted(Other,
+    dg_read_field_def_DeletePersistentSubscriptionCompleted(Other,
 							    Z1, Z2, F1, F2,
 							    TrUserData).
 
-dg_read_field_def_UpdatePersistentSubscriptionCompleted(<<1:1,
+dg_read_field_def_DeletePersistentSubscriptionCompleted(<<1:1,
 							  X:7, Rest/binary>>,
 							N, Acc, F1, F2,
 							TrUserData)
     when N < 32 - 7 ->
-    dg_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+    dg_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
 							    N + 7,
 							    X bsl N + Acc, F1,
 							    F2, TrUserData);
-dg_read_field_def_UpdatePersistentSubscriptionCompleted(<<0:1,
+dg_read_field_def_DeletePersistentSubscriptionCompleted(<<0:1,
 							  X:7, Rest/binary>>,
 							N, Acc, F1, F2,
 							TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
       8 ->
-	  d_field_UpdatePersistentSubscriptionCompleted_result(Rest,
+	  d_field_DeletePersistentSubscriptionCompleted_result(Rest,
 							       0, 0, F1, F2,
 							       TrUserData);
       18 ->
-	  d_field_UpdatePersistentSubscriptionCompleted_reason(Rest,
+	  d_field_DeletePersistentSubscriptionCompleted_reason(Rest,
 							       0, 0, F1, F2,
 							       TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
-		skip_varint_UpdatePersistentSubscriptionCompleted(Rest,
+		skip_varint_DeletePersistentSubscriptionCompleted(Rest,
 								  0, 0, F1, F2,
 								  TrUserData);
 	    1 ->
-		skip_64_UpdatePersistentSubscriptionCompleted(Rest, 0,
+		skip_64_DeletePersistentSubscriptionCompleted(Rest, 0,
 							      0, F1, F2,
 							      TrUserData);
 	    2 ->
-		skip_length_delimited_UpdatePersistentSubscriptionCompleted(Rest,
+		skip_length_delimited_DeletePersistentSubscriptionCompleted(Rest,
 									    0,
 									    0,
 									    F1,
 									    F2,
 									    TrUserData);
 	    3 ->
-		skip_group_UpdatePersistentSubscriptionCompleted(Rest,
+		skip_group_DeletePersistentSubscriptionCompleted(Rest,
 								 Key bsr 3, 0,
 								 F1, F2,
 								 TrUserData);
 	    5 ->
-		skip_32_UpdatePersistentSubscriptionCompleted(Rest, 0,
+		skip_32_DeletePersistentSubscriptionCompleted(Rest, 0,
 							      0, F1, F2,
 							      TrUserData)
 	  end
     end;
-dg_read_field_def_UpdatePersistentSubscriptionCompleted(<<>>,
+dg_read_field_def_DeletePersistentSubscriptionCompleted(<<>>,
 							0, 0, F1, F2, _) ->
-    #'UpdatePersistentSubscriptionCompleted'{result = F1,
+    #'DeletePersistentSubscriptionCompleted'{result = F1,
 					     reason = F2}.
 
-d_field_UpdatePersistentSubscriptionCompleted_result(<<1:1,
+d_field_DeletePersistentSubscriptionCompleted_result(<<1:1,
 						       X:7, Rest/binary>>,
 						     N, Acc, F1, F2, TrUserData)
     when N < 57 ->
-    d_field_UpdatePersistentSubscriptionCompleted_result(Rest,
+    d_field_DeletePersistentSubscriptionCompleted_result(Rest,
 							 N + 7, X bsl N + Acc,
 							 F1, F2, TrUserData);
-d_field_UpdatePersistentSubscriptionCompleted_result(<<0:1,
+d_field_DeletePersistentSubscriptionCompleted_result(<<0:1,
 						       X:7, Rest/binary>>,
 						     N, Acc, _, F2,
 						     TrUserData) ->
     <<Tmp:32/signed-native>> = <<(X bsl N +
 				    Acc):32/unsigned-native>>,
     NewFValue =
-	'd_enum_UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'(Tmp),
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+	'd_enum_DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'(Tmp),
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
 							     0, 0, NewFValue,
 							     F2, TrUserData).
 
 
-d_field_UpdatePersistentSubscriptionCompleted_reason(<<1:1,
+d_field_DeletePersistentSubscriptionCompleted_reason(<<1:1,
 						       X:7, Rest/binary>>,
 						     N, Acc, F1, F2, TrUserData)
     when N < 57 ->
-    d_field_UpdatePersistentSubscriptionCompleted_reason(Rest,
+    d_field_DeletePersistentSubscriptionCompleted_reason(Rest,
 							 N + 7, X bsl N + Acc,
 							 F1, F2, TrUserData);
-d_field_UpdatePersistentSubscriptionCompleted_reason(<<0:1,
+d_field_DeletePersistentSubscriptionCompleted_reason(<<0:1,
 						       X:7, Rest/binary>>,
 						     N, Acc, F1, _,
 						     TrUserData) ->
     Len = X bsl N + Acc,
     <<Bytes:Len/binary, Rest2/binary>> = Rest,
     NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest2,
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest2,
 							     0, 0, F1,
 							     NewFValue,
 							     TrUserData).
 
 
-skip_varint_UpdatePersistentSubscriptionCompleted(<<1:1,
+skip_varint_DeletePersistentSubscriptionCompleted(<<1:1,
 						    _:7, Rest/binary>>,
 						  Z1, Z2, F1, F2, TrUserData) ->
-    skip_varint_UpdatePersistentSubscriptionCompleted(Rest,
+    skip_varint_DeletePersistentSubscriptionCompleted(Rest,
 						      Z1, Z2, F1, F2,
 						      TrUserData);
-skip_varint_UpdatePersistentSubscriptionCompleted(<<0:1,
+skip_varint_DeletePersistentSubscriptionCompleted(<<0:1,
 						    _:7, Rest/binary>>,
 						  Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
 							     Z1, Z2, F1, F2,
 							     TrUserData).
 
 
-skip_length_delimited_UpdatePersistentSubscriptionCompleted(<<1:1,
+skip_length_delimited_DeletePersistentSubscriptionCompleted(<<1:1,
 							      X:7,
 							      Rest/binary>>,
 							    N, Acc, F1, F2,
 							    TrUserData)
     when N < 57 ->
-    skip_length_delimited_UpdatePersistentSubscriptionCompleted(Rest,
+    skip_length_delimited_DeletePersistentSubscriptionCompleted(Rest,
 								N + 7,
 								X bsl N + Acc,
 								F1, F2,
 								TrUserData);
-skip_length_delimited_UpdatePersistentSubscriptionCompleted(<<0:1,
+skip_length_delimited_DeletePersistentSubscriptionCompleted(<<0:1,
 							      X:7,
 							      Rest/binary>>,
 							    N, Acc, F1, F2,
 							    TrUserData) ->
     Length = X bsl N + Acc,
     <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest2,
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest2,
 							     0, 0, F1, F2,
 							     TrUserData).
 
 
-skip_group_UpdatePersistentSubscriptionCompleted(Bin,
+skip_group_DeletePersistentSubscriptionCompleted(Bin,
 						 FNum, Z2, F1, F2,
 						 TrUserData) ->
     {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
 							     0, Z2, F1, F2,
 							     TrUserData).
 
 
-skip_32_UpdatePersistentSubscriptionCompleted(<<_:32,
+skip_32_DeletePersistentSubscriptionCompleted(<<_:32,
 						Rest/binary>>,
 					      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
 							     Z1, Z2, F1, F2,
 							     TrUserData).
 
 
-skip_64_UpdatePersistentSubscriptionCompleted(<<_:64,
+skip_64_DeletePersistentSubscriptionCompleted(<<_:64,
 						Rest/binary>>,
 					      Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+    dfp_read_field_def_DeletePersistentSubscriptionCompleted(Rest,
 							     Z1, Z2, F1, F2,
 							     TrUserData).
-
-
-d_msg_PersistentSubscriptionStreamEventAppeared(Bin,
-						TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Bin,
-								 0, 0,
-								 id(undefined,
-								    TrUserData),
-								 TrUserData).
-
-dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(<<10,
-							       Rest/binary>>,
-							     Z1, Z2, F1,
-							     TrUserData) ->
-    d_field_PersistentSubscriptionStreamEventAppeared_event(Rest,
-							    Z1, Z2, F1,
-							    TrUserData);
-dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(<<>>,
-							     0, 0, F1, _) ->
-    #'PersistentSubscriptionStreamEventAppeared'{event =
-						     F1};
-dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Other,
-							     Z1, Z2, F1,
-							     TrUserData) ->
-    dg_read_field_def_PersistentSubscriptionStreamEventAppeared(Other,
-								Z1, Z2, F1,
-								TrUserData).
-
-dg_read_field_def_PersistentSubscriptionStreamEventAppeared(<<1:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1,
-							    TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
-								N + 7,
-								X bsl N + Acc,
-								F1, TrUserData);
-dg_read_field_def_PersistentSubscriptionStreamEventAppeared(<<0:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1,
-							    TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_PersistentSubscriptionStreamEventAppeared_event(Rest,
-								  0, 0, F1,
-								  TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_PersistentSubscriptionStreamEventAppeared(Rest,
-								      0, 0, F1,
-								      TrUserData);
-	    1 ->
-		skip_64_PersistentSubscriptionStreamEventAppeared(Rest,
-								  0, 0, F1,
-								  TrUserData);
-	    2 ->
-		skip_length_delimited_PersistentSubscriptionStreamEventAppeared(Rest,
-										0,
-										0,
-										F1,
-										TrUserData);
-	    3 ->
-		skip_group_PersistentSubscriptionStreamEventAppeared(Rest,
-								     Key bsr 3,
-								     0, F1,
-								     TrUserData);
-	    5 ->
-		skip_32_PersistentSubscriptionStreamEventAppeared(Rest,
-								  0, 0, F1,
-								  TrUserData)
-	  end
-    end;
-dg_read_field_def_PersistentSubscriptionStreamEventAppeared(<<>>,
-							    0, 0, F1, _) ->
-    #'PersistentSubscriptionStreamEventAppeared'{event =
-						     F1}.
-
-d_field_PersistentSubscriptionStreamEventAppeared_event(<<1:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, TrUserData)
-    when N < 57 ->
-    d_field_PersistentSubscriptionStreamEventAppeared_event(Rest,
-							    N + 7,
-							    X bsl N + Acc, F1,
-							    TrUserData);
-d_field_PersistentSubscriptionStreamEventAppeared_event(<<0:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1,
-							TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bs:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = id(d_msg_ResolvedIndexedEvent(Bs,
-					      TrUserData),
-		   TrUserData),
-    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest2,
-								 0, 0,
-								 if F1 ==
-								      undefined ->
-									NewFValue;
-								    true ->
-									merge_msg_ResolvedIndexedEvent(F1,
-												       NewFValue,
-												       TrUserData)
-								 end,
-								 TrUserData).
-
-
-skip_varint_PersistentSubscriptionStreamEventAppeared(<<1:1,
-							_:7, Rest/binary>>,
-						      Z1, Z2, F1, TrUserData) ->
-    skip_varint_PersistentSubscriptionStreamEventAppeared(Rest,
-							  Z1, Z2, F1,
-							  TrUserData);
-skip_varint_PersistentSubscriptionStreamEventAppeared(<<0:1,
-							_:7, Rest/binary>>,
-						      Z1, Z2, F1, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
-								 Z1, Z2, F1,
-								 TrUserData).
-
-
-skip_length_delimited_PersistentSubscriptionStreamEventAppeared(<<1:1,
-								  X:7,
-								  Rest/binary>>,
-								N, Acc, F1,
-								TrUserData)
-    when N < 57 ->
-    skip_length_delimited_PersistentSubscriptionStreamEventAppeared(Rest,
-								    N + 7,
-								    X bsl N +
-								      Acc,
-								    F1,
-								    TrUserData);
-skip_length_delimited_PersistentSubscriptionStreamEventAppeared(<<0:1,
-								  X:7,
-								  Rest/binary>>,
-								N, Acc, F1,
-								TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest2,
-								 0, 0, F1,
-								 TrUserData).
-
-
-skip_group_PersistentSubscriptionStreamEventAppeared(Bin,
-						     FNum, Z2, F1,
-						     TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
-								 0, Z2, F1,
-								 TrUserData).
-
-
-skip_32_PersistentSubscriptionStreamEventAppeared(<<_:32,
-						    Rest/binary>>,
-						  Z1, Z2, F1, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
-								 Z1, Z2, F1,
-								 TrUserData).
-
-
-skip_64_PersistentSubscriptionStreamEventAppeared(<<_:64,
-						    Rest/binary>>,
-						  Z1, Z2, F1, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionStreamEventAppeared(Rest,
-								 Z1, Z2, F1,
-								 TrUserData).
 
 
 d_msg_ReadEventCompleted(Bin, TrUserData) ->
@@ -10308,126 +10257,878 @@ skip_64_DeletePersistentSubscription(<<_:64,
 						    Z1, Z2, F1, F2, TrUserData).
 
 
-d_msg_StreamEventAppeared(Bin, TrUserData) ->
-    dfp_read_field_def_StreamEventAppeared(Bin, 0, 0,
-					   id(undefined, TrUserData),
-					   TrUserData).
+d_msg_UpdatePersistentSubscriptionCompleted(Bin,
+					    TrUserData) ->
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Bin,
+							     0, 0,
+							     id(undefined,
+								TrUserData),
+							     id(<<>>,
+								TrUserData),
+							     TrUserData).
 
-dfp_read_field_def_StreamEventAppeared(<<10,
-					 Rest/binary>>,
-				       Z1, Z2, F1, TrUserData) ->
-    d_field_StreamEventAppeared_event(Rest, Z1, Z2, F1,
-				      TrUserData);
-dfp_read_field_def_StreamEventAppeared(<<>>, 0, 0, F1,
-				       _) ->
-    #'StreamEventAppeared'{event = F1};
-dfp_read_field_def_StreamEventAppeared(Other, Z1, Z2,
-				       F1, TrUserData) ->
-    dg_read_field_def_StreamEventAppeared(Other, Z1, Z2, F1,
-					  TrUserData).
+dfp_read_field_def_UpdatePersistentSubscriptionCompleted(<<8,
+							   Rest/binary>>,
+							 Z1, Z2, F1, F2,
+							 TrUserData) ->
+    d_field_UpdatePersistentSubscriptionCompleted_result(Rest,
+							 Z1, Z2, F1, F2,
+							 TrUserData);
+dfp_read_field_def_UpdatePersistentSubscriptionCompleted(<<18,
+							   Rest/binary>>,
+							 Z1, Z2, F1, F2,
+							 TrUserData) ->
+    d_field_UpdatePersistentSubscriptionCompleted_reason(Rest,
+							 Z1, Z2, F1, F2,
+							 TrUserData);
+dfp_read_field_def_UpdatePersistentSubscriptionCompleted(<<>>,
+							 0, 0, F1, F2, _) ->
+    #'UpdatePersistentSubscriptionCompleted'{result = F1,
+					     reason = F2};
+dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Other,
+							 Z1, Z2, F1, F2,
+							 TrUserData) ->
+    dg_read_field_def_UpdatePersistentSubscriptionCompleted(Other,
+							    Z1, Z2, F1, F2,
+							    TrUserData).
 
-dg_read_field_def_StreamEventAppeared(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, TrUserData)
+dg_read_field_def_UpdatePersistentSubscriptionCompleted(<<1:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, F2,
+							TrUserData)
     when N < 32 - 7 ->
-    dg_read_field_def_StreamEventAppeared(Rest, N + 7,
-					  X bsl N + Acc, F1, TrUserData);
-dg_read_field_def_StreamEventAppeared(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, TrUserData) ->
+    dg_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+							    N + 7,
+							    X bsl N + Acc, F1,
+							    F2, TrUserData);
+dg_read_field_def_UpdatePersistentSubscriptionCompleted(<<0:1,
+							  X:7, Rest/binary>>,
+							N, Acc, F1, F2,
+							TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
-      10 ->
-	  d_field_StreamEventAppeared_event(Rest, 0, 0, F1,
-					    TrUserData);
+      8 ->
+	  d_field_UpdatePersistentSubscriptionCompleted_result(Rest,
+							       0, 0, F1, F2,
+							       TrUserData);
+      18 ->
+	  d_field_UpdatePersistentSubscriptionCompleted_reason(Rest,
+							       0, 0, F1, F2,
+							       TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
-		skip_varint_StreamEventAppeared(Rest, 0, 0, F1,
-						TrUserData);
+		skip_varint_UpdatePersistentSubscriptionCompleted(Rest,
+								  0, 0, F1, F2,
+								  TrUserData);
 	    1 ->
-		skip_64_StreamEventAppeared(Rest, 0, 0, F1, TrUserData);
+		skip_64_UpdatePersistentSubscriptionCompleted(Rest, 0,
+							      0, F1, F2,
+							      TrUserData);
 	    2 ->
-		skip_length_delimited_StreamEventAppeared(Rest, 0, 0,
-							  F1, TrUserData);
+		skip_length_delimited_UpdatePersistentSubscriptionCompleted(Rest,
+									    0,
+									    0,
+									    F1,
+									    F2,
+									    TrUserData);
 	    3 ->
-		skip_group_StreamEventAppeared(Rest, Key bsr 3, 0, F1,
-					       TrUserData);
+		skip_group_UpdatePersistentSubscriptionCompleted(Rest,
+								 Key bsr 3, 0,
+								 F1, F2,
+								 TrUserData);
 	    5 ->
-		skip_32_StreamEventAppeared(Rest, 0, 0, F1, TrUserData)
+		skip_32_UpdatePersistentSubscriptionCompleted(Rest, 0,
+							      0, F1, F2,
+							      TrUserData)
 	  end
     end;
-dg_read_field_def_StreamEventAppeared(<<>>, 0, 0, F1,
-				      _) ->
-    #'StreamEventAppeared'{event = F1}.
+dg_read_field_def_UpdatePersistentSubscriptionCompleted(<<>>,
+							0, 0, F1, F2, _) ->
+    #'UpdatePersistentSubscriptionCompleted'{result = F1,
+					     reason = F2}.
 
-d_field_StreamEventAppeared_event(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, TrUserData)
+d_field_UpdatePersistentSubscriptionCompleted_result(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, TrUserData)
     when N < 57 ->
-    d_field_StreamEventAppeared_event(Rest, N + 7,
-				      X bsl N + Acc, F1, TrUserData);
-d_field_StreamEventAppeared_event(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F1, TrUserData) ->
+    d_field_UpdatePersistentSubscriptionCompleted_result(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, TrUserData);
+d_field_UpdatePersistentSubscriptionCompleted_result(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, _, F2,
+						     TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue =
+	'd_enum_UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'(Tmp),
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+							     0, 0, NewFValue,
+							     F2, TrUserData).
+
+
+d_field_UpdatePersistentSubscriptionCompleted_reason(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, TrUserData)
+    when N < 57 ->
+    d_field_UpdatePersistentSubscriptionCompleted_reason(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, TrUserData);
+d_field_UpdatePersistentSubscriptionCompleted_reason(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, _,
+						     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest2,
+							     0, 0, F1,
+							     NewFValue,
+							     TrUserData).
+
+
+skip_varint_UpdatePersistentSubscriptionCompleted(<<1:1,
+						    _:7, Rest/binary>>,
+						  Z1, Z2, F1, F2, TrUserData) ->
+    skip_varint_UpdatePersistentSubscriptionCompleted(Rest,
+						      Z1, Z2, F1, F2,
+						      TrUserData);
+skip_varint_UpdatePersistentSubscriptionCompleted(<<0:1,
+						    _:7, Rest/binary>>,
+						  Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+							     Z1, Z2, F1, F2,
+							     TrUserData).
+
+
+skip_length_delimited_UpdatePersistentSubscriptionCompleted(<<1:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2,
+							    TrUserData)
+    when N < 57 ->
+    skip_length_delimited_UpdatePersistentSubscriptionCompleted(Rest,
+								N + 7,
+								X bsl N + Acc,
+								F1, F2,
+								TrUserData);
+skip_length_delimited_UpdatePersistentSubscriptionCompleted(<<0:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2,
+							    TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest2,
+							     0, 0, F1, F2,
+							     TrUserData).
+
+
+skip_group_UpdatePersistentSubscriptionCompleted(Bin,
+						 FNum, Z2, F1, F2,
+						 TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+							     0, Z2, F1, F2,
+							     TrUserData).
+
+
+skip_32_UpdatePersistentSubscriptionCompleted(<<_:32,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+							     Z1, Z2, F1, F2,
+							     TrUserData).
+
+
+skip_64_UpdatePersistentSubscriptionCompleted(<<_:64,
+						Rest/binary>>,
+					      Z1, Z2, F1, F2, TrUserData) ->
+    dfp_read_field_def_UpdatePersistentSubscriptionCompleted(Rest,
+							     Z1, Z2, F1, F2,
+							     TrUserData).
+
+
+'d_msg_NotHandled.MasterInfo'(Bin, TrUserData) ->
+    'dfp_read_field_def_NotHandled.MasterInfo'(Bin, 0, 0,
+					       id(undefined, TrUserData),
+					       id(undefined, TrUserData),
+					       id(undefined, TrUserData),
+					       id(undefined, TrUserData),
+					       id(<<>>, TrUserData),
+					       id(0, TrUserData), TrUserData).
+
+'dfp_read_field_def_NotHandled.MasterInfo'(<<10,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    'd_field_NotHandled.MasterInfo_external_tcp_address'(Rest,
+							 Z1, Z2, F1, F2, F3, F4,
+							 F5, F6, TrUserData);
+'dfp_read_field_def_NotHandled.MasterInfo'(<<16,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    'd_field_NotHandled.MasterInfo_external_tcp_port'(Rest,
+						      Z1, Z2, F1, F2, F3, F4,
+						      F5, F6, TrUserData);
+'dfp_read_field_def_NotHandled.MasterInfo'(<<26,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    'd_field_NotHandled.MasterInfo_external_http_address'(Rest,
+							  Z1, Z2, F1, F2, F3,
+							  F4, F5, F6,
+							  TrUserData);
+'dfp_read_field_def_NotHandled.MasterInfo'(<<32,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    'd_field_NotHandled.MasterInfo_external_http_port'(Rest,
+						       Z1, Z2, F1, F2, F3, F4,
+						       F5, F6, TrUserData);
+'dfp_read_field_def_NotHandled.MasterInfo'(<<42,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    'd_field_NotHandled.MasterInfo_external_secure_tcp_address'(Rest,
+								Z1, Z2, F1, F2,
+								F3, F4, F5, F6,
+								TrUserData);
+'dfp_read_field_def_NotHandled.MasterInfo'(<<48,
+					     Rest/binary>>,
+					   Z1, Z2, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    'd_field_NotHandled.MasterInfo_external_secure_tcp_port'(Rest,
+							     Z1, Z2, F1, F2, F3,
+							     F4, F5, F6,
+							     TrUserData);
+'dfp_read_field_def_NotHandled.MasterInfo'(<<>>, 0, 0,
+					   F1, F2, F3, F4, F5, F6, _) ->
+    #'NotHandled.MasterInfo'{external_tcp_address = F1,
+			     external_tcp_port = F2, external_http_address = F3,
+			     external_http_port = F4,
+			     external_secure_tcp_address = F5,
+			     external_secure_tcp_port = F6};
+'dfp_read_field_def_NotHandled.MasterInfo'(Other, Z1,
+					   Z2, F1, F2, F3, F4, F5, F6,
+					   TrUserData) ->
+    'dg_read_field_def_NotHandled.MasterInfo'(Other, Z1, Z2,
+					      F1, F2, F3, F4, F5, F6,
+					      TrUserData).
+
+'dg_read_field_def_NotHandled.MasterInfo'(<<1:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, F4, F5, F6,
+					  TrUserData)
+    when N < 32 - 7 ->
+    'dg_read_field_def_NotHandled.MasterInfo'(Rest, N + 7,
+					      X bsl N + Acc, F1, F2, F3, F4, F5,
+					      F6, TrUserData);
+'dg_read_field_def_NotHandled.MasterInfo'(<<0:1, X:7,
+					    Rest/binary>>,
+					  N, Acc, F1, F2, F3, F4, F5, F6,
+					  TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      10 ->
+	  'd_field_NotHandled.MasterInfo_external_tcp_address'(Rest,
+							       0, 0, F1, F2, F3,
+							       F4, F5, F6,
+							       TrUserData);
+      16 ->
+	  'd_field_NotHandled.MasterInfo_external_tcp_port'(Rest,
+							    0, 0, F1, F2, F3,
+							    F4, F5, F6,
+							    TrUserData);
+      26 ->
+	  'd_field_NotHandled.MasterInfo_external_http_address'(Rest,
+								0, 0, F1, F2,
+								F3, F4, F5, F6,
+								TrUserData);
+      32 ->
+	  'd_field_NotHandled.MasterInfo_external_http_port'(Rest,
+							     0, 0, F1, F2, F3,
+							     F4, F5, F6,
+							     TrUserData);
+      42 ->
+	  'd_field_NotHandled.MasterInfo_external_secure_tcp_address'(Rest,
+								      0, 0, F1,
+								      F2, F3,
+								      F4, F5,
+								      F6,
+								      TrUserData);
+      48 ->
+	  'd_field_NotHandled.MasterInfo_external_secure_tcp_port'(Rest,
+								   0, 0, F1, F2,
+								   F3, F4, F5,
+								   F6,
+								   TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		'skip_varint_NotHandled.MasterInfo'(Rest, 0, 0, F1, F2,
+						    F3, F4, F5, F6, TrUserData);
+	    1 ->
+		'skip_64_NotHandled.MasterInfo'(Rest, 0, 0, F1, F2, F3,
+						F4, F5, F6, TrUserData);
+	    2 ->
+		'skip_length_delimited_NotHandled.MasterInfo'(Rest, 0,
+							      0, F1, F2, F3, F4,
+							      F5, F6,
+							      TrUserData);
+	    3 ->
+		'skip_group_NotHandled.MasterInfo'(Rest, Key bsr 3, 0,
+						   F1, F2, F3, F4, F5, F6,
+						   TrUserData);
+	    5 ->
+		'skip_32_NotHandled.MasterInfo'(Rest, 0, 0, F1, F2, F3,
+						F4, F5, F6, TrUserData)
+	  end
+    end;
+'dg_read_field_def_NotHandled.MasterInfo'(<<>>, 0, 0,
+					  F1, F2, F3, F4, F5, F6, _) ->
+    #'NotHandled.MasterInfo'{external_tcp_address = F1,
+			     external_tcp_port = F2, external_http_address = F3,
+			     external_http_port = F4,
+			     external_secure_tcp_address = F5,
+			     external_secure_tcp_port = F6}.
+
+'d_field_NotHandled.MasterInfo_external_tcp_address'(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, TrUserData)
+    when N < 57 ->
+    'd_field_NotHandled.MasterInfo_external_tcp_address'(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, F3, F4, F5, F6,
+							 TrUserData);
+'d_field_NotHandled.MasterInfo_external_tcp_address'(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, _, F2, F3, F4, F5,
+						     F6, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
+					       NewFValue, F2, F3, F4, F5, F6,
+					       TrUserData).
+
+
+'d_field_NotHandled.MasterInfo_external_tcp_port'(<<1:1,
+						    X:7, Rest/binary>>,
+						  N, Acc, F1, F2, F3, F4, F5,
+						  F6, TrUserData)
+    when N < 57 ->
+    'd_field_NotHandled.MasterInfo_external_tcp_port'(Rest,
+						      N + 7, X bsl N + Acc, F1,
+						      F2, F3, F4, F5, F6,
+						      TrUserData);
+'d_field_NotHandled.MasterInfo_external_tcp_port'(<<0:1,
+						    X:7, Rest/binary>>,
+						  N, Acc, F1, _, F3, F4, F5, F6,
+						  TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, 0,
+					       F1, NewFValue, F3, F4, F5, F6,
+					       TrUserData).
+
+
+'d_field_NotHandled.MasterInfo_external_http_address'(<<1:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, F3, F4,
+						      F5, F6, TrUserData)
+    when N < 57 ->
+    'd_field_NotHandled.MasterInfo_external_http_address'(Rest,
+							  N + 7, X bsl N + Acc,
+							  F1, F2, F3, F4, F5,
+							  F6, TrUserData);
+'d_field_NotHandled.MasterInfo_external_http_address'(<<0:1,
+							X:7, Rest/binary>>,
+						      N, Acc, F1, F2, _, F4, F5,
+						      F6, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
+					       F1, F2, NewFValue, F4, F5, F6,
+					       TrUserData).
+
+
+'d_field_NotHandled.MasterInfo_external_http_port'(<<1:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, F2, F3, F4, F5,
+						   F6, TrUserData)
+    when N < 57 ->
+    'd_field_NotHandled.MasterInfo_external_http_port'(Rest,
+						       N + 7, X bsl N + Acc, F1,
+						       F2, F3, F4, F5, F6,
+						       TrUserData);
+'d_field_NotHandled.MasterInfo_external_http_port'(<<0:1,
+						     X:7, Rest/binary>>,
+						   N, Acc, F1, F2, F3, _, F5,
+						   F6, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, 0,
+					       F1, F2, F3, NewFValue, F5, F6,
+					       TrUserData).
+
+
+'d_field_NotHandled.MasterInfo_external_secure_tcp_address'(<<1:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2, F3,
+							    F4, F5, F6,
+							    TrUserData)
+    when N < 57 ->
+    'd_field_NotHandled.MasterInfo_external_secure_tcp_address'(Rest,
+								N + 7,
+								X bsl N + Acc,
+								F1, F2, F3, F4,
+								F5, F6,
+								TrUserData);
+'d_field_NotHandled.MasterInfo_external_secure_tcp_address'(<<0:1,
+							      X:7,
+							      Rest/binary>>,
+							    N, Acc, F1, F2, F3,
+							    F4, _, F6,
+							    TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
+					       F1, F2, F3, F4, NewFValue, F6,
+					       TrUserData).
+
+
+'d_field_NotHandled.MasterInfo_external_secure_tcp_port'(<<1:1,
+							   X:7, Rest/binary>>,
+							 N, Acc, F1, F2, F3, F4,
+							 F5, F6, TrUserData)
+    when N < 57 ->
+    'd_field_NotHandled.MasterInfo_external_secure_tcp_port'(Rest,
+							     N + 7,
+							     X bsl N + Acc, F1,
+							     F2, F3, F4, F5, F6,
+							     TrUserData);
+'d_field_NotHandled.MasterInfo_external_secure_tcp_port'(<<0:1,
+							   X:7, Rest/binary>>,
+							 N, Acc, F1, F2, F3, F4,
+							 F5, _, TrUserData) ->
+    <<NewFValue:32/signed-native>> = <<(X bsl N +
+					  Acc):32/unsigned-native>>,
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, 0,
+					       F1, F2, F3, F4, F5, NewFValue,
+					       TrUserData).
+
+
+'skip_varint_NotHandled.MasterInfo'(<<1:1, _:7,
+				      Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, F4, F5, F6,
+				    TrUserData) ->
+    'skip_varint_NotHandled.MasterInfo'(Rest, Z1, Z2, F1,
+					F2, F3, F4, F5, F6, TrUserData);
+'skip_varint_NotHandled.MasterInfo'(<<0:1, _:7,
+				      Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, F4, F5, F6,
+				    TrUserData) ->
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, Z1, Z2,
+					       F1, F2, F3, F4, F5, F6,
+					       TrUserData).
+
+
+'skip_length_delimited_NotHandled.MasterInfo'(<<1:1,
+						X:7, Rest/binary>>,
+					      N, Acc, F1, F2, F3, F4, F5, F6,
+					      TrUserData)
+    when N < 57 ->
+    'skip_length_delimited_NotHandled.MasterInfo'(Rest,
+						  N + 7, X bsl N + Acc, F1, F2,
+						  F3, F4, F5, F6, TrUserData);
+'skip_length_delimited_NotHandled.MasterInfo'(<<0:1,
+						X:7, Rest/binary>>,
+					      N, Acc, F1, F2, F3, F4, F5, F6,
+					      TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest2, 0, 0,
+					       F1, F2, F3, F4, F5, F6,
+					       TrUserData).
+
+
+'skip_group_NotHandled.MasterInfo'(Bin, FNum, Z2, F1,
+				   F2, F3, F4, F5, F6, TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, 0, Z2,
+					       F1, F2, F3, F4, F5, F6,
+					       TrUserData).
+
+
+'skip_32_NotHandled.MasterInfo'(<<_:32, Rest/binary>>,
+				Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, Z1, Z2,
+					       F1, F2, F3, F4, F5, F6,
+					       TrUserData).
+
+
+'skip_64_NotHandled.MasterInfo'(<<_:64, Rest/binary>>,
+				Z1, Z2, F1, F2, F3, F4, F5, F6, TrUserData) ->
+    'dfp_read_field_def_NotHandled.MasterInfo'(Rest, Z1, Z2,
+					       F1, F2, F3, F4, F5, F6,
+					       TrUserData).
+
+
+d_msg_ReadAllEventsCompleted(Bin, TrUserData) ->
+    dfp_read_field_def_ReadAllEventsCompleted(Bin, 0, 0,
+					      id(undefined, TrUserData),
+					      id(undefined, TrUserData),
+					      id([], TrUserData),
+					      id(undefined, TrUserData),
+					      id(undefined, TrUserData),
+					      id('Success', TrUserData),
+					      id(<<>>, TrUserData), TrUserData).
+
+dfp_read_field_def_ReadAllEventsCompleted(<<8,
+					    Rest/binary>>,
+					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    d_field_ReadAllEventsCompleted_commit_position(Rest, Z1,
+						   Z2, F1, F2, F3, F4, F5, F6,
+						   F7, TrUserData);
+dfp_read_field_def_ReadAllEventsCompleted(<<16,
+					    Rest/binary>>,
+					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    d_field_ReadAllEventsCompleted_prepare_position(Rest,
+						    Z1, Z2, F1, F2, F3, F4, F5,
+						    F6, F7, TrUserData);
+dfp_read_field_def_ReadAllEventsCompleted(<<26,
+					    Rest/binary>>,
+					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    d_field_ReadAllEventsCompleted_events(Rest, Z1, Z2, F1,
+					  F2, F3, F4, F5, F6, F7, TrUserData);
+dfp_read_field_def_ReadAllEventsCompleted(<<32,
+					    Rest/binary>>,
+					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    d_field_ReadAllEventsCompleted_next_commit_position(Rest,
+							Z1, Z2, F1, F2, F3, F4,
+							F5, F6, F7, TrUserData);
+dfp_read_field_def_ReadAllEventsCompleted(<<40,
+					    Rest/binary>>,
+					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    d_field_ReadAllEventsCompleted_next_prepare_position(Rest,
+							 Z1, Z2, F1, F2, F3, F4,
+							 F5, F6, F7,
+							 TrUserData);
+dfp_read_field_def_ReadAllEventsCompleted(<<48,
+					    Rest/binary>>,
+					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    d_field_ReadAllEventsCompleted_result(Rest, Z1, Z2, F1,
+					  F2, F3, F4, F5, F6, F7, TrUserData);
+dfp_read_field_def_ReadAllEventsCompleted(<<58,
+					    Rest/binary>>,
+					  Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    d_field_ReadAllEventsCompleted_error(Rest, Z1, Z2, F1,
+					 F2, F3, F4, F5, F6, F7, TrUserData);
+dfp_read_field_def_ReadAllEventsCompleted(<<>>, 0, 0,
+					  F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    #'ReadAllEventsCompleted'{commit_position = F1,
+			      prepare_position = F2,
+			      events = lists_reverse(F3, TrUserData),
+			      next_commit_position = F4,
+			      next_prepare_position = F5, result = F6,
+			      error = F7};
+dfp_read_field_def_ReadAllEventsCompleted(Other, Z1, Z2,
+					  F1, F2, F3, F4, F5, F6, F7,
+					  TrUserData) ->
+    dg_read_field_def_ReadAllEventsCompleted(Other, Z1, Z2,
+					     F1, F2, F3, F4, F5, F6, F7,
+					     TrUserData).
+
+dg_read_field_def_ReadAllEventsCompleted(<<1:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					 TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_ReadAllEventsCompleted(Rest, N + 7,
+					     X bsl N + Acc, F1, F2, F3, F4, F5,
+					     F6, F7, TrUserData);
+dg_read_field_def_ReadAllEventsCompleted(<<0:1, X:7,
+					   Rest/binary>>,
+					 N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					 TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_ReadAllEventsCompleted_commit_position(Rest, 0,
+							 0, F1, F2, F3, F4, F5,
+							 F6, F7, TrUserData);
+      16 ->
+	  d_field_ReadAllEventsCompleted_prepare_position(Rest, 0,
+							  0, F1, F2, F3, F4, F5,
+							  F6, F7, TrUserData);
+      26 ->
+	  d_field_ReadAllEventsCompleted_events(Rest, 0, 0, F1,
+						F2, F3, F4, F5, F6, F7,
+						TrUserData);
+      32 ->
+	  d_field_ReadAllEventsCompleted_next_commit_position(Rest,
+							      0, 0, F1, F2, F3,
+							      F4, F5, F6, F7,
+							      TrUserData);
+      40 ->
+	  d_field_ReadAllEventsCompleted_next_prepare_position(Rest,
+							       0, 0, F1, F2, F3,
+							       F4, F5, F6, F7,
+							       TrUserData);
+      48 ->
+	  d_field_ReadAllEventsCompleted_result(Rest, 0, 0, F1,
+						F2, F3, F4, F5, F6, F7,
+						TrUserData);
+      58 ->
+	  d_field_ReadAllEventsCompleted_error(Rest, 0, 0, F1, F2,
+					       F3, F4, F5, F6, F7, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_ReadAllEventsCompleted(Rest, 0, 0, F1, F2,
+						   F3, F4, F5, F6, F7,
+						   TrUserData);
+	    1 ->
+		skip_64_ReadAllEventsCompleted(Rest, 0, 0, F1, F2, F3,
+					       F4, F5, F6, F7, TrUserData);
+	    2 ->
+		skip_length_delimited_ReadAllEventsCompleted(Rest, 0, 0,
+							     F1, F2, F3, F4, F5,
+							     F6, F7,
+							     TrUserData);
+	    3 ->
+		skip_group_ReadAllEventsCompleted(Rest, Key bsr 3, 0,
+						  F1, F2, F3, F4, F5, F6, F7,
+						  TrUserData);
+	    5 ->
+		skip_32_ReadAllEventsCompleted(Rest, 0, 0, F1, F2, F3,
+					       F4, F5, F6, F7, TrUserData)
+	  end
+    end;
+dg_read_field_def_ReadAllEventsCompleted(<<>>, 0, 0, F1,
+					 F2, F3, F4, F5, F6, F7, TrUserData) ->
+    #'ReadAllEventsCompleted'{commit_position = F1,
+			      prepare_position = F2,
+			      events = lists_reverse(F3, TrUserData),
+			      next_commit_position = F4,
+			      next_prepare_position = F5, result = F6,
+			      error = F7}.
+
+d_field_ReadAllEventsCompleted_commit_position(<<1:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, F1, F2, F3, F4, F5, F6,
+					       F7, TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEventsCompleted_commit_position(Rest,
+						   N + 7, X bsl N + Acc, F1, F2,
+						   F3, F4, F5, F6, F7,
+						   TrUserData);
+d_field_ReadAllEventsCompleted_commit_position(<<0:1,
+						 X:7, Rest/binary>>,
+					       N, Acc, _, F2, F3, F4, F5, F6,
+					       F7, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
+					      NewFValue, F2, F3, F4, F5, F6, F7,
+					      TrUserData).
+
+
+d_field_ReadAllEventsCompleted_prepare_position(<<1:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, F2, F3, F4, F5, F6,
+						F7, TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEventsCompleted_prepare_position(Rest,
+						    N + 7, X bsl N + Acc, F1,
+						    F2, F3, F4, F5, F6, F7,
+						    TrUserData);
+d_field_ReadAllEventsCompleted_prepare_position(<<0:1,
+						  X:7, Rest/binary>>,
+						N, Acc, F1, _, F3, F4, F5, F6,
+						F7, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
+					      F1, NewFValue, F3, F4, F5, F6, F7,
+					      TrUserData).
+
+
+d_field_ReadAllEventsCompleted_events(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, F5, F6, F7,
+				      TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEventsCompleted_events(Rest, N + 7,
+					  X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+					  F7, TrUserData);
+d_field_ReadAllEventsCompleted_events(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, F5, F6, F7,
+				      TrUserData) ->
     Len = X bsl N + Acc,
     <<Bs:Len/binary, Rest2/binary>> = Rest,
     NewFValue = id(d_msg_ResolvedEvent(Bs, TrUserData),
 		   TrUserData),
-    dfp_read_field_def_StreamEventAppeared(Rest2, 0, 0,
-					   if F1 == undefined -> NewFValue;
-					      true ->
-						  merge_msg_ResolvedEvent(F1,
-									  NewFValue,
-									  TrUserData)
-					   end,
-					   TrUserData).
+    dfp_read_field_def_ReadAllEventsCompleted(Rest2, 0, 0,
+					      F1, F2,
+					      cons(NewFValue, F3, TrUserData),
+					      F4, F5, F6, F7, TrUserData).
 
 
-skip_varint_StreamEventAppeared(<<1:1, _:7,
-				  Rest/binary>>,
-				Z1, Z2, F1, TrUserData) ->
-    skip_varint_StreamEventAppeared(Rest, Z1, Z2, F1,
-				    TrUserData);
-skip_varint_StreamEventAppeared(<<0:1, _:7,
-				  Rest/binary>>,
-				Z1, Z2, F1, TrUserData) ->
-    dfp_read_field_def_StreamEventAppeared(Rest, Z1, Z2, F1,
-					   TrUserData).
-
-
-skip_length_delimited_StreamEventAppeared(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, TrUserData)
+d_field_ReadAllEventsCompleted_next_commit_position(<<1:1,
+						      X:7, Rest/binary>>,
+						    N, Acc, F1, F2, F3, F4, F5,
+						    F6, F7, TrUserData)
     when N < 57 ->
-    skip_length_delimited_StreamEventAppeared(Rest, N + 7,
-					      X bsl N + Acc, F1, TrUserData);
-skip_length_delimited_StreamEventAppeared(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, TrUserData) ->
+    d_field_ReadAllEventsCompleted_next_commit_position(Rest,
+							N + 7, X bsl N + Acc,
+							F1, F2, F3, F4, F5, F6,
+							F7, TrUserData);
+d_field_ReadAllEventsCompleted_next_commit_position(<<0:1,
+						      X:7, Rest/binary>>,
+						    N, Acc, F1, F2, F3, _, F5,
+						    F6, F7, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
+					      F1, F2, F3, NewFValue, F5, F6, F7,
+					      TrUserData).
+
+
+d_field_ReadAllEventsCompleted_next_prepare_position(<<1:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, F5,
+						     F6, F7, TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEventsCompleted_next_prepare_position(Rest,
+							 N + 7, X bsl N + Acc,
+							 F1, F2, F3, F4, F5, F6,
+							 F7, TrUserData);
+d_field_ReadAllEventsCompleted_next_prepare_position(<<0:1,
+						       X:7, Rest/binary>>,
+						     N, Acc, F1, F2, F3, F4, _,
+						     F6, F7, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
+					      F1, F2, F3, F4, NewFValue, F6, F7,
+					      TrUserData).
+
+
+d_field_ReadAllEventsCompleted_result(<<1:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, F5, F6, F7,
+				      TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEventsCompleted_result(Rest, N + 7,
+					  X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+					  F7, TrUserData);
+d_field_ReadAllEventsCompleted_result(<<0:1, X:7,
+					Rest/binary>>,
+				      N, Acc, F1, F2, F3, F4, F5, _, F7,
+				      TrUserData) ->
+    <<Tmp:32/signed-native>> = <<(X bsl N +
+				    Acc):32/unsigned-native>>,
+    NewFValue =
+	'd_enum_ReadAllEventsCompleted.ReadAllResult'(Tmp),
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, 0,
+					      F1, F2, F3, F4, F5, NewFValue, F7,
+					      TrUserData).
+
+
+d_field_ReadAllEventsCompleted_error(<<1:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, F5, F6, F7,
+				     TrUserData)
+    when N < 57 ->
+    d_field_ReadAllEventsCompleted_error(Rest, N + 7,
+					 X bsl N + Acc, F1, F2, F3, F4, F5, F6,
+					 F7, TrUserData);
+d_field_ReadAllEventsCompleted_error(<<0:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F1, F2, F3, F4, F5, F6, _,
+				     TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bytes:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = binary:copy(Bytes),
+    dfp_read_field_def_ReadAllEventsCompleted(Rest2, 0, 0,
+					      F1, F2, F3, F4, F5, F6, NewFValue,
+					      TrUserData).
+
+
+skip_varint_ReadAllEventsCompleted(<<1:1, _:7,
+				     Rest/binary>>,
+				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+				   TrUserData) ->
+    skip_varint_ReadAllEventsCompleted(Rest, Z1, Z2, F1, F2,
+				       F3, F4, F5, F6, F7, TrUserData);
+skip_varint_ReadAllEventsCompleted(<<0:1, _:7,
+				     Rest/binary>>,
+				   Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+				   TrUserData) ->
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, Z1, Z2,
+					      F1, F2, F3, F4, F5, F6, F7,
+					      TrUserData).
+
+
+skip_length_delimited_ReadAllEventsCompleted(<<1:1, X:7,
+					       Rest/binary>>,
+					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					     TrUserData)
+    when N < 57 ->
+    skip_length_delimited_ReadAllEventsCompleted(Rest,
+						 N + 7, X bsl N + Acc, F1, F2,
+						 F3, F4, F5, F6, F7,
+						 TrUserData);
+skip_length_delimited_ReadAllEventsCompleted(<<0:1, X:7,
+					       Rest/binary>>,
+					     N, Acc, F1, F2, F3, F4, F5, F6, F7,
+					     TrUserData) ->
     Length = X bsl N + Acc,
     <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_StreamEventAppeared(Rest2, 0, 0, F1,
-					   TrUserData).
+    dfp_read_field_def_ReadAllEventsCompleted(Rest2, 0, 0,
+					      F1, F2, F3, F4, F5, F6, F7,
+					      TrUserData).
 
 
-skip_group_StreamEventAppeared(Bin, FNum, Z2, F1,
-			       TrUserData) ->
+skip_group_ReadAllEventsCompleted(Bin, FNum, Z2, F1, F2,
+				  F3, F4, F5, F6, F7, TrUserData) ->
     {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_StreamEventAppeared(Rest, 0, Z2, F1,
-					   TrUserData).
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, 0, Z2,
+					      F1, F2, F3, F4, F5, F6, F7,
+					      TrUserData).
 
 
-skip_32_StreamEventAppeared(<<_:32, Rest/binary>>, Z1,
-			    Z2, F1, TrUserData) ->
-    dfp_read_field_def_StreamEventAppeared(Rest, Z1, Z2, F1,
-					   TrUserData).
+skip_32_ReadAllEventsCompleted(<<_:32, Rest/binary>>,
+			       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+			       TrUserData) ->
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, Z1, Z2,
+					      F1, F2, F3, F4, F5, F6, F7,
+					      TrUserData).
 
 
-skip_64_StreamEventAppeared(<<_:64, Rest/binary>>, Z1,
-			    Z2, F1, TrUserData) ->
-    dfp_read_field_def_StreamEventAppeared(Rest, Z1, Z2, F1,
-					   TrUserData).
+skip_64_ReadAllEventsCompleted(<<_:64, Rest/binary>>,
+			       Z1, Z2, F1, F2, F3, F4, F5, F6, F7,
+			       TrUserData) ->
+    dfp_read_field_def_ReadAllEventsCompleted(Rest, Z1, Z2,
+					      F1, F2, F3, F4, F5, F6, F7,
+					      TrUserData).
 
 
 d_msg_ConnectToPersistentSubscription(Bin,
@@ -10662,6 +11363,173 @@ skip_64_ConnectToPersistentSubscription(<<_:64,
     dfp_read_field_def_ConnectToPersistentSubscription(Rest,
 						       Z1, Z2, F1, F2, F3,
 						       TrUserData).
+
+
+d_msg_TransactionWrite(Bin, TrUserData) ->
+    dfp_read_field_def_TransactionWrite(Bin, 0, 0,
+					id(undefined, TrUserData),
+					id([], TrUserData),
+					id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_TransactionWrite(<<8, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionWrite_transaction_id(Rest, Z1, Z2,
+					    F1, F2, F3, TrUserData);
+dfp_read_field_def_TransactionWrite(<<18, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionWrite_events(Rest, Z1, Z2, F1, F2,
+				    F3, TrUserData);
+dfp_read_field_def_TransactionWrite(<<24, Rest/binary>>,
+				    Z1, Z2, F1, F2, F3, TrUserData) ->
+    d_field_TransactionWrite_require_master(Rest, Z1, Z2,
+					    F1, F2, F3, TrUserData);
+dfp_read_field_def_TransactionWrite(<<>>, 0, 0, F1, F2,
+				    F3, TrUserData) ->
+    #'TransactionWrite'{transaction_id = F1,
+			events = lists_reverse(F2, TrUserData),
+			require_master = F3};
+dfp_read_field_def_TransactionWrite(Other, Z1, Z2, F1,
+				    F2, F3, TrUserData) ->
+    dg_read_field_def_TransactionWrite(Other, Z1, Z2, F1,
+				       F2, F3, TrUserData).
+
+dg_read_field_def_TransactionWrite(<<1:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_TransactionWrite(Rest, N + 7,
+				       X bsl N + Acc, F1, F2, F3, TrUserData);
+dg_read_field_def_TransactionWrite(<<0:1, X:7,
+				     Rest/binary>>,
+				   N, Acc, F1, F2, F3, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      8 ->
+	  d_field_TransactionWrite_transaction_id(Rest, 0, 0, F1,
+						  F2, F3, TrUserData);
+      18 ->
+	  d_field_TransactionWrite_events(Rest, 0, 0, F1, F2, F3,
+					  TrUserData);
+      24 ->
+	  d_field_TransactionWrite_require_master(Rest, 0, 0, F1,
+						  F2, F3, TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_TransactionWrite(Rest, 0, 0, F1, F2, F3,
+					     TrUserData);
+	    1 ->
+		skip_64_TransactionWrite(Rest, 0, 0, F1, F2, F3,
+					 TrUserData);
+	    2 ->
+		skip_length_delimited_TransactionWrite(Rest, 0, 0, F1,
+						       F2, F3, TrUserData);
+	    3 ->
+		skip_group_TransactionWrite(Rest, Key bsr 3, 0, F1, F2,
+					    F3, TrUserData);
+	    5 ->
+		skip_32_TransactionWrite(Rest, 0, 0, F1, F2, F3,
+					 TrUserData)
+	  end
+    end;
+dg_read_field_def_TransactionWrite(<<>>, 0, 0, F1, F2,
+				   F3, TrUserData) ->
+    #'TransactionWrite'{transaction_id = F1,
+			events = lists_reverse(F2, TrUserData),
+			require_master = F3}.
+
+d_field_TransactionWrite_transaction_id(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionWrite_transaction_id(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, F3,
+					    TrUserData);
+d_field_TransactionWrite_transaction_id(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, _, F2, F3, TrUserData) ->
+    <<NewFValue:64/signed-native>> = <<(X bsl N +
+					  Acc):64/unsigned-native>>,
+    dfp_read_field_def_TransactionWrite(Rest, 0, 0,
+					NewFValue, F2, F3, TrUserData).
+
+
+d_field_TransactionWrite_events(<<1:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionWrite_events(Rest, N + 7,
+				    X bsl N + Acc, F1, F2, F3, TrUserData);
+d_field_TransactionWrite_events(<<0:1, X:7,
+				  Rest/binary>>,
+				N, Acc, F1, F2, F3, TrUserData) ->
+    Len = X bsl N + Acc,
+    <<Bs:Len/binary, Rest2/binary>> = Rest,
+    NewFValue = id(d_msg_NewEvent(Bs, TrUserData),
+		   TrUserData),
+    dfp_read_field_def_TransactionWrite(Rest2, 0, 0, F1,
+					cons(NewFValue, F2, TrUserData), F3,
+					TrUserData).
+
+
+d_field_TransactionWrite_require_master(<<1:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    d_field_TransactionWrite_require_master(Rest, N + 7,
+					    X bsl N + Acc, F1, F2, F3,
+					    TrUserData);
+d_field_TransactionWrite_require_master(<<0:1, X:7,
+					  Rest/binary>>,
+					N, Acc, F1, F2, _, TrUserData) ->
+    NewFValue = X bsl N + Acc =/= 0,
+    dfp_read_field_def_TransactionWrite(Rest, 0, 0, F1, F2,
+					NewFValue, TrUserData).
+
+
+skip_varint_TransactionWrite(<<1:1, _:7, Rest/binary>>,
+			     Z1, Z2, F1, F2, F3, TrUserData) ->
+    skip_varint_TransactionWrite(Rest, Z1, Z2, F1, F2, F3,
+				 TrUserData);
+skip_varint_TransactionWrite(<<0:1, _:7, Rest/binary>>,
+			     Z1, Z2, F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionWrite(Rest, Z1, Z2, F1,
+					F2, F3, TrUserData).
+
+
+skip_length_delimited_TransactionWrite(<<1:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_TransactionWrite(Rest, N + 7,
+					   X bsl N + Acc, F1, F2, F3,
+					   TrUserData);
+skip_length_delimited_TransactionWrite(<<0:1, X:7,
+					 Rest/binary>>,
+				       N, Acc, F1, F2, F3, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_TransactionWrite(Rest2, 0, 0, F1, F2,
+					F3, TrUserData).
+
+
+skip_group_TransactionWrite(Bin, FNum, Z2, F1, F2, F3,
+			    TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_TransactionWrite(Rest, 0, Z2, F1, F2,
+					F3, TrUserData).
+
+
+skip_32_TransactionWrite(<<_:32, Rest/binary>>, Z1, Z2,
+			 F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionWrite(Rest, Z1, Z2, F1,
+					F2, F3, TrUserData).
+
+
+skip_64_TransactionWrite(<<_:64, Rest/binary>>, Z1, Z2,
+			 F1, F2, F3, TrUserData) ->
+    dfp_read_field_def_TransactionWrite(Rest, Z1, Z2, F1,
+					F2, F3, TrUserData).
 
 
 d_msg_PersistentSubscriptionNakEvents(Bin,
@@ -10932,874 +11800,6 @@ skip_64_PersistentSubscriptionNakEvents(<<_:64,
 						       TrUserData).
 
 
-d_msg_ReadStreamEvents(Bin, TrUserData) ->
-    dfp_read_field_def_ReadStreamEvents(Bin, 0, 0,
-					id(undefined, TrUserData),
-					id(undefined, TrUserData),
-					id(undefined, TrUserData),
-					id(undefined, TrUserData),
-					id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_ReadStreamEvents(<<10, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadStreamEvents_event_stream_id(Rest, Z1, Z2,
-					     F1, F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadStreamEvents(<<16, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadStreamEvents_from_event_number(Rest, Z1, Z2,
-					       F1, F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadStreamEvents(<<24, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadStreamEvents_max_count(Rest, Z1, Z2, F1, F2,
-				       F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadStreamEvents(<<32, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadStreamEvents_resolve_link_tos(Rest, Z1, Z2,
-					      F1, F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadStreamEvents(<<40, Rest/binary>>,
-				    Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadStreamEvents_require_master(Rest, Z1, Z2,
-					    F1, F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadStreamEvents(<<>>, 0, 0, F1, F2,
-				    F3, F4, F5, _) ->
-    #'ReadStreamEvents'{event_stream_id = F1,
-			from_event_number = F2, max_count = F3,
-			resolve_link_tos = F4, require_master = F5};
-dfp_read_field_def_ReadStreamEvents(Other, Z1, Z2, F1,
-				    F2, F3, F4, F5, TrUserData) ->
-    dg_read_field_def_ReadStreamEvents(Other, Z1, Z2, F1,
-				       F2, F3, F4, F5, TrUserData).
-
-dg_read_field_def_ReadStreamEvents(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_ReadStreamEvents(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, F4, F5,
-				       TrUserData);
-dg_read_field_def_ReadStreamEvents(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, F5, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_ReadStreamEvents_event_stream_id(Rest, 0, 0, F1,
-						   F2, F3, F4, F5, TrUserData);
-      16 ->
-	  d_field_ReadStreamEvents_from_event_number(Rest, 0, 0,
-						     F1, F2, F3, F4, F5,
-						     TrUserData);
-      24 ->
-	  d_field_ReadStreamEvents_max_count(Rest, 0, 0, F1, F2,
-					     F3, F4, F5, TrUserData);
-      32 ->
-	  d_field_ReadStreamEvents_resolve_link_tos(Rest, 0, 0,
-						    F1, F2, F3, F4, F5,
-						    TrUserData);
-      40 ->
-	  d_field_ReadStreamEvents_require_master(Rest, 0, 0, F1,
-						  F2, F3, F4, F5, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_ReadStreamEvents(Rest, 0, 0, F1, F2, F3, F4,
-					     F5, TrUserData);
-	    1 ->
-		skip_64_ReadStreamEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
-					 TrUserData);
-	    2 ->
-		skip_length_delimited_ReadStreamEvents(Rest, 0, 0, F1,
-						       F2, F3, F4, F5,
-						       TrUserData);
-	    3 ->
-		skip_group_ReadStreamEvents(Rest, Key bsr 3, 0, F1, F2,
-					    F3, F4, F5, TrUserData);
-	    5 ->
-		skip_32_ReadStreamEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
-					 TrUserData)
-	  end
-    end;
-dg_read_field_def_ReadStreamEvents(<<>>, 0, 0, F1, F2,
-				   F3, F4, F5, _) ->
-    #'ReadStreamEvents'{event_stream_id = F1,
-			from_event_number = F2, max_count = F3,
-			resolve_link_tos = F4, require_master = F5}.
-
-d_field_ReadStreamEvents_event_stream_id(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadStreamEvents_event_stream_id(Rest, N + 7,
-					     X bsl N + Acc, F1, F2, F3, F4, F5,
-					     TrUserData);
-d_field_ReadStreamEvents_event_stream_id(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, _, F2, F3, F4, F5,
-					 TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_ReadStreamEvents(Rest2, 0, 0,
-					NewFValue, F2, F3, F4, F5, TrUserData).
-
-
-d_field_ReadStreamEvents_from_event_number(<<1:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, F2, F3, F4, F5,
-					   TrUserData)
-    when N < 57 ->
-    d_field_ReadStreamEvents_from_event_number(Rest, N + 7,
-					       X bsl N + Acc, F1, F2, F3, F4,
-					       F5, TrUserData);
-d_field_ReadStreamEvents_from_event_number(<<0:1, X:7,
-					     Rest/binary>>,
-					   N, Acc, F1, _, F3, F4, F5,
-					   TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1,
-					NewFValue, F3, F4, F5, TrUserData).
-
-
-d_field_ReadStreamEvents_max_count(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadStreamEvents_max_count(Rest, N + 7,
-				       X bsl N + Acc, F1, F2, F3, F4, F5,
-				       TrUserData);
-d_field_ReadStreamEvents_max_count(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F1, F2, _, F4, F5, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1, F2,
-					NewFValue, F4, F5, TrUserData).
-
-
-d_field_ReadStreamEvents_resolve_link_tos(<<1:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, F4, F5,
-					  TrUserData)
-    when N < 57 ->
-    d_field_ReadStreamEvents_resolve_link_tos(Rest, N + 7,
-					      X bsl N + Acc, F1, F2, F3, F4, F5,
-					      TrUserData);
-d_field_ReadStreamEvents_resolve_link_tos(<<0:1, X:7,
-					    Rest/binary>>,
-					  N, Acc, F1, F2, F3, _, F5,
-					  TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1, F2,
-					F3, NewFValue, F5, TrUserData).
-
-
-d_field_ReadStreamEvents_require_master(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadStreamEvents_require_master(Rest, N + 7,
-					    X bsl N + Acc, F1, F2, F3, F4, F5,
-					    TrUserData);
-d_field_ReadStreamEvents_require_master(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F1, F2, F3, F4, _,
-					TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_ReadStreamEvents(Rest, 0, 0, F1, F2,
-					F3, F4, NewFValue, TrUserData).
-
-
-skip_varint_ReadStreamEvents(<<1:1, _:7, Rest/binary>>,
-			     Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    skip_varint_ReadStreamEvents(Rest, Z1, Z2, F1, F2, F3,
-				 F4, F5, TrUserData);
-skip_varint_ReadStreamEvents(<<0:1, _:7, Rest/binary>>,
-			     Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    dfp_read_field_def_ReadStreamEvents(Rest, Z1, Z2, F1,
-					F2, F3, F4, F5, TrUserData).
-
-
-skip_length_delimited_ReadStreamEvents(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_ReadStreamEvents(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3, F4, F5,
-					   TrUserData);
-skip_length_delimited_ReadStreamEvents(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, F5,
-				       TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_ReadStreamEvents(Rest2, 0, 0, F1, F2,
-					F3, F4, F5, TrUserData).
-
-
-skip_group_ReadStreamEvents(Bin, FNum, Z2, F1, F2, F3,
-			    F4, F5, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_ReadStreamEvents(Rest, 0, Z2, F1, F2,
-					F3, F4, F5, TrUserData).
-
-
-skip_32_ReadStreamEvents(<<_:32, Rest/binary>>, Z1, Z2,
-			 F1, F2, F3, F4, F5, TrUserData) ->
-    dfp_read_field_def_ReadStreamEvents(Rest, Z1, Z2, F1,
-					F2, F3, F4, F5, TrUserData).
-
-
-skip_64_ReadStreamEvents(<<_:64, Rest/binary>>, Z1, Z2,
-			 F1, F2, F3, F4, F5, TrUserData) ->
-    dfp_read_field_def_ReadStreamEvents(Rest, Z1, Z2, F1,
-					F2, F3, F4, F5, TrUserData).
-
-
-d_msg_ReadAllEvents(Bin, TrUserData) ->
-    dfp_read_field_def_ReadAllEvents(Bin, 0, 0,
-				     id(undefined, TrUserData),
-				     id(undefined, TrUserData),
-				     id(undefined, TrUserData),
-				     id(undefined, TrUserData),
-				     id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_ReadAllEvents(<<8, Rest/binary>>, Z1,
-				 Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadAllEvents_commit_position(Rest, Z1, Z2, F1,
-					  F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadAllEvents(<<16, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadAllEvents_prepare_position(Rest, Z1, Z2, F1,
-					   F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadAllEvents(<<24, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadAllEvents_max_count(Rest, Z1, Z2, F1, F2,
-				    F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadAllEvents(<<32, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadAllEvents_resolve_link_tos(Rest, Z1, Z2, F1,
-					   F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadAllEvents(<<40, Rest/binary>>,
-				 Z1, Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    d_field_ReadAllEvents_require_master(Rest, Z1, Z2, F1,
-					 F2, F3, F4, F5, TrUserData);
-dfp_read_field_def_ReadAllEvents(<<>>, 0, 0, F1, F2, F3,
-				 F4, F5, _) ->
-    #'ReadAllEvents'{commit_position = F1,
-		     prepare_position = F2, max_count = F3,
-		     resolve_link_tos = F4, require_master = F5};
-dfp_read_field_def_ReadAllEvents(Other, Z1, Z2, F1, F2,
-				 F3, F4, F5, TrUserData) ->
-    dg_read_field_def_ReadAllEvents(Other, Z1, Z2, F1, F2,
-				    F3, F4, F5, TrUserData).
-
-dg_read_field_def_ReadAllEvents(<<1:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_ReadAllEvents(Rest, N + 7,
-				    X bsl N + Acc, F1, F2, F3, F4, F5,
-				    TrUserData);
-dg_read_field_def_ReadAllEvents(<<0:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, F4, F5, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_ReadAllEvents_commit_position(Rest, 0, 0, F1,
-						F2, F3, F4, F5, TrUserData);
-      16 ->
-	  d_field_ReadAllEvents_prepare_position(Rest, 0, 0, F1,
-						 F2, F3, F4, F5, TrUserData);
-      24 ->
-	  d_field_ReadAllEvents_max_count(Rest, 0, 0, F1, F2, F3,
-					  F4, F5, TrUserData);
-      32 ->
-	  d_field_ReadAllEvents_resolve_link_tos(Rest, 0, 0, F1,
-						 F2, F3, F4, F5, TrUserData);
-      40 ->
-	  d_field_ReadAllEvents_require_master(Rest, 0, 0, F1, F2,
-					       F3, F4, F5, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_ReadAllEvents(Rest, 0, 0, F1, F2, F3, F4,
-					  F5, TrUserData);
-	    1 ->
-		skip_64_ReadAllEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
-				      TrUserData);
-	    2 ->
-		skip_length_delimited_ReadAllEvents(Rest, 0, 0, F1, F2,
-						    F3, F4, F5, TrUserData);
-	    3 ->
-		skip_group_ReadAllEvents(Rest, Key bsr 3, 0, F1, F2, F3,
-					 F4, F5, TrUserData);
-	    5 ->
-		skip_32_ReadAllEvents(Rest, 0, 0, F1, F2, F3, F4, F5,
-				      TrUserData)
-	  end
-    end;
-dg_read_field_def_ReadAllEvents(<<>>, 0, 0, F1, F2, F3,
-				F4, F5, _) ->
-    #'ReadAllEvents'{commit_position = F1,
-		     prepare_position = F2, max_count = F3,
-		     resolve_link_tos = F4, require_master = F5}.
-
-d_field_ReadAllEvents_commit_position(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEvents_commit_position(Rest, N + 7,
-					  X bsl N + Acc, F1, F2, F3, F4, F5,
-					  TrUserData);
-d_field_ReadAllEvents_commit_position(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, _, F2, F3, F4, F5, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, NewFValue,
-				     F2, F3, F4, F5, TrUserData).
-
-
-d_field_ReadAllEvents_prepare_position(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEvents_prepare_position(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3, F4, F5,
-					   TrUserData);
-d_field_ReadAllEvents_prepare_position(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, _, F3, F4, F5, TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1,
-				     NewFValue, F3, F4, F5, TrUserData).
-
-
-d_field_ReadAllEvents_max_count(<<1:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEvents_max_count(Rest, N + 7,
-				    X bsl N + Acc, F1, F2, F3, F4, F5,
-				    TrUserData);
-d_field_ReadAllEvents_max_count(<<0:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F1, F2, _, F4, F5, TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1, F2,
-				     NewFValue, F4, F5, TrUserData).
-
-
-d_field_ReadAllEvents_resolve_link_tos(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEvents_resolve_link_tos(Rest, N + 7,
-					   X bsl N + Acc, F1, F2, F3, F4, F5,
-					   TrUserData);
-d_field_ReadAllEvents_resolve_link_tos(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F1, F2, F3, _, F5, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1, F2, F3,
-				     NewFValue, F5, TrUserData).
-
-
-d_field_ReadAllEvents_require_master(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    d_field_ReadAllEvents_require_master(Rest, N + 7,
-					 X bsl N + Acc, F1, F2, F3, F4, F5,
-					 TrUserData);
-d_field_ReadAllEvents_require_master(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F1, F2, F3, F4, _, TrUserData) ->
-    NewFValue = X bsl N + Acc =/= 0,
-    dfp_read_field_def_ReadAllEvents(Rest, 0, 0, F1, F2, F3,
-				     F4, NewFValue, TrUserData).
-
-
-skip_varint_ReadAllEvents(<<1:1, _:7, Rest/binary>>, Z1,
-			  Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    skip_varint_ReadAllEvents(Rest, Z1, Z2, F1, F2, F3, F4,
-			      F5, TrUserData);
-skip_varint_ReadAllEvents(<<0:1, _:7, Rest/binary>>, Z1,
-			  Z2, F1, F2, F3, F4, F5, TrUserData) ->
-    dfp_read_field_def_ReadAllEvents(Rest, Z1, Z2, F1, F2,
-				     F3, F4, F5, TrUserData).
-
-
-skip_length_delimited_ReadAllEvents(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, F5, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_ReadAllEvents(Rest, N + 7,
-					X bsl N + Acc, F1, F2, F3, F4, F5,
-					TrUserData);
-skip_length_delimited_ReadAllEvents(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F1, F2, F3, F4, F5, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_ReadAllEvents(Rest2, 0, 0, F1, F2,
-				     F3, F4, F5, TrUserData).
-
-
-skip_group_ReadAllEvents(Bin, FNum, Z2, F1, F2, F3, F4,
-			 F5, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_ReadAllEvents(Rest, 0, Z2, F1, F2,
-				     F3, F4, F5, TrUserData).
-
-
-skip_32_ReadAllEvents(<<_:32, Rest/binary>>, Z1, Z2, F1,
-		      F2, F3, F4, F5, TrUserData) ->
-    dfp_read_field_def_ReadAllEvents(Rest, Z1, Z2, F1, F2,
-				     F3, F4, F5, TrUserData).
-
-
-skip_64_ReadAllEvents(<<_:64, Rest/binary>>, Z1, Z2, F1,
-		      F2, F3, F4, F5, TrUserData) ->
-    dfp_read_field_def_ReadAllEvents(Rest, Z1, Z2, F1, F2,
-				     F3, F4, F5, TrUserData).
-
-
-d_msg_PersistentSubscriptionConfirmation(Bin,
-					 TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Bin,
-							  0, 0,
-							  id(undefined,
-							     TrUserData),
-							  id(undefined,
-							     TrUserData),
-							  id(0, TrUserData),
-							  TrUserData).
-
-dfp_read_field_def_PersistentSubscriptionConfirmation(<<8,
-							Rest/binary>>,
-						      Z1, Z2, F1, F2, F3,
-						      TrUserData) ->
-    d_field_PersistentSubscriptionConfirmation_last_commit_position(Rest,
-								    Z1, Z2, F1,
-								    F2, F3,
-								    TrUserData);
-dfp_read_field_def_PersistentSubscriptionConfirmation(<<18,
-							Rest/binary>>,
-						      Z1, Z2, F1, F2, F3,
-						      TrUserData) ->
-    d_field_PersistentSubscriptionConfirmation_subscription_id(Rest,
-							       Z1, Z2, F1, F2,
-							       F3, TrUserData);
-dfp_read_field_def_PersistentSubscriptionConfirmation(<<24,
-							Rest/binary>>,
-						      Z1, Z2, F1, F2, F3,
-						      TrUserData) ->
-    d_field_PersistentSubscriptionConfirmation_last_event_number(Rest,
-								 Z1, Z2, F1, F2,
-								 F3,
-								 TrUserData);
-dfp_read_field_def_PersistentSubscriptionConfirmation(<<>>,
-						      0, 0, F1, F2, F3, _) ->
-    #'PersistentSubscriptionConfirmation'{last_commit_position
-					      = F1,
-					  subscription_id = F2,
-					  last_event_number = F3};
-dfp_read_field_def_PersistentSubscriptionConfirmation(Other,
-						      Z1, Z2, F1, F2, F3,
-						      TrUserData) ->
-    dg_read_field_def_PersistentSubscriptionConfirmation(Other,
-							 Z1, Z2, F1, F2, F3,
-							 TrUserData).
-
-dg_read_field_def_PersistentSubscriptionConfirmation(<<1:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3,
-						     TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_PersistentSubscriptionConfirmation(Rest,
-							 N + 7, X bsl N + Acc,
-							 F1, F2, F3,
-							 TrUserData);
-dg_read_field_def_PersistentSubscriptionConfirmation(<<0:1,
-						       X:7, Rest/binary>>,
-						     N, Acc, F1, F2, F3,
-						     TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_PersistentSubscriptionConfirmation_last_commit_position(Rest,
-									  0, 0,
-									  F1,
-									  F2,
-									  F3,
-									  TrUserData);
-      18 ->
-	  d_field_PersistentSubscriptionConfirmation_subscription_id(Rest,
-								     0, 0, F1,
-								     F2, F3,
-								     TrUserData);
-      24 ->
-	  d_field_PersistentSubscriptionConfirmation_last_event_number(Rest,
-								       0, 0, F1,
-								       F2, F3,
-								       TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_PersistentSubscriptionConfirmation(Rest, 0,
-							       0, F1, F2, F3,
-							       TrUserData);
-	    1 ->
-		skip_64_PersistentSubscriptionConfirmation(Rest, 0, 0,
-							   F1, F2, F3,
-							   TrUserData);
-	    2 ->
-		skip_length_delimited_PersistentSubscriptionConfirmation(Rest,
-									 0, 0,
-									 F1, F2,
-									 F3,
-									 TrUserData);
-	    3 ->
-		skip_group_PersistentSubscriptionConfirmation(Rest,
-							      Key bsr 3, 0, F1,
-							      F2, F3,
-							      TrUserData);
-	    5 ->
-		skip_32_PersistentSubscriptionConfirmation(Rest, 0, 0,
-							   F1, F2, F3,
-							   TrUserData)
-	  end
-    end;
-dg_read_field_def_PersistentSubscriptionConfirmation(<<>>,
-						     0, 0, F1, F2, F3, _) ->
-    #'PersistentSubscriptionConfirmation'{last_commit_position
-					      = F1,
-					  subscription_id = F2,
-					  last_event_number = F3}.
-
-d_field_PersistentSubscriptionConfirmation_last_commit_position(<<1:1,
-								  X:7,
-								  Rest/binary>>,
-								N, Acc, F1, F2,
-								F3, TrUserData)
-    when N < 57 ->
-    d_field_PersistentSubscriptionConfirmation_last_commit_position(Rest,
-								    N + 7,
-								    X bsl N +
-								      Acc,
-								    F1, F2, F3,
-								    TrUserData);
-d_field_PersistentSubscriptionConfirmation_last_commit_position(<<0:1,
-								  X:7,
-								  Rest/binary>>,
-								N, Acc, _, F2,
-								F3,
-								TrUserData) ->
-    <<NewFValue:64/signed-native>> = <<(X bsl N +
-					  Acc):64/unsigned-native>>,
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
-							  0, 0, NewFValue, F2,
-							  F3, TrUserData).
-
-
-d_field_PersistentSubscriptionConfirmation_subscription_id(<<1:1,
-							     X:7, Rest/binary>>,
-							   N, Acc, F1, F2, F3,
-							   TrUserData)
-    when N < 57 ->
-    d_field_PersistentSubscriptionConfirmation_subscription_id(Rest,
-							       N + 7,
-							       X bsl N + Acc,
-							       F1, F2, F3,
-							       TrUserData);
-d_field_PersistentSubscriptionConfirmation_subscription_id(<<0:1,
-							     X:7, Rest/binary>>,
-							   N, Acc, F1, _, F3,
-							   TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest2,
-							  0, 0, F1, NewFValue,
-							  F3, TrUserData).
-
-
-d_field_PersistentSubscriptionConfirmation_last_event_number(<<1:1,
-							       X:7,
-							       Rest/binary>>,
-							     N, Acc, F1, F2, F3,
-							     TrUserData)
-    when N < 57 ->
-    d_field_PersistentSubscriptionConfirmation_last_event_number(Rest,
-								 N + 7,
-								 X bsl N + Acc,
-								 F1, F2, F3,
-								 TrUserData);
-d_field_PersistentSubscriptionConfirmation_last_event_number(<<0:1,
-							       X:7,
-							       Rest/binary>>,
-							     N, Acc, F1, F2, _,
-							     TrUserData) ->
-    <<NewFValue:32/signed-native>> = <<(X bsl N +
-					  Acc):32/unsigned-native>>,
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
-							  0, 0, F1, F2,
-							  NewFValue,
-							  TrUserData).
-
-
-skip_varint_PersistentSubscriptionConfirmation(<<1:1,
-						 _:7, Rest/binary>>,
-					       Z1, Z2, F1, F2, F3,
-					       TrUserData) ->
-    skip_varint_PersistentSubscriptionConfirmation(Rest, Z1,
-						   Z2, F1, F2, F3, TrUserData);
-skip_varint_PersistentSubscriptionConfirmation(<<0:1,
-						 _:7, Rest/binary>>,
-					       Z1, Z2, F1, F2, F3,
-					       TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
-							  Z1, Z2, F1, F2, F3,
-							  TrUserData).
-
-
-skip_length_delimited_PersistentSubscriptionConfirmation(<<1:1,
-							   X:7, Rest/binary>>,
-							 N, Acc, F1, F2, F3,
-							 TrUserData)
-    when N < 57 ->
-    skip_length_delimited_PersistentSubscriptionConfirmation(Rest,
-							     N + 7,
-							     X bsl N + Acc, F1,
-							     F2, F3,
-							     TrUserData);
-skip_length_delimited_PersistentSubscriptionConfirmation(<<0:1,
-							   X:7, Rest/binary>>,
-							 N, Acc, F1, F2, F3,
-							 TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest2,
-							  0, 0, F1, F2, F3,
-							  TrUserData).
-
-
-skip_group_PersistentSubscriptionConfirmation(Bin, FNum,
-					      Z2, F1, F2, F3, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
-							  0, Z2, F1, F2, F3,
-							  TrUserData).
-
-
-skip_32_PersistentSubscriptionConfirmation(<<_:32,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
-							  Z1, Z2, F1, F2, F3,
-							  TrUserData).
-
-
-skip_64_PersistentSubscriptionConfirmation(<<_:64,
-					     Rest/binary>>,
-					   Z1, Z2, F1, F2, F3, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionConfirmation(Rest,
-							  Z1, Z2, F1, F2, F3,
-							  TrUserData).
-
-
-d_msg_PersistentSubscriptionAckEvents(Bin,
-				      TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Bin,
-						       0, 0,
-						       id(undefined,
-							  TrUserData),
-						       id([], TrUserData),
-						       TrUserData).
-
-dfp_read_field_def_PersistentSubscriptionAckEvents(<<10,
-						     Rest/binary>>,
-						   Z1, Z2, F1, F2,
-						   TrUserData) ->
-    d_field_PersistentSubscriptionAckEvents_subscription_id(Rest,
-							    Z1, Z2, F1, F2,
-							    TrUserData);
-dfp_read_field_def_PersistentSubscriptionAckEvents(<<18,
-						     Rest/binary>>,
-						   Z1, Z2, F1, F2,
-						   TrUserData) ->
-    d_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
-								Z1, Z2, F1, F2,
-								TrUserData);
-dfp_read_field_def_PersistentSubscriptionAckEvents(<<>>,
-						   0, 0, F1, F2, TrUserData) ->
-    #'PersistentSubscriptionAckEvents'{subscription_id = F1,
-				       processed_event_ids =
-					   lists_reverse(F2, TrUserData)};
-dfp_read_field_def_PersistentSubscriptionAckEvents(Other,
-						   Z1, Z2, F1, F2,
-						   TrUserData) ->
-    dg_read_field_def_PersistentSubscriptionAckEvents(Other,
-						      Z1, Z2, F1, F2,
-						      TrUserData).
-
-dg_read_field_def_PersistentSubscriptionAckEvents(<<1:1,
-						    X:7, Rest/binary>>,
-						  N, Acc, F1, F2, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_PersistentSubscriptionAckEvents(Rest,
-						      N + 7, X bsl N + Acc, F1,
-						      F2, TrUserData);
-dg_read_field_def_PersistentSubscriptionAckEvents(<<0:1,
-						    X:7, Rest/binary>>,
-						  N, Acc, F1, F2, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_PersistentSubscriptionAckEvents_subscription_id(Rest,
-								  0, 0, F1, F2,
-								  TrUserData);
-      18 ->
-	  d_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
-								      0, 0, F1,
-								      F2,
-								      TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_PersistentSubscriptionAckEvents(Rest, 0, 0,
-							    F1, F2, TrUserData);
-	    1 ->
-		skip_64_PersistentSubscriptionAckEvents(Rest, 0, 0, F1,
-							F2, TrUserData);
-	    2 ->
-		skip_length_delimited_PersistentSubscriptionAckEvents(Rest,
-								      0, 0, F1,
-								      F2,
-								      TrUserData);
-	    3 ->
-		skip_group_PersistentSubscriptionAckEvents(Rest,
-							   Key bsr 3, 0, F1, F2,
-							   TrUserData);
-	    5 ->
-		skip_32_PersistentSubscriptionAckEvents(Rest, 0, 0, F1,
-							F2, TrUserData)
-	  end
-    end;
-dg_read_field_def_PersistentSubscriptionAckEvents(<<>>,
-						  0, 0, F1, F2, TrUserData) ->
-    #'PersistentSubscriptionAckEvents'{subscription_id = F1,
-				       processed_event_ids =
-					   lists_reverse(F2, TrUserData)}.
-
-d_field_PersistentSubscriptionAckEvents_subscription_id(<<1:1,
-							  X:7, Rest/binary>>,
-							N, Acc, F1, F2,
-							TrUserData)
-    when N < 57 ->
-    d_field_PersistentSubscriptionAckEvents_subscription_id(Rest,
-							    N + 7,
-							    X bsl N + Acc, F1,
-							    F2, TrUserData);
-d_field_PersistentSubscriptionAckEvents_subscription_id(<<0:1,
-							  X:7, Rest/binary>>,
-							N, Acc, _, F2,
-							TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest2,
-						       0, 0, NewFValue, F2,
-						       TrUserData).
-
-
-d_field_PersistentSubscriptionAckEvents_processed_event_ids(<<1:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2,
-							    TrUserData)
-    when N < 57 ->
-    d_field_PersistentSubscriptionAckEvents_processed_event_ids(Rest,
-								N + 7,
-								X bsl N + Acc,
-								F1, F2,
-								TrUserData);
-d_field_PersistentSubscriptionAckEvents_processed_event_ids(<<0:1,
-							      X:7,
-							      Rest/binary>>,
-							    N, Acc, F1, F2,
-							    TrUserData) ->
-    Len = X bsl N + Acc,
-    <<Bytes:Len/binary, Rest2/binary>> = Rest,
-    NewFValue = binary:copy(Bytes),
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest2,
-						       0, 0, F1,
-						       cons(NewFValue, F2,
-							    TrUserData),
-						       TrUserData).
-
-
-skip_varint_PersistentSubscriptionAckEvents(<<1:1, _:7,
-					      Rest/binary>>,
-					    Z1, Z2, F1, F2, TrUserData) ->
-    skip_varint_PersistentSubscriptionAckEvents(Rest, Z1,
-						Z2, F1, F2, TrUserData);
-skip_varint_PersistentSubscriptionAckEvents(<<0:1, _:7,
-					      Rest/binary>>,
-					    Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
-						       Z1, Z2, F1, F2,
-						       TrUserData).
-
-
-skip_length_delimited_PersistentSubscriptionAckEvents(<<1:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2,
-						      TrUserData)
-    when N < 57 ->
-    skip_length_delimited_PersistentSubscriptionAckEvents(Rest,
-							  N + 7, X bsl N + Acc,
-							  F1, F2, TrUserData);
-skip_length_delimited_PersistentSubscriptionAckEvents(<<0:1,
-							X:7, Rest/binary>>,
-						      N, Acc, F1, F2,
-						      TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest2,
-						       0, 0, F1, F2,
-						       TrUserData).
-
-
-skip_group_PersistentSubscriptionAckEvents(Bin, FNum,
-					   Z2, F1, F2, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
-						       0, Z2, F1, F2,
-						       TrUserData).
-
-
-skip_32_PersistentSubscriptionAckEvents(<<_:32,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
-						       Z1, Z2, F1, F2,
-						       TrUserData).
-
-
-skip_64_PersistentSubscriptionAckEvents(<<_:64,
-					  Rest/binary>>,
-					Z1, Z2, F1, F2, TrUserData) ->
-    dfp_read_field_def_PersistentSubscriptionAckEvents(Rest,
-						       Z1, Z2, F1, F2,
-						       TrUserData).
-
-
 
 
 d_enum_OperationResult(0) -> 'Success';
@@ -11989,279 +11989,136 @@ merge_msgs(Prev, New, Opts)
     when element(1, Prev) =:= element(1, New) ->
     TrUserData = proplists:get_value(user_data, Opts),
     case Prev of
-      #'NewEvent'{} ->
-	  merge_msg_NewEvent(Prev, New, TrUserData);
-      #'TransactionWrite'{} ->
-	  merge_msg_TransactionWrite(Prev, New, TrUserData);
-      #'TransactionCommitCompleted'{} ->
-	  merge_msg_TransactionCommitCompleted(Prev, New,
-					       TrUserData);
-      #'NotHandled.MasterInfo'{} ->
-	  'merge_msg_NotHandled.MasterInfo'(Prev, New,
-					    TrUserData);
-      #'ScavengeDatabase'{} ->
-	  merge_msg_ScavengeDatabase(Prev, New, TrUserData);
-      #'WriteEventsCompleted'{} ->
-	  merge_msg_WriteEventsCompleted(Prev, New, TrUserData);
-      #'SubscribeToStream'{} ->
-	  merge_msg_SubscribeToStream(Prev, New, TrUserData);
-      #'SubscriptionDropped'{} ->
-	  merge_msg_SubscriptionDropped(Prev, New, TrUserData);
-      #'TransactionWriteCompleted'{} ->
-	  merge_msg_TransactionWriteCompleted(Prev, New,
-					      TrUserData);
-      #'TransactionStart'{} ->
-	  merge_msg_TransactionStart(Prev, New, TrUserData);
-      #'CreatePersistentSubscription'{} ->
-	  merge_msg_CreatePersistentSubscription(Prev, New,
-						 TrUserData);
-      #'TransactionStartCompleted'{} ->
-	  merge_msg_TransactionStartCompleted(Prev, New,
-					      TrUserData);
-      #'EventRecord'{} ->
-	  merge_msg_EventRecord(Prev, New, TrUserData);
-      #'ResolvedEvent'{} ->
-	  merge_msg_ResolvedEvent(Prev, New, TrUserData);
-      #'ReadAllEventsCompleted'{} ->
-	  merge_msg_ReadAllEventsCompleted(Prev, New, TrUserData);
-      #'NotHandled'{} ->
-	  merge_msg_NotHandled(Prev, New, TrUserData);
+      #'ReadAllEvents'{} ->
+	  merge_msg_ReadAllEvents(Prev, New, TrUserData);
       #'SubscriptionConfirmation'{} ->
 	  merge_msg_SubscriptionConfirmation(Prev, New,
 					     TrUserData);
-      #'DeleteStreamCompleted'{} ->
-	  merge_msg_DeleteStreamCompleted(Prev, New, TrUserData);
-      #'WriteEvents'{} ->
-	  merge_msg_WriteEvents(Prev, New, TrUserData);
-      #'DeleteStream'{} ->
-	  merge_msg_DeleteStream(Prev, New, TrUserData);
-      #'ScavengeDatabaseCompleted'{} ->
-	  merge_msg_ScavengeDatabaseCompleted(Prev, New,
-					      TrUserData);
-      #'UnsubscribeFromStream'{} ->
-	  merge_msg_UnsubscribeFromStream(Prev, New, TrUserData);
-      #'DeletePersistentSubscriptionCompleted'{} ->
-	  merge_msg_DeletePersistentSubscriptionCompleted(Prev,
-							  New, TrUserData);
-      #'UpdatePersistentSubscription'{} ->
-	  merge_msg_UpdatePersistentSubscription(Prev, New,
-						 TrUserData);
-      #'ResolvedIndexedEvent'{} ->
-	  merge_msg_ResolvedIndexedEvent(Prev, New, TrUserData);
-      #'ReadStreamEventsCompleted'{} ->
-	  merge_msg_ReadStreamEventsCompleted(Prev, New,
+      #'TransactionWriteCompleted'{} ->
+	  merge_msg_TransactionWriteCompleted(Prev, New,
 					      TrUserData);
       #'TransactionCommit'{} ->
 	  merge_msg_TransactionCommit(Prev, New, TrUserData);
-      #'CreatePersistentSubscriptionCompleted'{} ->
-	  merge_msg_CreatePersistentSubscriptionCompleted(Prev,
-							  New, TrUserData);
-      #'ReadEvent'{} ->
-	  merge_msg_ReadEvent(Prev, New, TrUserData);
-      #'UpdatePersistentSubscriptionCompleted'{} ->
-	  merge_msg_UpdatePersistentSubscriptionCompleted(Prev,
-							  New, TrUserData);
+      #'UpdatePersistentSubscription'{} ->
+	  merge_msg_UpdatePersistentSubscription(Prev, New,
+						 TrUserData);
+      #'EventRecord'{} ->
+	  merge_msg_EventRecord(Prev, New, TrUserData);
+      #'ResolvedIndexedEvent'{} ->
+	  merge_msg_ResolvedIndexedEvent(Prev, New, TrUserData);
       #'PersistentSubscriptionStreamEventAppeared'{} ->
 	  merge_msg_PersistentSubscriptionStreamEventAppeared(Prev,
 							      New, TrUserData);
+      #'ReadEvent'{} ->
+	  merge_msg_ReadEvent(Prev, New, TrUserData);
+      #'TransactionStartCompleted'{} ->
+	  merge_msg_TransactionStartCompleted(Prev, New,
+					      TrUserData);
+      #'ScavengeDatabaseCompleted'{} ->
+	  merge_msg_ScavengeDatabaseCompleted(Prev, New,
+					      TrUserData);
+      #'WriteEventsCompleted'{} ->
+	  merge_msg_WriteEventsCompleted(Prev, New, TrUserData);
+      #'DeleteStream'{} ->
+	  merge_msg_DeleteStream(Prev, New, TrUserData);
+      #'UnsubscribeFromStream'{} ->
+	  merge_msg_UnsubscribeFromStream(Prev, New, TrUserData);
+      #'NewEvent'{} ->
+	  merge_msg_NewEvent(Prev, New, TrUserData);
+      #'NotHandled'{} ->
+	  merge_msg_NotHandled(Prev, New, TrUserData);
+      #'WriteEvents'{} ->
+	  merge_msg_WriteEvents(Prev, New, TrUserData);
+      #'ScavengeDatabase'{} ->
+	  merge_msg_ScavengeDatabase(Prev, New, TrUserData);
+      #'ResolvedEvent'{} ->
+	  merge_msg_ResolvedEvent(Prev, New, TrUserData);
+      #'StreamEventAppeared'{} ->
+	  merge_msg_StreamEventAppeared(Prev, New, TrUserData);
+      #'ReadStreamEvents'{} ->
+	  merge_msg_ReadStreamEvents(Prev, New, TrUserData);
+      #'SubscriptionDropped'{} ->
+	  merge_msg_SubscriptionDropped(Prev, New, TrUserData);
+      #'SubscribeToStream'{} ->
+	  merge_msg_SubscribeToStream(Prev, New, TrUserData);
+      #'PersistentSubscriptionConfirmation'{} ->
+	  merge_msg_PersistentSubscriptionConfirmation(Prev, New,
+						       TrUserData);
+      #'TransactionStart'{} ->
+	  merge_msg_TransactionStart(Prev, New, TrUserData);
+      #'CreatePersistentSubscriptionCompleted'{} ->
+	  merge_msg_CreatePersistentSubscriptionCompleted(Prev,
+							  New, TrUserData);
+      #'ReadStreamEventsCompleted'{} ->
+	  merge_msg_ReadStreamEventsCompleted(Prev, New,
+					      TrUserData);
+      #'TransactionCommitCompleted'{} ->
+	  merge_msg_TransactionCommitCompleted(Prev, New,
+					       TrUserData);
+      #'PersistentSubscriptionAckEvents'{} ->
+	  merge_msg_PersistentSubscriptionAckEvents(Prev, New,
+						    TrUserData);
+      #'DeleteStreamCompleted'{} ->
+	  merge_msg_DeleteStreamCompleted(Prev, New, TrUserData);
+      #'CreatePersistentSubscription'{} ->
+	  merge_msg_CreatePersistentSubscription(Prev, New,
+						 TrUserData);
+      #'DeletePersistentSubscriptionCompleted'{} ->
+	  merge_msg_DeletePersistentSubscriptionCompleted(Prev,
+							  New, TrUserData);
       #'ReadEventCompleted'{} ->
 	  merge_msg_ReadEventCompleted(Prev, New, TrUserData);
       #'DeletePersistentSubscription'{} ->
 	  merge_msg_DeletePersistentSubscription(Prev, New,
 						 TrUserData);
-      #'StreamEventAppeared'{} ->
-	  merge_msg_StreamEventAppeared(Prev, New, TrUserData);
+      #'UpdatePersistentSubscriptionCompleted'{} ->
+	  merge_msg_UpdatePersistentSubscriptionCompleted(Prev,
+							  New, TrUserData);
+      #'NotHandled.MasterInfo'{} ->
+	  'merge_msg_NotHandled.MasterInfo'(Prev, New,
+					    TrUserData);
+      #'ReadAllEventsCompleted'{} ->
+	  merge_msg_ReadAllEventsCompleted(Prev, New, TrUserData);
       #'ConnectToPersistentSubscription'{} ->
 	  merge_msg_ConnectToPersistentSubscription(Prev, New,
 						    TrUserData);
+      #'TransactionWrite'{} ->
+	  merge_msg_TransactionWrite(Prev, New, TrUserData);
       #'PersistentSubscriptionNakEvents'{} ->
 	  merge_msg_PersistentSubscriptionNakEvents(Prev, New,
-						    TrUserData);
-      #'ReadStreamEvents'{} ->
-	  merge_msg_ReadStreamEvents(Prev, New, TrUserData);
-      #'ReadAllEvents'{} ->
-	  merge_msg_ReadAllEvents(Prev, New, TrUserData);
-      #'PersistentSubscriptionConfirmation'{} ->
-	  merge_msg_PersistentSubscriptionConfirmation(Prev, New,
-						       TrUserData);
-      #'PersistentSubscriptionAckEvents'{} ->
-	  merge_msg_PersistentSubscriptionAckEvents(Prev, New,
 						    TrUserData)
     end.
 
-merge_msg_NewEvent(#'NewEvent'{metadata = PFmetadata},
-		   #'NewEvent'{event_id = NFevent_id,
-			       event_type = NFevent_type,
-			       data_content_type = NFdata_content_type,
-			       metadata_content_type = NFmetadata_content_type,
-			       data = NFdata, metadata = NFmetadata},
-		   _) ->
-    #'NewEvent'{event_id = NFevent_id,
-		event_type = NFevent_type,
-		data_content_type = NFdata_content_type,
-		metadata_content_type = NFmetadata_content_type,
-		data = NFdata,
-		metadata =
-		    if NFmetadata =:= undefined -> PFmetadata;
-		       true -> NFmetadata
-		    end}.
+merge_msg_ReadAllEvents(#'ReadAllEvents'{},
+			#'ReadAllEvents'{commit_position = NFcommit_position,
+					 prepare_position = NFprepare_position,
+					 max_count = NFmax_count,
+					 resolve_link_tos = NFresolve_link_tos,
+					 require_master = NFrequire_master},
+			_) ->
+    #'ReadAllEvents'{commit_position = NFcommit_position,
+		     prepare_position = NFprepare_position,
+		     max_count = NFmax_count,
+		     resolve_link_tos = NFresolve_link_tos,
+		     require_master = NFrequire_master}.
 
-merge_msg_TransactionWrite(#'TransactionWrite'{events =
-						   PFevents},
-			   #'TransactionWrite'{transaction_id =
-						   NFtransaction_id,
-					       events = NFevents,
-					       require_master =
-						   NFrequire_master},
-			   TrUserData) ->
-    #'TransactionWrite'{transaction_id = NFtransaction_id,
-			events = 'erlang_++'(PFevents, NFevents, TrUserData),
-			require_master = NFrequire_master}.
-
-merge_msg_TransactionCommitCompleted(#'TransactionCommitCompleted'{message
-								       =
-								       PFmessage,
-								   prepare_position
-								       =
-								       PFprepare_position,
-								   commit_position
-								       =
-								       PFcommit_position},
-				     #'TransactionCommitCompleted'{transaction_id
-								       =
-								       NFtransaction_id,
-								   result =
-								       NFresult,
-								   message =
-								       NFmessage,
-								   first_event_number
-								       =
-								       NFfirst_event_number,
-								   last_event_number
-								       =
-								       NFlast_event_number,
-								   prepare_position
-								       =
-								       NFprepare_position,
-								   commit_position
-								       =
-								       NFcommit_position},
-				     _) ->
-    #'TransactionCommitCompleted'{transaction_id =
-				      NFtransaction_id,
-				  result = NFresult,
-				  message =
-				      if NFmessage =:= undefined -> PFmessage;
-					 true -> NFmessage
-				      end,
-				  first_event_number = NFfirst_event_number,
-				  last_event_number = NFlast_event_number,
-				  prepare_position =
-				      if NFprepare_position =:= undefined ->
-					     PFprepare_position;
-					 true -> NFprepare_position
-				      end,
-				  commit_position =
-				      if NFcommit_position =:= undefined ->
-					     PFcommit_position;
-					 true -> NFcommit_position
-				      end}.
-
-'merge_msg_NotHandled.MasterInfo'(#'NotHandled.MasterInfo'{external_secure_tcp_address
-							       =
-							       PFexternal_secure_tcp_address,
-							   external_secure_tcp_port
-							       =
-							       PFexternal_secure_tcp_port},
-				  #'NotHandled.MasterInfo'{external_tcp_address
-							       =
-							       NFexternal_tcp_address,
-							   external_tcp_port =
-							       NFexternal_tcp_port,
-							   external_http_address
-							       =
-							       NFexternal_http_address,
-							   external_http_port =
-							       NFexternal_http_port,
-							   external_secure_tcp_address
-							       =
-							       NFexternal_secure_tcp_address,
-							   external_secure_tcp_port
-							       =
-							       NFexternal_secure_tcp_port},
-				  _) ->
-    #'NotHandled.MasterInfo'{external_tcp_address =
-				 NFexternal_tcp_address,
-			     external_tcp_port = NFexternal_tcp_port,
-			     external_http_address = NFexternal_http_address,
-			     external_http_port = NFexternal_http_port,
-			     external_secure_tcp_address =
-				 if NFexternal_secure_tcp_address =:=
-				      undefined ->
-					PFexternal_secure_tcp_address;
-				    true -> NFexternal_secure_tcp_address
-				 end,
-			     external_secure_tcp_port =
-				 if NFexternal_secure_tcp_port =:= undefined ->
-					PFexternal_secure_tcp_port;
-				    true -> NFexternal_secure_tcp_port
-				 end}.
-
-merge_msg_ScavengeDatabase(_Prev, New, _TrUserData) ->
-    New.
-
-merge_msg_WriteEventsCompleted(#'WriteEventsCompleted'{message
-							   = PFmessage,
-						       prepare_position =
-							   PFprepare_position,
-						       commit_position =
-							   PFcommit_position},
-			       #'WriteEventsCompleted'{result = NFresult,
-						       message = NFmessage,
-						       first_event_number =
-							   NFfirst_event_number,
-						       last_event_number =
-							   NFlast_event_number,
-						       prepare_position =
-							   NFprepare_position,
-						       commit_position =
-							   NFcommit_position},
-			       _) ->
-    #'WriteEventsCompleted'{result = NFresult,
-			    message =
-				if NFmessage =:= undefined -> PFmessage;
-				   true -> NFmessage
-				end,
-			    first_event_number = NFfirst_event_number,
-			    last_event_number = NFlast_event_number,
-			    prepare_position =
-				if NFprepare_position =:= undefined ->
-				       PFprepare_position;
-				   true -> NFprepare_position
-				end,
-			    commit_position =
-				if NFcommit_position =:= undefined ->
-				       PFcommit_position;
-				   true -> NFcommit_position
-				end}.
-
-merge_msg_SubscribeToStream(#'SubscribeToStream'{},
-			    #'SubscribeToStream'{event_stream_id =
-						     NFevent_stream_id,
-						 resolve_link_tos =
-						     NFresolve_link_tos},
-			    _) ->
-    #'SubscribeToStream'{event_stream_id =
-			     NFevent_stream_id,
-			 resolve_link_tos = NFresolve_link_tos}.
-
-merge_msg_SubscriptionDropped(#'SubscriptionDropped'{reason
-							 = PFreason},
-			      #'SubscriptionDropped'{reason = NFreason}, _) ->
-    #'SubscriptionDropped'{reason =
-			       if NFreason =:= undefined -> PFreason;
-				  true -> NFreason
-			       end}.
+merge_msg_SubscriptionConfirmation(#'SubscriptionConfirmation'{last_event_number
+								   =
+								   PFlast_event_number},
+				   #'SubscriptionConfirmation'{last_commit_position
+								   =
+								   NFlast_commit_position,
+							       last_event_number
+								   =
+								   NFlast_event_number},
+				   _) ->
+    #'SubscriptionConfirmation'{last_commit_position =
+				    NFlast_commit_position,
+				last_event_number =
+				    if NFlast_event_number =:= undefined ->
+					   PFlast_event_number;
+				       true -> NFlast_event_number
+				    end}.
 
 merge_msg_TransactionWriteCompleted(#'TransactionWriteCompleted'{message
 								     =
@@ -12282,334 +12139,14 @@ merge_msg_TransactionWriteCompleted(#'TransactionWriteCompleted'{message
 					true -> NFmessage
 				     end}.
 
-merge_msg_TransactionStart(#'TransactionStart'{},
-			   #'TransactionStart'{event_stream_id =
-						   NFevent_stream_id,
-					       expected_version =
-						   NFexpected_version,
-					       require_master =
-						   NFrequire_master},
-			   _) ->
-    #'TransactionStart'{event_stream_id = NFevent_stream_id,
-			expected_version = NFexpected_version,
-			require_master = NFrequire_master}.
-
-merge_msg_CreatePersistentSubscription(#'CreatePersistentSubscription'{named_consumer_strategy
-									   =
-									   PFnamed_consumer_strategy},
-				       #'CreatePersistentSubscription'{subscription_group_name
-									   =
-									   NFsubscription_group_name,
-								       event_stream_id
-									   =
-									   NFevent_stream_id,
-								       resolve_link_tos
-									   =
-									   NFresolve_link_tos,
-								       start_from
-									   =
-									   NFstart_from,
-								       message_timeout_milliseconds
-									   =
-									   NFmessage_timeout_milliseconds,
-								       record_statistics
-									   =
-									   NFrecord_statistics,
-								       live_buffer_size
-									   =
-									   NFlive_buffer_size,
-								       read_batch_size
-									   =
-									   NFread_batch_size,
-								       buffer_size
-									   =
-									   NFbuffer_size,
-								       max_retry_count
-									   =
-									   NFmax_retry_count,
-								       prefer_round_robin
-									   =
-									   NFprefer_round_robin,
-								       checkpoint_after_time
-									   =
-									   NFcheckpoint_after_time,
-								       checkpoint_max_count
-									   =
-									   NFcheckpoint_max_count,
-								       checkpoint_min_count
-									   =
-									   NFcheckpoint_min_count,
-								       subscriber_max_count
-									   =
-									   NFsubscriber_max_count,
-								       named_consumer_strategy
-									   =
-									   NFnamed_consumer_strategy},
-				       _) ->
-    #'CreatePersistentSubscription'{subscription_group_name
-					= NFsubscription_group_name,
-				    event_stream_id = NFevent_stream_id,
-				    resolve_link_tos = NFresolve_link_tos,
-				    start_from = NFstart_from,
-				    message_timeout_milliseconds =
-					NFmessage_timeout_milliseconds,
-				    record_statistics = NFrecord_statistics,
-				    live_buffer_size = NFlive_buffer_size,
-				    read_batch_size = NFread_batch_size,
-				    buffer_size = NFbuffer_size,
-				    max_retry_count = NFmax_retry_count,
-				    prefer_round_robin = NFprefer_round_robin,
-				    checkpoint_after_time =
-					NFcheckpoint_after_time,
-				    checkpoint_max_count =
-					NFcheckpoint_max_count,
-				    checkpoint_min_count =
-					NFcheckpoint_min_count,
-				    subscriber_max_count =
-					NFsubscriber_max_count,
-				    named_consumer_strategy =
-					if NFnamed_consumer_strategy =:=
-					     undefined ->
-					       PFnamed_consumer_strategy;
-					   true -> NFnamed_consumer_strategy
-					end}.
-
-merge_msg_TransactionStartCompleted(#'TransactionStartCompleted'{message
-								     =
-								     PFmessage},
-				    #'TransactionStartCompleted'{transaction_id
-								     =
-								     NFtransaction_id,
-								 result =
-								     NFresult,
-								 message =
-								     NFmessage},
-				    _) ->
-    #'TransactionStartCompleted'{transaction_id =
-				     NFtransaction_id,
-				 result = NFresult,
-				 message =
-				     if NFmessage =:= undefined -> PFmessage;
-					true -> NFmessage
-				     end}.
-
-merge_msg_EventRecord(#'EventRecord'{metadata =
-					 PFmetadata,
-				     created = PFcreated,
-				     created_epoch = PFcreated_epoch},
-		      #'EventRecord'{event_stream_id = NFevent_stream_id,
-				     event_number = NFevent_number,
-				     event_id = NFevent_id,
-				     event_type = NFevent_type,
-				     data_content_type = NFdata_content_type,
-				     metadata_content_type =
-					 NFmetadata_content_type,
-				     data = NFdata, metadata = NFmetadata,
-				     created = NFcreated,
-				     created_epoch = NFcreated_epoch},
-		      _) ->
-    #'EventRecord'{event_stream_id = NFevent_stream_id,
-		   event_number = NFevent_number, event_id = NFevent_id,
-		   event_type = NFevent_type,
-		   data_content_type = NFdata_content_type,
-		   metadata_content_type = NFmetadata_content_type,
-		   data = NFdata,
-		   metadata =
-		       if NFmetadata =:= undefined -> PFmetadata;
-			  true -> NFmetadata
-		       end,
-		   created =
-		       if NFcreated =:= undefined -> PFcreated;
-			  true -> NFcreated
-		       end,
-		   created_epoch =
-		       if NFcreated_epoch =:= undefined -> PFcreated_epoch;
-			  true -> NFcreated_epoch
-		       end}.
-
-merge_msg_ResolvedEvent(#'ResolvedEvent'{event =
-					     PFevent,
-					 link = PFlink},
-			#'ResolvedEvent'{event = NFevent, link = NFlink,
-					 commit_position = NFcommit_position,
-					 prepare_position = NFprepare_position},
-			TrUserData) ->
-    #'ResolvedEvent'{event =
-			 if PFevent /= undefined, NFevent /= undefined ->
-				merge_msg_EventRecord(PFevent, NFevent,
-						      TrUserData);
-			    PFevent == undefined -> NFevent;
-			    NFevent == undefined -> PFevent
-			 end,
-		     link =
-			 if PFlink /= undefined, NFlink /= undefined ->
-				merge_msg_EventRecord(PFlink, NFlink,
-						      TrUserData);
-			    PFlink == undefined -> NFlink;
-			    NFlink == undefined -> PFlink
-			 end,
-		     commit_position = NFcommit_position,
-		     prepare_position = NFprepare_position}.
-
-merge_msg_ReadAllEventsCompleted(#'ReadAllEventsCompleted'{events
-							       = PFevents,
-							   result = PFresult,
-							   error = PFerror},
-				 #'ReadAllEventsCompleted'{commit_position =
-							       NFcommit_position,
-							   prepare_position =
-							       NFprepare_position,
-							   events = NFevents,
-							   next_commit_position
-							       =
-							       NFnext_commit_position,
-							   next_prepare_position
-							       =
-							       NFnext_prepare_position,
-							   result = NFresult,
-							   error = NFerror},
-				 TrUserData) ->
-    #'ReadAllEventsCompleted'{commit_position =
-				  NFcommit_position,
-			      prepare_position = NFprepare_position,
-			      events =
-				  'erlang_++'(PFevents, NFevents, TrUserData),
-			      next_commit_position = NFnext_commit_position,
-			      next_prepare_position = NFnext_prepare_position,
-			      result =
-				  if NFresult =:= undefined -> PFresult;
-				     true -> NFresult
-				  end,
-			      error =
-				  if NFerror =:= undefined -> PFerror;
-				     true -> NFerror
-				  end}.
-
-merge_msg_NotHandled(#'NotHandled'{additional_info =
-				       PFadditional_info},
-		     #'NotHandled'{reason = NFreason,
-				   additional_info = NFadditional_info},
-		     _) ->
-    #'NotHandled'{reason = NFreason,
-		  additional_info =
-		      if NFadditional_info =:= undefined -> PFadditional_info;
-			 true -> NFadditional_info
-		      end}.
-
-merge_msg_SubscriptionConfirmation(#'SubscriptionConfirmation'{last_event_number
-								   =
-								   PFlast_event_number},
-				   #'SubscriptionConfirmation'{last_commit_position
-								   =
-								   NFlast_commit_position,
-							       last_event_number
-								   =
-								   NFlast_event_number},
-				   _) ->
-    #'SubscriptionConfirmation'{last_commit_position =
-				    NFlast_commit_position,
-				last_event_number =
-				    if NFlast_event_number =:= undefined ->
-					   PFlast_event_number;
-				       true -> NFlast_event_number
-				    end}.
-
-merge_msg_DeleteStreamCompleted(#'DeleteStreamCompleted'{message
-							     = PFmessage,
-							 prepare_position =
-							     PFprepare_position,
-							 commit_position =
-							     PFcommit_position},
-				#'DeleteStreamCompleted'{result = NFresult,
-							 message = NFmessage,
-							 prepare_position =
-							     NFprepare_position,
-							 commit_position =
-							     NFcommit_position},
-				_) ->
-    #'DeleteStreamCompleted'{result = NFresult,
-			     message =
-				 if NFmessage =:= undefined -> PFmessage;
-				    true -> NFmessage
-				 end,
-			     prepare_position =
-				 if NFprepare_position =:= undefined ->
-					PFprepare_position;
-				    true -> NFprepare_position
-				 end,
-			     commit_position =
-				 if NFcommit_position =:= undefined ->
-					PFcommit_position;
-				    true -> NFcommit_position
-				 end}.
-
-merge_msg_WriteEvents(#'WriteEvents'{events = PFevents},
-		      #'WriteEvents'{event_stream_id = NFevent_stream_id,
-				     expected_version = NFexpected_version,
-				     events = NFevents,
-				     require_master = NFrequire_master},
-		      TrUserData) ->
-    #'WriteEvents'{event_stream_id = NFevent_stream_id,
-		   expected_version = NFexpected_version,
-		   events = 'erlang_++'(PFevents, NFevents, TrUserData),
-		   require_master = NFrequire_master}.
-
-merge_msg_DeleteStream(#'DeleteStream'{hard_delete =
-					   PFhard_delete},
-		       #'DeleteStream'{event_stream_id = NFevent_stream_id,
-				       expected_version = NFexpected_version,
-				       require_master = NFrequire_master,
-				       hard_delete = NFhard_delete},
-		       _) ->
-    #'DeleteStream'{event_stream_id = NFevent_stream_id,
-		    expected_version = NFexpected_version,
-		    require_master = NFrequire_master,
-		    hard_delete =
-			if NFhard_delete =:= undefined -> PFhard_delete;
-			   true -> NFhard_delete
-			end}.
-
-merge_msg_ScavengeDatabaseCompleted(#'ScavengeDatabaseCompleted'{error
-								     = PFerror},
-				    #'ScavengeDatabaseCompleted'{result =
-								     NFresult,
-								 error =
-								     NFerror,
-								 total_time_ms =
-								     NFtotal_time_ms,
-								 total_space_saved
-								     =
-								     NFtotal_space_saved},
-				    _) ->
-    #'ScavengeDatabaseCompleted'{result = NFresult,
-				 error =
-				     if NFerror =:= undefined -> PFerror;
-					true -> NFerror
-				     end,
-				 total_time_ms = NFtotal_time_ms,
-				 total_space_saved = NFtotal_space_saved}.
-
-merge_msg_UnsubscribeFromStream(_Prev, New,
-				_TrUserData) ->
-    New.
-
-merge_msg_DeletePersistentSubscriptionCompleted(#'DeletePersistentSubscriptionCompleted'{reason
-											     =
-											     PFreason},
-						#'DeletePersistentSubscriptionCompleted'{result
-											     =
-											     NFresult,
-											 reason
-											     =
-											     NFreason},
-						_) ->
-    #'DeletePersistentSubscriptionCompleted'{result =
-						 NFresult,
-					     reason =
-						 if NFreason =:= undefined ->
-							PFreason;
-						    true -> NFreason
-						 end}.
+merge_msg_TransactionCommit(#'TransactionCommit'{},
+			    #'TransactionCommit'{transaction_id =
+						     NFtransaction_id,
+						 require_master =
+						     NFrequire_master},
+			    _) ->
+    #'TransactionCommit'{transaction_id = NFtransaction_id,
+			 require_master = NFrequire_master}.
 
 merge_msg_UpdatePersistentSubscription(#'UpdatePersistentSubscription'{named_consumer_strategy
 									   =
@@ -12691,6 +12228,40 @@ merge_msg_UpdatePersistentSubscription(#'UpdatePersistentSubscription'{named_con
 					   true -> NFnamed_consumer_strategy
 					end}.
 
+merge_msg_EventRecord(#'EventRecord'{metadata =
+					 PFmetadata,
+				     created = PFcreated,
+				     created_epoch = PFcreated_epoch},
+		      #'EventRecord'{event_stream_id = NFevent_stream_id,
+				     event_number = NFevent_number,
+				     event_id = NFevent_id,
+				     event_type = NFevent_type,
+				     data_content_type = NFdata_content_type,
+				     metadata_content_type =
+					 NFmetadata_content_type,
+				     data = NFdata, metadata = NFmetadata,
+				     created = NFcreated,
+				     created_epoch = NFcreated_epoch},
+		      _) ->
+    #'EventRecord'{event_stream_id = NFevent_stream_id,
+		   event_number = NFevent_number, event_id = NFevent_id,
+		   event_type = NFevent_type,
+		   data_content_type = NFdata_content_type,
+		   metadata_content_type = NFmetadata_content_type,
+		   data = NFdata,
+		   metadata =
+		       if NFmetadata =:= undefined -> PFmetadata;
+			  true -> NFmetadata
+		       end,
+		   created =
+		       if NFcreated =:= undefined -> PFcreated;
+			  true -> NFcreated
+		       end,
+		   created_epoch =
+		       if NFcreated_epoch =:= undefined -> PFcreated_epoch;
+			  true -> NFcreated_epoch
+		       end}.
+
 merge_msg_ResolvedIndexedEvent(#'ResolvedIndexedEvent'{event
 							   = PFevent,
 						       link = PFlink},
@@ -12711,6 +12282,295 @@ merge_msg_ResolvedIndexedEvent(#'ResolvedIndexedEvent'{event
 				   PFlink == undefined -> NFlink;
 				   NFlink == undefined -> PFlink
 				end}.
+
+merge_msg_PersistentSubscriptionStreamEventAppeared(#'PersistentSubscriptionStreamEventAppeared'{event
+												     =
+												     PFevent},
+						    #'PersistentSubscriptionStreamEventAppeared'{event
+												     =
+												     NFevent},
+						    TrUserData) ->
+    #'PersistentSubscriptionStreamEventAppeared'{event =
+						     if PFevent /= undefined,
+							NFevent /= undefined ->
+							    merge_msg_ResolvedIndexedEvent(PFevent,
+											   NFevent,
+											   TrUserData);
+							PFevent == undefined ->
+							    NFevent;
+							NFevent == undefined ->
+							    PFevent
+						     end}.
+
+merge_msg_ReadEvent(#'ReadEvent'{},
+		    #'ReadEvent'{event_stream_id = NFevent_stream_id,
+				 event_number = NFevent_number,
+				 resolve_link_tos = NFresolve_link_tos,
+				 require_master = NFrequire_master},
+		    _) ->
+    #'ReadEvent'{event_stream_id = NFevent_stream_id,
+		 event_number = NFevent_number,
+		 resolve_link_tos = NFresolve_link_tos,
+		 require_master = NFrequire_master}.
+
+merge_msg_TransactionStartCompleted(#'TransactionStartCompleted'{message
+								     =
+								     PFmessage},
+				    #'TransactionStartCompleted'{transaction_id
+								     =
+								     NFtransaction_id,
+								 result =
+								     NFresult,
+								 message =
+								     NFmessage},
+				    _) ->
+    #'TransactionStartCompleted'{transaction_id =
+				     NFtransaction_id,
+				 result = NFresult,
+				 message =
+				     if NFmessage =:= undefined -> PFmessage;
+					true -> NFmessage
+				     end}.
+
+merge_msg_ScavengeDatabaseCompleted(#'ScavengeDatabaseCompleted'{error
+								     = PFerror},
+				    #'ScavengeDatabaseCompleted'{result =
+								     NFresult,
+								 error =
+								     NFerror,
+								 total_time_ms =
+								     NFtotal_time_ms,
+								 total_space_saved
+								     =
+								     NFtotal_space_saved},
+				    _) ->
+    #'ScavengeDatabaseCompleted'{result = NFresult,
+				 error =
+				     if NFerror =:= undefined -> PFerror;
+					true -> NFerror
+				     end,
+				 total_time_ms = NFtotal_time_ms,
+				 total_space_saved = NFtotal_space_saved}.
+
+merge_msg_WriteEventsCompleted(#'WriteEventsCompleted'{message
+							   = PFmessage,
+						       prepare_position =
+							   PFprepare_position,
+						       commit_position =
+							   PFcommit_position},
+			       #'WriteEventsCompleted'{result = NFresult,
+						       message = NFmessage,
+						       first_event_number =
+							   NFfirst_event_number,
+						       last_event_number =
+							   NFlast_event_number,
+						       prepare_position =
+							   NFprepare_position,
+						       commit_position =
+							   NFcommit_position},
+			       _) ->
+    #'WriteEventsCompleted'{result = NFresult,
+			    message =
+				if NFmessage =:= undefined -> PFmessage;
+				   true -> NFmessage
+				end,
+			    first_event_number = NFfirst_event_number,
+			    last_event_number = NFlast_event_number,
+			    prepare_position =
+				if NFprepare_position =:= undefined ->
+				       PFprepare_position;
+				   true -> NFprepare_position
+				end,
+			    commit_position =
+				if NFcommit_position =:= undefined ->
+				       PFcommit_position;
+				   true -> NFcommit_position
+				end}.
+
+merge_msg_DeleteStream(#'DeleteStream'{hard_delete =
+					   PFhard_delete},
+		       #'DeleteStream'{event_stream_id = NFevent_stream_id,
+				       expected_version = NFexpected_version,
+				       require_master = NFrequire_master,
+				       hard_delete = NFhard_delete},
+		       _) ->
+    #'DeleteStream'{event_stream_id = NFevent_stream_id,
+		    expected_version = NFexpected_version,
+		    require_master = NFrequire_master,
+		    hard_delete =
+			if NFhard_delete =:= undefined -> PFhard_delete;
+			   true -> NFhard_delete
+			end}.
+
+merge_msg_UnsubscribeFromStream(_Prev, New,
+				_TrUserData) ->
+    New.
+
+merge_msg_NewEvent(#'NewEvent'{metadata = PFmetadata},
+		   #'NewEvent'{event_id = NFevent_id,
+			       event_type = NFevent_type,
+			       data_content_type = NFdata_content_type,
+			       metadata_content_type = NFmetadata_content_type,
+			       data = NFdata, metadata = NFmetadata},
+		   _) ->
+    #'NewEvent'{event_id = NFevent_id,
+		event_type = NFevent_type,
+		data_content_type = NFdata_content_type,
+		metadata_content_type = NFmetadata_content_type,
+		data = NFdata,
+		metadata =
+		    if NFmetadata =:= undefined -> PFmetadata;
+		       true -> NFmetadata
+		    end}.
+
+merge_msg_NotHandled(#'NotHandled'{additional_info =
+				       PFadditional_info},
+		     #'NotHandled'{reason = NFreason,
+				   additional_info = NFadditional_info},
+		     _) ->
+    #'NotHandled'{reason = NFreason,
+		  additional_info =
+		      if NFadditional_info =:= undefined -> PFadditional_info;
+			 true -> NFadditional_info
+		      end}.
+
+merge_msg_WriteEvents(#'WriteEvents'{events = PFevents},
+		      #'WriteEvents'{event_stream_id = NFevent_stream_id,
+				     expected_version = NFexpected_version,
+				     events = NFevents,
+				     require_master = NFrequire_master},
+		      TrUserData) ->
+    #'WriteEvents'{event_stream_id = NFevent_stream_id,
+		   expected_version = NFexpected_version,
+		   events = 'erlang_++'(PFevents, NFevents, TrUserData),
+		   require_master = NFrequire_master}.
+
+merge_msg_ScavengeDatabase(_Prev, New, _TrUserData) ->
+    New.
+
+merge_msg_ResolvedEvent(#'ResolvedEvent'{event =
+					     PFevent,
+					 link = PFlink},
+			#'ResolvedEvent'{event = NFevent, link = NFlink,
+					 commit_position = NFcommit_position,
+					 prepare_position = NFprepare_position},
+			TrUserData) ->
+    #'ResolvedEvent'{event =
+			 if PFevent /= undefined, NFevent /= undefined ->
+				merge_msg_EventRecord(PFevent, NFevent,
+						      TrUserData);
+			    PFevent == undefined -> NFevent;
+			    NFevent == undefined -> PFevent
+			 end,
+		     link =
+			 if PFlink /= undefined, NFlink /= undefined ->
+				merge_msg_EventRecord(PFlink, NFlink,
+						      TrUserData);
+			    PFlink == undefined -> NFlink;
+			    NFlink == undefined -> PFlink
+			 end,
+		     commit_position = NFcommit_position,
+		     prepare_position = NFprepare_position}.
+
+merge_msg_StreamEventAppeared(#'StreamEventAppeared'{event
+							 = PFevent},
+			      #'StreamEventAppeared'{event = NFevent},
+			      TrUserData) ->
+    #'StreamEventAppeared'{event =
+			       if PFevent /= undefined, NFevent /= undefined ->
+				      merge_msg_ResolvedEvent(PFevent, NFevent,
+							      TrUserData);
+				  PFevent == undefined -> NFevent;
+				  NFevent == undefined -> PFevent
+			       end}.
+
+merge_msg_ReadStreamEvents(#'ReadStreamEvents'{},
+			   #'ReadStreamEvents'{event_stream_id =
+						   NFevent_stream_id,
+					       from_event_number =
+						   NFfrom_event_number,
+					       max_count = NFmax_count,
+					       resolve_link_tos =
+						   NFresolve_link_tos,
+					       require_master =
+						   NFrequire_master},
+			   _) ->
+    #'ReadStreamEvents'{event_stream_id = NFevent_stream_id,
+			from_event_number = NFfrom_event_number,
+			max_count = NFmax_count,
+			resolve_link_tos = NFresolve_link_tos,
+			require_master = NFrequire_master}.
+
+merge_msg_SubscriptionDropped(#'SubscriptionDropped'{reason
+							 = PFreason},
+			      #'SubscriptionDropped'{reason = NFreason}, _) ->
+    #'SubscriptionDropped'{reason =
+			       if NFreason =:= undefined -> PFreason;
+				  true -> NFreason
+			       end}.
+
+merge_msg_SubscribeToStream(#'SubscribeToStream'{},
+			    #'SubscribeToStream'{event_stream_id =
+						     NFevent_stream_id,
+						 resolve_link_tos =
+						     NFresolve_link_tos},
+			    _) ->
+    #'SubscribeToStream'{event_stream_id =
+			     NFevent_stream_id,
+			 resolve_link_tos = NFresolve_link_tos}.
+
+merge_msg_PersistentSubscriptionConfirmation(#'PersistentSubscriptionConfirmation'{last_event_number
+										       =
+										       PFlast_event_number},
+					     #'PersistentSubscriptionConfirmation'{last_commit_position
+										       =
+										       NFlast_commit_position,
+										   subscription_id
+										       =
+										       NFsubscription_id,
+										   last_event_number
+										       =
+										       NFlast_event_number},
+					     _) ->
+    #'PersistentSubscriptionConfirmation'{last_commit_position
+					      = NFlast_commit_position,
+					  subscription_id = NFsubscription_id,
+					  last_event_number =
+					      if NFlast_event_number =:=
+						   undefined ->
+						     PFlast_event_number;
+						 true -> NFlast_event_number
+					      end}.
+
+merge_msg_TransactionStart(#'TransactionStart'{},
+			   #'TransactionStart'{event_stream_id =
+						   NFevent_stream_id,
+					       expected_version =
+						   NFexpected_version,
+					       require_master =
+						   NFrequire_master},
+			   _) ->
+    #'TransactionStart'{event_stream_id = NFevent_stream_id,
+			expected_version = NFexpected_version,
+			require_master = NFrequire_master}.
+
+merge_msg_CreatePersistentSubscriptionCompleted(#'CreatePersistentSubscriptionCompleted'{reason
+											     =
+											     PFreason},
+						#'CreatePersistentSubscriptionCompleted'{result
+											     =
+											     NFresult,
+											 reason
+											     =
+											     NFreason},
+						_) ->
+    #'CreatePersistentSubscriptionCompleted'{result =
+						 NFresult,
+					     reason =
+						 if NFreason =:= undefined ->
+							PFreason;
+						    true -> NFreason
+						 end}.
 
 merge_msg_ReadStreamEventsCompleted(#'ReadStreamEventsCompleted'{events
 								     = PFevents,
@@ -12748,80 +12608,198 @@ merge_msg_ReadStreamEventsCompleted(#'ReadStreamEventsCompleted'{events
 					true -> NFerror
 				     end}.
 
-merge_msg_TransactionCommit(#'TransactionCommit'{},
-			    #'TransactionCommit'{transaction_id =
-						     NFtransaction_id,
-						 require_master =
-						     NFrequire_master},
-			    _) ->
-    #'TransactionCommit'{transaction_id = NFtransaction_id,
-			 require_master = NFrequire_master}.
+merge_msg_TransactionCommitCompleted(#'TransactionCommitCompleted'{message
+								       =
+								       PFmessage,
+								   prepare_position
+								       =
+								       PFprepare_position,
+								   commit_position
+								       =
+								       PFcommit_position},
+				     #'TransactionCommitCompleted'{transaction_id
+								       =
+								       NFtransaction_id,
+								   result =
+								       NFresult,
+								   message =
+								       NFmessage,
+								   first_event_number
+								       =
+								       NFfirst_event_number,
+								   last_event_number
+								       =
+								       NFlast_event_number,
+								   prepare_position
+								       =
+								       NFprepare_position,
+								   commit_position
+								       =
+								       NFcommit_position},
+				     _) ->
+    #'TransactionCommitCompleted'{transaction_id =
+				      NFtransaction_id,
+				  result = NFresult,
+				  message =
+				      if NFmessage =:= undefined -> PFmessage;
+					 true -> NFmessage
+				      end,
+				  first_event_number = NFfirst_event_number,
+				  last_event_number = NFlast_event_number,
+				  prepare_position =
+				      if NFprepare_position =:= undefined ->
+					     PFprepare_position;
+					 true -> NFprepare_position
+				      end,
+				  commit_position =
+				      if NFcommit_position =:= undefined ->
+					     PFcommit_position;
+					 true -> NFcommit_position
+				      end}.
 
-merge_msg_CreatePersistentSubscriptionCompleted(#'CreatePersistentSubscriptionCompleted'{reason
+merge_msg_PersistentSubscriptionAckEvents(#'PersistentSubscriptionAckEvents'{processed_event_ids
+										 =
+										 PFprocessed_event_ids},
+					  #'PersistentSubscriptionAckEvents'{subscription_id
+										 =
+										 NFsubscription_id,
+									     processed_event_ids
+										 =
+										 NFprocessed_event_ids},
+					  TrUserData) ->
+    #'PersistentSubscriptionAckEvents'{subscription_id =
+					   NFsubscription_id,
+				       processed_event_ids =
+					   'erlang_++'(PFprocessed_event_ids,
+						       NFprocessed_event_ids,
+						       TrUserData)}.
+
+merge_msg_DeleteStreamCompleted(#'DeleteStreamCompleted'{message
+							     = PFmessage,
+							 prepare_position =
+							     PFprepare_position,
+							 commit_position =
+							     PFcommit_position},
+				#'DeleteStreamCompleted'{result = NFresult,
+							 message = NFmessage,
+							 prepare_position =
+							     NFprepare_position,
+							 commit_position =
+							     NFcommit_position},
+				_) ->
+    #'DeleteStreamCompleted'{result = NFresult,
+			     message =
+				 if NFmessage =:= undefined -> PFmessage;
+				    true -> NFmessage
+				 end,
+			     prepare_position =
+				 if NFprepare_position =:= undefined ->
+					PFprepare_position;
+				    true -> NFprepare_position
+				 end,
+			     commit_position =
+				 if NFcommit_position =:= undefined ->
+					PFcommit_position;
+				    true -> NFcommit_position
+				 end}.
+
+merge_msg_CreatePersistentSubscription(#'CreatePersistentSubscription'{named_consumer_strategy
+									   =
+									   PFnamed_consumer_strategy},
+				       #'CreatePersistentSubscription'{subscription_group_name
+									   =
+									   NFsubscription_group_name,
+								       event_stream_id
+									   =
+									   NFevent_stream_id,
+								       resolve_link_tos
+									   =
+									   NFresolve_link_tos,
+								       start_from
+									   =
+									   NFstart_from,
+								       message_timeout_milliseconds
+									   =
+									   NFmessage_timeout_milliseconds,
+								       record_statistics
+									   =
+									   NFrecord_statistics,
+								       live_buffer_size
+									   =
+									   NFlive_buffer_size,
+								       read_batch_size
+									   =
+									   NFread_batch_size,
+								       buffer_size
+									   =
+									   NFbuffer_size,
+								       max_retry_count
+									   =
+									   NFmax_retry_count,
+								       prefer_round_robin
+									   =
+									   NFprefer_round_robin,
+								       checkpoint_after_time
+									   =
+									   NFcheckpoint_after_time,
+								       checkpoint_max_count
+									   =
+									   NFcheckpoint_max_count,
+								       checkpoint_min_count
+									   =
+									   NFcheckpoint_min_count,
+								       subscriber_max_count
+									   =
+									   NFsubscriber_max_count,
+								       named_consumer_strategy
+									   =
+									   NFnamed_consumer_strategy},
+				       _) ->
+    #'CreatePersistentSubscription'{subscription_group_name
+					= NFsubscription_group_name,
+				    event_stream_id = NFevent_stream_id,
+				    resolve_link_tos = NFresolve_link_tos,
+				    start_from = NFstart_from,
+				    message_timeout_milliseconds =
+					NFmessage_timeout_milliseconds,
+				    record_statistics = NFrecord_statistics,
+				    live_buffer_size = NFlive_buffer_size,
+				    read_batch_size = NFread_batch_size,
+				    buffer_size = NFbuffer_size,
+				    max_retry_count = NFmax_retry_count,
+				    prefer_round_robin = NFprefer_round_robin,
+				    checkpoint_after_time =
+					NFcheckpoint_after_time,
+				    checkpoint_max_count =
+					NFcheckpoint_max_count,
+				    checkpoint_min_count =
+					NFcheckpoint_min_count,
+				    subscriber_max_count =
+					NFsubscriber_max_count,
+				    named_consumer_strategy =
+					if NFnamed_consumer_strategy =:=
+					     undefined ->
+					       PFnamed_consumer_strategy;
+					   true -> NFnamed_consumer_strategy
+					end}.
+
+merge_msg_DeletePersistentSubscriptionCompleted(#'DeletePersistentSubscriptionCompleted'{reason
 											     =
 											     PFreason},
-						#'CreatePersistentSubscriptionCompleted'{result
+						#'DeletePersistentSubscriptionCompleted'{result
 											     =
 											     NFresult,
 											 reason
 											     =
 											     NFreason},
 						_) ->
-    #'CreatePersistentSubscriptionCompleted'{result =
+    #'DeletePersistentSubscriptionCompleted'{result =
 						 NFresult,
 					     reason =
 						 if NFreason =:= undefined ->
 							PFreason;
 						    true -> NFreason
 						 end}.
-
-merge_msg_ReadEvent(#'ReadEvent'{},
-		    #'ReadEvent'{event_stream_id = NFevent_stream_id,
-				 event_number = NFevent_number,
-				 resolve_link_tos = NFresolve_link_tos,
-				 require_master = NFrequire_master},
-		    _) ->
-    #'ReadEvent'{event_stream_id = NFevent_stream_id,
-		 event_number = NFevent_number,
-		 resolve_link_tos = NFresolve_link_tos,
-		 require_master = NFrequire_master}.
-
-merge_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionCompleted'{reason
-											     =
-											     PFreason},
-						#'UpdatePersistentSubscriptionCompleted'{result
-											     =
-											     NFresult,
-											 reason
-											     =
-											     NFreason},
-						_) ->
-    #'UpdatePersistentSubscriptionCompleted'{result =
-						 NFresult,
-					     reason =
-						 if NFreason =:= undefined ->
-							PFreason;
-						    true -> NFreason
-						 end}.
-
-merge_msg_PersistentSubscriptionStreamEventAppeared(#'PersistentSubscriptionStreamEventAppeared'{event
-												     =
-												     PFevent},
-						    #'PersistentSubscriptionStreamEventAppeared'{event
-												     =
-												     NFevent},
-						    TrUserData) ->
-    #'PersistentSubscriptionStreamEventAppeared'{event =
-						     if PFevent /= undefined,
-							NFevent /= undefined ->
-							    merge_msg_ResolvedIndexedEvent(PFevent,
-											   NFevent,
-											   TrUserData);
-							PFevent == undefined ->
-							    NFevent;
-							NFevent == undefined ->
-							    PFevent
-						     end}.
 
 merge_msg_ReadEventCompleted(#'ReadEventCompleted'{event
 						       = PFevent,
@@ -12856,17 +12834,97 @@ merge_msg_DeletePersistentSubscription(#'DeletePersistentSubscription'{},
 					= NFsubscription_group_name,
 				    event_stream_id = NFevent_stream_id}.
 
-merge_msg_StreamEventAppeared(#'StreamEventAppeared'{event
-							 = PFevent},
-			      #'StreamEventAppeared'{event = NFevent},
-			      TrUserData) ->
-    #'StreamEventAppeared'{event =
-			       if PFevent /= undefined, NFevent /= undefined ->
-				      merge_msg_ResolvedEvent(PFevent, NFevent,
-							      TrUserData);
-				  PFevent == undefined -> NFevent;
-				  NFevent == undefined -> PFevent
-			       end}.
+merge_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionCompleted'{reason
+											     =
+											     PFreason},
+						#'UpdatePersistentSubscriptionCompleted'{result
+											     =
+											     NFresult,
+											 reason
+											     =
+											     NFreason},
+						_) ->
+    #'UpdatePersistentSubscriptionCompleted'{result =
+						 NFresult,
+					     reason =
+						 if NFreason =:= undefined ->
+							PFreason;
+						    true -> NFreason
+						 end}.
+
+'merge_msg_NotHandled.MasterInfo'(#'NotHandled.MasterInfo'{external_secure_tcp_address
+							       =
+							       PFexternal_secure_tcp_address,
+							   external_secure_tcp_port
+							       =
+							       PFexternal_secure_tcp_port},
+				  #'NotHandled.MasterInfo'{external_tcp_address
+							       =
+							       NFexternal_tcp_address,
+							   external_tcp_port =
+							       NFexternal_tcp_port,
+							   external_http_address
+							       =
+							       NFexternal_http_address,
+							   external_http_port =
+							       NFexternal_http_port,
+							   external_secure_tcp_address
+							       =
+							       NFexternal_secure_tcp_address,
+							   external_secure_tcp_port
+							       =
+							       NFexternal_secure_tcp_port},
+				  _) ->
+    #'NotHandled.MasterInfo'{external_tcp_address =
+				 NFexternal_tcp_address,
+			     external_tcp_port = NFexternal_tcp_port,
+			     external_http_address = NFexternal_http_address,
+			     external_http_port = NFexternal_http_port,
+			     external_secure_tcp_address =
+				 if NFexternal_secure_tcp_address =:=
+				      undefined ->
+					PFexternal_secure_tcp_address;
+				    true -> NFexternal_secure_tcp_address
+				 end,
+			     external_secure_tcp_port =
+				 if NFexternal_secure_tcp_port =:= undefined ->
+					PFexternal_secure_tcp_port;
+				    true -> NFexternal_secure_tcp_port
+				 end}.
+
+merge_msg_ReadAllEventsCompleted(#'ReadAllEventsCompleted'{events
+							       = PFevents,
+							   result = PFresult,
+							   error = PFerror},
+				 #'ReadAllEventsCompleted'{commit_position =
+							       NFcommit_position,
+							   prepare_position =
+							       NFprepare_position,
+							   events = NFevents,
+							   next_commit_position
+							       =
+							       NFnext_commit_position,
+							   next_prepare_position
+							       =
+							       NFnext_prepare_position,
+							   result = NFresult,
+							   error = NFerror},
+				 TrUserData) ->
+    #'ReadAllEventsCompleted'{commit_position =
+				  NFcommit_position,
+			      prepare_position = NFprepare_position,
+			      events =
+				  'erlang_++'(PFevents, NFevents, TrUserData),
+			      next_commit_position = NFnext_commit_position,
+			      next_prepare_position = NFnext_prepare_position,
+			      result =
+				  if NFresult =:= undefined -> PFresult;
+				     true -> NFresult
+				  end,
+			      error =
+				  if NFerror =:= undefined -> PFerror;
+				     true -> NFerror
+				  end}.
 
 merge_msg_ConnectToPersistentSubscription(#'ConnectToPersistentSubscription'{},
 					  #'ConnectToPersistentSubscription'{subscription_id
@@ -12884,6 +12942,18 @@ merge_msg_ConnectToPersistentSubscription(#'ConnectToPersistentSubscription'{},
 				       event_stream_id = NFevent_stream_id,
 				       allowed_in_flight_messages =
 					   NFallowed_in_flight_messages}.
+
+merge_msg_TransactionWrite(#'TransactionWrite'{events =
+						   PFevents},
+			   #'TransactionWrite'{transaction_id =
+						   NFtransaction_id,
+					       events = NFevents,
+					       require_master =
+						   NFrequire_master},
+			   TrUserData) ->
+    #'TransactionWrite'{transaction_id = NFtransaction_id,
+			events = 'erlang_++'(PFevents, NFevents, TrUserData),
+			require_master = NFrequire_master}.
 
 merge_msg_PersistentSubscriptionNakEvents(#'PersistentSubscriptionNakEvents'{processed_event_ids
 										 =
@@ -12917,76 +12987,6 @@ merge_msg_PersistentSubscriptionNakEvents(#'PersistentSubscriptionNakEvents'{pro
 					   end,
 				       action = NFaction}.
 
-merge_msg_ReadStreamEvents(#'ReadStreamEvents'{},
-			   #'ReadStreamEvents'{event_stream_id =
-						   NFevent_stream_id,
-					       from_event_number =
-						   NFfrom_event_number,
-					       max_count = NFmax_count,
-					       resolve_link_tos =
-						   NFresolve_link_tos,
-					       require_master =
-						   NFrequire_master},
-			   _) ->
-    #'ReadStreamEvents'{event_stream_id = NFevent_stream_id,
-			from_event_number = NFfrom_event_number,
-			max_count = NFmax_count,
-			resolve_link_tos = NFresolve_link_tos,
-			require_master = NFrequire_master}.
-
-merge_msg_ReadAllEvents(#'ReadAllEvents'{},
-			#'ReadAllEvents'{commit_position = NFcommit_position,
-					 prepare_position = NFprepare_position,
-					 max_count = NFmax_count,
-					 resolve_link_tos = NFresolve_link_tos,
-					 require_master = NFrequire_master},
-			_) ->
-    #'ReadAllEvents'{commit_position = NFcommit_position,
-		     prepare_position = NFprepare_position,
-		     max_count = NFmax_count,
-		     resolve_link_tos = NFresolve_link_tos,
-		     require_master = NFrequire_master}.
-
-merge_msg_PersistentSubscriptionConfirmation(#'PersistentSubscriptionConfirmation'{last_event_number
-										       =
-										       PFlast_event_number},
-					     #'PersistentSubscriptionConfirmation'{last_commit_position
-										       =
-										       NFlast_commit_position,
-										   subscription_id
-										       =
-										       NFsubscription_id,
-										   last_event_number
-										       =
-										       NFlast_event_number},
-					     _) ->
-    #'PersistentSubscriptionConfirmation'{last_commit_position
-					      = NFlast_commit_position,
-					  subscription_id = NFsubscription_id,
-					  last_event_number =
-					      if NFlast_event_number =:=
-						   undefined ->
-						     PFlast_event_number;
-						 true -> NFlast_event_number
-					      end}.
-
-merge_msg_PersistentSubscriptionAckEvents(#'PersistentSubscriptionAckEvents'{processed_event_ids
-										 =
-										 PFprocessed_event_ids},
-					  #'PersistentSubscriptionAckEvents'{subscription_id
-										 =
-										 NFsubscription_id,
-									     processed_event_ids
-										 =
-										 NFprocessed_event_ids},
-					  TrUserData) ->
-    #'PersistentSubscriptionAckEvents'{subscription_id =
-					   NFsubscription_id,
-				       processed_event_ids =
-					   'erlang_++'(PFprocessed_event_ids,
-						       NFprocessed_event_ids,
-						       TrUserData)}.
-
 
 
 verify_msg(Msg) -> verify_msg(Msg, []).
@@ -12994,104 +12994,107 @@ verify_msg(Msg) -> verify_msg(Msg, []).
 verify_msg(Msg, Opts) ->
     TrUserData = proplists:get_value(user_data, Opts),
     case Msg of
-      #'NewEvent'{} ->
-	  v_msg_NewEvent(Msg, ['NewEvent'], TrUserData);
-      #'TransactionWrite'{} ->
-	  v_msg_TransactionWrite(Msg, ['TransactionWrite'],
-				 TrUserData);
-      #'TransactionCommitCompleted'{} ->
-	  v_msg_TransactionCommitCompleted(Msg,
-					   ['TransactionCommitCompleted'],
-					   TrUserData);
-      #'NotHandled.MasterInfo'{} ->
-	  'v_msg_NotHandled.MasterInfo'(Msg,
-					['NotHandled.MasterInfo'], TrUserData);
-      #'ScavengeDatabase'{} ->
-	  v_msg_ScavengeDatabase(Msg, ['ScavengeDatabase'],
-				 TrUserData);
-      #'WriteEventsCompleted'{} ->
-	  v_msg_WriteEventsCompleted(Msg,
-				     ['WriteEventsCompleted'], TrUserData);
-      #'SubscribeToStream'{} ->
-	  v_msg_SubscribeToStream(Msg, ['SubscribeToStream'],
-				  TrUserData);
-      #'SubscriptionDropped'{} ->
-	  v_msg_SubscriptionDropped(Msg, ['SubscriptionDropped'],
-				    TrUserData);
-      #'TransactionWriteCompleted'{} ->
-	  v_msg_TransactionWriteCompleted(Msg,
-					  ['TransactionWriteCompleted'],
-					  TrUserData);
-      #'TransactionStart'{} ->
-	  v_msg_TransactionStart(Msg, ['TransactionStart'],
-				 TrUserData);
-      #'CreatePersistentSubscription'{} ->
-	  v_msg_CreatePersistentSubscription(Msg,
-					     ['CreatePersistentSubscription'],
-					     TrUserData);
-      #'TransactionStartCompleted'{} ->
-	  v_msg_TransactionStartCompleted(Msg,
-					  ['TransactionStartCompleted'],
-					  TrUserData);
-      #'EventRecord'{} ->
-	  v_msg_EventRecord(Msg, ['EventRecord'], TrUserData);
-      #'ResolvedEvent'{} ->
-	  v_msg_ResolvedEvent(Msg, ['ResolvedEvent'], TrUserData);
-      #'ReadAllEventsCompleted'{} ->
-	  v_msg_ReadAllEventsCompleted(Msg,
-				       ['ReadAllEventsCompleted'], TrUserData);
-      #'NotHandled'{} ->
-	  v_msg_NotHandled(Msg, ['NotHandled'], TrUserData);
+      #'ReadAllEvents'{} ->
+	  v_msg_ReadAllEvents(Msg, ['ReadAllEvents'], TrUserData);
       #'SubscriptionConfirmation'{} ->
 	  v_msg_SubscriptionConfirmation(Msg,
 					 ['SubscriptionConfirmation'],
 					 TrUserData);
-      #'DeleteStreamCompleted'{} ->
-	  v_msg_DeleteStreamCompleted(Msg,
-				      ['DeleteStreamCompleted'], TrUserData);
-      #'WriteEvents'{} ->
-	  v_msg_WriteEvents(Msg, ['WriteEvents'], TrUserData);
-      #'DeleteStream'{} ->
-	  v_msg_DeleteStream(Msg, ['DeleteStream'], TrUserData);
-      #'ScavengeDatabaseCompleted'{} ->
-	  v_msg_ScavengeDatabaseCompleted(Msg,
-					  ['ScavengeDatabaseCompleted'],
-					  TrUserData);
-      #'UnsubscribeFromStream'{} ->
-	  v_msg_UnsubscribeFromStream(Msg,
-				      ['UnsubscribeFromStream'], TrUserData);
-      #'DeletePersistentSubscriptionCompleted'{} ->
-	  v_msg_DeletePersistentSubscriptionCompleted(Msg,
-						      ['DeletePersistentSubscriptionCompleted'],
-						      TrUserData);
-      #'UpdatePersistentSubscription'{} ->
-	  v_msg_UpdatePersistentSubscription(Msg,
-					     ['UpdatePersistentSubscription'],
-					     TrUserData);
-      #'ResolvedIndexedEvent'{} ->
-	  v_msg_ResolvedIndexedEvent(Msg,
-				     ['ResolvedIndexedEvent'], TrUserData);
-      #'ReadStreamEventsCompleted'{} ->
-	  v_msg_ReadStreamEventsCompleted(Msg,
-					  ['ReadStreamEventsCompleted'],
+      #'TransactionWriteCompleted'{} ->
+	  v_msg_TransactionWriteCompleted(Msg,
+					  ['TransactionWriteCompleted'],
 					  TrUserData);
       #'TransactionCommit'{} ->
 	  v_msg_TransactionCommit(Msg, ['TransactionCommit'],
 				  TrUserData);
-      #'CreatePersistentSubscriptionCompleted'{} ->
-	  v_msg_CreatePersistentSubscriptionCompleted(Msg,
-						      ['CreatePersistentSubscriptionCompleted'],
-						      TrUserData);
-      #'ReadEvent'{} ->
-	  v_msg_ReadEvent(Msg, ['ReadEvent'], TrUserData);
-      #'UpdatePersistentSubscriptionCompleted'{} ->
-	  v_msg_UpdatePersistentSubscriptionCompleted(Msg,
-						      ['UpdatePersistentSubscriptionCompleted'],
-						      TrUserData);
+      #'UpdatePersistentSubscription'{} ->
+	  v_msg_UpdatePersistentSubscription(Msg,
+					     ['UpdatePersistentSubscription'],
+					     TrUserData);
+      #'EventRecord'{} ->
+	  v_msg_EventRecord(Msg, ['EventRecord'], TrUserData);
+      #'ResolvedIndexedEvent'{} ->
+	  v_msg_ResolvedIndexedEvent(Msg,
+				     ['ResolvedIndexedEvent'], TrUserData);
       #'PersistentSubscriptionStreamEventAppeared'{} ->
 	  v_msg_PersistentSubscriptionStreamEventAppeared(Msg,
 							  ['PersistentSubscriptionStreamEventAppeared'],
 							  TrUserData);
+      #'ReadEvent'{} ->
+	  v_msg_ReadEvent(Msg, ['ReadEvent'], TrUserData);
+      #'TransactionStartCompleted'{} ->
+	  v_msg_TransactionStartCompleted(Msg,
+					  ['TransactionStartCompleted'],
+					  TrUserData);
+      #'ScavengeDatabaseCompleted'{} ->
+	  v_msg_ScavengeDatabaseCompleted(Msg,
+					  ['ScavengeDatabaseCompleted'],
+					  TrUserData);
+      #'WriteEventsCompleted'{} ->
+	  v_msg_WriteEventsCompleted(Msg,
+				     ['WriteEventsCompleted'], TrUserData);
+      #'DeleteStream'{} ->
+	  v_msg_DeleteStream(Msg, ['DeleteStream'], TrUserData);
+      #'UnsubscribeFromStream'{} ->
+	  v_msg_UnsubscribeFromStream(Msg,
+				      ['UnsubscribeFromStream'], TrUserData);
+      #'NewEvent'{} ->
+	  v_msg_NewEvent(Msg, ['NewEvent'], TrUserData);
+      #'NotHandled'{} ->
+	  v_msg_NotHandled(Msg, ['NotHandled'], TrUserData);
+      #'WriteEvents'{} ->
+	  v_msg_WriteEvents(Msg, ['WriteEvents'], TrUserData);
+      #'ScavengeDatabase'{} ->
+	  v_msg_ScavengeDatabase(Msg, ['ScavengeDatabase'],
+				 TrUserData);
+      #'ResolvedEvent'{} ->
+	  v_msg_ResolvedEvent(Msg, ['ResolvedEvent'], TrUserData);
+      #'StreamEventAppeared'{} ->
+	  v_msg_StreamEventAppeared(Msg, ['StreamEventAppeared'],
+				    TrUserData);
+      #'ReadStreamEvents'{} ->
+	  v_msg_ReadStreamEvents(Msg, ['ReadStreamEvents'],
+				 TrUserData);
+      #'SubscriptionDropped'{} ->
+	  v_msg_SubscriptionDropped(Msg, ['SubscriptionDropped'],
+				    TrUserData);
+      #'SubscribeToStream'{} ->
+	  v_msg_SubscribeToStream(Msg, ['SubscribeToStream'],
+				  TrUserData);
+      #'PersistentSubscriptionConfirmation'{} ->
+	  v_msg_PersistentSubscriptionConfirmation(Msg,
+						   ['PersistentSubscriptionConfirmation'],
+						   TrUserData);
+      #'TransactionStart'{} ->
+	  v_msg_TransactionStart(Msg, ['TransactionStart'],
+				 TrUserData);
+      #'CreatePersistentSubscriptionCompleted'{} ->
+	  v_msg_CreatePersistentSubscriptionCompleted(Msg,
+						      ['CreatePersistentSubscriptionCompleted'],
+						      TrUserData);
+      #'ReadStreamEventsCompleted'{} ->
+	  v_msg_ReadStreamEventsCompleted(Msg,
+					  ['ReadStreamEventsCompleted'],
+					  TrUserData);
+      #'TransactionCommitCompleted'{} ->
+	  v_msg_TransactionCommitCompleted(Msg,
+					   ['TransactionCommitCompleted'],
+					   TrUserData);
+      #'PersistentSubscriptionAckEvents'{} ->
+	  v_msg_PersistentSubscriptionAckEvents(Msg,
+						['PersistentSubscriptionAckEvents'],
+						TrUserData);
+      #'DeleteStreamCompleted'{} ->
+	  v_msg_DeleteStreamCompleted(Msg,
+				      ['DeleteStreamCompleted'], TrUserData);
+      #'CreatePersistentSubscription'{} ->
+	  v_msg_CreatePersistentSubscription(Msg,
+					     ['CreatePersistentSubscription'],
+					     TrUserData);
+      #'DeletePersistentSubscriptionCompleted'{} ->
+	  v_msg_DeletePersistentSubscriptionCompleted(Msg,
+						      ['DeletePersistentSubscriptionCompleted'],
+						      TrUserData);
       #'ReadEventCompleted'{} ->
 	  v_msg_ReadEventCompleted(Msg, ['ReadEventCompleted'],
 				   TrUserData);
@@ -13099,169 +13102,54 @@ verify_msg(Msg, Opts) ->
 	  v_msg_DeletePersistentSubscription(Msg,
 					     ['DeletePersistentSubscription'],
 					     TrUserData);
-      #'StreamEventAppeared'{} ->
-	  v_msg_StreamEventAppeared(Msg, ['StreamEventAppeared'],
-				    TrUserData);
+      #'UpdatePersistentSubscriptionCompleted'{} ->
+	  v_msg_UpdatePersistentSubscriptionCompleted(Msg,
+						      ['UpdatePersistentSubscriptionCompleted'],
+						      TrUserData);
+      #'NotHandled.MasterInfo'{} ->
+	  'v_msg_NotHandled.MasterInfo'(Msg,
+					['NotHandled.MasterInfo'], TrUserData);
+      #'ReadAllEventsCompleted'{} ->
+	  v_msg_ReadAllEventsCompleted(Msg,
+				       ['ReadAllEventsCompleted'], TrUserData);
       #'ConnectToPersistentSubscription'{} ->
 	  v_msg_ConnectToPersistentSubscription(Msg,
 						['ConnectToPersistentSubscription'],
 						TrUserData);
+      #'TransactionWrite'{} ->
+	  v_msg_TransactionWrite(Msg, ['TransactionWrite'],
+				 TrUserData);
       #'PersistentSubscriptionNakEvents'{} ->
 	  v_msg_PersistentSubscriptionNakEvents(Msg,
 						['PersistentSubscriptionNakEvents'],
-						TrUserData);
-      #'ReadStreamEvents'{} ->
-	  v_msg_ReadStreamEvents(Msg, ['ReadStreamEvents'],
-				 TrUserData);
-      #'ReadAllEvents'{} ->
-	  v_msg_ReadAllEvents(Msg, ['ReadAllEvents'], TrUserData);
-      #'PersistentSubscriptionConfirmation'{} ->
-	  v_msg_PersistentSubscriptionConfirmation(Msg,
-						   ['PersistentSubscriptionConfirmation'],
-						   TrUserData);
-      #'PersistentSubscriptionAckEvents'{} ->
-	  v_msg_PersistentSubscriptionAckEvents(Msg,
-						['PersistentSubscriptionAckEvents'],
 						TrUserData);
       _ -> mk_type_error(not_a_known_message, Msg, [])
     end.
 
 
--dialyzer({nowarn_function,v_msg_NewEvent/3}).
-v_msg_NewEvent(#'NewEvent'{event_id = F1,
-			   event_type = F2, data_content_type = F3,
-			   metadata_content_type = F4, data = F5,
-			   metadata = F6},
-	       Path, _) ->
-    v_type_bytes(F1, [event_id | Path]),
-    v_type_string(F2, [event_type | Path]),
-    v_type_int32(F3, [data_content_type | Path]),
-    v_type_int32(F4, [metadata_content_type | Path]),
-    v_type_bytes(F5, [data | Path]),
-    if F6 == undefined -> ok;
-       true -> v_type_bytes(F6, [metadata | Path])
-    end,
-    ok;
-v_msg_NewEvent(X, Path, _TrUserData) ->
-    mk_type_error({expected_msg, 'NewEvent'}, X, Path).
-
--dialyzer({nowarn_function,v_msg_TransactionWrite/3}).
-v_msg_TransactionWrite(#'TransactionWrite'{transaction_id
-					       = F1,
-					   events = F2, require_master = F3},
-		       Path, TrUserData) ->
-    v_type_int64(F1, [transaction_id | Path]),
-    if is_list(F2) ->
-	   _ = [v_msg_NewEvent(Elem, [events | Path], TrUserData)
-		|| Elem <- F2],
-	   ok;
-       true ->
-	   mk_type_error({invalid_list_of, {msg, 'NewEvent'}}, F2,
-			 [events | Path])
-    end,
-    v_type_bool(F3, [require_master | Path]),
+-dialyzer({nowarn_function,v_msg_ReadAllEvents/3}).
+v_msg_ReadAllEvents(#'ReadAllEvents'{commit_position =
+					 F1,
+				     prepare_position = F2, max_count = F3,
+				     resolve_link_tos = F4,
+				     require_master = F5},
+		    Path, _) ->
+    v_type_int64(F1, [commit_position | Path]),
+    v_type_int64(F2, [prepare_position | Path]),
+    v_type_int32(F3, [max_count | Path]),
+    v_type_bool(F4, [resolve_link_tos | Path]),
+    v_type_bool(F5, [require_master | Path]),
     ok.
 
--dialyzer({nowarn_function,v_msg_TransactionCommitCompleted/3}).
-v_msg_TransactionCommitCompleted(#'TransactionCommitCompleted'{transaction_id
-								   = F1,
-							       result = F2,
-							       message = F3,
-							       first_event_number
-								   = F4,
-							       last_event_number
-								   = F5,
-							       prepare_position
-								   = F6,
-							       commit_position =
-								   F7},
-				 Path, _) ->
-    v_type_int64(F1, [transaction_id | Path]),
-    v_enum_OperationResult(F2, [result | Path]),
-    if F3 == undefined -> ok;
-       true -> v_type_string(F3, [message | Path])
-    end,
-    v_type_int32(F4, [first_event_number | Path]),
-    v_type_int32(F5, [last_event_number | Path]),
-    if F6 == undefined -> ok;
-       true -> v_type_int64(F6, [prepare_position | Path])
-    end,
-    if F7 == undefined -> ok;
-       true -> v_type_int64(F7, [commit_position | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,'v_msg_NotHandled.MasterInfo'/3}).
-'v_msg_NotHandled.MasterInfo'(#'NotHandled.MasterInfo'{external_tcp_address
-							   = F1,
-						       external_tcp_port = F2,
-						       external_http_address =
-							   F3,
-						       external_http_port = F4,
-						       external_secure_tcp_address
-							   = F5,
-						       external_secure_tcp_port
-							   = F6},
-			      Path, _) ->
-    v_type_string(F1, [external_tcp_address | Path]),
-    v_type_int32(F2, [external_tcp_port | Path]),
-    v_type_string(F3, [external_http_address | Path]),
-    v_type_int32(F4, [external_http_port | Path]),
-    if F5 == undefined -> ok;
-       true ->
-	   v_type_string(F5, [external_secure_tcp_address | Path])
-    end,
-    if F6 == undefined -> ok;
-       true ->
-	   v_type_int32(F6, [external_secure_tcp_port | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_ScavengeDatabase/3}).
-v_msg_ScavengeDatabase(#'ScavengeDatabase'{}, _Path,
-		       _) ->
-    ok.
-
--dialyzer({nowarn_function,v_msg_WriteEventsCompleted/3}).
-v_msg_WriteEventsCompleted(#'WriteEventsCompleted'{result
-						       = F1,
-						   message = F2,
-						   first_event_number = F3,
-						   last_event_number = F4,
-						   prepare_position = F5,
-						   commit_position = F6},
-			   Path, _) ->
-    v_enum_OperationResult(F1, [result | Path]),
+-dialyzer({nowarn_function,v_msg_SubscriptionConfirmation/3}).
+v_msg_SubscriptionConfirmation(#'SubscriptionConfirmation'{last_commit_position
+							       = F1,
+							   last_event_number =
+							       F2},
+			       Path, _) ->
+    v_type_int64(F1, [last_commit_position | Path]),
     if F2 == undefined -> ok;
-       true -> v_type_string(F2, [message | Path])
-    end,
-    v_type_int32(F3, [first_event_number | Path]),
-    v_type_int32(F4, [last_event_number | Path]),
-    if F5 == undefined -> ok;
-       true -> v_type_int64(F5, [prepare_position | Path])
-    end,
-    if F6 == undefined -> ok;
-       true -> v_type_int64(F6, [commit_position | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_SubscribeToStream/3}).
-v_msg_SubscribeToStream(#'SubscribeToStream'{event_stream_id
-						 = F1,
-					     resolve_link_tos = F2},
-			Path, _) ->
-    v_type_string(F1, [event_stream_id | Path]),
-    v_type_bool(F2, [resolve_link_tos | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_SubscriptionDropped/3}).
-v_msg_SubscriptionDropped(#'SubscriptionDropped'{reason
-						     = F1},
-			  Path, _) ->
-    if F1 == undefined -> ok;
-       true ->
-	   'v_enum_SubscriptionDropped.SubscriptionDropReason'(F1,
-							       [reason | Path])
+       true -> v_type_int32(F2, [last_event_number | Path])
     end,
     ok.
 
@@ -13278,271 +13166,13 @@ v_msg_TransactionWriteCompleted(#'TransactionWriteCompleted'{transaction_id
     end,
     ok.
 
--dialyzer({nowarn_function,v_msg_TransactionStart/3}).
-v_msg_TransactionStart(#'TransactionStart'{event_stream_id
-					       = F1,
-					   expected_version = F2,
-					   require_master = F3},
-		       Path, _) ->
-    v_type_string(F1, [event_stream_id | Path]),
-    v_type_int32(F2, [expected_version | Path]),
-    v_type_bool(F3, [require_master | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_CreatePersistentSubscription/3}).
-v_msg_CreatePersistentSubscription(#'CreatePersistentSubscription'{subscription_group_name
-								       = F1,
-								   event_stream_id
-								       = F2,
-								   resolve_link_tos
-								       = F3,
-								   start_from =
-								       F4,
-								   message_timeout_milliseconds
-								       = F5,
-								   record_statistics
-								       = F6,
-								   live_buffer_size
-								       = F7,
-								   read_batch_size
-								       = F8,
-								   buffer_size =
-								       F9,
-								   max_retry_count
-								       = F10,
-								   prefer_round_robin
-								       = F11,
-								   checkpoint_after_time
-								       = F12,
-								   checkpoint_max_count
-								       = F13,
-								   checkpoint_min_count
-								       = F14,
-								   subscriber_max_count
-								       = F15,
-								   named_consumer_strategy
-								       = F16},
-				   Path, _) ->
-    v_type_string(F1, [subscription_group_name | Path]),
-    v_type_string(F2, [event_stream_id | Path]),
-    v_type_bool(F3, [resolve_link_tos | Path]),
-    v_type_int32(F4, [start_from | Path]),
-    v_type_int32(F5, [message_timeout_milliseconds | Path]),
-    v_type_bool(F6, [record_statistics | Path]),
-    v_type_int32(F7, [live_buffer_size | Path]),
-    v_type_int32(F8, [read_batch_size | Path]),
-    v_type_int32(F9, [buffer_size | Path]),
-    v_type_int32(F10, [max_retry_count | Path]),
-    v_type_bool(F11, [prefer_round_robin | Path]),
-    v_type_int32(F12, [checkpoint_after_time | Path]),
-    v_type_int32(F13, [checkpoint_max_count | Path]),
-    v_type_int32(F14, [checkpoint_min_count | Path]),
-    v_type_int32(F15, [subscriber_max_count | Path]),
-    if F16 == undefined -> ok;
-       true ->
-	   v_type_string(F16, [named_consumer_strategy | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_TransactionStartCompleted/3}).
-v_msg_TransactionStartCompleted(#'TransactionStartCompleted'{transaction_id
-								 = F1,
-							     result = F2,
-							     message = F3},
-				Path, _) ->
+-dialyzer({nowarn_function,v_msg_TransactionCommit/3}).
+v_msg_TransactionCommit(#'TransactionCommit'{transaction_id
+						 = F1,
+					     require_master = F2},
+			Path, _) ->
     v_type_int64(F1, [transaction_id | Path]),
-    v_enum_OperationResult(F2, [result | Path]),
-    if F3 == undefined -> ok;
-       true -> v_type_string(F3, [message | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_EventRecord/3}).
-v_msg_EventRecord(#'EventRecord'{event_stream_id = F1,
-				 event_number = F2, event_id = F3,
-				 event_type = F4, data_content_type = F5,
-				 metadata_content_type = F6, data = F7,
-				 metadata = F8, created = F9,
-				 created_epoch = F10},
-		  Path, _) ->
-    v_type_string(F1, [event_stream_id | Path]),
-    v_type_int32(F2, [event_number | Path]),
-    v_type_bytes(F3, [event_id | Path]),
-    v_type_string(F4, [event_type | Path]),
-    v_type_int32(F5, [data_content_type | Path]),
-    v_type_int32(F6, [metadata_content_type | Path]),
-    v_type_bytes(F7, [data | Path]),
-    if F8 == undefined -> ok;
-       true -> v_type_bytes(F8, [metadata | Path])
-    end,
-    if F9 == undefined -> ok;
-       true -> v_type_int64(F9, [created | Path])
-    end,
-    if F10 == undefined -> ok;
-       true -> v_type_int64(F10, [created_epoch | Path])
-    end,
-    ok;
-v_msg_EventRecord(X, Path, _TrUserData) ->
-    mk_type_error({expected_msg, 'EventRecord'}, X, Path).
-
--dialyzer({nowarn_function,v_msg_ResolvedEvent/3}).
-v_msg_ResolvedEvent(#'ResolvedEvent'{event = F1,
-				     link = F2, commit_position = F3,
-				     prepare_position = F4},
-		    Path, TrUserData) ->
-    v_msg_EventRecord(F1, [event | Path], TrUserData),
-    if F2 == undefined -> ok;
-       true -> v_msg_EventRecord(F2, [link | Path], TrUserData)
-    end,
-    v_type_int64(F3, [commit_position | Path]),
-    v_type_int64(F4, [prepare_position | Path]),
-    ok;
-v_msg_ResolvedEvent(X, Path, _TrUserData) ->
-    mk_type_error({expected_msg, 'ResolvedEvent'}, X, Path).
-
--dialyzer({nowarn_function,v_msg_ReadAllEventsCompleted/3}).
-v_msg_ReadAllEventsCompleted(#'ReadAllEventsCompleted'{commit_position
-							   = F1,
-						       prepare_position = F2,
-						       events = F3,
-						       next_commit_position =
-							   F4,
-						       next_prepare_position =
-							   F5,
-						       result = F6, error = F7},
-			     Path, TrUserData) ->
-    v_type_int64(F1, [commit_position | Path]),
-    v_type_int64(F2, [prepare_position | Path]),
-    if is_list(F3) ->
-	   _ = [v_msg_ResolvedEvent(Elem, [events | Path],
-				    TrUserData)
-		|| Elem <- F3],
-	   ok;
-       true ->
-	   mk_type_error({invalid_list_of, {msg, 'ResolvedEvent'}},
-			 F3, [events | Path])
-    end,
-    v_type_int64(F4, [next_commit_position | Path]),
-    v_type_int64(F5, [next_prepare_position | Path]),
-    if F6 == undefined -> ok;
-       true ->
-	   'v_enum_ReadAllEventsCompleted.ReadAllResult'(F6,
-							 [result | Path])
-    end,
-    if F7 == undefined -> ok;
-       true -> v_type_string(F7, [error | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_NotHandled/3}).
-v_msg_NotHandled(#'NotHandled'{reason = F1,
-			       additional_info = F2},
-		 Path, _) ->
-    'v_enum_NotHandled.NotHandledReason'(F1,
-					 [reason | Path]),
-    if F2 == undefined -> ok;
-       true -> v_type_bytes(F2, [additional_info | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_SubscriptionConfirmation/3}).
-v_msg_SubscriptionConfirmation(#'SubscriptionConfirmation'{last_commit_position
-							       = F1,
-							   last_event_number =
-							       F2},
-			       Path, _) ->
-    v_type_int64(F1, [last_commit_position | Path]),
-    if F2 == undefined -> ok;
-       true -> v_type_int32(F2, [last_event_number | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_DeleteStreamCompleted/3}).
-v_msg_DeleteStreamCompleted(#'DeleteStreamCompleted'{result
-							 = F1,
-						     message = F2,
-						     prepare_position = F3,
-						     commit_position = F4},
-			    Path, _) ->
-    v_enum_OperationResult(F1, [result | Path]),
-    if F2 == undefined -> ok;
-       true -> v_type_string(F2, [message | Path])
-    end,
-    if F3 == undefined -> ok;
-       true -> v_type_int64(F3, [prepare_position | Path])
-    end,
-    if F4 == undefined -> ok;
-       true -> v_type_int64(F4, [commit_position | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_WriteEvents/3}).
-v_msg_WriteEvents(#'WriteEvents'{event_stream_id = F1,
-				 expected_version = F2, events = F3,
-				 require_master = F4},
-		  Path, TrUserData) ->
-    v_type_string(F1, [event_stream_id | Path]),
-    v_type_int32(F2, [expected_version | Path]),
-    if is_list(F3) ->
-	   _ = [v_msg_NewEvent(Elem, [events | Path], TrUserData)
-		|| Elem <- F3],
-	   ok;
-       true ->
-	   mk_type_error({invalid_list_of, {msg, 'NewEvent'}}, F3,
-			 [events | Path])
-    end,
-    v_type_bool(F4, [require_master | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_DeleteStream/3}).
-v_msg_DeleteStream(#'DeleteStream'{event_stream_id = F1,
-				   expected_version = F2, require_master = F3,
-				   hard_delete = F4},
-		   Path, _) ->
-    v_type_string(F1, [event_stream_id | Path]),
-    v_type_int32(F2, [expected_version | Path]),
-    v_type_bool(F3, [require_master | Path]),
-    if F4 == undefined -> ok;
-       true -> v_type_bool(F4, [hard_delete | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_ScavengeDatabaseCompleted/3}).
-v_msg_ScavengeDatabaseCompleted(#'ScavengeDatabaseCompleted'{result
-								 = F1,
-							     error = F2,
-							     total_time_ms = F3,
-							     total_space_saved =
-								 F4},
-				Path, _) ->
-    'v_enum_ScavengeDatabaseCompleted.ScavengeResult'(F1,
-						      [result | Path]),
-    if F2 == undefined -> ok;
-       true -> v_type_string(F2, [error | Path])
-    end,
-    v_type_int32(F3, [total_time_ms | Path]),
-    v_type_int64(F4, [total_space_saved | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_UnsubscribeFromStream/3}).
-v_msg_UnsubscribeFromStream(#'UnsubscribeFromStream'{},
-			    _Path, _) ->
-    ok.
-
--dialyzer({nowarn_function,v_msg_DeletePersistentSubscriptionCompleted/3}).
-v_msg_DeletePersistentSubscriptionCompleted(#'DeletePersistentSubscriptionCompleted'{result
-											 =
-											 F1,
-										     reason
-											 =
-											 F2},
-					    Path, _) ->
-    'v_enum_DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'(F1,
-										      [result
-										       | Path]),
-    if F2 == undefined -> ok;
-       true -> v_type_string(F2, [reason | Path])
-    end,
+    v_type_bool(F2, [require_master | Path]),
     ok.
 
 -dialyzer({nowarn_function,v_msg_UpdatePersistentSubscription/3}).
@@ -13600,6 +13230,34 @@ v_msg_UpdatePersistentSubscription(#'UpdatePersistentSubscription'{subscription_
     end,
     ok.
 
+-dialyzer({nowarn_function,v_msg_EventRecord/3}).
+v_msg_EventRecord(#'EventRecord'{event_stream_id = F1,
+				 event_number = F2, event_id = F3,
+				 event_type = F4, data_content_type = F5,
+				 metadata_content_type = F6, data = F7,
+				 metadata = F8, created = F9,
+				 created_epoch = F10},
+		  Path, _) ->
+    v_type_string(F1, [event_stream_id | Path]),
+    v_type_int32(F2, [event_number | Path]),
+    v_type_bytes(F3, [event_id | Path]),
+    v_type_string(F4, [event_type | Path]),
+    v_type_int32(F5, [data_content_type | Path]),
+    v_type_int32(F6, [metadata_content_type | Path]),
+    v_type_bytes(F7, [data | Path]),
+    if F8 == undefined -> ok;
+       true -> v_type_bytes(F8, [metadata | Path])
+    end,
+    if F9 == undefined -> ok;
+       true -> v_type_int64(F9, [created | Path])
+    end,
+    if F10 == undefined -> ok;
+       true -> v_type_int64(F10, [created_epoch | Path])
+    end,
+    ok;
+v_msg_EventRecord(X, Path, _TrUserData) ->
+    mk_type_error({expected_msg, 'EventRecord'}, X, Path).
+
 -dialyzer({nowarn_function,v_msg_ResolvedIndexedEvent/3}).
 v_msg_ResolvedIndexedEvent(#'ResolvedIndexedEvent'{event
 						       = F1,
@@ -13613,6 +13271,250 @@ v_msg_ResolvedIndexedEvent(#'ResolvedIndexedEvent'{event
 v_msg_ResolvedIndexedEvent(X, Path, _TrUserData) ->
     mk_type_error({expected_msg, 'ResolvedIndexedEvent'}, X,
 		  Path).
+
+-dialyzer({nowarn_function,v_msg_PersistentSubscriptionStreamEventAppeared/3}).
+v_msg_PersistentSubscriptionStreamEventAppeared(#'PersistentSubscriptionStreamEventAppeared'{event
+												 =
+												 F1},
+						Path, TrUserData) ->
+    v_msg_ResolvedIndexedEvent(F1, [event | Path],
+			       TrUserData),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_ReadEvent/3}).
+v_msg_ReadEvent(#'ReadEvent'{event_stream_id = F1,
+			     event_number = F2, resolve_link_tos = F3,
+			     require_master = F4},
+		Path, _) ->
+    v_type_string(F1, [event_stream_id | Path]),
+    v_type_int32(F2, [event_number | Path]),
+    v_type_bool(F3, [resolve_link_tos | Path]),
+    v_type_bool(F4, [require_master | Path]),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_TransactionStartCompleted/3}).
+v_msg_TransactionStartCompleted(#'TransactionStartCompleted'{transaction_id
+								 = F1,
+							     result = F2,
+							     message = F3},
+				Path, _) ->
+    v_type_int64(F1, [transaction_id | Path]),
+    v_enum_OperationResult(F2, [result | Path]),
+    if F3 == undefined -> ok;
+       true -> v_type_string(F3, [message | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_ScavengeDatabaseCompleted/3}).
+v_msg_ScavengeDatabaseCompleted(#'ScavengeDatabaseCompleted'{result
+								 = F1,
+							     error = F2,
+							     total_time_ms = F3,
+							     total_space_saved =
+								 F4},
+				Path, _) ->
+    'v_enum_ScavengeDatabaseCompleted.ScavengeResult'(F1,
+						      [result | Path]),
+    if F2 == undefined -> ok;
+       true -> v_type_string(F2, [error | Path])
+    end,
+    v_type_int32(F3, [total_time_ms | Path]),
+    v_type_int64(F4, [total_space_saved | Path]),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_WriteEventsCompleted/3}).
+v_msg_WriteEventsCompleted(#'WriteEventsCompleted'{result
+						       = F1,
+						   message = F2,
+						   first_event_number = F3,
+						   last_event_number = F4,
+						   prepare_position = F5,
+						   commit_position = F6},
+			   Path, _) ->
+    v_enum_OperationResult(F1, [result | Path]),
+    if F2 == undefined -> ok;
+       true -> v_type_string(F2, [message | Path])
+    end,
+    v_type_int32(F3, [first_event_number | Path]),
+    v_type_int32(F4, [last_event_number | Path]),
+    if F5 == undefined -> ok;
+       true -> v_type_int64(F5, [prepare_position | Path])
+    end,
+    if F6 == undefined -> ok;
+       true -> v_type_int64(F6, [commit_position | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_DeleteStream/3}).
+v_msg_DeleteStream(#'DeleteStream'{event_stream_id = F1,
+				   expected_version = F2, require_master = F3,
+				   hard_delete = F4},
+		   Path, _) ->
+    v_type_string(F1, [event_stream_id | Path]),
+    v_type_int32(F2, [expected_version | Path]),
+    v_type_bool(F3, [require_master | Path]),
+    if F4 == undefined -> ok;
+       true -> v_type_bool(F4, [hard_delete | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_UnsubscribeFromStream/3}).
+v_msg_UnsubscribeFromStream(#'UnsubscribeFromStream'{},
+			    _Path, _) ->
+    ok.
+
+-dialyzer({nowarn_function,v_msg_NewEvent/3}).
+v_msg_NewEvent(#'NewEvent'{event_id = F1,
+			   event_type = F2, data_content_type = F3,
+			   metadata_content_type = F4, data = F5,
+			   metadata = F6},
+	       Path, _) ->
+    v_type_bytes(F1, [event_id | Path]),
+    v_type_string(F2, [event_type | Path]),
+    v_type_int32(F3, [data_content_type | Path]),
+    v_type_int32(F4, [metadata_content_type | Path]),
+    v_type_bytes(F5, [data | Path]),
+    if F6 == undefined -> ok;
+       true -> v_type_bytes(F6, [metadata | Path])
+    end,
+    ok;
+v_msg_NewEvent(X, Path, _TrUserData) ->
+    mk_type_error({expected_msg, 'NewEvent'}, X, Path).
+
+-dialyzer({nowarn_function,v_msg_NotHandled/3}).
+v_msg_NotHandled(#'NotHandled'{reason = F1,
+			       additional_info = F2},
+		 Path, _) ->
+    'v_enum_NotHandled.NotHandledReason'(F1,
+					 [reason | Path]),
+    if F2 == undefined -> ok;
+       true -> v_type_bytes(F2, [additional_info | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_WriteEvents/3}).
+v_msg_WriteEvents(#'WriteEvents'{event_stream_id = F1,
+				 expected_version = F2, events = F3,
+				 require_master = F4},
+		  Path, TrUserData) ->
+    v_type_string(F1, [event_stream_id | Path]),
+    v_type_int32(F2, [expected_version | Path]),
+    if is_list(F3) ->
+	   _ = [v_msg_NewEvent(Elem, [events | Path], TrUserData)
+		|| Elem <- F3],
+	   ok;
+       true ->
+	   mk_type_error({invalid_list_of, {msg, 'NewEvent'}}, F3,
+			 [events | Path])
+    end,
+    v_type_bool(F4, [require_master | Path]),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_ScavengeDatabase/3}).
+v_msg_ScavengeDatabase(#'ScavengeDatabase'{}, _Path,
+		       _) ->
+    ok.
+
+-dialyzer({nowarn_function,v_msg_ResolvedEvent/3}).
+v_msg_ResolvedEvent(#'ResolvedEvent'{event = F1,
+				     link = F2, commit_position = F3,
+				     prepare_position = F4},
+		    Path, TrUserData) ->
+    v_msg_EventRecord(F1, [event | Path], TrUserData),
+    if F2 == undefined -> ok;
+       true -> v_msg_EventRecord(F2, [link | Path], TrUserData)
+    end,
+    v_type_int64(F3, [commit_position | Path]),
+    v_type_int64(F4, [prepare_position | Path]),
+    ok;
+v_msg_ResolvedEvent(X, Path, _TrUserData) ->
+    mk_type_error({expected_msg, 'ResolvedEvent'}, X, Path).
+
+-dialyzer({nowarn_function,v_msg_StreamEventAppeared/3}).
+v_msg_StreamEventAppeared(#'StreamEventAppeared'{event =
+						     F1},
+			  Path, TrUserData) ->
+    v_msg_ResolvedEvent(F1, [event | Path], TrUserData), ok.
+
+-dialyzer({nowarn_function,v_msg_ReadStreamEvents/3}).
+v_msg_ReadStreamEvents(#'ReadStreamEvents'{event_stream_id
+					       = F1,
+					   from_event_number = F2,
+					   max_count = F3,
+					   resolve_link_tos = F4,
+					   require_master = F5},
+		       Path, _) ->
+    v_type_string(F1, [event_stream_id | Path]),
+    v_type_int32(F2, [from_event_number | Path]),
+    v_type_int32(F3, [max_count | Path]),
+    v_type_bool(F4, [resolve_link_tos | Path]),
+    v_type_bool(F5, [require_master | Path]),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_SubscriptionDropped/3}).
+v_msg_SubscriptionDropped(#'SubscriptionDropped'{reason
+						     = F1},
+			  Path, _) ->
+    if F1 == undefined -> ok;
+       true ->
+	   'v_enum_SubscriptionDropped.SubscriptionDropReason'(F1,
+							       [reason | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_SubscribeToStream/3}).
+v_msg_SubscribeToStream(#'SubscribeToStream'{event_stream_id
+						 = F1,
+					     resolve_link_tos = F2},
+			Path, _) ->
+    v_type_string(F1, [event_stream_id | Path]),
+    v_type_bool(F2, [resolve_link_tos | Path]),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_PersistentSubscriptionConfirmation/3}).
+v_msg_PersistentSubscriptionConfirmation(#'PersistentSubscriptionConfirmation'{last_commit_position
+										   =
+										   F1,
+									       subscription_id
+										   =
+										   F2,
+									       last_event_number
+										   =
+										   F3},
+					 Path, _) ->
+    v_type_int64(F1, [last_commit_position | Path]),
+    v_type_string(F2, [subscription_id | Path]),
+    if F3 == undefined -> ok;
+       true -> v_type_int32(F3, [last_event_number | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_TransactionStart/3}).
+v_msg_TransactionStart(#'TransactionStart'{event_stream_id
+					       = F1,
+					   expected_version = F2,
+					   require_master = F3},
+		       Path, _) ->
+    v_type_string(F1, [event_stream_id | Path]),
+    v_type_int32(F2, [expected_version | Path]),
+    v_type_bool(F3, [require_master | Path]),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_CreatePersistentSubscriptionCompleted/3}).
+v_msg_CreatePersistentSubscriptionCompleted(#'CreatePersistentSubscriptionCompleted'{result
+											 =
+											 F1,
+										     reason
+											 =
+											 F2},
+					    Path, _) ->
+    'v_enum_CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'(F1,
+										      [result
+										       | Path]),
+    if F2 == undefined -> ok;
+       true -> v_type_string(F2, [reason | Path])
+    end,
+    ok.
 
 -dialyzer({nowarn_function,v_msg_ReadStreamEventsCompleted/3}).
 v_msg_ReadStreamEventsCompleted(#'ReadStreamEventsCompleted'{events
@@ -13649,65 +13551,142 @@ v_msg_ReadStreamEventsCompleted(#'ReadStreamEventsCompleted'{events
     end,
     ok.
 
--dialyzer({nowarn_function,v_msg_TransactionCommit/3}).
-v_msg_TransactionCommit(#'TransactionCommit'{transaction_id
-						 = F1,
-					     require_master = F2},
-			Path, _) ->
+-dialyzer({nowarn_function,v_msg_TransactionCommitCompleted/3}).
+v_msg_TransactionCommitCompleted(#'TransactionCommitCompleted'{transaction_id
+								   = F1,
+							       result = F2,
+							       message = F3,
+							       first_event_number
+								   = F4,
+							       last_event_number
+								   = F5,
+							       prepare_position
+								   = F6,
+							       commit_position =
+								   F7},
+				 Path, _) ->
     v_type_int64(F1, [transaction_id | Path]),
-    v_type_bool(F2, [require_master | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_CreatePersistentSubscriptionCompleted/3}).
-v_msg_CreatePersistentSubscriptionCompleted(#'CreatePersistentSubscriptionCompleted'{result
-											 =
-											 F1,
-										     reason
-											 =
-											 F2},
-					    Path, _) ->
-    'v_enum_CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'(F1,
-										      [result
-										       | Path]),
-    if F2 == undefined -> ok;
-       true -> v_type_string(F2, [reason | Path])
+    v_enum_OperationResult(F2, [result | Path]),
+    if F3 == undefined -> ok;
+       true -> v_type_string(F3, [message | Path])
+    end,
+    v_type_int32(F4, [first_event_number | Path]),
+    v_type_int32(F5, [last_event_number | Path]),
+    if F6 == undefined -> ok;
+       true -> v_type_int64(F6, [prepare_position | Path])
+    end,
+    if F7 == undefined -> ok;
+       true -> v_type_int64(F7, [commit_position | Path])
     end,
     ok.
 
--dialyzer({nowarn_function,v_msg_ReadEvent/3}).
-v_msg_ReadEvent(#'ReadEvent'{event_stream_id = F1,
-			     event_number = F2, resolve_link_tos = F3,
-			     require_master = F4},
-		Path, _) ->
-    v_type_string(F1, [event_stream_id | Path]),
-    v_type_int32(F2, [event_number | Path]),
+-dialyzer({nowarn_function,v_msg_PersistentSubscriptionAckEvents/3}).
+v_msg_PersistentSubscriptionAckEvents(#'PersistentSubscriptionAckEvents'{subscription_id
+									     =
+									     F1,
+									 processed_event_ids
+									     =
+									     F2},
+				      Path, _) ->
+    v_type_string(F1, [subscription_id | Path]),
+    if is_list(F2) ->
+	   _ = [v_type_bytes(Elem, [processed_event_ids | Path])
+		|| Elem <- F2],
+	   ok;
+       true ->
+	   mk_type_error({invalid_list_of, bytes}, F2,
+			 [processed_event_ids | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_DeleteStreamCompleted/3}).
+v_msg_DeleteStreamCompleted(#'DeleteStreamCompleted'{result
+							 = F1,
+						     message = F2,
+						     prepare_position = F3,
+						     commit_position = F4},
+			    Path, _) ->
+    v_enum_OperationResult(F1, [result | Path]),
+    if F2 == undefined -> ok;
+       true -> v_type_string(F2, [message | Path])
+    end,
+    if F3 == undefined -> ok;
+       true -> v_type_int64(F3, [prepare_position | Path])
+    end,
+    if F4 == undefined -> ok;
+       true -> v_type_int64(F4, [commit_position | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_CreatePersistentSubscription/3}).
+v_msg_CreatePersistentSubscription(#'CreatePersistentSubscription'{subscription_group_name
+								       = F1,
+								   event_stream_id
+								       = F2,
+								   resolve_link_tos
+								       = F3,
+								   start_from =
+								       F4,
+								   message_timeout_milliseconds
+								       = F5,
+								   record_statistics
+								       = F6,
+								   live_buffer_size
+								       = F7,
+								   read_batch_size
+								       = F8,
+								   buffer_size =
+								       F9,
+								   max_retry_count
+								       = F10,
+								   prefer_round_robin
+								       = F11,
+								   checkpoint_after_time
+								       = F12,
+								   checkpoint_max_count
+								       = F13,
+								   checkpoint_min_count
+								       = F14,
+								   subscriber_max_count
+								       = F15,
+								   named_consumer_strategy
+								       = F16},
+				   Path, _) ->
+    v_type_string(F1, [subscription_group_name | Path]),
+    v_type_string(F2, [event_stream_id | Path]),
     v_type_bool(F3, [resolve_link_tos | Path]),
-    v_type_bool(F4, [require_master | Path]),
+    v_type_int32(F4, [start_from | Path]),
+    v_type_int32(F5, [message_timeout_milliseconds | Path]),
+    v_type_bool(F6, [record_statistics | Path]),
+    v_type_int32(F7, [live_buffer_size | Path]),
+    v_type_int32(F8, [read_batch_size | Path]),
+    v_type_int32(F9, [buffer_size | Path]),
+    v_type_int32(F10, [max_retry_count | Path]),
+    v_type_bool(F11, [prefer_round_robin | Path]),
+    v_type_int32(F12, [checkpoint_after_time | Path]),
+    v_type_int32(F13, [checkpoint_max_count | Path]),
+    v_type_int32(F14, [checkpoint_min_count | Path]),
+    v_type_int32(F15, [subscriber_max_count | Path]),
+    if F16 == undefined -> ok;
+       true ->
+	   v_type_string(F16, [named_consumer_strategy | Path])
+    end,
     ok.
 
--dialyzer({nowarn_function,v_msg_UpdatePersistentSubscriptionCompleted/3}).
-v_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionCompleted'{result
+-dialyzer({nowarn_function,v_msg_DeletePersistentSubscriptionCompleted/3}).
+v_msg_DeletePersistentSubscriptionCompleted(#'DeletePersistentSubscriptionCompleted'{result
 											 =
 											 F1,
 										     reason
 											 =
 											 F2},
 					    Path, _) ->
-    'v_enum_UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'(F1,
+    'v_enum_DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'(F1,
 										      [result
 										       | Path]),
     if F2 == undefined -> ok;
        true -> v_type_string(F2, [reason | Path])
     end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_PersistentSubscriptionStreamEventAppeared/3}).
-v_msg_PersistentSubscriptionStreamEventAppeared(#'PersistentSubscriptionStreamEventAppeared'{event
-												 =
-												 F1},
-						Path, TrUserData) ->
-    v_msg_ResolvedIndexedEvent(F1, [event | Path],
-			       TrUserData),
     ok.
 
 -dialyzer({nowarn_function,v_msg_ReadEventCompleted/3}).
@@ -13734,11 +13713,81 @@ v_msg_DeletePersistentSubscription(#'DeletePersistentSubscription'{subscription_
     v_type_string(F2, [event_stream_id | Path]),
     ok.
 
--dialyzer({nowarn_function,v_msg_StreamEventAppeared/3}).
-v_msg_StreamEventAppeared(#'StreamEventAppeared'{event =
-						     F1},
-			  Path, TrUserData) ->
-    v_msg_ResolvedEvent(F1, [event | Path], TrUserData), ok.
+-dialyzer({nowarn_function,v_msg_UpdatePersistentSubscriptionCompleted/3}).
+v_msg_UpdatePersistentSubscriptionCompleted(#'UpdatePersistentSubscriptionCompleted'{result
+											 =
+											 F1,
+										     reason
+											 =
+											 F2},
+					    Path, _) ->
+    'v_enum_UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'(F1,
+										      [result
+										       | Path]),
+    if F2 == undefined -> ok;
+       true -> v_type_string(F2, [reason | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,'v_msg_NotHandled.MasterInfo'/3}).
+'v_msg_NotHandled.MasterInfo'(#'NotHandled.MasterInfo'{external_tcp_address
+							   = F1,
+						       external_tcp_port = F2,
+						       external_http_address =
+							   F3,
+						       external_http_port = F4,
+						       external_secure_tcp_address
+							   = F5,
+						       external_secure_tcp_port
+							   = F6},
+			      Path, _) ->
+    v_type_string(F1, [external_tcp_address | Path]),
+    v_type_int32(F2, [external_tcp_port | Path]),
+    v_type_string(F3, [external_http_address | Path]),
+    v_type_int32(F4, [external_http_port | Path]),
+    if F5 == undefined -> ok;
+       true ->
+	   v_type_string(F5, [external_secure_tcp_address | Path])
+    end,
+    if F6 == undefined -> ok;
+       true ->
+	   v_type_int32(F6, [external_secure_tcp_port | Path])
+    end,
+    ok.
+
+-dialyzer({nowarn_function,v_msg_ReadAllEventsCompleted/3}).
+v_msg_ReadAllEventsCompleted(#'ReadAllEventsCompleted'{commit_position
+							   = F1,
+						       prepare_position = F2,
+						       events = F3,
+						       next_commit_position =
+							   F4,
+						       next_prepare_position =
+							   F5,
+						       result = F6, error = F7},
+			     Path, TrUserData) ->
+    v_type_int64(F1, [commit_position | Path]),
+    v_type_int64(F2, [prepare_position | Path]),
+    if is_list(F3) ->
+	   _ = [v_msg_ResolvedEvent(Elem, [events | Path],
+				    TrUserData)
+		|| Elem <- F3],
+	   ok;
+       true ->
+	   mk_type_error({invalid_list_of, {msg, 'ResolvedEvent'}},
+			 F3, [events | Path])
+    end,
+    v_type_int64(F4, [next_commit_position | Path]),
+    v_type_int64(F5, [next_prepare_position | Path]),
+    if F6 == undefined -> ok;
+       true ->
+	   'v_enum_ReadAllEventsCompleted.ReadAllResult'(F6,
+							 [result | Path])
+    end,
+    if F7 == undefined -> ok;
+       true -> v_type_string(F7, [error | Path])
+    end,
+    ok.
 
 -dialyzer({nowarn_function,v_msg_ConnectToPersistentSubscription/3}).
 v_msg_ConnectToPersistentSubscription(#'ConnectToPersistentSubscription'{subscription_id
@@ -13754,6 +13803,23 @@ v_msg_ConnectToPersistentSubscription(#'ConnectToPersistentSubscription'{subscri
     v_type_string(F1, [subscription_id | Path]),
     v_type_string(F2, [event_stream_id | Path]),
     v_type_int32(F3, [allowed_in_flight_messages | Path]),
+    ok.
+
+-dialyzer({nowarn_function,v_msg_TransactionWrite/3}).
+v_msg_TransactionWrite(#'TransactionWrite'{transaction_id
+					       = F1,
+					   events = F2, require_master = F3},
+		       Path, TrUserData) ->
+    v_type_int64(F1, [transaction_id | Path]),
+    if is_list(F2) ->
+	   _ = [v_msg_NewEvent(Elem, [events | Path], TrUserData)
+		|| Elem <- F2],
+	   ok;
+       true ->
+	   mk_type_error({invalid_list_of, {msg, 'NewEvent'}}, F2,
+			 [events | Path])
+    end,
+    v_type_bool(F3, [require_master | Path]),
     ok.
 
 -dialyzer({nowarn_function,v_msg_PersistentSubscriptionNakEvents/3}).
@@ -13784,72 +13850,6 @@ v_msg_PersistentSubscriptionNakEvents(#'PersistentSubscriptionNakEvents'{subscri
     end,
     'v_enum_PersistentSubscriptionNakEvents.NakAction'(F4,
 						       [action | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_ReadStreamEvents/3}).
-v_msg_ReadStreamEvents(#'ReadStreamEvents'{event_stream_id
-					       = F1,
-					   from_event_number = F2,
-					   max_count = F3,
-					   resolve_link_tos = F4,
-					   require_master = F5},
-		       Path, _) ->
-    v_type_string(F1, [event_stream_id | Path]),
-    v_type_int32(F2, [from_event_number | Path]),
-    v_type_int32(F3, [max_count | Path]),
-    v_type_bool(F4, [resolve_link_tos | Path]),
-    v_type_bool(F5, [require_master | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_ReadAllEvents/3}).
-v_msg_ReadAllEvents(#'ReadAllEvents'{commit_position =
-					 F1,
-				     prepare_position = F2, max_count = F3,
-				     resolve_link_tos = F4,
-				     require_master = F5},
-		    Path, _) ->
-    v_type_int64(F1, [commit_position | Path]),
-    v_type_int64(F2, [prepare_position | Path]),
-    v_type_int32(F3, [max_count | Path]),
-    v_type_bool(F4, [resolve_link_tos | Path]),
-    v_type_bool(F5, [require_master | Path]),
-    ok.
-
--dialyzer({nowarn_function,v_msg_PersistentSubscriptionConfirmation/3}).
-v_msg_PersistentSubscriptionConfirmation(#'PersistentSubscriptionConfirmation'{last_commit_position
-										   =
-										   F1,
-									       subscription_id
-										   =
-										   F2,
-									       last_event_number
-										   =
-										   F3},
-					 Path, _) ->
-    v_type_int64(F1, [last_commit_position | Path]),
-    v_type_string(F2, [subscription_id | Path]),
-    if F3 == undefined -> ok;
-       true -> v_type_int32(F3, [last_event_number | Path])
-    end,
-    ok.
-
--dialyzer({nowarn_function,v_msg_PersistentSubscriptionAckEvents/3}).
-v_msg_PersistentSubscriptionAckEvents(#'PersistentSubscriptionAckEvents'{subscription_id
-									     =
-									     F1,
-									 processed_event_ids
-									     =
-									     F2},
-				      Path, _) ->
-    v_type_string(F1, [subscription_id | Path]),
-    if is_list(F2) ->
-	   _ = [v_type_bytes(Elem, [processed_event_ids | Path])
-		|| Elem <- F2],
-	   ok;
-       true ->
-	   mk_type_error({invalid_list_of, bytes}, F2,
-			 [processed_event_ids | Path])
-    end,
     ok.
 
 -dialyzer({nowarn_function,v_enum_OperationResult/2}).
@@ -14234,84 +14234,22 @@ get_msg_defs() ->
       [{'NotReady', 0}, {'TooBusy', 1}, {'NotMaster', 2}]},
      {{enum, 'ScavengeDatabaseCompleted.ScavengeResult'},
       [{'Success', 0}, {'InProgress', 1}, {'Failed', 2}]},
-     {{msg, 'NewEvent'},
-      [#field{name = event_id, fnum = 1, rnum = 2,
-	      type = bytes, occurrence = required, opts = []},
-       #field{name = event_type, fnum = 2, rnum = 3,
-	      type = string, occurrence = required, opts = []},
-       #field{name = data_content_type, fnum = 3, rnum = 4,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = metadata_content_type, fnum = 4, rnum = 5,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = data, fnum = 5, rnum = 6, type = bytes,
-	      occurrence = required, opts = []},
-       #field{name = metadata, fnum = 6, rnum = 7,
-	      type = bytes, occurrence = optional, opts = []}]},
-     {{msg, 'TransactionWrite'},
-      [#field{name = transaction_id, fnum = 1, rnum = 2,
+     {{msg, 'ReadAllEvents'},
+      [#field{name = commit_position, fnum = 1, rnum = 2,
 	      type = int64, occurrence = required, opts = []},
-       #field{name = events, fnum = 2, rnum = 3,
-	      type = {msg, 'NewEvent'}, occurrence = repeated,
-	      opts = []},
-       #field{name = require_master, fnum = 3, rnum = 4,
-	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'TransactionCommitCompleted'},
-      [#field{name = transaction_id, fnum = 1, rnum = 2,
+       #field{name = prepare_position, fnum = 2, rnum = 3,
 	      type = int64, occurrence = required, opts = []},
-       #field{name = result, fnum = 2, rnum = 3,
-	      type = {enum, 'OperationResult'}, occurrence = required,
-	      opts = []},
-       #field{name = message, fnum = 3, rnum = 4,
-	      type = string, occurrence = optional, opts = []},
-       #field{name = first_event_number, fnum = 4, rnum = 5,
+       #field{name = max_count, fnum = 3, rnum = 4,
 	      type = int32, occurrence = required, opts = []},
-       #field{name = last_event_number, fnum = 5, rnum = 6,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = prepare_position, fnum = 6, rnum = 7,
-	      type = int64, occurrence = optional, opts = []},
-       #field{name = commit_position, fnum = 7, rnum = 8,
-	      type = int64, occurrence = optional, opts = []}]},
-     {{msg, 'NotHandled.MasterInfo'},
-      [#field{name = external_tcp_address, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = external_tcp_port, fnum = 2, rnum = 3,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = external_http_address, fnum = 3, rnum = 4,
-	      type = string, occurrence = required, opts = []},
-       #field{name = external_http_port, fnum = 4, rnum = 5,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = external_secure_tcp_address, fnum = 5,
-	      rnum = 6, type = string, occurrence = optional,
-	      opts = []},
-       #field{name = external_secure_tcp_port, fnum = 6,
-	      rnum = 7, type = int32, occurrence = optional,
-	      opts = []}]},
-     {{msg, 'ScavengeDatabase'}, []},
-     {{msg, 'WriteEventsCompleted'},
-      [#field{name = result, fnum = 1, rnum = 2,
-	      type = {enum, 'OperationResult'}, occurrence = required,
-	      opts = []},
-       #field{name = message, fnum = 2, rnum = 3,
-	      type = string, occurrence = optional, opts = []},
-       #field{name = first_event_number, fnum = 3, rnum = 4,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = last_event_number, fnum = 4, rnum = 5,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = prepare_position, fnum = 5, rnum = 6,
-	      type = int64, occurrence = optional, opts = []},
-       #field{name = commit_position, fnum = 6, rnum = 7,
-	      type = int64, occurrence = optional, opts = []}]},
-     {{msg, 'SubscribeToStream'},
-      [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = resolve_link_tos, fnum = 2, rnum = 3,
+       #field{name = resolve_link_tos, fnum = 4, rnum = 5,
+	      type = bool, occurrence = required, opts = []},
+       #field{name = require_master, fnum = 5, rnum = 6,
 	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'SubscriptionDropped'},
-      [#field{name = reason, fnum = 1, rnum = 2,
-	      type =
-		  {enum, 'SubscriptionDropped.SubscriptionDropReason'},
-	      occurrence = optional,
-	      opts = [{default, 'Unsubscribed'}]}]},
+     {{msg, 'SubscriptionConfirmation'},
+      [#field{name = last_commit_position, fnum = 1, rnum = 2,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = last_event_number, fnum = 2, rnum = 3,
+	      type = int32, occurrence = optional, opts = []}]},
      {{msg, 'TransactionWriteCompleted'},
       [#field{name = transaction_id, fnum = 1, rnum = 2,
 	      type = int64, occurrence = required, opts = []},
@@ -14320,170 +14258,11 @@ get_msg_defs() ->
 	      opts = []},
        #field{name = message, fnum = 3, rnum = 4,
 	      type = string, occurrence = optional, opts = []}]},
-     {{msg, 'TransactionStart'},
-      [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = expected_version, fnum = 2, rnum = 3,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = require_master, fnum = 3, rnum = 4,
-	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'CreatePersistentSubscription'},
-      [#field{name = subscription_group_name, fnum = 1,
-	      rnum = 2, type = string, occurrence = required,
-	      opts = []},
-       #field{name = event_stream_id, fnum = 2, rnum = 3,
-	      type = string, occurrence = required, opts = []},
-       #field{name = resolve_link_tos, fnum = 3, rnum = 4,
-	      type = bool, occurrence = required, opts = []},
-       #field{name = start_from, fnum = 4, rnum = 5,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = message_timeout_milliseconds, fnum = 5,
-	      rnum = 6, type = int32, occurrence = required,
-	      opts = []},
-       #field{name = record_statistics, fnum = 6, rnum = 7,
-	      type = bool, occurrence = required, opts = []},
-       #field{name = live_buffer_size, fnum = 7, rnum = 8,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = read_batch_size, fnum = 8, rnum = 9,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = buffer_size, fnum = 9, rnum = 10,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = max_retry_count, fnum = 10, rnum = 11,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = prefer_round_robin, fnum = 11, rnum = 12,
-	      type = bool, occurrence = required, opts = []},
-       #field{name = checkpoint_after_time, fnum = 12,
-	      rnum = 13, type = int32, occurrence = required,
-	      opts = []},
-       #field{name = checkpoint_max_count, fnum = 13,
-	      rnum = 14, type = int32, occurrence = required,
-	      opts = []},
-       #field{name = checkpoint_min_count, fnum = 14,
-	      rnum = 15, type = int32, occurrence = required,
-	      opts = []},
-       #field{name = subscriber_max_count, fnum = 15,
-	      rnum = 16, type = int32, occurrence = required,
-	      opts = []},
-       #field{name = named_consumer_strategy, fnum = 16,
-	      rnum = 17, type = string, occurrence = optional,
-	      opts = []}]},
-     {{msg, 'TransactionStartCompleted'},
+     {{msg, 'TransactionCommit'},
       [#field{name = transaction_id, fnum = 1, rnum = 2,
 	      type = int64, occurrence = required, opts = []},
-       #field{name = result, fnum = 2, rnum = 3,
-	      type = {enum, 'OperationResult'}, occurrence = required,
-	      opts = []},
-       #field{name = message, fnum = 3, rnum = 4,
-	      type = string, occurrence = optional, opts = []}]},
-     {{msg, 'EventRecord'},
-      [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = event_number, fnum = 2, rnum = 3,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = event_id, fnum = 3, rnum = 4,
-	      type = bytes, occurrence = required, opts = []},
-       #field{name = event_type, fnum = 4, rnum = 5,
-	      type = string, occurrence = required, opts = []},
-       #field{name = data_content_type, fnum = 5, rnum = 6,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = metadata_content_type, fnum = 6, rnum = 7,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = data, fnum = 7, rnum = 8, type = bytes,
-	      occurrence = required, opts = []},
-       #field{name = metadata, fnum = 8, rnum = 9,
-	      type = bytes, occurrence = optional, opts = []},
-       #field{name = created, fnum = 9, rnum = 10,
-	      type = int64, occurrence = optional, opts = []},
-       #field{name = created_epoch, fnum = 10, rnum = 11,
-	      type = int64, occurrence = optional, opts = []}]},
-     {{msg, 'ResolvedEvent'},
-      [#field{name = event, fnum = 1, rnum = 2,
-	      type = {msg, 'EventRecord'}, occurrence = required,
-	      opts = []},
-       #field{name = link, fnum = 2, rnum = 3,
-	      type = {msg, 'EventRecord'}, occurrence = optional,
-	      opts = []},
-       #field{name = commit_position, fnum = 3, rnum = 4,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = prepare_position, fnum = 4, rnum = 5,
-	      type = int64, occurrence = required, opts = []}]},
-     {{msg, 'ReadAllEventsCompleted'},
-      [#field{name = commit_position, fnum = 1, rnum = 2,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = prepare_position, fnum = 2, rnum = 3,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = events, fnum = 3, rnum = 4,
-	      type = {msg, 'ResolvedEvent'}, occurrence = repeated,
-	      opts = []},
-       #field{name = next_commit_position, fnum = 4, rnum = 5,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = next_prepare_position, fnum = 5, rnum = 6,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = result, fnum = 6, rnum = 7,
-	      type = {enum, 'ReadAllEventsCompleted.ReadAllResult'},
-	      occurrence = optional, opts = [{default, 'Success'}]},
-       #field{name = error, fnum = 7, rnum = 8, type = string,
-	      occurrence = optional, opts = []}]},
-     {{msg, 'NotHandled'},
-      [#field{name = reason, fnum = 1, rnum = 2,
-	      type = {enum, 'NotHandled.NotHandledReason'},
-	      occurrence = required, opts = []},
-       #field{name = additional_info, fnum = 2, rnum = 3,
-	      type = bytes, occurrence = optional, opts = []}]},
-     {{msg, 'SubscriptionConfirmation'},
-      [#field{name = last_commit_position, fnum = 1, rnum = 2,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = last_event_number, fnum = 2, rnum = 3,
-	      type = int32, occurrence = optional, opts = []}]},
-     {{msg, 'DeleteStreamCompleted'},
-      [#field{name = result, fnum = 1, rnum = 2,
-	      type = {enum, 'OperationResult'}, occurrence = required,
-	      opts = []},
-       #field{name = message, fnum = 2, rnum = 3,
-	      type = string, occurrence = optional, opts = []},
-       #field{name = prepare_position, fnum = 3, rnum = 4,
-	      type = int64, occurrence = optional, opts = []},
-       #field{name = commit_position, fnum = 4, rnum = 5,
-	      type = int64, occurrence = optional, opts = []}]},
-     {{msg, 'WriteEvents'},
-      [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = expected_version, fnum = 2, rnum = 3,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = events, fnum = 3, rnum = 4,
-	      type = {msg, 'NewEvent'}, occurrence = repeated,
-	      opts = []},
-       #field{name = require_master, fnum = 4, rnum = 5,
+       #field{name = require_master, fnum = 2, rnum = 3,
 	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'DeleteStream'},
-      [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = expected_version, fnum = 2, rnum = 3,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = require_master, fnum = 3, rnum = 4,
-	      type = bool, occurrence = required, opts = []},
-       #field{name = hard_delete, fnum = 4, rnum = 5,
-	      type = bool, occurrence = optional, opts = []}]},
-     {{msg, 'ScavengeDatabaseCompleted'},
-      [#field{name = result, fnum = 1, rnum = 2,
-	      type =
-		  {enum, 'ScavengeDatabaseCompleted.ScavengeResult'},
-	      occurrence = required, opts = []},
-       #field{name = error, fnum = 2, rnum = 3, type = string,
-	      occurrence = optional, opts = []},
-       #field{name = total_time_ms, fnum = 3, rnum = 4,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = total_space_saved, fnum = 4, rnum = 5,
-	      type = int64, occurrence = required, opts = []}]},
-     {{msg, 'UnsubscribeFromStream'}, []},
-     {{msg, 'DeletePersistentSubscriptionCompleted'},
-      [#field{name = result, fnum = 1, rnum = 2,
-	      type =
-		  {enum,
-		   'DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'},
-	      occurrence = required, opts = [{default, 'Success'}]},
-       #field{name = reason, fnum = 2, rnum = 3, type = string,
-	      occurrence = optional, opts = []}]},
      {{msg, 'UpdatePersistentSubscription'},
       [#field{name = subscription_group_name, fnum = 1,
 	      rnum = 2, type = string, occurrence = required,
@@ -14524,6 +14303,27 @@ get_msg_defs() ->
        #field{name = named_consumer_strategy, fnum = 16,
 	      rnum = 17, type = string, occurrence = optional,
 	      opts = []}]},
+     {{msg, 'EventRecord'},
+      [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = event_number, fnum = 2, rnum = 3,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = event_id, fnum = 3, rnum = 4,
+	      type = bytes, occurrence = required, opts = []},
+       #field{name = event_type, fnum = 4, rnum = 5,
+	      type = string, occurrence = required, opts = []},
+       #field{name = data_content_type, fnum = 5, rnum = 6,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = metadata_content_type, fnum = 6, rnum = 7,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = data, fnum = 7, rnum = 8, type = bytes,
+	      occurrence = required, opts = []},
+       #field{name = metadata, fnum = 8, rnum = 9,
+	      type = bytes, occurrence = optional, opts = []},
+       #field{name = created, fnum = 9, rnum = 10,
+	      type = int64, occurrence = optional, opts = []},
+       #field{name = created_epoch, fnum = 10, rnum = 11,
+	      type = int64, occurrence = optional, opts = []}]},
      {{msg, 'ResolvedIndexedEvent'},
       [#field{name = event, fnum = 1, rnum = 2,
 	      type = {msg, 'EventRecord'}, occurrence = required,
@@ -14531,6 +14331,151 @@ get_msg_defs() ->
        #field{name = link, fnum = 2, rnum = 3,
 	      type = {msg, 'EventRecord'}, occurrence = optional,
 	      opts = []}]},
+     {{msg, 'PersistentSubscriptionStreamEventAppeared'},
+      [#field{name = event, fnum = 1, rnum = 2,
+	      type = {msg, 'ResolvedIndexedEvent'},
+	      occurrence = required, opts = []}]},
+     {{msg, 'ReadEvent'},
+      [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = event_number, fnum = 2, rnum = 3,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = resolve_link_tos, fnum = 3, rnum = 4,
+	      type = bool, occurrence = required, opts = []},
+       #field{name = require_master, fnum = 4, rnum = 5,
+	      type = bool, occurrence = required, opts = []}]},
+     {{msg, 'TransactionStartCompleted'},
+      [#field{name = transaction_id, fnum = 1, rnum = 2,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = result, fnum = 2, rnum = 3,
+	      type = {enum, 'OperationResult'}, occurrence = required,
+	      opts = []},
+       #field{name = message, fnum = 3, rnum = 4,
+	      type = string, occurrence = optional, opts = []}]},
+     {{msg, 'ScavengeDatabaseCompleted'},
+      [#field{name = result, fnum = 1, rnum = 2,
+	      type =
+		  {enum, 'ScavengeDatabaseCompleted.ScavengeResult'},
+	      occurrence = required, opts = []},
+       #field{name = error, fnum = 2, rnum = 3, type = string,
+	      occurrence = optional, opts = []},
+       #field{name = total_time_ms, fnum = 3, rnum = 4,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = total_space_saved, fnum = 4, rnum = 5,
+	      type = int64, occurrence = required, opts = []}]},
+     {{msg, 'WriteEventsCompleted'},
+      [#field{name = result, fnum = 1, rnum = 2,
+	      type = {enum, 'OperationResult'}, occurrence = required,
+	      opts = []},
+       #field{name = message, fnum = 2, rnum = 3,
+	      type = string, occurrence = optional, opts = []},
+       #field{name = first_event_number, fnum = 3, rnum = 4,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = last_event_number, fnum = 4, rnum = 5,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = prepare_position, fnum = 5, rnum = 6,
+	      type = int64, occurrence = optional, opts = []},
+       #field{name = commit_position, fnum = 6, rnum = 7,
+	      type = int64, occurrence = optional, opts = []}]},
+     {{msg, 'DeleteStream'},
+      [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = expected_version, fnum = 2, rnum = 3,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = require_master, fnum = 3, rnum = 4,
+	      type = bool, occurrence = required, opts = []},
+       #field{name = hard_delete, fnum = 4, rnum = 5,
+	      type = bool, occurrence = optional, opts = []}]},
+     {{msg, 'UnsubscribeFromStream'}, []},
+     {{msg, 'NewEvent'},
+      [#field{name = event_id, fnum = 1, rnum = 2,
+	      type = bytes, occurrence = required, opts = []},
+       #field{name = event_type, fnum = 2, rnum = 3,
+	      type = string, occurrence = required, opts = []},
+       #field{name = data_content_type, fnum = 3, rnum = 4,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = metadata_content_type, fnum = 4, rnum = 5,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = data, fnum = 5, rnum = 6, type = bytes,
+	      occurrence = required, opts = []},
+       #field{name = metadata, fnum = 6, rnum = 7,
+	      type = bytes, occurrence = optional, opts = []}]},
+     {{msg, 'NotHandled'},
+      [#field{name = reason, fnum = 1, rnum = 2,
+	      type = {enum, 'NotHandled.NotHandledReason'},
+	      occurrence = required, opts = []},
+       #field{name = additional_info, fnum = 2, rnum = 3,
+	      type = bytes, occurrence = optional, opts = []}]},
+     {{msg, 'WriteEvents'},
+      [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = expected_version, fnum = 2, rnum = 3,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = events, fnum = 3, rnum = 4,
+	      type = {msg, 'NewEvent'}, occurrence = repeated,
+	      opts = []},
+       #field{name = require_master, fnum = 4, rnum = 5,
+	      type = bool, occurrence = required, opts = []}]},
+     {{msg, 'ScavengeDatabase'}, []},
+     {{msg, 'ResolvedEvent'},
+      [#field{name = event, fnum = 1, rnum = 2,
+	      type = {msg, 'EventRecord'}, occurrence = required,
+	      opts = []},
+       #field{name = link, fnum = 2, rnum = 3,
+	      type = {msg, 'EventRecord'}, occurrence = optional,
+	      opts = []},
+       #field{name = commit_position, fnum = 3, rnum = 4,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = prepare_position, fnum = 4, rnum = 5,
+	      type = int64, occurrence = required, opts = []}]},
+     {{msg, 'StreamEventAppeared'},
+      [#field{name = event, fnum = 1, rnum = 2,
+	      type = {msg, 'ResolvedEvent'}, occurrence = required,
+	      opts = []}]},
+     {{msg, 'ReadStreamEvents'},
+      [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = from_event_number, fnum = 2, rnum = 3,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = max_count, fnum = 3, rnum = 4,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = resolve_link_tos, fnum = 4, rnum = 5,
+	      type = bool, occurrence = required, opts = []},
+       #field{name = require_master, fnum = 5, rnum = 6,
+	      type = bool, occurrence = required, opts = []}]},
+     {{msg, 'SubscriptionDropped'},
+      [#field{name = reason, fnum = 1, rnum = 2,
+	      type =
+		  {enum, 'SubscriptionDropped.SubscriptionDropReason'},
+	      occurrence = optional,
+	      opts = [{default, 'Unsubscribed'}]}]},
+     {{msg, 'SubscribeToStream'},
+      [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = resolve_link_tos, fnum = 2, rnum = 3,
+	      type = bool, occurrence = required, opts = []}]},
+     {{msg, 'PersistentSubscriptionConfirmation'},
+      [#field{name = last_commit_position, fnum = 1, rnum = 2,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = subscription_id, fnum = 2, rnum = 3,
+	      type = string, occurrence = required, opts = []},
+       #field{name = last_event_number, fnum = 3, rnum = 4,
+	      type = int32, occurrence = optional, opts = []}]},
+     {{msg, 'TransactionStart'},
+      [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = expected_version, fnum = 2, rnum = 3,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = require_master, fnum = 3, rnum = 4,
+	      type = bool, occurrence = required, opts = []}]},
+     {{msg, 'CreatePersistentSubscriptionCompleted'},
+      [#field{name = result, fnum = 1, rnum = 2,
+	      type =
+		  {enum,
+		   'CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'},
+	      occurrence = required, opts = [{default, 'Success'}]},
+       #field{name = reason, fnum = 2, rnum = 3, type = string,
+	      occurrence = optional, opts = []}]},
      {{msg, 'ReadStreamEventsCompleted'},
       [#field{name = events, fnum = 1, rnum = 2,
 	      type = {msg, 'ResolvedIndexedEvent'},
@@ -14549,40 +14494,85 @@ get_msg_defs() ->
 	      type = int64, occurrence = required, opts = []},
        #field{name = error, fnum = 7, rnum = 8, type = string,
 	      occurrence = optional, opts = []}]},
-     {{msg, 'TransactionCommit'},
+     {{msg, 'TransactionCommitCompleted'},
       [#field{name = transaction_id, fnum = 1, rnum = 2,
 	      type = int64, occurrence = required, opts = []},
-       #field{name = require_master, fnum = 2, rnum = 3,
-	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'CreatePersistentSubscriptionCompleted'},
-      [#field{name = result, fnum = 1, rnum = 2,
-	      type =
-		  {enum,
-		   'CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'},
-	      occurrence = required, opts = [{default, 'Success'}]},
-       #field{name = reason, fnum = 2, rnum = 3, type = string,
-	      occurrence = optional, opts = []}]},
-     {{msg, 'ReadEvent'},
-      [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = event_number, fnum = 2, rnum = 3,
+       #field{name = result, fnum = 2, rnum = 3,
+	      type = {enum, 'OperationResult'}, occurrence = required,
+	      opts = []},
+       #field{name = message, fnum = 3, rnum = 4,
+	      type = string, occurrence = optional, opts = []},
+       #field{name = first_event_number, fnum = 4, rnum = 5,
 	      type = int32, occurrence = required, opts = []},
+       #field{name = last_event_number, fnum = 5, rnum = 6,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = prepare_position, fnum = 6, rnum = 7,
+	      type = int64, occurrence = optional, opts = []},
+       #field{name = commit_position, fnum = 7, rnum = 8,
+	      type = int64, occurrence = optional, opts = []}]},
+     {{msg, 'PersistentSubscriptionAckEvents'},
+      [#field{name = subscription_id, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = processed_event_ids, fnum = 2, rnum = 3,
+	      type = bytes, occurrence = repeated, opts = []}]},
+     {{msg, 'DeleteStreamCompleted'},
+      [#field{name = result, fnum = 1, rnum = 2,
+	      type = {enum, 'OperationResult'}, occurrence = required,
+	      opts = []},
+       #field{name = message, fnum = 2, rnum = 3,
+	      type = string, occurrence = optional, opts = []},
+       #field{name = prepare_position, fnum = 3, rnum = 4,
+	      type = int64, occurrence = optional, opts = []},
+       #field{name = commit_position, fnum = 4, rnum = 5,
+	      type = int64, occurrence = optional, opts = []}]},
+     {{msg, 'CreatePersistentSubscription'},
+      [#field{name = subscription_group_name, fnum = 1,
+	      rnum = 2, type = string, occurrence = required,
+	      opts = []},
+       #field{name = event_stream_id, fnum = 2, rnum = 3,
+	      type = string, occurrence = required, opts = []},
        #field{name = resolve_link_tos, fnum = 3, rnum = 4,
 	      type = bool, occurrence = required, opts = []},
-       #field{name = require_master, fnum = 4, rnum = 5,
-	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'UpdatePersistentSubscriptionCompleted'},
+       #field{name = start_from, fnum = 4, rnum = 5,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = message_timeout_milliseconds, fnum = 5,
+	      rnum = 6, type = int32, occurrence = required,
+	      opts = []},
+       #field{name = record_statistics, fnum = 6, rnum = 7,
+	      type = bool, occurrence = required, opts = []},
+       #field{name = live_buffer_size, fnum = 7, rnum = 8,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = read_batch_size, fnum = 8, rnum = 9,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = buffer_size, fnum = 9, rnum = 10,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = max_retry_count, fnum = 10, rnum = 11,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = prefer_round_robin, fnum = 11, rnum = 12,
+	      type = bool, occurrence = required, opts = []},
+       #field{name = checkpoint_after_time, fnum = 12,
+	      rnum = 13, type = int32, occurrence = required,
+	      opts = []},
+       #field{name = checkpoint_max_count, fnum = 13,
+	      rnum = 14, type = int32, occurrence = required,
+	      opts = []},
+       #field{name = checkpoint_min_count, fnum = 14,
+	      rnum = 15, type = int32, occurrence = required,
+	      opts = []},
+       #field{name = subscriber_max_count, fnum = 15,
+	      rnum = 16, type = int32, occurrence = required,
+	      opts = []},
+       #field{name = named_consumer_strategy, fnum = 16,
+	      rnum = 17, type = string, occurrence = optional,
+	      opts = []}]},
+     {{msg, 'DeletePersistentSubscriptionCompleted'},
       [#field{name = result, fnum = 1, rnum = 2,
 	      type =
 		  {enum,
-		   'UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'},
+		   'DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'},
 	      occurrence = required, opts = [{default, 'Success'}]},
        #field{name = reason, fnum = 2, rnum = 3, type = string,
 	      occurrence = optional, opts = []}]},
-     {{msg, 'PersistentSubscriptionStreamEventAppeared'},
-      [#field{name = event, fnum = 1, rnum = 2,
-	      type = {msg, 'ResolvedIndexedEvent'},
-	      occurrence = required, opts = []}]},
      {{msg, 'ReadEventCompleted'},
       [#field{name = result, fnum = 1, rnum = 2,
 	      type = {enum, 'ReadEventCompleted.ReadEventResult'},
@@ -14598,10 +14588,46 @@ get_msg_defs() ->
 	      opts = []},
        #field{name = event_stream_id, fnum = 2, rnum = 3,
 	      type = string, occurrence = required, opts = []}]},
-     {{msg, 'StreamEventAppeared'},
-      [#field{name = event, fnum = 1, rnum = 2,
-	      type = {msg, 'ResolvedEvent'}, occurrence = required,
+     {{msg, 'UpdatePersistentSubscriptionCompleted'},
+      [#field{name = result, fnum = 1, rnum = 2,
+	      type =
+		  {enum,
+		   'UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'},
+	      occurrence = required, opts = [{default, 'Success'}]},
+       #field{name = reason, fnum = 2, rnum = 3, type = string,
+	      occurrence = optional, opts = []}]},
+     {{msg, 'NotHandled.MasterInfo'},
+      [#field{name = external_tcp_address, fnum = 1, rnum = 2,
+	      type = string, occurrence = required, opts = []},
+       #field{name = external_tcp_port, fnum = 2, rnum = 3,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = external_http_address, fnum = 3, rnum = 4,
+	      type = string, occurrence = required, opts = []},
+       #field{name = external_http_port, fnum = 4, rnum = 5,
+	      type = int32, occurrence = required, opts = []},
+       #field{name = external_secure_tcp_address, fnum = 5,
+	      rnum = 6, type = string, occurrence = optional,
+	      opts = []},
+       #field{name = external_secure_tcp_port, fnum = 6,
+	      rnum = 7, type = int32, occurrence = optional,
 	      opts = []}]},
+     {{msg, 'ReadAllEventsCompleted'},
+      [#field{name = commit_position, fnum = 1, rnum = 2,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = prepare_position, fnum = 2, rnum = 3,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = events, fnum = 3, rnum = 4,
+	      type = {msg, 'ResolvedEvent'}, occurrence = repeated,
+	      opts = []},
+       #field{name = next_commit_position, fnum = 4, rnum = 5,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = next_prepare_position, fnum = 5, rnum = 6,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = result, fnum = 6, rnum = 7,
+	      type = {enum, 'ReadAllEventsCompleted.ReadAllResult'},
+	      occurrence = optional, opts = [{default, 'Success'}]},
+       #field{name = error, fnum = 7, rnum = 8, type = string,
+	      occurrence = optional, opts = []}]},
      {{msg, 'ConnectToPersistentSubscription'},
       [#field{name = subscription_id, fnum = 1, rnum = 2,
 	      type = string, occurrence = required, opts = []},
@@ -14610,6 +14636,14 @@ get_msg_defs() ->
        #field{name = allowed_in_flight_messages, fnum = 3,
 	      rnum = 4, type = int32, occurrence = required,
 	      opts = []}]},
+     {{msg, 'TransactionWrite'},
+      [#field{name = transaction_id, fnum = 1, rnum = 2,
+	      type = int64, occurrence = required, opts = []},
+       #field{name = events, fnum = 2, rnum = 3,
+	      type = {msg, 'NewEvent'}, occurrence = repeated,
+	      opts = []},
+       #field{name = require_master, fnum = 3, rnum = 4,
+	      type = bool, occurrence = required, opts = []}]},
      {{msg, 'PersistentSubscriptionNakEvents'},
       [#field{name = subscription_id, fnum = 1, rnum = 2,
 	      type = string, occurrence = required, opts = []},
@@ -14620,96 +14654,67 @@ get_msg_defs() ->
        #field{name = action, fnum = 4, rnum = 5,
 	      type =
 		  {enum, 'PersistentSubscriptionNakEvents.NakAction'},
-	      occurrence = required, opts = [{default, 'Unknown'}]}]},
-     {{msg, 'ReadStreamEvents'},
-      [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = from_event_number, fnum = 2, rnum = 3,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = max_count, fnum = 3, rnum = 4,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = resolve_link_tos, fnum = 4, rnum = 5,
-	      type = bool, occurrence = required, opts = []},
-       #field{name = require_master, fnum = 5, rnum = 6,
-	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'ReadAllEvents'},
-      [#field{name = commit_position, fnum = 1, rnum = 2,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = prepare_position, fnum = 2, rnum = 3,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = max_count, fnum = 3, rnum = 4,
-	      type = int32, occurrence = required, opts = []},
-       #field{name = resolve_link_tos, fnum = 4, rnum = 5,
-	      type = bool, occurrence = required, opts = []},
-       #field{name = require_master, fnum = 5, rnum = 6,
-	      type = bool, occurrence = required, opts = []}]},
-     {{msg, 'PersistentSubscriptionConfirmation'},
-      [#field{name = last_commit_position, fnum = 1, rnum = 2,
-	      type = int64, occurrence = required, opts = []},
-       #field{name = subscription_id, fnum = 2, rnum = 3,
-	      type = string, occurrence = required, opts = []},
-       #field{name = last_event_number, fnum = 3, rnum = 4,
-	      type = int32, occurrence = optional, opts = []}]},
-     {{msg, 'PersistentSubscriptionAckEvents'},
-      [#field{name = subscription_id, fnum = 1, rnum = 2,
-	      type = string, occurrence = required, opts = []},
-       #field{name = processed_event_ids, fnum = 2, rnum = 3,
-	      type = bytes, occurrence = repeated, opts = []}]}].
+	      occurrence = required,
+	      opts = [{default, 'Unknown'}]}]}].
 
 
 get_msg_names() ->
-    ['NewEvent', 'TransactionWrite',
-     'TransactionCommitCompleted', 'NotHandled.MasterInfo',
-     'ScavengeDatabase', 'WriteEventsCompleted',
-     'SubscribeToStream', 'SubscriptionDropped',
-     'TransactionWriteCompleted', 'TransactionStart',
-     'CreatePersistentSubscription',
-     'TransactionStartCompleted', 'EventRecord',
-     'ResolvedEvent', 'ReadAllEventsCompleted', 'NotHandled',
-     'SubscriptionConfirmation', 'DeleteStreamCompleted',
-     'WriteEvents', 'DeleteStream',
-     'ScavengeDatabaseCompleted', 'UnsubscribeFromStream',
-     'DeletePersistentSubscriptionCompleted',
-     'UpdatePersistentSubscription', 'ResolvedIndexedEvent',
-     'ReadStreamEventsCompleted', 'TransactionCommit',
-     'CreatePersistentSubscriptionCompleted', 'ReadEvent',
-     'UpdatePersistentSubscriptionCompleted',
+    ['ReadAllEvents', 'SubscriptionConfirmation',
+     'TransactionWriteCompleted', 'TransactionCommit',
+     'UpdatePersistentSubscription', 'EventRecord',
+     'ResolvedIndexedEvent',
      'PersistentSubscriptionStreamEventAppeared',
+     'ReadEvent', 'TransactionStartCompleted',
+     'ScavengeDatabaseCompleted', 'WriteEventsCompleted',
+     'DeleteStream', 'UnsubscribeFromStream', 'NewEvent',
+     'NotHandled', 'WriteEvents', 'ScavengeDatabase',
+     'ResolvedEvent', 'StreamEventAppeared',
+     'ReadStreamEvents', 'SubscriptionDropped',
+     'SubscribeToStream',
+     'PersistentSubscriptionConfirmation',
+     'TransactionStart',
+     'CreatePersistentSubscriptionCompleted',
+     'ReadStreamEventsCompleted',
+     'TransactionCommitCompleted',
+     'PersistentSubscriptionAckEvents',
+     'DeleteStreamCompleted', 'CreatePersistentSubscription',
+     'DeletePersistentSubscriptionCompleted',
      'ReadEventCompleted', 'DeletePersistentSubscription',
-     'StreamEventAppeared',
-     'ConnectToPersistentSubscription',
-     'PersistentSubscriptionNakEvents', 'ReadStreamEvents',
-     'ReadAllEvents', 'PersistentSubscriptionConfirmation',
-     'PersistentSubscriptionAckEvents'].
+     'UpdatePersistentSubscriptionCompleted',
+     'NotHandled.MasterInfo', 'ReadAllEventsCompleted',
+     'ConnectToPersistentSubscription', 'TransactionWrite',
+     'PersistentSubscriptionNakEvents'].
 
 
 get_group_names() -> [].
 
 
 get_msg_or_group_names() ->
-    ['NewEvent', 'TransactionWrite',
-     'TransactionCommitCompleted', 'NotHandled.MasterInfo',
-     'ScavengeDatabase', 'WriteEventsCompleted',
-     'SubscribeToStream', 'SubscriptionDropped',
-     'TransactionWriteCompleted', 'TransactionStart',
-     'CreatePersistentSubscription',
-     'TransactionStartCompleted', 'EventRecord',
-     'ResolvedEvent', 'ReadAllEventsCompleted', 'NotHandled',
-     'SubscriptionConfirmation', 'DeleteStreamCompleted',
-     'WriteEvents', 'DeleteStream',
-     'ScavengeDatabaseCompleted', 'UnsubscribeFromStream',
-     'DeletePersistentSubscriptionCompleted',
-     'UpdatePersistentSubscription', 'ResolvedIndexedEvent',
-     'ReadStreamEventsCompleted', 'TransactionCommit',
-     'CreatePersistentSubscriptionCompleted', 'ReadEvent',
-     'UpdatePersistentSubscriptionCompleted',
+    ['ReadAllEvents', 'SubscriptionConfirmation',
+     'TransactionWriteCompleted', 'TransactionCommit',
+     'UpdatePersistentSubscription', 'EventRecord',
+     'ResolvedIndexedEvent',
      'PersistentSubscriptionStreamEventAppeared',
+     'ReadEvent', 'TransactionStartCompleted',
+     'ScavengeDatabaseCompleted', 'WriteEventsCompleted',
+     'DeleteStream', 'UnsubscribeFromStream', 'NewEvent',
+     'NotHandled', 'WriteEvents', 'ScavengeDatabase',
+     'ResolvedEvent', 'StreamEventAppeared',
+     'ReadStreamEvents', 'SubscriptionDropped',
+     'SubscribeToStream',
+     'PersistentSubscriptionConfirmation',
+     'TransactionStart',
+     'CreatePersistentSubscriptionCompleted',
+     'ReadStreamEventsCompleted',
+     'TransactionCommitCompleted',
+     'PersistentSubscriptionAckEvents',
+     'DeleteStreamCompleted', 'CreatePersistentSubscription',
+     'DeletePersistentSubscriptionCompleted',
      'ReadEventCompleted', 'DeletePersistentSubscription',
-     'StreamEventAppeared',
-     'ConnectToPersistentSubscription',
-     'PersistentSubscriptionNakEvents', 'ReadStreamEvents',
-     'ReadAllEvents', 'PersistentSubscriptionConfirmation',
-     'PersistentSubscriptionAckEvents'].
+     'UpdatePersistentSubscriptionCompleted',
+     'NotHandled.MasterInfo', 'ReadAllEventsCompleted',
+     'ConnectToPersistentSubscription', 'TransactionWrite',
+     'PersistentSubscriptionNakEvents'].
 
 
 get_enum_names() ->
@@ -14740,84 +14745,22 @@ fetch_enum_def(EnumName) ->
     end.
 
 
-find_msg_def('NewEvent') ->
-    [#field{name = event_id, fnum = 1, rnum = 2,
-	    type = bytes, occurrence = required, opts = []},
-     #field{name = event_type, fnum = 2, rnum = 3,
-	    type = string, occurrence = required, opts = []},
-     #field{name = data_content_type, fnum = 3, rnum = 4,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = metadata_content_type, fnum = 4, rnum = 5,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = data, fnum = 5, rnum = 6, type = bytes,
-	    occurrence = required, opts = []},
-     #field{name = metadata, fnum = 6, rnum = 7,
-	    type = bytes, occurrence = optional, opts = []}];
-find_msg_def('TransactionWrite') ->
-    [#field{name = transaction_id, fnum = 1, rnum = 2,
+find_msg_def('ReadAllEvents') ->
+    [#field{name = commit_position, fnum = 1, rnum = 2,
 	    type = int64, occurrence = required, opts = []},
-     #field{name = events, fnum = 2, rnum = 3,
-	    type = {msg, 'NewEvent'}, occurrence = repeated,
-	    opts = []},
-     #field{name = require_master, fnum = 3, rnum = 4,
-	    type = bool, occurrence = required, opts = []}];
-find_msg_def('TransactionCommitCompleted') ->
-    [#field{name = transaction_id, fnum = 1, rnum = 2,
+     #field{name = prepare_position, fnum = 2, rnum = 3,
 	    type = int64, occurrence = required, opts = []},
-     #field{name = result, fnum = 2, rnum = 3,
-	    type = {enum, 'OperationResult'}, occurrence = required,
-	    opts = []},
-     #field{name = message, fnum = 3, rnum = 4,
-	    type = string, occurrence = optional, opts = []},
-     #field{name = first_event_number, fnum = 4, rnum = 5,
+     #field{name = max_count, fnum = 3, rnum = 4,
 	    type = int32, occurrence = required, opts = []},
-     #field{name = last_event_number, fnum = 5, rnum = 6,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = prepare_position, fnum = 6, rnum = 7,
-	    type = int64, occurrence = optional, opts = []},
-     #field{name = commit_position, fnum = 7, rnum = 8,
-	    type = int64, occurrence = optional, opts = []}];
-find_msg_def('NotHandled.MasterInfo') ->
-    [#field{name = external_tcp_address, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = external_tcp_port, fnum = 2, rnum = 3,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = external_http_address, fnum = 3, rnum = 4,
-	    type = string, occurrence = required, opts = []},
-     #field{name = external_http_port, fnum = 4, rnum = 5,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = external_secure_tcp_address, fnum = 5,
-	    rnum = 6, type = string, occurrence = optional,
-	    opts = []},
-     #field{name = external_secure_tcp_port, fnum = 6,
-	    rnum = 7, type = int32, occurrence = optional,
-	    opts = []}];
-find_msg_def('ScavengeDatabase') -> [];
-find_msg_def('WriteEventsCompleted') ->
-    [#field{name = result, fnum = 1, rnum = 2,
-	    type = {enum, 'OperationResult'}, occurrence = required,
-	    opts = []},
-     #field{name = message, fnum = 2, rnum = 3,
-	    type = string, occurrence = optional, opts = []},
-     #field{name = first_event_number, fnum = 3, rnum = 4,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = last_event_number, fnum = 4, rnum = 5,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = prepare_position, fnum = 5, rnum = 6,
-	    type = int64, occurrence = optional, opts = []},
-     #field{name = commit_position, fnum = 6, rnum = 7,
-	    type = int64, occurrence = optional, opts = []}];
-find_msg_def('SubscribeToStream') ->
-    [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = resolve_link_tos, fnum = 2, rnum = 3,
+     #field{name = resolve_link_tos, fnum = 4, rnum = 5,
+	    type = bool, occurrence = required, opts = []},
+     #field{name = require_master, fnum = 5, rnum = 6,
 	    type = bool, occurrence = required, opts = []}];
-find_msg_def('SubscriptionDropped') ->
-    [#field{name = reason, fnum = 1, rnum = 2,
-	    type =
-		{enum, 'SubscriptionDropped.SubscriptionDropReason'},
-	    occurrence = optional,
-	    opts = [{default, 'Unsubscribed'}]}];
+find_msg_def('SubscriptionConfirmation') ->
+    [#field{name = last_commit_position, fnum = 1, rnum = 2,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = last_event_number, fnum = 2, rnum = 3,
+	    type = int32, occurrence = optional, opts = []}];
 find_msg_def('TransactionWriteCompleted') ->
     [#field{name = transaction_id, fnum = 1, rnum = 2,
 	    type = int64, occurrence = required, opts = []},
@@ -14826,170 +14769,11 @@ find_msg_def('TransactionWriteCompleted') ->
 	    opts = []},
      #field{name = message, fnum = 3, rnum = 4,
 	    type = string, occurrence = optional, opts = []}];
-find_msg_def('TransactionStart') ->
-    [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = expected_version, fnum = 2, rnum = 3,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = require_master, fnum = 3, rnum = 4,
-	    type = bool, occurrence = required, opts = []}];
-find_msg_def('CreatePersistentSubscription') ->
-    [#field{name = subscription_group_name, fnum = 1,
-	    rnum = 2, type = string, occurrence = required,
-	    opts = []},
-     #field{name = event_stream_id, fnum = 2, rnum = 3,
-	    type = string, occurrence = required, opts = []},
-     #field{name = resolve_link_tos, fnum = 3, rnum = 4,
-	    type = bool, occurrence = required, opts = []},
-     #field{name = start_from, fnum = 4, rnum = 5,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = message_timeout_milliseconds, fnum = 5,
-	    rnum = 6, type = int32, occurrence = required,
-	    opts = []},
-     #field{name = record_statistics, fnum = 6, rnum = 7,
-	    type = bool, occurrence = required, opts = []},
-     #field{name = live_buffer_size, fnum = 7, rnum = 8,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = read_batch_size, fnum = 8, rnum = 9,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = buffer_size, fnum = 9, rnum = 10,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = max_retry_count, fnum = 10, rnum = 11,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = prefer_round_robin, fnum = 11, rnum = 12,
-	    type = bool, occurrence = required, opts = []},
-     #field{name = checkpoint_after_time, fnum = 12,
-	    rnum = 13, type = int32, occurrence = required,
-	    opts = []},
-     #field{name = checkpoint_max_count, fnum = 13,
-	    rnum = 14, type = int32, occurrence = required,
-	    opts = []},
-     #field{name = checkpoint_min_count, fnum = 14,
-	    rnum = 15, type = int32, occurrence = required,
-	    opts = []},
-     #field{name = subscriber_max_count, fnum = 15,
-	    rnum = 16, type = int32, occurrence = required,
-	    opts = []},
-     #field{name = named_consumer_strategy, fnum = 16,
-	    rnum = 17, type = string, occurrence = optional,
-	    opts = []}];
-find_msg_def('TransactionStartCompleted') ->
+find_msg_def('TransactionCommit') ->
     [#field{name = transaction_id, fnum = 1, rnum = 2,
 	    type = int64, occurrence = required, opts = []},
-     #field{name = result, fnum = 2, rnum = 3,
-	    type = {enum, 'OperationResult'}, occurrence = required,
-	    opts = []},
-     #field{name = message, fnum = 3, rnum = 4,
-	    type = string, occurrence = optional, opts = []}];
-find_msg_def('EventRecord') ->
-    [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = event_number, fnum = 2, rnum = 3,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = event_id, fnum = 3, rnum = 4,
-	    type = bytes, occurrence = required, opts = []},
-     #field{name = event_type, fnum = 4, rnum = 5,
-	    type = string, occurrence = required, opts = []},
-     #field{name = data_content_type, fnum = 5, rnum = 6,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = metadata_content_type, fnum = 6, rnum = 7,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = data, fnum = 7, rnum = 8, type = bytes,
-	    occurrence = required, opts = []},
-     #field{name = metadata, fnum = 8, rnum = 9,
-	    type = bytes, occurrence = optional, opts = []},
-     #field{name = created, fnum = 9, rnum = 10,
-	    type = int64, occurrence = optional, opts = []},
-     #field{name = created_epoch, fnum = 10, rnum = 11,
-	    type = int64, occurrence = optional, opts = []}];
-find_msg_def('ResolvedEvent') ->
-    [#field{name = event, fnum = 1, rnum = 2,
-	    type = {msg, 'EventRecord'}, occurrence = required,
-	    opts = []},
-     #field{name = link, fnum = 2, rnum = 3,
-	    type = {msg, 'EventRecord'}, occurrence = optional,
-	    opts = []},
-     #field{name = commit_position, fnum = 3, rnum = 4,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = prepare_position, fnum = 4, rnum = 5,
-	    type = int64, occurrence = required, opts = []}];
-find_msg_def('ReadAllEventsCompleted') ->
-    [#field{name = commit_position, fnum = 1, rnum = 2,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = prepare_position, fnum = 2, rnum = 3,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = events, fnum = 3, rnum = 4,
-	    type = {msg, 'ResolvedEvent'}, occurrence = repeated,
-	    opts = []},
-     #field{name = next_commit_position, fnum = 4, rnum = 5,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = next_prepare_position, fnum = 5, rnum = 6,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = result, fnum = 6, rnum = 7,
-	    type = {enum, 'ReadAllEventsCompleted.ReadAllResult'},
-	    occurrence = optional, opts = [{default, 'Success'}]},
-     #field{name = error, fnum = 7, rnum = 8, type = string,
-	    occurrence = optional, opts = []}];
-find_msg_def('NotHandled') ->
-    [#field{name = reason, fnum = 1, rnum = 2,
-	    type = {enum, 'NotHandled.NotHandledReason'},
-	    occurrence = required, opts = []},
-     #field{name = additional_info, fnum = 2, rnum = 3,
-	    type = bytes, occurrence = optional, opts = []}];
-find_msg_def('SubscriptionConfirmation') ->
-    [#field{name = last_commit_position, fnum = 1, rnum = 2,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = last_event_number, fnum = 2, rnum = 3,
-	    type = int32, occurrence = optional, opts = []}];
-find_msg_def('DeleteStreamCompleted') ->
-    [#field{name = result, fnum = 1, rnum = 2,
-	    type = {enum, 'OperationResult'}, occurrence = required,
-	    opts = []},
-     #field{name = message, fnum = 2, rnum = 3,
-	    type = string, occurrence = optional, opts = []},
-     #field{name = prepare_position, fnum = 3, rnum = 4,
-	    type = int64, occurrence = optional, opts = []},
-     #field{name = commit_position, fnum = 4, rnum = 5,
-	    type = int64, occurrence = optional, opts = []}];
-find_msg_def('WriteEvents') ->
-    [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = expected_version, fnum = 2, rnum = 3,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = events, fnum = 3, rnum = 4,
-	    type = {msg, 'NewEvent'}, occurrence = repeated,
-	    opts = []},
-     #field{name = require_master, fnum = 4, rnum = 5,
+     #field{name = require_master, fnum = 2, rnum = 3,
 	    type = bool, occurrence = required, opts = []}];
-find_msg_def('DeleteStream') ->
-    [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = expected_version, fnum = 2, rnum = 3,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = require_master, fnum = 3, rnum = 4,
-	    type = bool, occurrence = required, opts = []},
-     #field{name = hard_delete, fnum = 4, rnum = 5,
-	    type = bool, occurrence = optional, opts = []}];
-find_msg_def('ScavengeDatabaseCompleted') ->
-    [#field{name = result, fnum = 1, rnum = 2,
-	    type =
-		{enum, 'ScavengeDatabaseCompleted.ScavengeResult'},
-	    occurrence = required, opts = []},
-     #field{name = error, fnum = 2, rnum = 3, type = string,
-	    occurrence = optional, opts = []},
-     #field{name = total_time_ms, fnum = 3, rnum = 4,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = total_space_saved, fnum = 4, rnum = 5,
-	    type = int64, occurrence = required, opts = []}];
-find_msg_def('UnsubscribeFromStream') -> [];
-find_msg_def('DeletePersistentSubscriptionCompleted') ->
-    [#field{name = result, fnum = 1, rnum = 2,
-	    type =
-		{enum,
-		 'DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'},
-	    occurrence = required, opts = [{default, 'Success'}]},
-     #field{name = reason, fnum = 2, rnum = 3, type = string,
-	    occurrence = optional, opts = []}];
 find_msg_def('UpdatePersistentSubscription') ->
     [#field{name = subscription_group_name, fnum = 1,
 	    rnum = 2, type = string, occurrence = required,
@@ -15030,6 +14814,27 @@ find_msg_def('UpdatePersistentSubscription') ->
      #field{name = named_consumer_strategy, fnum = 16,
 	    rnum = 17, type = string, occurrence = optional,
 	    opts = []}];
+find_msg_def('EventRecord') ->
+    [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = event_number, fnum = 2, rnum = 3,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = event_id, fnum = 3, rnum = 4,
+	    type = bytes, occurrence = required, opts = []},
+     #field{name = event_type, fnum = 4, rnum = 5,
+	    type = string, occurrence = required, opts = []},
+     #field{name = data_content_type, fnum = 5, rnum = 6,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = metadata_content_type, fnum = 6, rnum = 7,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = data, fnum = 7, rnum = 8, type = bytes,
+	    occurrence = required, opts = []},
+     #field{name = metadata, fnum = 8, rnum = 9,
+	    type = bytes, occurrence = optional, opts = []},
+     #field{name = created, fnum = 9, rnum = 10,
+	    type = int64, occurrence = optional, opts = []},
+     #field{name = created_epoch, fnum = 10, rnum = 11,
+	    type = int64, occurrence = optional, opts = []}];
 find_msg_def('ResolvedIndexedEvent') ->
     [#field{name = event, fnum = 1, rnum = 2,
 	    type = {msg, 'EventRecord'}, occurrence = required,
@@ -15037,6 +14842,151 @@ find_msg_def('ResolvedIndexedEvent') ->
      #field{name = link, fnum = 2, rnum = 3,
 	    type = {msg, 'EventRecord'}, occurrence = optional,
 	    opts = []}];
+find_msg_def('PersistentSubscriptionStreamEventAppeared') ->
+    [#field{name = event, fnum = 1, rnum = 2,
+	    type = {msg, 'ResolvedIndexedEvent'},
+	    occurrence = required, opts = []}];
+find_msg_def('ReadEvent') ->
+    [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = event_number, fnum = 2, rnum = 3,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = resolve_link_tos, fnum = 3, rnum = 4,
+	    type = bool, occurrence = required, opts = []},
+     #field{name = require_master, fnum = 4, rnum = 5,
+	    type = bool, occurrence = required, opts = []}];
+find_msg_def('TransactionStartCompleted') ->
+    [#field{name = transaction_id, fnum = 1, rnum = 2,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = result, fnum = 2, rnum = 3,
+	    type = {enum, 'OperationResult'}, occurrence = required,
+	    opts = []},
+     #field{name = message, fnum = 3, rnum = 4,
+	    type = string, occurrence = optional, opts = []}];
+find_msg_def('ScavengeDatabaseCompleted') ->
+    [#field{name = result, fnum = 1, rnum = 2,
+	    type =
+		{enum, 'ScavengeDatabaseCompleted.ScavengeResult'},
+	    occurrence = required, opts = []},
+     #field{name = error, fnum = 2, rnum = 3, type = string,
+	    occurrence = optional, opts = []},
+     #field{name = total_time_ms, fnum = 3, rnum = 4,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = total_space_saved, fnum = 4, rnum = 5,
+	    type = int64, occurrence = required, opts = []}];
+find_msg_def('WriteEventsCompleted') ->
+    [#field{name = result, fnum = 1, rnum = 2,
+	    type = {enum, 'OperationResult'}, occurrence = required,
+	    opts = []},
+     #field{name = message, fnum = 2, rnum = 3,
+	    type = string, occurrence = optional, opts = []},
+     #field{name = first_event_number, fnum = 3, rnum = 4,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = last_event_number, fnum = 4, rnum = 5,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = prepare_position, fnum = 5, rnum = 6,
+	    type = int64, occurrence = optional, opts = []},
+     #field{name = commit_position, fnum = 6, rnum = 7,
+	    type = int64, occurrence = optional, opts = []}];
+find_msg_def('DeleteStream') ->
+    [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = expected_version, fnum = 2, rnum = 3,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = require_master, fnum = 3, rnum = 4,
+	    type = bool, occurrence = required, opts = []},
+     #field{name = hard_delete, fnum = 4, rnum = 5,
+	    type = bool, occurrence = optional, opts = []}];
+find_msg_def('UnsubscribeFromStream') -> [];
+find_msg_def('NewEvent') ->
+    [#field{name = event_id, fnum = 1, rnum = 2,
+	    type = bytes, occurrence = required, opts = []},
+     #field{name = event_type, fnum = 2, rnum = 3,
+	    type = string, occurrence = required, opts = []},
+     #field{name = data_content_type, fnum = 3, rnum = 4,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = metadata_content_type, fnum = 4, rnum = 5,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = data, fnum = 5, rnum = 6, type = bytes,
+	    occurrence = required, opts = []},
+     #field{name = metadata, fnum = 6, rnum = 7,
+	    type = bytes, occurrence = optional, opts = []}];
+find_msg_def('NotHandled') ->
+    [#field{name = reason, fnum = 1, rnum = 2,
+	    type = {enum, 'NotHandled.NotHandledReason'},
+	    occurrence = required, opts = []},
+     #field{name = additional_info, fnum = 2, rnum = 3,
+	    type = bytes, occurrence = optional, opts = []}];
+find_msg_def('WriteEvents') ->
+    [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = expected_version, fnum = 2, rnum = 3,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = events, fnum = 3, rnum = 4,
+	    type = {msg, 'NewEvent'}, occurrence = repeated,
+	    opts = []},
+     #field{name = require_master, fnum = 4, rnum = 5,
+	    type = bool, occurrence = required, opts = []}];
+find_msg_def('ScavengeDatabase') -> [];
+find_msg_def('ResolvedEvent') ->
+    [#field{name = event, fnum = 1, rnum = 2,
+	    type = {msg, 'EventRecord'}, occurrence = required,
+	    opts = []},
+     #field{name = link, fnum = 2, rnum = 3,
+	    type = {msg, 'EventRecord'}, occurrence = optional,
+	    opts = []},
+     #field{name = commit_position, fnum = 3, rnum = 4,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = prepare_position, fnum = 4, rnum = 5,
+	    type = int64, occurrence = required, opts = []}];
+find_msg_def('StreamEventAppeared') ->
+    [#field{name = event, fnum = 1, rnum = 2,
+	    type = {msg, 'ResolvedEvent'}, occurrence = required,
+	    opts = []}];
+find_msg_def('ReadStreamEvents') ->
+    [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = from_event_number, fnum = 2, rnum = 3,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = max_count, fnum = 3, rnum = 4,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = resolve_link_tos, fnum = 4, rnum = 5,
+	    type = bool, occurrence = required, opts = []},
+     #field{name = require_master, fnum = 5, rnum = 6,
+	    type = bool, occurrence = required, opts = []}];
+find_msg_def('SubscriptionDropped') ->
+    [#field{name = reason, fnum = 1, rnum = 2,
+	    type =
+		{enum, 'SubscriptionDropped.SubscriptionDropReason'},
+	    occurrence = optional,
+	    opts = [{default, 'Unsubscribed'}]}];
+find_msg_def('SubscribeToStream') ->
+    [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = resolve_link_tos, fnum = 2, rnum = 3,
+	    type = bool, occurrence = required, opts = []}];
+find_msg_def('PersistentSubscriptionConfirmation') ->
+    [#field{name = last_commit_position, fnum = 1, rnum = 2,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = subscription_id, fnum = 2, rnum = 3,
+	    type = string, occurrence = required, opts = []},
+     #field{name = last_event_number, fnum = 3, rnum = 4,
+	    type = int32, occurrence = optional, opts = []}];
+find_msg_def('TransactionStart') ->
+    [#field{name = event_stream_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = expected_version, fnum = 2, rnum = 3,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = require_master, fnum = 3, rnum = 4,
+	    type = bool, occurrence = required, opts = []}];
+find_msg_def('CreatePersistentSubscriptionCompleted') ->
+    [#field{name = result, fnum = 1, rnum = 2,
+	    type =
+		{enum,
+		 'CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'},
+	    occurrence = required, opts = [{default, 'Success'}]},
+     #field{name = reason, fnum = 2, rnum = 3, type = string,
+	    occurrence = optional, opts = []}];
 find_msg_def('ReadStreamEventsCompleted') ->
     [#field{name = events, fnum = 1, rnum = 2,
 	    type = {msg, 'ResolvedIndexedEvent'},
@@ -15055,40 +15005,85 @@ find_msg_def('ReadStreamEventsCompleted') ->
 	    type = int64, occurrence = required, opts = []},
      #field{name = error, fnum = 7, rnum = 8, type = string,
 	    occurrence = optional, opts = []}];
-find_msg_def('TransactionCommit') ->
+find_msg_def('TransactionCommitCompleted') ->
     [#field{name = transaction_id, fnum = 1, rnum = 2,
 	    type = int64, occurrence = required, opts = []},
-     #field{name = require_master, fnum = 2, rnum = 3,
-	    type = bool, occurrence = required, opts = []}];
-find_msg_def('CreatePersistentSubscriptionCompleted') ->
-    [#field{name = result, fnum = 1, rnum = 2,
-	    type =
-		{enum,
-		 'CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult'},
-	    occurrence = required, opts = [{default, 'Success'}]},
-     #field{name = reason, fnum = 2, rnum = 3, type = string,
-	    occurrence = optional, opts = []}];
-find_msg_def('ReadEvent') ->
-    [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = event_number, fnum = 2, rnum = 3,
+     #field{name = result, fnum = 2, rnum = 3,
+	    type = {enum, 'OperationResult'}, occurrence = required,
+	    opts = []},
+     #field{name = message, fnum = 3, rnum = 4,
+	    type = string, occurrence = optional, opts = []},
+     #field{name = first_event_number, fnum = 4, rnum = 5,
 	    type = int32, occurrence = required, opts = []},
+     #field{name = last_event_number, fnum = 5, rnum = 6,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = prepare_position, fnum = 6, rnum = 7,
+	    type = int64, occurrence = optional, opts = []},
+     #field{name = commit_position, fnum = 7, rnum = 8,
+	    type = int64, occurrence = optional, opts = []}];
+find_msg_def('PersistentSubscriptionAckEvents') ->
+    [#field{name = subscription_id, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = processed_event_ids, fnum = 2, rnum = 3,
+	    type = bytes, occurrence = repeated, opts = []}];
+find_msg_def('DeleteStreamCompleted') ->
+    [#field{name = result, fnum = 1, rnum = 2,
+	    type = {enum, 'OperationResult'}, occurrence = required,
+	    opts = []},
+     #field{name = message, fnum = 2, rnum = 3,
+	    type = string, occurrence = optional, opts = []},
+     #field{name = prepare_position, fnum = 3, rnum = 4,
+	    type = int64, occurrence = optional, opts = []},
+     #field{name = commit_position, fnum = 4, rnum = 5,
+	    type = int64, occurrence = optional, opts = []}];
+find_msg_def('CreatePersistentSubscription') ->
+    [#field{name = subscription_group_name, fnum = 1,
+	    rnum = 2, type = string, occurrence = required,
+	    opts = []},
+     #field{name = event_stream_id, fnum = 2, rnum = 3,
+	    type = string, occurrence = required, opts = []},
      #field{name = resolve_link_tos, fnum = 3, rnum = 4,
 	    type = bool, occurrence = required, opts = []},
-     #field{name = require_master, fnum = 4, rnum = 5,
-	    type = bool, occurrence = required, opts = []}];
-find_msg_def('UpdatePersistentSubscriptionCompleted') ->
+     #field{name = start_from, fnum = 4, rnum = 5,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = message_timeout_milliseconds, fnum = 5,
+	    rnum = 6, type = int32, occurrence = required,
+	    opts = []},
+     #field{name = record_statistics, fnum = 6, rnum = 7,
+	    type = bool, occurrence = required, opts = []},
+     #field{name = live_buffer_size, fnum = 7, rnum = 8,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = read_batch_size, fnum = 8, rnum = 9,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = buffer_size, fnum = 9, rnum = 10,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = max_retry_count, fnum = 10, rnum = 11,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = prefer_round_robin, fnum = 11, rnum = 12,
+	    type = bool, occurrence = required, opts = []},
+     #field{name = checkpoint_after_time, fnum = 12,
+	    rnum = 13, type = int32, occurrence = required,
+	    opts = []},
+     #field{name = checkpoint_max_count, fnum = 13,
+	    rnum = 14, type = int32, occurrence = required,
+	    opts = []},
+     #field{name = checkpoint_min_count, fnum = 14,
+	    rnum = 15, type = int32, occurrence = required,
+	    opts = []},
+     #field{name = subscriber_max_count, fnum = 15,
+	    rnum = 16, type = int32, occurrence = required,
+	    opts = []},
+     #field{name = named_consumer_strategy, fnum = 16,
+	    rnum = 17, type = string, occurrence = optional,
+	    opts = []}];
+find_msg_def('DeletePersistentSubscriptionCompleted') ->
     [#field{name = result, fnum = 1, rnum = 2,
 	    type =
 		{enum,
-		 'UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'},
+		 'DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult'},
 	    occurrence = required, opts = [{default, 'Success'}]},
      #field{name = reason, fnum = 2, rnum = 3, type = string,
 	    occurrence = optional, opts = []}];
-find_msg_def('PersistentSubscriptionStreamEventAppeared') ->
-    [#field{name = event, fnum = 1, rnum = 2,
-	    type = {msg, 'ResolvedIndexedEvent'},
-	    occurrence = required, opts = []}];
 find_msg_def('ReadEventCompleted') ->
     [#field{name = result, fnum = 1, rnum = 2,
 	    type = {enum, 'ReadEventCompleted.ReadEventResult'},
@@ -15104,10 +15099,46 @@ find_msg_def('DeletePersistentSubscription') ->
 	    opts = []},
      #field{name = event_stream_id, fnum = 2, rnum = 3,
 	    type = string, occurrence = required, opts = []}];
-find_msg_def('StreamEventAppeared') ->
-    [#field{name = event, fnum = 1, rnum = 2,
-	    type = {msg, 'ResolvedEvent'}, occurrence = required,
+find_msg_def('UpdatePersistentSubscriptionCompleted') ->
+    [#field{name = result, fnum = 1, rnum = 2,
+	    type =
+		{enum,
+		 'UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult'},
+	    occurrence = required, opts = [{default, 'Success'}]},
+     #field{name = reason, fnum = 2, rnum = 3, type = string,
+	    occurrence = optional, opts = []}];
+find_msg_def('NotHandled.MasterInfo') ->
+    [#field{name = external_tcp_address, fnum = 1, rnum = 2,
+	    type = string, occurrence = required, opts = []},
+     #field{name = external_tcp_port, fnum = 2, rnum = 3,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = external_http_address, fnum = 3, rnum = 4,
+	    type = string, occurrence = required, opts = []},
+     #field{name = external_http_port, fnum = 4, rnum = 5,
+	    type = int32, occurrence = required, opts = []},
+     #field{name = external_secure_tcp_address, fnum = 5,
+	    rnum = 6, type = string, occurrence = optional,
+	    opts = []},
+     #field{name = external_secure_tcp_port, fnum = 6,
+	    rnum = 7, type = int32, occurrence = optional,
 	    opts = []}];
+find_msg_def('ReadAllEventsCompleted') ->
+    [#field{name = commit_position, fnum = 1, rnum = 2,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = prepare_position, fnum = 2, rnum = 3,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = events, fnum = 3, rnum = 4,
+	    type = {msg, 'ResolvedEvent'}, occurrence = repeated,
+	    opts = []},
+     #field{name = next_commit_position, fnum = 4, rnum = 5,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = next_prepare_position, fnum = 5, rnum = 6,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = result, fnum = 6, rnum = 7,
+	    type = {enum, 'ReadAllEventsCompleted.ReadAllResult'},
+	    occurrence = optional, opts = [{default, 'Success'}]},
+     #field{name = error, fnum = 7, rnum = 8, type = string,
+	    occurrence = optional, opts = []}];
 find_msg_def('ConnectToPersistentSubscription') ->
     [#field{name = subscription_id, fnum = 1, rnum = 2,
 	    type = string, occurrence = required, opts = []},
@@ -15116,6 +15147,14 @@ find_msg_def('ConnectToPersistentSubscription') ->
      #field{name = allowed_in_flight_messages, fnum = 3,
 	    rnum = 4, type = int32, occurrence = required,
 	    opts = []}];
+find_msg_def('TransactionWrite') ->
+    [#field{name = transaction_id, fnum = 1, rnum = 2,
+	    type = int64, occurrence = required, opts = []},
+     #field{name = events, fnum = 2, rnum = 3,
+	    type = {msg, 'NewEvent'}, occurrence = repeated,
+	    opts = []},
+     #field{name = require_master, fnum = 3, rnum = 4,
+	    type = bool, occurrence = required, opts = []}];
 find_msg_def('PersistentSubscriptionNakEvents') ->
     [#field{name = subscription_id, fnum = 1, rnum = 2,
 	    type = string, occurrence = required, opts = []},
@@ -15127,40 +15166,6 @@ find_msg_def('PersistentSubscriptionNakEvents') ->
 	    type =
 		{enum, 'PersistentSubscriptionNakEvents.NakAction'},
 	    occurrence = required, opts = [{default, 'Unknown'}]}];
-find_msg_def('ReadStreamEvents') ->
-    [#field{name = event_stream_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = from_event_number, fnum = 2, rnum = 3,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = max_count, fnum = 3, rnum = 4,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = resolve_link_tos, fnum = 4, rnum = 5,
-	    type = bool, occurrence = required, opts = []},
-     #field{name = require_master, fnum = 5, rnum = 6,
-	    type = bool, occurrence = required, opts = []}];
-find_msg_def('ReadAllEvents') ->
-    [#field{name = commit_position, fnum = 1, rnum = 2,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = prepare_position, fnum = 2, rnum = 3,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = max_count, fnum = 3, rnum = 4,
-	    type = int32, occurrence = required, opts = []},
-     #field{name = resolve_link_tos, fnum = 4, rnum = 5,
-	    type = bool, occurrence = required, opts = []},
-     #field{name = require_master, fnum = 5, rnum = 6,
-	    type = bool, occurrence = required, opts = []}];
-find_msg_def('PersistentSubscriptionConfirmation') ->
-    [#field{name = last_commit_position, fnum = 1, rnum = 2,
-	    type = int64, occurrence = required, opts = []},
-     #field{name = subscription_id, fnum = 2, rnum = 3,
-	    type = string, occurrence = required, opts = []},
-     #field{name = last_event_number, fnum = 3, rnum = 4,
-	    type = int32, occurrence = optional, opts = []}];
-find_msg_def('PersistentSubscriptionAckEvents') ->
-    [#field{name = subscription_id, fnum = 1, rnum = 2,
-	    type = string, occurrence = required, opts = []},
-     #field{name = processed_event_ids, fnum = 2, rnum = 3,
-	    type = bytes, occurrence = repeated, opts = []}];
 find_msg_def(_) -> error.
 
 

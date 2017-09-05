@@ -7,83 +7,22 @@
 
 -define(erles_clientapi_pb_gpb_version, "3.27.0").
 
--ifndef('NEWEVENT_PB_H').
--define('NEWEVENT_PB_H', true).
--record('NewEvent',
-        {event_id               :: binary(),        % = 1
-         event_type             :: binary() | iolist(), % = 2
-         data_content_type      :: integer(),       % = 3, 32 bits
-         metadata_content_type  :: integer(),       % = 4, 32 bits
-         data                   :: binary(),        % = 5
-         metadata               :: binary() | undefined % = 6
+-ifndef('READALLEVENTS_PB_H').
+-define('READALLEVENTS_PB_H', true).
+-record('ReadAllEvents',
+        {commit_position        :: integer(),       % = 1, 32 bits
+         prepare_position       :: integer(),       % = 2, 32 bits
+         max_count              :: integer(),       % = 3, 32 bits
+         resolve_link_tos       :: boolean() | 0 | 1, % = 4
+         require_master         :: boolean() | 0 | 1 % = 5
         }).
 -endif.
 
--ifndef('TRANSACTIONWRITE_PB_H').
--define('TRANSACTIONWRITE_PB_H', true).
--record('TransactionWrite',
-        {transaction_id         :: integer(),       % = 1, 32 bits
-         events = []            :: [#'NewEvent'{}], % = 2
-         require_master         :: boolean() | 0 | 1 % = 3
-        }).
--endif.
-
--ifndef('TRANSACTIONCOMMITCOMPLETED_PB_H').
--define('TRANSACTIONCOMMITCOMPLETED_PB_H', true).
--record('TransactionCommitCompleted',
-        {transaction_id         :: integer(),       % = 1, 32 bits
-         result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 2, enum OperationResult
-         message                :: binary() | iolist() | undefined, % = 3
-         first_event_number     :: integer(),       % = 4, 32 bits
-         last_event_number      :: integer(),       % = 5, 32 bits
-         prepare_position       :: integer() | undefined, % = 6, 32 bits
-         commit_position        :: integer() | undefined % = 7, 32 bits
-        }).
--endif.
-
--ifndef('NOTHANDLED.MASTERINFO_PB_H').
--define('NOTHANDLED.MASTERINFO_PB_H', true).
--record('NotHandled.MasterInfo',
-        {external_tcp_address   :: binary() | iolist(), % = 1
-         external_tcp_port      :: integer(),       % = 2, 32 bits
-         external_http_address  :: binary() | iolist(), % = 3
-         external_http_port     :: integer(),       % = 4, 32 bits
-         external_secure_tcp_address :: binary() | iolist() | undefined, % = 5
-         external_secure_tcp_port :: integer() | undefined % = 6, 32 bits
-        }).
--endif.
-
--ifndef('SCAVENGEDATABASE_PB_H').
--define('SCAVENGEDATABASE_PB_H', true).
--record('ScavengeDatabase',
-        {
-        }).
--endif.
-
--ifndef('WRITEEVENTSCOMPLETED_PB_H').
--define('WRITEEVENTSCOMPLETED_PB_H', true).
--record('WriteEventsCompleted',
-        {result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 1, enum OperationResult
-         message                :: binary() | iolist() | undefined, % = 2
-         first_event_number     :: integer(),       % = 3, 32 bits
-         last_event_number      :: integer(),       % = 4, 32 bits
-         prepare_position       :: integer() | undefined, % = 5, 32 bits
-         commit_position        :: integer() | undefined % = 6, 32 bits
-        }).
--endif.
-
--ifndef('SUBSCRIBETOSTREAM_PB_H').
--define('SUBSCRIBETOSTREAM_PB_H', true).
--record('SubscribeToStream',
-        {event_stream_id        :: binary() | iolist(), % = 1
-         resolve_link_tos       :: boolean() | 0 | 1 % = 2
-        }).
--endif.
-
--ifndef('SUBSCRIPTIONDROPPED_PB_H').
--define('SUBSCRIPTIONDROPPED_PB_H', true).
--record('SubscriptionDropped',
-        {reason = 'Unsubscribed' :: 'Unsubscribed' | 'AccessDenied' | 'NotFound' | 'PersistentSubscriptionDeleted' | 'SubscriberMaxCountReached' | integer() | undefined % = 1, enum SubscriptionDropped.SubscriptionDropReason
+-ifndef('SUBSCRIPTIONCONFIRMATION_PB_H').
+-define('SUBSCRIPTIONCONFIRMATION_PB_H', true).
+-record('SubscriptionConfirmation',
+        {last_commit_position   :: integer(),       % = 1, 32 bits
+         last_event_number      :: integer() | undefined % = 2, 32 bits
         }).
 -endif.
 
@@ -96,153 +35,11 @@
         }).
 -endif.
 
--ifndef('TRANSACTIONSTART_PB_H').
--define('TRANSACTIONSTART_PB_H', true).
--record('TransactionStart',
-        {event_stream_id        :: binary() | iolist(), % = 1
-         expected_version       :: integer(),       % = 2, 32 bits
-         require_master         :: boolean() | 0 | 1 % = 3
-        }).
--endif.
-
--ifndef('CREATEPERSISTENTSUBSCRIPTION_PB_H').
--define('CREATEPERSISTENTSUBSCRIPTION_PB_H', true).
--record('CreatePersistentSubscription',
-        {subscription_group_name :: binary() | iolist(), % = 1
-         event_stream_id        :: binary() | iolist(), % = 2
-         resolve_link_tos       :: boolean() | 0 | 1, % = 3
-         start_from             :: integer(),       % = 4, 32 bits
-         message_timeout_milliseconds :: integer(), % = 5, 32 bits
-         record_statistics      :: boolean() | 0 | 1, % = 6
-         live_buffer_size       :: integer(),       % = 7, 32 bits
-         read_batch_size        :: integer(),       % = 8, 32 bits
-         buffer_size            :: integer(),       % = 9, 32 bits
-         max_retry_count        :: integer(),       % = 10, 32 bits
-         prefer_round_robin     :: boolean() | 0 | 1, % = 11
-         checkpoint_after_time  :: integer(),       % = 12, 32 bits
-         checkpoint_max_count   :: integer(),       % = 13, 32 bits
-         checkpoint_min_count   :: integer(),       % = 14, 32 bits
-         subscriber_max_count   :: integer(),       % = 15, 32 bits
-         named_consumer_strategy :: binary() | iolist() | undefined % = 16
-        }).
--endif.
-
--ifndef('TRANSACTIONSTARTCOMPLETED_PB_H').
--define('TRANSACTIONSTARTCOMPLETED_PB_H', true).
--record('TransactionStartCompleted',
+-ifndef('TRANSACTIONCOMMIT_PB_H').
+-define('TRANSACTIONCOMMIT_PB_H', true).
+-record('TransactionCommit',
         {transaction_id         :: integer(),       % = 1, 32 bits
-         result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 2, enum OperationResult
-         message                :: binary() | iolist() | undefined % = 3
-        }).
--endif.
-
--ifndef('EVENTRECORD_PB_H').
--define('EVENTRECORD_PB_H', true).
--record('EventRecord',
-        {event_stream_id        :: binary() | iolist(), % = 1
-         event_number           :: integer(),       % = 2, 32 bits
-         event_id               :: binary(),        % = 3
-         event_type             :: binary() | iolist(), % = 4
-         data_content_type      :: integer(),       % = 5, 32 bits
-         metadata_content_type  :: integer(),       % = 6, 32 bits
-         data                   :: binary(),        % = 7
-         metadata               :: binary() | undefined, % = 8
-         created                :: integer() | undefined, % = 9, 32 bits
-         created_epoch          :: integer() | undefined % = 10, 32 bits
-        }).
--endif.
-
--ifndef('RESOLVEDEVENT_PB_H').
--define('RESOLVEDEVENT_PB_H', true).
--record('ResolvedEvent',
-        {event                  :: #'EventRecord'{}, % = 1
-         link                   :: #'EventRecord'{} | undefined, % = 2
-         commit_position        :: integer(),       % = 3, 32 bits
-         prepare_position       :: integer()        % = 4, 32 bits
-        }).
--endif.
-
--ifndef('READALLEVENTSCOMPLETED_PB_H').
--define('READALLEVENTSCOMPLETED_PB_H', true).
--record('ReadAllEventsCompleted',
-        {commit_position        :: integer(),       % = 1, 32 bits
-         prepare_position       :: integer(),       % = 2, 32 bits
-         events = []            :: [#'ResolvedEvent'{}], % = 3
-         next_commit_position   :: integer(),       % = 4, 32 bits
-         next_prepare_position  :: integer(),       % = 5, 32 bits
-         result = 'Success'     :: 'Success' | 'NotModified' | 'Error' | 'AccessDenied' | integer() | undefined, % = 6, enum ReadAllEventsCompleted.ReadAllResult
-         error                  :: binary() | iolist() | undefined % = 7
-        }).
--endif.
-
--ifndef('NOTHANDLED_PB_H').
--define('NOTHANDLED_PB_H', true).
--record('NotHandled',
-        {reason                 :: 'NotReady' | 'TooBusy' | 'NotMaster' | integer(), % = 1, enum NotHandled.NotHandledReason
-         additional_info        :: binary() | undefined % = 2
-        }).
--endif.
-
--ifndef('SUBSCRIPTIONCONFIRMATION_PB_H').
--define('SUBSCRIPTIONCONFIRMATION_PB_H', true).
--record('SubscriptionConfirmation',
-        {last_commit_position   :: integer(),       % = 1, 32 bits
-         last_event_number      :: integer() | undefined % = 2, 32 bits
-        }).
--endif.
-
--ifndef('DELETESTREAMCOMPLETED_PB_H').
--define('DELETESTREAMCOMPLETED_PB_H', true).
--record('DeleteStreamCompleted',
-        {result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 1, enum OperationResult
-         message                :: binary() | iolist() | undefined, % = 2
-         prepare_position       :: integer() | undefined, % = 3, 32 bits
-         commit_position        :: integer() | undefined % = 4, 32 bits
-        }).
--endif.
-
--ifndef('WRITEEVENTS_PB_H').
--define('WRITEEVENTS_PB_H', true).
--record('WriteEvents',
-        {event_stream_id        :: binary() | iolist(), % = 1
-         expected_version       :: integer(),       % = 2, 32 bits
-         events = []            :: [#'NewEvent'{}], % = 3
-         require_master         :: boolean() | 0 | 1 % = 4
-        }).
--endif.
-
--ifndef('DELETESTREAM_PB_H').
--define('DELETESTREAM_PB_H', true).
--record('DeleteStream',
-        {event_stream_id        :: binary() | iolist(), % = 1
-         expected_version       :: integer(),       % = 2, 32 bits
-         require_master         :: boolean() | 0 | 1, % = 3
-         hard_delete            :: boolean() | 0 | 1 | undefined % = 4
-        }).
--endif.
-
--ifndef('SCAVENGEDATABASECOMPLETED_PB_H').
--define('SCAVENGEDATABASECOMPLETED_PB_H', true).
--record('ScavengeDatabaseCompleted',
-        {result                 :: 'Success' | 'InProgress' | 'Failed' | integer(), % = 1, enum ScavengeDatabaseCompleted.ScavengeResult
-         error                  :: binary() | iolist() | undefined, % = 2
-         total_time_ms          :: integer(),       % = 3, 32 bits
-         total_space_saved      :: integer()        % = 4, 32 bits
-        }).
--endif.
-
--ifndef('UNSUBSCRIBEFROMSTREAM_PB_H').
--define('UNSUBSCRIBEFROMSTREAM_PB_H', true).
--record('UnsubscribeFromStream',
-        {
-        }).
--endif.
-
--ifndef('DELETEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H').
--define('DELETEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H', true).
--record('DeletePersistentSubscriptionCompleted',
-        {result = 'Success'     :: 'Success' | 'DoesNotExist' | 'Fail' | 'AccessDenied' | integer(), % = 1, enum DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult
-         reason                 :: binary() | iolist() | undefined % = 2
+         require_master         :: boolean() | 0 | 1 % = 2
         }).
 -endif.
 
@@ -268,11 +65,198 @@
         }).
 -endif.
 
+-ifndef('EVENTRECORD_PB_H').
+-define('EVENTRECORD_PB_H', true).
+-record('EventRecord',
+        {event_stream_id        :: binary() | iolist(), % = 1
+         event_number           :: integer(),       % = 2, 32 bits
+         event_id               :: binary(),        % = 3
+         event_type             :: binary() | iolist(), % = 4
+         data_content_type      :: integer(),       % = 5, 32 bits
+         metadata_content_type  :: integer(),       % = 6, 32 bits
+         data                   :: binary(),        % = 7
+         metadata               :: binary() | undefined, % = 8
+         created                :: integer() | undefined, % = 9, 32 bits
+         created_epoch          :: integer() | undefined % = 10, 32 bits
+        }).
+-endif.
+
 -ifndef('RESOLVEDINDEXEDEVENT_PB_H').
 -define('RESOLVEDINDEXEDEVENT_PB_H', true).
 -record('ResolvedIndexedEvent',
         {event                  :: #'EventRecord'{}, % = 1
          link                   :: #'EventRecord'{} | undefined % = 2
+        }).
+-endif.
+
+-ifndef('PERSISTENTSUBSCRIPTIONSTREAMEVENTAPPEARED_PB_H').
+-define('PERSISTENTSUBSCRIPTIONSTREAMEVENTAPPEARED_PB_H', true).
+-record('PersistentSubscriptionStreamEventAppeared',
+        {event                  :: #'ResolvedIndexedEvent'{} % = 1
+        }).
+-endif.
+
+-ifndef('READEVENT_PB_H').
+-define('READEVENT_PB_H', true).
+-record('ReadEvent',
+        {event_stream_id        :: binary() | iolist(), % = 1
+         event_number           :: integer(),       % = 2, 32 bits
+         resolve_link_tos       :: boolean() | 0 | 1, % = 3
+         require_master         :: boolean() | 0 | 1 % = 4
+        }).
+-endif.
+
+-ifndef('TRANSACTIONSTARTCOMPLETED_PB_H').
+-define('TRANSACTIONSTARTCOMPLETED_PB_H', true).
+-record('TransactionStartCompleted',
+        {transaction_id         :: integer(),       % = 1, 32 bits
+         result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 2, enum OperationResult
+         message                :: binary() | iolist() | undefined % = 3
+        }).
+-endif.
+
+-ifndef('SCAVENGEDATABASECOMPLETED_PB_H').
+-define('SCAVENGEDATABASECOMPLETED_PB_H', true).
+-record('ScavengeDatabaseCompleted',
+        {result                 :: 'Success' | 'InProgress' | 'Failed' | integer(), % = 1, enum ScavengeDatabaseCompleted.ScavengeResult
+         error                  :: binary() | iolist() | undefined, % = 2
+         total_time_ms          :: integer(),       % = 3, 32 bits
+         total_space_saved      :: integer()        % = 4, 32 bits
+        }).
+-endif.
+
+-ifndef('WRITEEVENTSCOMPLETED_PB_H').
+-define('WRITEEVENTSCOMPLETED_PB_H', true).
+-record('WriteEventsCompleted',
+        {result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 1, enum OperationResult
+         message                :: binary() | iolist() | undefined, % = 2
+         first_event_number     :: integer(),       % = 3, 32 bits
+         last_event_number      :: integer(),       % = 4, 32 bits
+         prepare_position       :: integer() | undefined, % = 5, 32 bits
+         commit_position        :: integer() | undefined % = 6, 32 bits
+        }).
+-endif.
+
+-ifndef('DELETESTREAM_PB_H').
+-define('DELETESTREAM_PB_H', true).
+-record('DeleteStream',
+        {event_stream_id        :: binary() | iolist(), % = 1
+         expected_version       :: integer(),       % = 2, 32 bits
+         require_master         :: boolean() | 0 | 1, % = 3
+         hard_delete            :: boolean() | 0 | 1 | undefined % = 4
+        }).
+-endif.
+
+-ifndef('UNSUBSCRIBEFROMSTREAM_PB_H').
+-define('UNSUBSCRIBEFROMSTREAM_PB_H', true).
+-record('UnsubscribeFromStream',
+        {
+        }).
+-endif.
+
+-ifndef('NEWEVENT_PB_H').
+-define('NEWEVENT_PB_H', true).
+-record('NewEvent',
+        {event_id               :: binary(),        % = 1
+         event_type             :: binary() | iolist(), % = 2
+         data_content_type      :: integer(),       % = 3, 32 bits
+         metadata_content_type  :: integer(),       % = 4, 32 bits
+         data                   :: binary(),        % = 5
+         metadata               :: binary() | undefined % = 6
+        }).
+-endif.
+
+-ifndef('NOTHANDLED_PB_H').
+-define('NOTHANDLED_PB_H', true).
+-record('NotHandled',
+        {reason                 :: 'NotReady' | 'TooBusy' | 'NotMaster' | integer(), % = 1, enum NotHandled.NotHandledReason
+         additional_info        :: binary() | undefined % = 2
+        }).
+-endif.
+
+-ifndef('WRITEEVENTS_PB_H').
+-define('WRITEEVENTS_PB_H', true).
+-record('WriteEvents',
+        {event_stream_id        :: binary() | iolist(), % = 1
+         expected_version       :: integer(),       % = 2, 32 bits
+         events = []            :: [#'NewEvent'{}], % = 3
+         require_master         :: boolean() | 0 | 1 % = 4
+        }).
+-endif.
+
+-ifndef('SCAVENGEDATABASE_PB_H').
+-define('SCAVENGEDATABASE_PB_H', true).
+-record('ScavengeDatabase',
+        {
+        }).
+-endif.
+
+-ifndef('RESOLVEDEVENT_PB_H').
+-define('RESOLVEDEVENT_PB_H', true).
+-record('ResolvedEvent',
+        {event                  :: #'EventRecord'{}, % = 1
+         link                   :: #'EventRecord'{} | undefined, % = 2
+         commit_position        :: integer(),       % = 3, 32 bits
+         prepare_position       :: integer()        % = 4, 32 bits
+        }).
+-endif.
+
+-ifndef('STREAMEVENTAPPEARED_PB_H').
+-define('STREAMEVENTAPPEARED_PB_H', true).
+-record('StreamEventAppeared',
+        {event                  :: #'ResolvedEvent'{} % = 1
+        }).
+-endif.
+
+-ifndef('READSTREAMEVENTS_PB_H').
+-define('READSTREAMEVENTS_PB_H', true).
+-record('ReadStreamEvents',
+        {event_stream_id        :: binary() | iolist(), % = 1
+         from_event_number      :: integer(),       % = 2, 32 bits
+         max_count              :: integer(),       % = 3, 32 bits
+         resolve_link_tos       :: boolean() | 0 | 1, % = 4
+         require_master         :: boolean() | 0 | 1 % = 5
+        }).
+-endif.
+
+-ifndef('SUBSCRIPTIONDROPPED_PB_H').
+-define('SUBSCRIPTIONDROPPED_PB_H', true).
+-record('SubscriptionDropped',
+        {reason = 'Unsubscribed' :: 'Unsubscribed' | 'AccessDenied' | 'NotFound' | 'PersistentSubscriptionDeleted' | 'SubscriberMaxCountReached' | integer() | undefined % = 1, enum SubscriptionDropped.SubscriptionDropReason
+        }).
+-endif.
+
+-ifndef('SUBSCRIBETOSTREAM_PB_H').
+-define('SUBSCRIBETOSTREAM_PB_H', true).
+-record('SubscribeToStream',
+        {event_stream_id        :: binary() | iolist(), % = 1
+         resolve_link_tos       :: boolean() | 0 | 1 % = 2
+        }).
+-endif.
+
+-ifndef('PERSISTENTSUBSCRIPTIONCONFIRMATION_PB_H').
+-define('PERSISTENTSUBSCRIPTIONCONFIRMATION_PB_H', true).
+-record('PersistentSubscriptionConfirmation',
+        {last_commit_position   :: integer(),       % = 1, 32 bits
+         subscription_id        :: binary() | iolist(), % = 2
+         last_event_number      :: integer() | undefined % = 3, 32 bits
+        }).
+-endif.
+
+-ifndef('TRANSACTIONSTART_PB_H').
+-define('TRANSACTIONSTART_PB_H', true).
+-record('TransactionStart',
+        {event_stream_id        :: binary() | iolist(), % = 1
+         expected_version       :: integer(),       % = 2, 32 bits
+         require_master         :: boolean() | 0 | 1 % = 3
+        }).
+-endif.
+
+-ifndef('CREATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H').
+-define('CREATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H', true).
+-record('CreatePersistentSubscriptionCompleted',
+        {result = 'Success'     :: 'Success' | 'AlreadyExists' | 'Fail' | 'AccessDenied' | integer(), % = 1, enum CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult
+         reason                 :: binary() | iolist() | undefined % = 2
         }).
 -endif.
 
@@ -289,44 +273,64 @@
         }).
 -endif.
 
--ifndef('TRANSACTIONCOMMIT_PB_H').
--define('TRANSACTIONCOMMIT_PB_H', true).
--record('TransactionCommit',
+-ifndef('TRANSACTIONCOMMITCOMPLETED_PB_H').
+-define('TRANSACTIONCOMMITCOMPLETED_PB_H', true).
+-record('TransactionCommitCompleted',
         {transaction_id         :: integer(),       % = 1, 32 bits
-         require_master         :: boolean() | 0 | 1 % = 2
+         result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 2, enum OperationResult
+         message                :: binary() | iolist() | undefined, % = 3
+         first_event_number     :: integer(),       % = 4, 32 bits
+         last_event_number      :: integer(),       % = 5, 32 bits
+         prepare_position       :: integer() | undefined, % = 6, 32 bits
+         commit_position        :: integer() | undefined % = 7, 32 bits
         }).
 -endif.
 
--ifndef('CREATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H').
--define('CREATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H', true).
--record('CreatePersistentSubscriptionCompleted',
-        {result = 'Success'     :: 'Success' | 'AlreadyExists' | 'Fail' | 'AccessDenied' | integer(), % = 1, enum CreatePersistentSubscriptionCompleted.CreatePersistentSubscriptionResult
-         reason                 :: binary() | iolist() | undefined % = 2
+-ifndef('PERSISTENTSUBSCRIPTIONACKEVENTS_PB_H').
+-define('PERSISTENTSUBSCRIPTIONACKEVENTS_PB_H', true).
+-record('PersistentSubscriptionAckEvents',
+        {subscription_id        :: binary() | iolist(), % = 1
+         processed_event_ids = [] :: [binary()]     % = 2
         }).
 -endif.
 
--ifndef('READEVENT_PB_H').
--define('READEVENT_PB_H', true).
--record('ReadEvent',
-        {event_stream_id        :: binary() | iolist(), % = 1
-         event_number           :: integer(),       % = 2, 32 bits
+-ifndef('DELETESTREAMCOMPLETED_PB_H').
+-define('DELETESTREAMCOMPLETED_PB_H', true).
+-record('DeleteStreamCompleted',
+        {result                 :: 'Success' | 'PrepareTimeout' | 'CommitTimeout' | 'ForwardTimeout' | 'WrongExpectedVersion' | 'StreamDeleted' | 'InvalidTransaction' | 'AccessDenied' | integer(), % = 1, enum OperationResult
+         message                :: binary() | iolist() | undefined, % = 2
+         prepare_position       :: integer() | undefined, % = 3, 32 bits
+         commit_position        :: integer() | undefined % = 4, 32 bits
+        }).
+-endif.
+
+-ifndef('CREATEPERSISTENTSUBSCRIPTION_PB_H').
+-define('CREATEPERSISTENTSUBSCRIPTION_PB_H', true).
+-record('CreatePersistentSubscription',
+        {subscription_group_name :: binary() | iolist(), % = 1
+         event_stream_id        :: binary() | iolist(), % = 2
          resolve_link_tos       :: boolean() | 0 | 1, % = 3
-         require_master         :: boolean() | 0 | 1 % = 4
+         start_from             :: integer(),       % = 4, 32 bits
+         message_timeout_milliseconds :: integer(), % = 5, 32 bits
+         record_statistics      :: boolean() | 0 | 1, % = 6
+         live_buffer_size       :: integer(),       % = 7, 32 bits
+         read_batch_size        :: integer(),       % = 8, 32 bits
+         buffer_size            :: integer(),       % = 9, 32 bits
+         max_retry_count        :: integer(),       % = 10, 32 bits
+         prefer_round_robin     :: boolean() | 0 | 1, % = 11
+         checkpoint_after_time  :: integer(),       % = 12, 32 bits
+         checkpoint_max_count   :: integer(),       % = 13, 32 bits
+         checkpoint_min_count   :: integer(),       % = 14, 32 bits
+         subscriber_max_count   :: integer(),       % = 15, 32 bits
+         named_consumer_strategy :: binary() | iolist() | undefined % = 16
         }).
 -endif.
 
--ifndef('UPDATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H').
--define('UPDATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H', true).
--record('UpdatePersistentSubscriptionCompleted',
-        {result = 'Success'     :: 'Success' | 'DoesNotExist' | 'Fail' | 'AccessDenied' | integer(), % = 1, enum UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult
+-ifndef('DELETEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H').
+-define('DELETEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H', true).
+-record('DeletePersistentSubscriptionCompleted',
+        {result = 'Success'     :: 'Success' | 'DoesNotExist' | 'Fail' | 'AccessDenied' | integer(), % = 1, enum DeletePersistentSubscriptionCompleted.DeletePersistentSubscriptionResult
          reason                 :: binary() | iolist() | undefined % = 2
-        }).
--endif.
-
--ifndef('PERSISTENTSUBSCRIPTIONSTREAMEVENTAPPEARED_PB_H').
--define('PERSISTENTSUBSCRIPTIONSTREAMEVENTAPPEARED_PB_H', true).
--record('PersistentSubscriptionStreamEventAppeared',
-        {event                  :: #'ResolvedIndexedEvent'{} % = 1
         }).
 -endif.
 
@@ -347,10 +351,36 @@
         }).
 -endif.
 
--ifndef('STREAMEVENTAPPEARED_PB_H').
--define('STREAMEVENTAPPEARED_PB_H', true).
--record('StreamEventAppeared',
-        {event                  :: #'ResolvedEvent'{} % = 1
+-ifndef('UPDATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H').
+-define('UPDATEPERSISTENTSUBSCRIPTIONCOMPLETED_PB_H', true).
+-record('UpdatePersistentSubscriptionCompleted',
+        {result = 'Success'     :: 'Success' | 'DoesNotExist' | 'Fail' | 'AccessDenied' | integer(), % = 1, enum UpdatePersistentSubscriptionCompleted.UpdatePersistentSubscriptionResult
+         reason                 :: binary() | iolist() | undefined % = 2
+        }).
+-endif.
+
+-ifndef('NOTHANDLED.MASTERINFO_PB_H').
+-define('NOTHANDLED.MASTERINFO_PB_H', true).
+-record('NotHandled.MasterInfo',
+        {external_tcp_address   :: binary() | iolist(), % = 1
+         external_tcp_port      :: integer(),       % = 2, 32 bits
+         external_http_address  :: binary() | iolist(), % = 3
+         external_http_port     :: integer(),       % = 4, 32 bits
+         external_secure_tcp_address :: binary() | iolist() | undefined, % = 5
+         external_secure_tcp_port :: integer() | undefined % = 6, 32 bits
+        }).
+-endif.
+
+-ifndef('READALLEVENTSCOMPLETED_PB_H').
+-define('READALLEVENTSCOMPLETED_PB_H', true).
+-record('ReadAllEventsCompleted',
+        {commit_position        :: integer(),       % = 1, 32 bits
+         prepare_position       :: integer(),       % = 2, 32 bits
+         events = []            :: [#'ResolvedEvent'{}], % = 3
+         next_commit_position   :: integer(),       % = 4, 32 bits
+         next_prepare_position  :: integer(),       % = 5, 32 bits
+         result = 'Success'     :: 'Success' | 'NotModified' | 'Error' | 'AccessDenied' | integer() | undefined, % = 6, enum ReadAllEventsCompleted.ReadAllResult
+         error                  :: binary() | iolist() | undefined % = 7
         }).
 -endif.
 
@@ -363,6 +393,15 @@
         }).
 -endif.
 
+-ifndef('TRANSACTIONWRITE_PB_H').
+-define('TRANSACTIONWRITE_PB_H', true).
+-record('TransactionWrite',
+        {transaction_id         :: integer(),       % = 1, 32 bits
+         events = []            :: [#'NewEvent'{}], % = 2
+         require_master         :: boolean() | 0 | 1 % = 3
+        }).
+-endif.
+
 -ifndef('PERSISTENTSUBSCRIPTIONNAKEVENTS_PB_H').
 -define('PERSISTENTSUBSCRIPTIONNAKEVENTS_PB_H', true).
 -record('PersistentSubscriptionNakEvents',
@@ -370,45 +409,6 @@
          processed_event_ids = [] :: [binary()],    % = 2
          message                :: binary() | iolist() | undefined, % = 3
          action = 'Unknown'     :: 'Unknown' | 'Park' | 'Retry' | 'Skip' | 'Stop' | integer() % = 4, enum PersistentSubscriptionNakEvents.NakAction
-        }).
--endif.
-
--ifndef('READSTREAMEVENTS_PB_H').
--define('READSTREAMEVENTS_PB_H', true).
--record('ReadStreamEvents',
-        {event_stream_id        :: binary() | iolist(), % = 1
-         from_event_number      :: integer(),       % = 2, 32 bits
-         max_count              :: integer(),       % = 3, 32 bits
-         resolve_link_tos       :: boolean() | 0 | 1, % = 4
-         require_master         :: boolean() | 0 | 1 % = 5
-        }).
--endif.
-
--ifndef('READALLEVENTS_PB_H').
--define('READALLEVENTS_PB_H', true).
--record('ReadAllEvents',
-        {commit_position        :: integer(),       % = 1, 32 bits
-         prepare_position       :: integer(),       % = 2, 32 bits
-         max_count              :: integer(),       % = 3, 32 bits
-         resolve_link_tos       :: boolean() | 0 | 1, % = 4
-         require_master         :: boolean() | 0 | 1 % = 5
-        }).
--endif.
-
--ifndef('PERSISTENTSUBSCRIPTIONCONFIRMATION_PB_H').
--define('PERSISTENTSUBSCRIPTIONCONFIRMATION_PB_H', true).
--record('PersistentSubscriptionConfirmation',
-        {last_commit_position   :: integer(),       % = 1, 32 bits
-         subscription_id        :: binary() | iolist(), % = 2
-         last_event_number      :: integer() | undefined % = 3, 32 bits
-        }).
--endif.
-
--ifndef('PERSISTENTSUBSCRIPTIONACKEVENTS_PB_H').
--define('PERSISTENTSUBSCRIPTIONACKEVENTS_PB_H', true).
--record('PersistentSubscriptionAckEvents',
-        {subscription_id        :: binary() | iolist(), % = 1
-         processed_event_ids = [] :: [binary()]     % = 2
         }).
 -endif.
 
